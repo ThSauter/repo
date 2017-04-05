@@ -1,0 +1,13 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- filesTable = { IRPYRawContainer 
+	- size = 6;
+	- value = "Exercise_7_BoardControlledPotiLed.rpy" ""
+	"Exercise_7_BoardControlledPotiLed_rpy\\Default.sbs" "Default"
+	"Exercise_7_BoardControlledPotiLed_rpy\\Display.sbs" "Libs::Display"
+	"Exercise_7_BoardControlledPotiLed_rpy\\Libs.sbs" "Libs"
+	"Exercise_7_BoardControlledPotiLed_rpy\\MCB1700.cmp" "MCB1700"
+	"Exercise_7_BoardControlledPotiLed_rpy\\MyProfile.sbs" "MyProfile"
+	
+}
+

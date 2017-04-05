@@ -1,0 +1,177 @@
+I-Logix-RPY-Archive version 8.12.0 C++ 9641846
+{ IComponent 
+	- _id = GUID 93425724-08db-4e42-a798-cb363b94c8e8;
+	- _myState = 139264;
+	- _name = "MCB1700";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "$OMROOT\\Profiles\\WST_RXF_V6\\RXF-Eval_Rpy-Cpp-ARM_Profile.sbs";
+			- _subsystem = "RXF-Eval_Rpy-Cpp-ARM_Profile";
+			- _class = "";
+			- _name = "RXFComponent";
+			- _id = GUID 90296721-6f0a-8699-914a-0629c0506aa3;
+		}
+	}
+	- _modifiedTimeWeak = 4.3.2017::19:35:57;
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "<lpc17xx.h>,<stdio.h>";
+	- m_includePath = "C:\\Keil_v5\\ARM\\PACK\\Keil\\MDK-Middleware\\7.4.0\\Board";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 2d306b6b-e418-4f77-bc1c-f736e6a8b085;
+		- _myState = 73728;
+		- _name = "Files";
+		- _modifiedTimeWeak = 3.29.2017::7:21:22;
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID 840289d8-7f5d-48ac-a5cb-a20ec035818c;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID 840289d8-7f5d-48ac-a5cb-a20ec035818c;
+			- _myState = 8192;
+			- _name = "Debug";
+			- _modifiedTimeWeak = 3.31.2017::8:44:34;
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 01e052c0-fa70-4338-bef0-060b3d7317c9;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\02__Cpp_Lab\\0_Exercise0_BlinkyLed\\rpy\\Exercise_0_BlinkyLed\\DefaultComponent\\DefaultConfig\\DefaultComponent.mak";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID 2f252d26-86a5-4dfe-8e13-099000ad7d57;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\02__Cpp_Lab\\0_Exercise0_BlinkyLed\\rpy\\Exercise_0_BlinkyLed\\DefaultComponent\\DefaultConfig\\MainDefaultComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID e0209024-c391-4acf-a2c9-eaa900a15468;
+				- _myState = 8192;
+				- _name = "Debug";
+				- _modifiedTimeWeak = 3.29.2017::7:22:1;
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 3.31.2017::8:44:34;
+			- strongCGTime = 3.31.2017::8:44:34;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+	}
+	- HandlesInMe = { IRPYRawContainer 
+		- size = 6;
+		- value = 
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Default.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Default";
+			- _id = GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "$OMROOT\\Profiles\\WST_RXF_V6\\RXF-Eval_Rpy-Cpp-ARM_Profile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "RXF-Eval_Rpy-Cpp-ARM_Profile";
+			- _id = GUID bfc317b6-e8a6-d0c6-ebbd-d5c3478d6a6a;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "$OMROOT\\Profiles\\WST_RXF_V6\\WSTProfile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "WSTProfile";
+			- _id = GUID 839b3570-feed-482e-8776-cdf59c7831ae;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Libs.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Libs";
+			- _id = GUID 69475eb7-5ef4-46bc-9117-4ce518750ecd;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Display.sbs";
+			- _subsystem = "Libs";
+			- _class = "";
+			- _name = "Display";
+			- _id = GUID b98bdd42-60f3-497a-b33f-9a3ab368eb94;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "MyProfile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "MyProfile";
+			- _id = GUID d0265d83-0c4c-4278-a00c-5522ab3e38a8;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 4.3.2017::19:35:57;
+	- strongCGTime = 4.3.2017::19:35:57;
+}
+

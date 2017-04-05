@@ -1,0 +1,85 @@
+I-Logix-RPY-Archive version 8.12.0 C++ 9641846
+{ IProfile 
+	- _id = GUID d0265d83-0c4c-4278-a00c-5522ab3e38a8;
+	- _myState = 8192;
+	- _name = "MyProfile";
+	- _modifiedTimeWeak = 3.31.2017::9:17:37;
+	- _lastID = 2;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IStereotype 
+			- _id = GUID 6309ef03-44fb-4d06-84e6-99af48bccc7c;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "ImplementationEpilog";
+										- _Value = "}";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "ImplementationProlog";
+										- _Value = "extern \"C\" {";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "}";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "extern \"C\" {";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "ExternC";
+			- _modifiedTimeWeak = 3.31.2017::9:10:41;
+			- _m2Classes = { IRPYRawContainer 
+				- size = 2;
+				- value = "Dependency"; "Module"; 
+			}
+		}
+	}
+	- weakCGTime = 3.31.2017::9:17:37;
+	- strongCGTime = 3.31.2017::8:54:38;
+	- _defaultComposite = GUID aa86d93c-5b7e-4ed3-b01c-805fd30966a9;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID aa86d93c-5b7e-4ed3-b01c-805fd30966a9;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.1.1970::1:0:0;
+}
+

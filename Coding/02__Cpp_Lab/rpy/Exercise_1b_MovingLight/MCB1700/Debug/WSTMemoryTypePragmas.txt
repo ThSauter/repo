@@ -1,0 +1,19 @@
+/**
+*
+*
+*
+* $Id: WSTMemoryTypePragmas.txt 24786 2011-05-04 15:06:37Z er $
+* $URL: https://svn.willert.de/V6/trunk/Component/CompilerAndTarget/Keil5_ARM/Config/MemorySections/WSTMemoryTypePragmas.txt $
+*
+* Willert Software Tools - Memory Type pragmas
+* 
+*
+* Email: support@willert.de
+*
+* 
+* 
+*
+**/
+
+/* This default memory section configuration file is empty not to slow down the compiler
+ */

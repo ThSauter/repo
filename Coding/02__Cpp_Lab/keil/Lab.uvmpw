@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ProjectWorkspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_mpw.xsd">
+
+  <SchemaVersion>1.0</SchemaVersion>
+
+  <Header>### uVision Project, (C) Keil Software</Header>
+
+  <WorkspaceName>WorkSpace</WorkspaceName>
+
+  <project>
+    <PathAndName>.\Exercise_0_Blinky\Exercise_0_BlinkyLed.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_1a_FlashingLeds\Exercise_1a_FlashingLeds.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_1b_MovingLight\Exercise_1b_MovingLight.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_2_DynamicLed\Exercise_2_DynamicDelay.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_3_LedWithPoti\Exercise_3_LedWithPoti.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_4_Board\Exercise_4_Board.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_5_Display\Exercise_5_Display.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_6_PeriodicPoti\Exercise_6_PeriodicPoti.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\Exercise_7_BoardControlledPotiLed\Exercise_7_BoardControlledPotiLed.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
+  </project>
+
+</ProjectWorkspace>

@@ -1,0 +1,13 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- filesTable = { IRPYRawContainer 
+	- size = 6;
+	- value = "Exercise_6_PeriodicPoti.rpy" ""
+	"Exercise_6_PeriodicPoti_rpy\\Default.sbs" "Default"
+	"Exercise_6_PeriodicPoti_rpy\\Display.sbs" "Libs::Display"
+	"Exercise_6_PeriodicPoti_rpy\\Libs.sbs" "Libs"
+	"Exercise_6_PeriodicPoti_rpy\\MCB1700.cmp" "MCB1700"
+	"Exercise_6_PeriodicPoti_rpy\\MyProfile.sbs" "MyProfile"
+	
+}
+

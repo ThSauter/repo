@@ -1,0 +1,61 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 8;
+	- value = "MCB1700\\Debug\\Board.cpp" 4.3.2017::19:45:36
+	"MCB1700\\Debug\\Board.h" 4.3.2017::19:35:59
+	"MCB1700\\Debug\\Default.cpp" 3.31.2017::6:7:44
+	"MCB1700\\Debug\\Default.h" 4.3.2017::19:35:59
+	"MCB1700\\Debug\\Display.cpp" 4.3.2017::19:35:29
+	"MCB1700\\Debug\\Display.h" 4.3.2017::19:35:59
+	"MCB1700\\Debug\\LedBar.cpp" 3.31.2017::5:52:24
+	"MCB1700\\Debug\\LedBar.h" 4.3.2017::19:35:59
+	
+}
+- size = 5;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "Default.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "Default";
+	- _id = GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea;
+}
+- genTime = 4.3.2017::19:35:59;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "MCB1700.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "MCB1700\\Debug";
+	- _id = GUID 840289d8-7f5d-48ac-a5cb-a20ec035818c;
+}
+- genTime = 4.3.2017::19:45:36;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "LedBar";
+	- _id = GUID c2d5c3b8-e0fe-4ea7-b08f-376cecd32516;
+}
+- genTime = 4.3.2017::19:35:59;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Board";
+	- _id = GUID 0cd33b24-8444-4d7a-b67b-a0f59d871ea4;
+}
+- genTime = 4.3.2017::19:45:36;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Display";
+	- _id = GUID d474bf0c-c0a7-4352-9096-5cf8a45b9dc5;
+}
+- genTime = 4.3.2017::19:35:59;
+
