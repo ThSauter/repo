@@ -50,3 +50,7 @@ Temporary Items
 *.crf
 *.d
 *.o
+*.zip
+
+# Directories to ignore
+ThirdParty/Willert_DemoDVD_Rhp_Req_2016-11/
