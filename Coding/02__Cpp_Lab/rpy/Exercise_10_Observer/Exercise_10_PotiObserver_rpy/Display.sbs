@@ -1,0 +1,182 @@
+I-Logix-RPY-Archive version 8.12.0 C++ 9641846
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Libs.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "Libs";
+		- _id = GUID e6f6ce14-ef24-43cd-8e0f-c5c092e96e0d;
+	}
+	- _id = GUID 325963f0-84fa-46c8-8008-343ac094f9ea;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 1;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Package";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "UseAsExternal";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "Display";
+	- _modifiedTimeWeak = 4.14.2017::9:17:53;
+	- weakCGTime = 4.14.2017::9:18:55;
+	- strongCGTime = 4.14.2017::9:18:28;
+	- _defaultComposite = GUID abd3a517-b125-4177-8383-d6c53c637266;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID abd3a517-b125-4177-8383-d6c53c637266;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 4.14.2017::9:18:55;
+			- weakCGTime = 4.14.2017::9:18:55;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IModule 
+					- _id = GUID 0cba564e-03c5-4ed8-ba21-748b1e7625c4;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UseAsExternal";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "Board_GLCD";
+					- _modifiedTimeWeak = 4.14.2017::9:18:55;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID f7491e35-7caf-4f96-9b51-120480963158;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- Qualifiers = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _implicitClass = { IClass 
+						- _id = GUID f7491e35-7caf-4f96-9b51-120480963158;
+						- _myState = 10240;
+						- _name = "Board_GLCD";
+						- Dependencies = { IRPYRawContainer 
+							- size = 0;
+						}
+						- _modifiedTimeWeak = 4.14.2017::9:18:55;
+						- EmbededFiles = { IRPYRawContainer 
+							- size = 0;
+						}
+						- weakCGTime = 4.14.2017::9:18:55;
+						- strongCGTime = 4.14.2017::9:16:19;
+						- _multiplicity = "";
+						- _itsStateChart = { IHandle 
+							- _m2Class = "";
+						}
+						- _classModifier = Unspecified;
+					}
+					- _partKind = Block;
+				}
+				{ IModule 
+					- _id = GUID a1b818ac-b46c-44d5-90d6-4927d5e69af5;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UseAsExternal";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "GLCD_config";
+					- _modifiedTimeWeak = 4.14.2017::9:18:28;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID c877b58d-5e3d-4c58-860c-b1f22f84011c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _implicitClass = { IClass 
+						- _id = GUID c877b58d-5e3d-4c58-860c-b1f22f84011c;
+						- _myState = 10240;
+						- _name = "GLCD_config";
+						- _modifiedTimeWeak = 4.14.2017::9:18:23;
+						- weakCGTime = 4.14.2017::9:18:23;
+						- strongCGTime = 4.14.2017::9:18:23;
+						- _multiplicity = "";
+						- _itsStateChart = { IHandle 
+							- _m2Class = "";
+						}
+						- _classModifier = Unspecified;
+					}
+					- _partKind = Block;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 4.14.2017::9:15:45;
+}
+

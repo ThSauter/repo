@@ -433,15 +433,14 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\flash\startup_lpc17xx.d -o.\flash\startup_lpc17xx.o -I. -IRXF -I
-RXF\oxf -IC:\02__Cpp_Lab\keil\Exercise_0_Blinky\RTE\Device\LPC1768 -IC:\02__Cpp
-_Lab\keil\Exercise_0_Blinky\RTE\_Debug -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CM
-SIS\Driver\Include -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -IC:\Kei
-l_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common -IC:\Keil_v5\AR
-M\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include -IC:\Keil_v5\ARM\PACK\Keil\LPC1700
-_DFP\2.3.0\RTE_Driver -IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board --p
-redefine="__UVISION_VERSION SETA 522" --predefine="_RTE_ SETA 1" --predefine="L
-PC175x_6x SETA 1" --list=.\flash\startup_lpc17xx.lst RTE\Device\LPC1768\startup
-_LPC17xx.s
+RXF\oxf -I.\RTE\Device\LPC1768 -I.\RTE\_Debug -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5
+.0.1\CMSIS\Driver\Include -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -
+IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common -IC:\Kei
+l_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include -IC:\Keil_v5\ARM\PACK\Keil\
+LPC1700_DFP\2.3.0\RTE_Driver -IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Bo
+ard --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 523" --pred
+efine="_RTE_ SETA 1" --predefine="LPC175x_6x SETA 1" --list=.\flash\startup_lpc
+17xx.lst RTE\Device\LPC1768\startup_LPC17xx.s
 
 
 
@@ -1094,4 +1093,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-403 symbols in table
+404 symbols in table

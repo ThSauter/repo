@@ -1,0 +1,9 @@
+
+Reverse Engineering Done.
+
+Adding Operation 'WSTMonitor_getTypeSize0()' to Package 'ExamplePkg'. 
+Adding Operation 'WSTMonitor_getTypeSize1()' to Package 'ExamplePkg'. 
+Adding Operation 'WSTMonitor_getTypeSize2()' to Package 'ExamplePkg'. 
+Adding Operation 'ClassWSTMonitor_getTypeSize0()' to Class 'ActiveController'. 
+Adding Operation 'ClassWSTMonitor_getTypeSize1()' to Class 'ActiveController'. 
+Adding Operation 'ClassWSTMonitor_getTypeSize2()' to Class 'ActiveController'. 

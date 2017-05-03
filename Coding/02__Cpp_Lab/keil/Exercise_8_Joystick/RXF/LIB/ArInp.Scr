@@ -1,0 +1,20 @@
+--create ..\..\..\Source\LIB\RXFR.lib
+..\..\..\source\lib\wst_err.o
+..\..\..\source\lib\wst_evt.o
+..\..\..\source\lib\wst_fsm.o
+..\..\..\source\lib\wst_mem_block.o
+..\..\..\source\lib\wst_msq.o
+..\..\..\source\lib\wst_mtx.o
+..\..\..\source\lib\wst_prt_multi.o
+..\..\..\source\lib\wst_rxf.o
+..\..\..\source\lib\wst_tmm.o
+..\..\..\source\lib\wst_tmr.o
+..\..\..\source\lib\wst_tsk.o
+..\..\..\source\lib\wstforwarddecl.o
+..\..\..\source\lib\wstmonitor.o
+..\..\..\source\lib\wstmonitorio_keil_cortexm3_itm.o
+..\..\..\source\lib\wstmonitorio_keil_cortexm3_uart.o
+..\..\..\source\lib\wstrtos.o
+..\..\..\source\lib\wsttarget.o
+..\..\..\source\lib\omstring.o
+..\..\..\source\lib\omstring_1.o

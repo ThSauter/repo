@@ -1,0 +1,96 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 16;
+	- value = "MCB1700\\Debug\\Default.cpp" 4.18.2017::7:30:9
+	"MCB1700\\Debug\\Default.h" 4.18.2017::7:30:9
+	"MCB1700\\Debug\\Display.cpp" 4.14.2017::20:10:17
+	"MCB1700\\Debug\\Display.h" 4.14.2017::20:13:5
+	"MCB1700\\Debug\\LedBar.cpp" 4.14.2017::8:24:12
+	"MCB1700\\Debug\\LedBar.h" 4.18.2017::7:30:8
+	"MCB1700\\Debug\\Poti.cpp" 4.14.2017::8:31:24
+	"MCB1700\\Debug\\Poti.h" 4.14.2017::20:11:14
+	"MCB1700\\Debug\\PotiObserver.cpp" 4.14.2017::7:47:53
+	"MCB1700\\Debug\\PotiObserver.h" 4.14.2017::20:11:14
+	"MCB1700\\Debug\\PotiSubject.cpp" 4.9.2017::20:32:38
+	"MCB1700\\Debug\\PotiSubject.h" 4.14.2017::20:11:14
+	"MCB1700\\Debug\\class_5.cpp" 4.14.2017::8:23:50
+	"MCB1700\\Debug\\class_5.h" 4.14.2017::8:23:50
+	"MCB1700\\Debug\\class_6.cpp" 4.18.2017::7:28:12
+	"MCB1700\\Debug\\class_6.h" 4.18.2017::7:28:12
+	
+}
+- size = 8;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "PotiSubject";
+	- _id = GUID e578f94b-6296-456a-8f1b-7388977dc247;
+}
+- genTime = 4.14.2017::20:31:47;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "Default.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "Default";
+	- _id = GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea;
+}
+- genTime = 4.18.2017::7:30:9;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "MCB1700.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "MCB1700\\Debug";
+	- _id = GUID 840289d8-7f5d-48ac-a5cb-a20ec035818c;
+}
+- genTime = 4.18.2017::7:30:9;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "PotiObserver";
+	- _id = GUID e04836a4-9583-44b4-a01b-5b80d96fb379;
+}
+- genTime = 4.18.2017::7:24:8;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "LedBar";
+	- _id = GUID c2d5c3b8-e0fe-4ea7-b08f-376cecd32516;
+}
+- genTime = 4.18.2017::7:30:8;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _filename = "";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "";
+	- _id = GUID 7da2f158-6e81-4bfe-bcfa-5ce57b5e55c2;
+}
+- genTime = 4.18.2017::7:28:57;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Poti";
+	- _id = GUID 6ce86e89-ec1b-475c-b290-79b623c64ce3;
+}
+- genTime = 4.14.2017::20:32:8;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Display";
+	- _id = GUID 85057fce-019e-4faf-aa33-55938faea72f;
+}
+- genTime = 4.14.2017::20:30:55;
+

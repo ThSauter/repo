@@ -1,0 +1,72 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 10;
+	- value = "MCB1700\\DefaultConfig\\Board.cpp" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\Board.h" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\Default.cpp" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\Default.h" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\Joystick.cpp" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\Joystick.h" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\Led.cpp" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\Led.h" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\LedBar.cpp" 4.26.2017::11:25:35
+	"MCB1700\\DefaultConfig\\LedBar.h" 4.26.2017::11:25:35
+	
+}
+- size = 6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Board";
+	- _id = GUID 0e164094-f978-4236-8d1c-85c5d7c19674;
+}
+- genTime = 4.26.2017::11:25:35;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "Default.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "Default";
+	- _id = GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea;
+}
+- genTime = 4.26.2017::11:25:35;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Joystick";
+	- _id = GUID 24b3e8fc-8587-4e3c-932a-bbd58b55ce0c;
+}
+- genTime = 4.26.2017::11:25:35;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "LedBar";
+	- _id = GUID 01253ee6-ff71-4615-a7c5-05e6215f5c28;
+}
+- genTime = 4.26.2017::11:25:35;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Led";
+	- _id = GUID c2d5c3b8-e0fe-4ea7-b08f-376cecd32516;
+}
+- genTime = 4.26.2017::11:25:35;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "MCB1700.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "MCB1700\\DefaultConfig";
+	- _id = GUID c9010ea4-d614-41d3-a380-b8dc717fefa6;
+}
+- genTime = 4.26.2017::11:25:35;
+

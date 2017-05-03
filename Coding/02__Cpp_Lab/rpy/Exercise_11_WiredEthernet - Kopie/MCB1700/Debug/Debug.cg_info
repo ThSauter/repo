@@ -1,0 +1,78 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 16;
+	- value = "MCB1700\\Debug\\Board.cpp" 4.25.2017::5:3:14
+	"MCB1700\\Debug\\Board.h" 4.24.2017::20:21:36
+	"MCB1700\\Debug\\Default.cpp" 4.24.2017::20:34:6
+	"MCB1700\\Debug\\Default.h" 4.25.2017::4:56:35
+	"MCB1700\\Debug\\Joystick.cpp" 4.24.2017::20:21:38
+	"MCB1700\\Debug\\Joystick.h" 4.24.2017::20:21:38
+	"MCB1700\\Debug\\Led.cpp" 4.24.2017::20:37:37
+	"MCB1700\\Debug\\Led.h" 4.24.2017::20:37:37
+	"MCB1700\\Debug\\LedBar.cpp" 4.25.2017::5:3:31
+	"MCB1700\\Debug\\LedBar.h" 4.25.2017::5:2:5
+	"MCB1700\\Debug\\class_1.cpp" 4.24.2017::19:40:47
+	"MCB1700\\Debug\\class_1.h" 4.24.2017::19:40:47
+	"MCB1700\\Debug\\class_2.cpp" 4.24.2017::19:44:8
+	"MCB1700\\Debug\\class_2.h" 4.24.2017::19:44:8
+	"MCB1700\\Debug\\class_3.cpp" 4.24.2017::19:49:20
+	"MCB1700\\Debug\\class_3.h" 4.24.2017::19:49:20
+	
+}
+- size = 6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Board";
+	- _id = GUID 0e164094-f978-4236-8d1c-85c5d7c19674;
+}
+- genTime = 4.25.2017::5:3:14;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "Default.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "Default";
+	- _id = GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea;
+}
+- genTime = 4.25.2017::4:56:35;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Joystick";
+	- _id = GUID 24b3e8fc-8587-4e3c-932a-bbd58b55ce0c;
+}
+- genTime = 4.24.2017::20:21:38;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "MCB1700.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "MCB1700\\Debug";
+	- _id = GUID 840289d8-7f5d-48ac-a5cb-a20ec035818c;
+}
+- genTime = 4.25.2017::5:3:32;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Led";
+	- _id = GUID c2d5c3b8-e0fe-4ea7-b08f-376cecd32516;
+}
+- genTime = 4.24.2017::20:37:37;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "LedBar";
+	- _id = GUID 01253ee6-ff71-4615-a7c5-05e6215f5c28;
+}
+- genTime = 4.25.2017::5:3:31;
+

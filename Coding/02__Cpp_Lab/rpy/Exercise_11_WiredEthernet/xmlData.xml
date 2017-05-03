@@ -1,0 +1,257 @@
+<DataModel application="Application" tool="Rhapsody">
+  <Target>
+    <Endianness>Little</Endianness>
+    <Alignment>1</Alignment>
+    <TypeList>
+      <Type size="0">*</Type>
+      <Type size="0">SOCKADDR_IN</Type>
+      <Type size="0">char</Type>
+      <Type size="0">int</Type>
+      <Type size="0">ActiveController</Type>
+      <Type size="0">EthernetController</Type>
+      <Type size="0">LED</Type>
+      <Type size="0">SequentialController</Type>
+    </TypeList>
+  </Target>
+  <Language>CPP</Language>
+  <EventList>
+    <Event id="16401" name="evToggle">
+      <ArgumentsList/>
+    </Event>
+    <Event id="16402" name="evOn">
+      <ArgumentsList/>
+    </Event>
+    <Event id="16403" name="evOff">
+      <ArgumentsList/>
+    </Event>
+    <Event id="16404" name="evReceivedData">
+      <ArgumentsList/>
+    </Event>
+  </EventList>
+  <Operations/>
+  <HighWater>
+    <HighWaterList>
+      <CurrentAndMax>
+        <Name>hugeBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>0U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>largeBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>2U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>mediumBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>6U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>smallBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>12U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>tinyBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>0U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>maxTimeouts</Name>
+        <Type>uint16</Type>
+        <Max>32U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+    </HighWaterList>
+  </HighWater>
+  <Class>
+    <Name>ActiveController</Name>
+    <ID>101</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">Receive</State>
+    <AttributeList>
+      <Attribute>
+        <Name>addr</Name>
+        <Type>SOCKADDR_IN</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>dbuf</Name>
+        <Type>char</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>sock</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLED</Name>
+        <Type>LED*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>SequentialController</Name>
+    <ID>102</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">On</State>
+    <State id="2">Off</State>
+    <AttributeList>
+      <Attribute>
+        <Name>itsLED</Name>
+        <Type>LED*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>LED</Name>
+    <ID>103</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">On</State>
+    <State id="2">Off</State>
+    <AttributeList>
+      <Attribute>
+        <Name>bitIndicator</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>TestBuilder</Name>
+    <ID>104</ID>
+    <parallelStateCount>0</parallelStateCount>
+    <AttributeList>
+      <Attribute>
+        <Name>itsActiveController</Name>
+        <Type>ActiveController</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsEthernetController</Name>
+        <Type>EthernetController</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLED1</Name>
+        <Type>LED</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLED2</Name>
+        <Type>LED</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLED3</Name>
+        <Type>LED</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsSequentialController</Name>
+        <Type>SequentialController</Type>
+        <Visible>True</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>EthernetController</Name>
+    <ID>105</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">state_0</State>
+    <AttributeList>
+      <Attribute>
+        <Name>addr</Name>
+        <Type>SOCKADDR_IN</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>dbuf</Name>
+        <Type>char</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>sock</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLED</Name>
+        <Type>LED*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+</DataModel>
