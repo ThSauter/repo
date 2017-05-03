@@ -1,0 +1,146 @@
+I-Logix-RPY-Archive version 8.12.0 C++ 9641846
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Libs.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "Libs";
+		- _id = GUID 69475eb7-5ef4-46bc-9117-4ce518750ecd;
+	}
+	- _id = GUID b98bdd42-60f3-497a-b33f-9a3ab368eb94;
+	- _myState = 8192;
+	- _name = "Display";
+	- _modifiedTimeWeak = 4.5.2017::18:40:58;
+	- weakCGTime = 4.5.2017::18:40:58;
+	- strongCGTime = 3.31.2017::9:14:21;
+	- _defaultComposite = GUID e70ffe0c-b2ee-4b1d-87f2-6c511d541c3c;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID e70ffe0c-b2ee-4b1d-87f2-6c511d541c3c;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 4.3.2017::20:17:5;
+			- weakCGTime = 4.3.2017::20:17:5;
+			- strongCGTime = 3.31.2017::9:14:21;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IModule 
+					- _id = GUID f1f3e3df-0037-4abf-ac55-7e44d61fab4c;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UseAsExternal";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "Board_GLCD";
+					- _modifiedTimeWeak = 3.31.2017::8:43:21;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 3b7731b1-4724-44bb-8e15-5e1452e44462;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _implicitClass = { IClass 
+						- _id = GUID 3b7731b1-4724-44bb-8e15-5e1452e44462;
+						- _myState = 10240;
+						- _name = "Board_GLCD";
+						- _modifiedTimeWeak = 3.31.2017::8:42:45;
+						- weakCGTime = 3.31.2017::8:42:45;
+						- strongCGTime = 3.31.2017::8:42:45;
+						- _multiplicity = "";
+						- _itsStateChart = { IHandle 
+							- _m2Class = "";
+						}
+						- _classModifier = Unspecified;
+					}
+				}
+				{ IModule 
+					- _id = GUID 1f77c612-26df-4b1d-a957-7375bc3c063c;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UseAsExternal";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "GLCD_config";
+					- _modifiedTimeWeak = 3.31.2017::9:14:21;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID acd5beec-8fa4-4484-8dbf-cf1cb9ff8724;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _implicitClass = { IClass 
+						- _id = GUID acd5beec-8fa4-4484-8dbf-cf1cb9ff8724;
+						- _myState = 10240;
+						- _name = "GLCD_config";
+						- _modifiedTimeWeak = 3.31.2017::9:14:16;
+						- weakCGTime = 3.31.2017::9:14:16;
+						- strongCGTime = 3.31.2017::9:14:16;
+						- _multiplicity = "";
+						- _itsStateChart = { IHandle 
+							- _m2Class = "";
+						}
+						- _classModifier = Unspecified;
+					}
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 3.31.2017::8:42:23;
+}
+
