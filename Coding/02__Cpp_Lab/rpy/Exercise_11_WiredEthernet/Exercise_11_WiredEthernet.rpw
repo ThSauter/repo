@@ -1,12 +1,42 @@
-I-Logix-RPY-Archive version 8.12.0 * 9641846
+I-Logix-RPY-Archive version 8.13.0 * 9794446
 { CGEMdiWorkspace 
 	- stubList = { IRPYRawContainer 
-		- size = 0;
+		- size = 2;
+		- value = GUID 839b3570-feed-482e-8776-cdf59c7831ae; GUID 12831e05-d580-d500-2767-cffc5fe8467e; 
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 1;
+		- size = 4;
 		- value = 
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 0;
+				- m_nTop = 0;
+				- m_nRight = 1190;
+				- m_nBottom = 394;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IMSC";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "EthernetController";
+				- _name = "FlowChartBSD";
+				- _id = GUID 654eb8e7-52d7-440f-a106-3d42644a8628;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1153 315 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+			- m_bIsActiveView = 0;
+		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
@@ -16,28 +46,86 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -30;
-				- m_nLeft = 75;
-				- m_nTop = 75;
-				- m_nRight = 1260;
-				- m_nBottom = 624;
+				- m_nLeft = 50;
+				- m_nTop = 50;
+				- m_nRight = 1240;
+				- m_nBottom = 444;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
-				- _m2Class = "IStructureDiagram";
-				- _filename = "ExamplePkg.sbs";
-				- _subsystem = "ExamplePkg";
-				- _class = "TestBuilder";
-				- _name = "RunTime";
-				- _id = GUID 06628181-07e8-4d7b-accc-985ac969c6fe;
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "EthernetController";
+				- _id = GUID 0b89939f-e988-47b5-9a6b-c1b7d80c35ee;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 1601 591 ;
+			- _UpLeft = 0 20 ;
+			- _DownRight = 1222 518 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 0;
+			- m_nDiagramIndex = 1;
 			- m_bIsActiveView = 1;
 		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 150;
+				- m_nTop = 150;
+				- m_nRight = 1364;
+				- m_nBottom = 501;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Overview";
+				- _id = GUID 52c01b27-da69-48a6-b576-84a5dd3e10b3;
+			}
+			- _UpLeft = 0 21 ;
+			- _DownRight = 1435 377 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 2;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 50;
+				- m_nTop = 50;
+				- m_nRight = 1240;
+				- m_nBottom = 444;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "EthernetController";
+				- _id = GUID 0b89939f-e988-47b5-9a6b-c1b7d80c35ee;
+			}
+			- _UpLeft = 58 44 ;
+			- _DownRight = 1106 349 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+			- m_bIsActiveView = 0;
+		}
 	}
-	- _fullName = "C:\\02__Cpp_Lab\\rpy\\Exercise_11_WiredEthernet\\Exercise_11_WiredEthernet";
+	- _fullName = "C:\\90__Studium\\Master\\Semester_III\\PROJ\\repo\\Coding\\02__Cpp_Lab\\rpy\\Exercise_11_WiredEthernet\\Exercise_11_WiredEthernet";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}

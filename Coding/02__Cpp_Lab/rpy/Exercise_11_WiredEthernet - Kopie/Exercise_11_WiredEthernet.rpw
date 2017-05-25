@@ -1,7 +1,8 @@
-I-Logix-RPY-Archive version 8.12.0 * 9641846
+I-Logix-RPY-Archive version 8.13.0 * 9794446
 { CGEMdiWorkspace 
 	- stubList = { IRPYRawContainer 
-		- size = 0;
+		- size = 2;
+		- value = GUID 839b3570-feed-482e-8776-cdf59c7831ae; GUID bfc317b6-e8a6-d0c6-ebbd-d5c3478d6a6a; 
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
@@ -10,8 +11,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -31,10 +32,10 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 				- _id = GUID 4841741e-9db6-4972-88b1-2e4095b18069;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1210 353 ;
+			- _DownRight = 1344 578 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
-			- m_bIsActiveView = 0;
+			- m_bIsActiveView = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -97,8 +98,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -117,14 +118,14 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 				- _name = "Overview";
 				- _id = GUID fb1c9b9c-2ea3-4199-a470-4c8d0076d38d;
 			}
-			- _UpLeft = 177 18 ;
-			- _DownRight = 1385 540 ;
+			- _UpLeft = 147 0 ;
+			- _DownRight = 1311 322 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 3;
-			- m_bIsActiveView = 1;
+			- m_bIsActiveView = 0;
 		}
 	}
-	- _fullName = "C:\\02__Cpp_Lab\\rpy\\Exercise_11_WiredEthernet\\Exercise_11_WiredEthernet";
+	- _fullName = "C:\\90__Studium\\Master\\Semester_III\\PROJ\\repo\\Coding\\02__Cpp_Lab\\rpy\\Exercise_11_WiredEthernet - Kopie\\Exercise_11_WiredEthernet";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}
@@ -142,11 +143,23 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 	}
 
 	- m_favoritesTree = {
-		count=1;
+		count=2;
 		{ - favoritesItem
 			generation = 0;
 			name = Favorites;
-			idOrFolder = folder;
+			idOrFolder = folder-expanded;
+		}
+		{ - favoritesItem
+			generation = 1;
+			name = «RXFComponent» MCB1700;
+			idOrFolder = #startHnd# INObjectHandle 
+	- _m2Class = "IComponent"#hndSem#
+	- _filename = "MCB1700.cmp"#hndSem#
+	- _subsystem = ""#hndSem#
+	- _class = ""#hndSem#
+	- _name = "MCB1700"#hndSem#
+	- _id = GUID 93425724-08db-4e42-a798-cb363b94c8e8#hndSem#
+#endHnd#;
 		}
 	}
 

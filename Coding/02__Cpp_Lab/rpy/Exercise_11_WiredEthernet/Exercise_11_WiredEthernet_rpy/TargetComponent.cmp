@@ -23,11 +23,11 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 			- _id = GUID c68b1011-4030-1faa-fd65-9b1a6a305635;
 		}
 	}
-	- _modifiedTimeWeak = 4.30.2017::12:20:15;
+	- _modifiedTimeWeak = 5.3.2017::11:50:56;
 	- m_buildType = Executable;
 	- m_libraries = "";
 	- m_additionalSources = "";
-	- m_standardHeaders = "";
+	- m_standardHeaders = "rl_net.h";
 	- m_includePath = "";
 	- m_initializationCode = "";
 	- m_folder = { IFolder 
@@ -254,7 +254,7 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 	- SelectedVariants = { IRPYRawContainer 
 		- size = 0;
 	}
-	- weakCGTime = 4.30.2017::12:20:15;
-	- strongCGTime = 1.24.2013::9:16:43;
+	- weakCGTime = 5.3.2017::11:50:56;
+	- strongCGTime = 5.3.2017::11:50:56;
 }
 

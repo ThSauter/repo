@@ -4,13 +4,16 @@
     <Alignment>1</Alignment>
     <TypeList>
       <Type size="0">*</Type>
-      <Type size="0">SOCKADDR_IN</Type>
       <Type size="0">char</Type>
+      <Type size="0">SOCKADDR_IN</Type>
       <Type size="0">int</Type>
-      <Type size="0">ActiveController</Type>
-      <Type size="0">EthernetController</Type>
-      <Type size="0">LED</Type>
-      <Type size="0">SequentialController</Type>
+      <Type size="0">Display</Type>
+      <Type size="0">EthernetReceiver</Type>
+      <Type size="0">EthernetTransmitter</Type>
+      <Type size="0">Joystick</Type>
+      <Type size="0">Led</Type>
+      <Type size="0">LedBar</Type>
+      <Type size="0">RunningIndicatorLed</Type>
     </TypeList>
   </Target>
   <Language>CPP</Language>
@@ -25,6 +28,22 @@
       <ArgumentsList/>
     </Event>
     <Event id="16404" name="evReceivedData">
+      <ArgumentsList>
+        <Parameter>
+          <Name>data</Name>
+          <Type>char</Type>
+        </Parameter>
+      </ArgumentsList>
+    </Event>
+    <Event id="16405" name="evNewJoystickPosition">
+      <ArgumentsList>
+        <Parameter>
+          <Name>joystickPosition</Name>
+          <Type>char</Type>
+        </Parameter>
+      </ArgumentsList>
+    </Event>
+    <Event id="16406" name="evBlink">
       <ArgumentsList/>
     </Event>
   </EventList>
@@ -70,11 +89,9 @@
     </HighWaterList>
   </HighWater>
   <Class>
-    <Name>ActiveController</Name>
+    <Name>EthernetController</Name>
     <ID>101</ID>
-    <parallelStateCount>1</parallelStateCount>
-    <State id="0">OMNonState</State>
-    <State id="1">Receive</State>
+    <parallelStateCount>0</parallelStateCount>
     <AttributeList>
       <Attribute>
         <Name>addr</Name>
@@ -82,49 +99,39 @@
         <Visible>True</Visible>
       </Attribute>
       <Attribute>
+        <Name>sock</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>EthernetReceiver</Name>
+    <ID>102</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <Parent>EthernetController</Parent>
+    <State id="0">OMNonState</State>
+    <State id="1">Receive</State>
+    <AttributeList>
+      <Attribute>
         <Name>dbuf</Name>
         <Type>char</Type>
         <Visible>True</Visible>
       </Attribute>
       <Attribute>
-        <Name>sock</Name>
-        <Type>int</Type>
+        <Name>itsDisplay</Name>
+        <Type>Display*</Type>
         <Visible>True</Visible>
       </Attribute>
       <Attribute>
-        <Name>itsLED</Name>
-        <Type>LED*</Type>
+        <Name>itsLed</Name>
+        <Type>Led*</Type>
         <Visible>True</Visible>
       </Attribute>
       <Attribute>
-        <Name>rootState_subState</Name>
-        <Type>int</Type>
-        <Visible>False</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>rootState_active</Name>
-        <Type>int</Type>
-        <Visible>False</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>rootState_timeout</Name>
-        <Type>IOxfTimeout*</Type>
-        <Visible>False</Visible>
-      </Attribute>
-    </AttributeList>
-    <ActiveClass>1</ActiveClass>
-  </Class>
-  <Class>
-    <Name>SequentialController</Name>
-    <ID>102</ID>
-    <parallelStateCount>1</parallelStateCount>
-    <State id="0">OMNonState</State>
-    <State id="1">On</State>
-    <State id="2">Off</State>
-    <AttributeList>
-      <Attribute>
-        <Name>itsLED</Name>
-        <Type>LED*</Type>
+        <Name>itsLedBar</Name>
+        <Type>LedBar*</Type>
         <Visible>True</Visible>
       </Attribute>
       <Attribute>
@@ -146,7 +153,7 @@
     <ActiveClass>1</ActiveClass>
   </Class>
   <Class>
-    <Name>LED</Name>
+    <Name>RunningIndicatorLed</Name>
     <ID>103</ID>
     <parallelStateCount>1</parallelStateCount>
     <State id="0">OMNonState</State>
@@ -154,86 +161,8 @@
     <State id="2">Off</State>
     <AttributeList>
       <Attribute>
-        <Name>bitIndicator</Name>
-        <Type>int</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>rootState_subState</Name>
-        <Type>int</Type>
-        <Visible>False</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>rootState_active</Name>
-        <Type>int</Type>
-        <Visible>False</Visible>
-      </Attribute>
-    </AttributeList>
-    <ActiveClass>0</ActiveClass>
-  </Class>
-  <Class>
-    <Name>TestBuilder</Name>
-    <ID>104</ID>
-    <parallelStateCount>0</parallelStateCount>
-    <AttributeList>
-      <Attribute>
-        <Name>itsActiveController</Name>
-        <Type>ActiveController</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>itsEthernetController</Name>
-        <Type>EthernetController</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>itsLED1</Name>
-        <Type>LED</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>itsLED2</Name>
-        <Type>LED</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>itsLED3</Name>
-        <Type>LED</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>itsSequentialController</Name>
-        <Type>SequentialController</Type>
-        <Visible>True</Visible>
-      </Attribute>
-    </AttributeList>
-    <ActiveClass>0</ActiveClass>
-  </Class>
-  <Class>
-    <Name>EthernetController</Name>
-    <ID>105</ID>
-    <parallelStateCount>1</parallelStateCount>
-    <State id="0">OMNonState</State>
-    <State id="1">state_0</State>
-    <AttributeList>
-      <Attribute>
-        <Name>addr</Name>
-        <Type>SOCKADDR_IN</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>dbuf</Name>
-        <Type>char</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>sock</Name>
-        <Type>int</Type>
-        <Visible>True</Visible>
-      </Attribute>
-      <Attribute>
-        <Name>itsLED</Name>
-        <Type>LED*</Type>
+        <Name>itsLed</Name>
+        <Type>Led*</Type>
         <Visible>True</Visible>
       </Attribute>
       <Attribute>
@@ -253,5 +182,224 @@
       </Attribute>
     </AttributeList>
     <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>Led</Name>
+    <ID>104</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">On</State>
+    <State id="2">Off</State>
+    <State id="3">BlinkOn</State>
+    <State id="4">BlinkOff</State>
+    <AttributeList>
+      <Attribute>
+        <Name>bitIndicator</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>blinkTimeoutMs</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>TestBuilder</Name>
+    <ID>105</ID>
+    <parallelStateCount>0</parallelStateCount>
+    <AttributeList>
+      <Attribute>
+        <Name>itsDisplay</Name>
+        <Type>Display</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsEthernetReceiver</Name>
+        <Type>EthernetReceiver</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsEthernetTransmitter</Name>
+        <Type>EthernetTransmitter</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsJoystick</Name>
+        <Type>Joystick</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed28</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed29</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed31</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLedBar</Name>
+        <Type>LedBar</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsRunningIndicatorLed</Name>
+        <Type>RunningIndicatorLed</Type>
+        <Visible>True</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>EthernetTransmitter</Name>
+    <ID>106</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <Parent>EthernetController</Parent>
+    <State id="0">OMNonState</State>
+    <State id="1">state_0</State>
+    <AttributeList>
+      <Attribute>
+        <Name>dbuf</Name>
+        <Type>char</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed</Name>
+        <Type>Led*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>Joystick</Name>
+    <ID>107</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">Sample</State>
+    <State id="2">Hold</State>
+    <AttributeList>
+      <Attribute>
+        <Name>lastPosition</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>sampleTime</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsEthernetTransmitter</Name>
+        <Type>EthernetTransmitter*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>LedBar</Name>
+    <ID>108</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">ProcessLeds</State>
+    <State id="2">Idle</State>
+    <AttributeList>
+      <Attribute>
+        <Name>joystickPosition</Name>
+        <Type>char</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLeds</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>Display</Name>
+    <ID>109</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">Refresh</State>
+    <AttributeList>
+      <Attribute>
+        <Name>itsEthernetReceiver</Name>
+        <Type>EthernetReceiver*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
   </Class>
 </DataModel>

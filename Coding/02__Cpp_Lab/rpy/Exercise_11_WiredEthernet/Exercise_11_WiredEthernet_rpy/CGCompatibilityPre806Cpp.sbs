@@ -116,8 +116,8 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 			- _id = GUID c4916b7f-5ca2-41a3-b8a9-6ac22b145b51;
 		}
 	}
-	- _modifiedTimeWeak = 4.30.2017::12:20:15;
-	- weakCGTime = 4.30.2017::12:20:15;
+	- _modifiedTimeWeak = 5.3.2017::8:50:58;
+	- weakCGTime = 5.3.2017::8:50:58;
 	- strongCGTime = 1.12.2014::12:43:32;
 	- _defaultComposite = GUID 1c8fbb9a-6f4a-44b2-a7d6-04d7a98775dd;
 	- _eventsBaseID = -1;
@@ -128,9 +128,9 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 			- _id = GUID 1c8fbb9a-6f4a-44b2-a7d6-04d7a98775dd;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 1.12.2014::11:32:28;
-			- weakCGTime = 1.12.2014::11:32:28;
-			- strongCGTime = 1.12.2014::11:32:28;
+			- _modifiedTimeWeak = 5.3.2017::8:50:58;
+			- weakCGTime = 5.3.2017::8:50:58;
+			- strongCGTime = 1.12.2014::12:43:32;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
 				- _m2Class = "";

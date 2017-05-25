@@ -1,7 +1,7 @@
-I-Logix-RPY-Archive version 8.12.0 * 9641846
+I-Logix-RPY-Archive version 8.13.0 * 9794446
 
 - filesTable = { IRPYRawContainer 
-	- size = 11;
+	- size = 16;
 	- value = "Exercise_11_WiredEthernet.rpy" ""
 	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre803Cpp.sbs" "CGCompatibilityPre803Cpp"
 	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre804Cpp.sbs" "CGCompatibilityPre804Cpp"
@@ -10,9 +10,14 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre812Cpp.sbs" "CGCompatibilityPre812Cpp"
 	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre813Cpp.sbs" "CGCompatibilityPre813Cpp"
 	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre814Cpp.sbs" "CGCompatibilityPre814Cpp"
+	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre815Cpp.sbs" "CGCompatibilityPre815Cpp"
 	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre81Cpp.sbs" "CGCompatibilityPre81Cpp"
-	"Exercise_11_WiredEthernet_rpy\\ExamplePkg.sbs" "ExamplePkg"
-	"Exercise_11_WiredEthernet_rpy\\TargetComponent.cmp" "TargetComponent"
+	"Exercise_11_WiredEthernet_rpy\\CGCompatibilityPre82Cpp.sbs" "CGCompatibilityPre82Cpp"
+	"Exercise_11_WiredEthernet_rpy\\DefaultPkg.sbs" "DefaultPkg"
+	"Exercise_11_WiredEthernet_rpy\\Display.sbs" "Libs::Display"
+	"Exercise_11_WiredEthernet_rpy\\Ethernet.sbs" "Libs::Ethernet"
+	"Exercise_11_WiredEthernet_rpy\\Libs.sbs" "Libs"
+	"Exercise_11_WiredEthernet_rpy\\MCB1700.cmp" "MCB1700"
 	
 }
 

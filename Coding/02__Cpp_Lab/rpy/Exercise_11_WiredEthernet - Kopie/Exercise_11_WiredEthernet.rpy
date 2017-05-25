@@ -1,9 +1,9 @@
-I-Logix-RPY-Archive version 8.12.0 C++ 9641846
+I-Logix-RPY-Archive version 8.13.0 C++ 9794446
 { IProject 
 	- _id = GUID 9fe820e0-2416-4f0d-aadd-d3c67f311616;
 	- _myState = 8192;
 	- _name = "Exercise_11_WiredEthernet";
-	- _modifiedTimeWeak = 4.25.2017::5:0:19;
+	- _modifiedTimeWeak = 5.7.2017::11:33:11;
 	- _lastID = 1;
 	- _UserColors = { IRPYRawContainer 
 		- size = 16;
@@ -46,7 +46,7 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 		}
 	}
 	- Subsystems = { IRPYRawContainer 
-		- size = 3;
+		- size = 5;
 		- value = 
 		{ ISubsystem 
 			- fileName = "Default";
@@ -56,13 +56,21 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 			- fileName = "RXF-Eval_Rpy-Cpp-ARM_Profile";
 			- _persistAs = "$OMROOT\\Profiles\\WST_RXF_V6";
 			- _id = GUID bfc317b6-e8a6-d0c6-ebbd-d5c3478d6a6a;
-			- _isReference = 1;
+			- _partOfTheModelKind = referenceunit;
 		}
 		{ IProfile 
 			- fileName = "WSTProfile";
 			- _persistAs = "$OMROOT\\Profiles\\WST_RXF_V6";
 			- _id = GUID 839b3570-feed-482e-8776-cdf59c7831ae;
-			- _isReference = 1;
+			- _partOfTheModelKind = referenceunit;
+		}
+		{ IProfile 
+			- fileName = "CGCompatibilityPre815Cpp";
+			- _id = GUID 9d010694-7844-4cae-a420-3b25ad4f4244;
+		}
+		{ IProfile 
+			- fileName = "CGCompatibilityPre82Cpp";
+			- _id = GUID 40cbe594-82cd-42e6-be5a-cbec76e87570;
 		}
 	}
 	- Diagrams = { IRPYRawContainer 
@@ -160,7 +168,7 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 			}
 			- _name = "Overview";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "4.25.2017::5:0:23";
+			- _lastModifiedTime = "5.7.2017::11:33:11";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 09a382a7-296a-49df-8bd7-47ea650096df;
 				- m_type = 0;
@@ -329,7 +337,7 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 4104;
-					- m_transform = 0.179415 0 0 0.119429 403.641 351.708 ;
+					- m_transform = 0.179415 0 0 0.119429 402.641 351.708 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -372,6 +380,8 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 									- _id = GUID cc0c16f7-03e8-4380-995e-af7cb9b4b8f5;
 								}
 							}
+							- _itemValueOfFontPropertiesMapCount = 1;
+							- _fontPropValues = " -1 -1 -1 0 0 0";
 						}
 						{ CGICompartment 
 							- _id = GUID 22a87b1d-5305-4c6d-a93b-e36d9a1b64b4;
@@ -407,6 +417,10 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 									- _id = GUID 06add599-3062-4030-8aed-ce59a3fa8c0b;
 								}
 							}
+							- _itemValueOfFontPropertiesMapCount = 3;
+							- _fontPropValues = " -1 -1 -1 0 0 0";
+							- _fontPropValues = " -1 -1 -1 0 0 0";
+							- _fontPropValues = " -1 -1 -1 0 0 0";
 						}
 					}
 					- Attrs = { IRPYRawContainer 
@@ -524,6 +538,13 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 							- m_displayOption = All;
 							- m_bShowInherited = 0;
 							- m_bOrdered = 0;
+							- _itemValueOfFontPropertiesMapCount = 6;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
 						}
 					}
 					- Attrs = { IRPYRawContainer 
@@ -603,11 +624,12 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
+					- m_arrow = 2 494 376  493 376  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 507 1434 ;
-					- m_TargetPort = 504 446 ;
+					- m_SourcePort = 507 1451 ;
+					- m_TargetPort = 504 329 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -810,6 +832,8 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 							- m_displayOption = All;
 							- m_bShowInherited = 0;
 							- m_bOrdered = 0;
+							- _itemValueOfFontPropertiesMapCount = 1;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
 						}
 						{ CGICompartment 
 							- _id = GUID af7f7582-26da-4f83-a54b-466348de806f;
@@ -817,6 +841,9 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 							- m_displayOption = All;
 							- m_bShowInherited = 0;
 							- m_bOrdered = 0;
+							- _itemValueOfFontPropertiesMapCount = 2;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
 						}
 					}
 					- Attrs = { IRPYRawContainer 
@@ -1103,6 +1130,9 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 							- m_displayOption = All;
 							- m_bShowInherited = 0;
 							- m_bOrdered = 0;
+							- _itemValueOfFontPropertiesMapCount = 2;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
 						}
 						{ CGICompartment 
 							- _id = GUID 2d90dc5e-8843-4b68-9a1e-6c8165316d5f;
@@ -1110,6 +1140,9 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 							- m_displayOption = All;
 							- m_bShowInherited = 0;
 							- m_bOrdered = 0;
+							- _itemValueOfFontPropertiesMapCount = 2;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
 						}
 					}
 					- Attrs = { IRPYRawContainer 
@@ -1758,6 +1791,9 @@ I-Logix-RPY-Archive version 8.12.0 C++ 9641846
 							- m_displayOption = Public;
 							- m_bShowInherited = 0;
 							- m_bOrdered = 0;
+							- _itemValueOfFontPropertiesMapCount = 2;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
 						}
 					}
 					- Attrs = { IRPYRawContainer 
