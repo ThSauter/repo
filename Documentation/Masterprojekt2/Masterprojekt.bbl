@@ -1,0 +1,283 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{RLARMtoCMSIS}{manual}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a577b878524059483a777b7407a121b8}{%
+           family={{ARM Keil Group}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a577b878524059483a777b7407a121b8}
+      \strng{fullhash}{a577b878524059483a777b7407a121b8}
+      \strng{authornamehash}{a577b878524059483a777b7407a121b8}
+      \strng{authorfullhash}{a577b878524059483a777b7407a121b8}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Migrate RTX to CMSIS-RTOS}
+      \field{type}{Application Note 264}
+      \field{year}{2014}
+    \endentry
+    \entry{MDK}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a577b878524059483a777b7407a121b8}{%
+           family={{ARM Keil Group}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a577b878524059483a777b7407a121b8}
+      \strng{fullhash}{a577b878524059483a777b7407a121b8}
+      \strng{authornamehash}{a577b878524059483a777b7407a121b8}
+      \strng{authorfullhash}{a577b878524059483a777b7407a121b8}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{extrayear}{1}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MDK Microcontroller Development Kit}
+      \field{urlday}{14}
+      \field{urlmonth}{5}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www2.keil.com/mdk5/
+      \endverb
+    \endentry
+    \entry{NetworkComponent2017}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a577b878524059483a777b7407a121b8}{%
+           family={{ARM Keil Group}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a577b878524059483a777b7407a121b8}
+      \strng{fullhash}{a577b878524059483a777b7407a121b8}
+      \strng{authornamehash}{a577b878524059483a777b7407a121b8}
+      \strng{authorfullhash}{a577b878524059483a777b7407a121b8}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{extrayear}{2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Network Component: MDK Middleware for IPv4 and IPv6 Networking}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.keil.com/pack/doc/mw/Network/html/nw_resource_requirements.html
+      \endverb
+    \endentry
+    \entry{CmsisRtos2017}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a577b878524059483a777b7407a121b8}{%
+           family={{ARM Keil Group}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a577b878524059483a777b7407a121b8}
+      \strng{fullhash}{a577b878524059483a777b7407a121b8}
+      \strng{authornamehash}{a577b878524059483a777b7407a121b8}
+      \strng{authorfullhash}{a577b878524059483a777b7407a121b8}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{extrayear}{3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real-Time Operating System: API and RTX Reference Implementation.}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.keil.com/pack/doc/CMSIS/RTOS/html/threadConfig.html
+      \endverb
+    \endentry
+    \entry{IBM2017}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rational Rhapsody family}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www-03.ibm.com/software/products/en/ratirhapfami
+      \endverb
+    \endentry
+    \entry{ExternalSources}{report}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=84a22146a4726431ebc11459f9688240}{%
+           family={Matuschek},
+           familyi={M\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=6a582f375c16696aa93f582595bce935}{%
+           family={Van\bibnamedelimb der\bibnamedelima Heiden},
+           familyi={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Willert Software Tools GmbH}%
+      }
+      \strng{namehash}{11d56f2e8bc831d43e1288a01190844b}
+      \strng{fullhash}{11d56f2e8bc831d43e1288a01190844b}
+      \strng{authornamehash}{11d56f2e8bc831d43e1288a01190844b}
+      \strng{authorfullhash}{11d56f2e8bc831d43e1288a01190844b}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{external sources}
+      \field{type}{Handout}
+      \field{year}{2015}
+    \endentry
+    \entry{RXFMigrationGuide}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=1a752be27e6fc3244e0f344b7dd72cf1}{%
+           family={Römer},
+           familyi={R\bibinitperiod},
+           given={Eike},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Willert Software Tools GmbH}%
+      }
+      \strng{namehash}{1a752be27e6fc3244e0f344b7dd72cf1}
+      \strng{fullhash}{1a752be27e6fc3244e0f344b7dd72cf1}
+      \strng{authornamehash}{1a752be27e6fc3244e0f344b7dd72cf1}
+      \strng{authorfullhash}{1a752be27e6fc3244e0f344b7dd72cf1}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RXF Migration Guide}
+      \field{type}{Application Note}
+      \field{year}{2012}
+    \endentry
+    \entry{Steinmeyer}{report}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=15879063112f05ae804a0d6219dc89ff}{%
+           family={Steinmeyer},
+           familyi={S\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=b46f33a5f2339675615455dbb0ebdf6d}{%
+           family={Pollithy},
+           familyi={P\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Hochschule Ulm}%
+      }
+      \strng{namehash}{dc63a322c2862ae6d54acfe86ae2a452}
+      \strng{fullhash}{dc63a322c2862ae6d54acfe86ae2a452}
+      \strng{authornamehash}{dc63a322c2862ae6d54acfe86ae2a452}
+      \strng{authorfullhash}{dc63a322c2862ae6d54acfe86ae2a452}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Codegenerierung aus UML Aktivitätsdiagrammen und Implementierung einer Ethernet Schnittstelle für Embedded Systems}
+      \field{type}{Master-Projektarbeit}
+      \field{year}{2015}
+    \endentry
+    \entry{ModelingEmSys}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=6a582f375c16696aa93f582595bce935}{%
+           family={Van\bibnamedelimb der\bibnamedelima Heiden},
+           familyi={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Willert Software Tools GmbH}%
+      }
+      \strng{namehash}{6a582f375c16696aa93f582595bce935}
+      \strng{fullhash}{6a582f375c16696aa93f582595bce935}
+      \strng{authornamehash}{6a582f375c16696aa93f582595bce935}
+      \strng{authorfullhash}{6a582f375c16696aa93f582595bce935}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{V8.0en}
+      \field{title}{Modeling Embedded Systems}
+      \field{type}{Datenblatt}
+      \field{year}{2016}
+    \endentry
+    \entry{Schwerin17}{report}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=a3661021604c89a94e674f7f363c8c80}{%
+           family={{von Schwerin}},
+           familyi={v\bibinitperiod},
+           given={Marianne},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=d75fb50c73bf6fe858e42cc72476ac2b}{%
+           family={Normann},
+           familyi={N\bibinitperiod},
+           given={Norbert},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Hochschule Ulm}%
+      }
+      \strng{namehash}{ad12b52cf207f44487a7caed8462e10e}
+      \strng{fullhash}{ad12b52cf207f44487a7caed8462e10e}
+      \strng{authornamehash}{ad12b52cf207f44487a7caed8462e10e}
+      \strng{authorfullhash}{ad12b52cf207f44487a7caed8462e10e}
+      \field{sortinit}{v}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Laboratory Guide - Embedded Systems}
+      \field{type}{Guide}
+      \field{year}{2017}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

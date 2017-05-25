@@ -1,0 +1,22 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$CMSIS$}]\begingroup Cortex Microcontroller Software Interface Standard\nomeqref {\relax 2.0}
+		\nompageref{5}
+  \item [{$CPU$}]\begingroup Central Processing Unit\nomeqref {\relax 2.0}
+		\nompageref{4}
+  \item [{$IDE$}]\begingroup Integrated Development Environment\nomeqref {\relax 2.0}
+		\nompageref{4}
+  \item [{$MDK$}]\begingroup Microcontroller Development Kit\nomeqref {\relax 2.0}
+		\nompageref{5}
+  \item [{$RL-ARM$}]\begingroup Real-Time Library for ARM microprocessors\nomeqref {\relax 2.0}
+		\nompageref{5}
+  \item [{$RTE$}]\begingroup Run-Time-Environment\nomeqref {\relax 2.0}
+		\nompageref{5}
+  \item [{$RTOS$}]\begingroup Real Time Operating System\nomeqref {\relax 2.0}
+		\nompageref{4}
+  \item [{$RXF$}]\begingroup Real-time eXecution Framework\nomeqref {\relax 2.0}
+		\nompageref{4}
+
+\end{thenomenclature}

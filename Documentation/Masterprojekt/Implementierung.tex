@@ -1,0 +1,231 @@
+\chapter{Implementierungen}
+\section{Ethernet}
+
+Dieses Kapitel beschreibt die Einbindung der Ethernet Schnittstelle des Keil MCB1760 Evaluation Boards. Ziel ist es, dass zwei Boards über ihre Ethernet Schnittstelle Daten austauschen können. In der Implementierung nach \citet{Steinmeyer} wurde die gewünschte Funktionalität bereits umgesetzt, jedoch auf der Basis des RTX RL-ARM Echtzeitbetriebssystems und einer damit überholten Version der Keil MDK. Zudem soll die gesamte Implementierung in Rhapsody stattfinden, so dass der generierte Code in der IDE Keil uVision lediglich übersetzt und auf das Target geflasht werden muss. 
+
+Zur Implementierung und Demonstration der Kommunikation über Ethernet wurde eine Entwicklungsumgebung entsprechend der nachfolgenden Abbildung aufgebaut.
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=1\textwidth]{images/EthernetAufbau.pdf}
+		\caption[Demonstrator Ethernet zwischen zwei Eval Boards]{Demonstrator für die Kommunikation zwischen zwei MCB1760 Evaluation Boards über Ethernet}
+	\label{fig:DemonstratorEthernet}
+\end{figure}
+
+Wie in \autoref{fig:DemonstratorEthernet} dargestellt, sind die beiden MCB1760 Evaluation Boards über Patchkabel mit einen Hub verbunden. Der Hub hat gegenüber einem Switch oder Router den Nachteil, dass er eine geringere nutzbare Bandbreite mit sich bringt. Grund dafür ist, dass der Hub ein Datenpaket immer an jedes angeschlossene Gerät sendet, unabhängig davon, ob das Datenpaket an das Gerät adressiert wurde oder nicht. Jedoch unterstützt dieses Defizit bei der Implementierung, indem mit Hilfe eines PCs das Tool Wireshark den Datenverkehr zwischen den beiden MCB1760 Evaluation Boards abhört. Da die versendeten Datenpakete eine Größe von zwei Bytes haben, spielt die nutzbare Bandbreite im Rahmen dieser Arbeit keine Rolle. 
+
+\subsection{Anforderungen}\label{subsec:Anforderungen} 
+
+Zur Demonstration einer funktionsfähigen Ethernet-Kommunikation soll ein exemplarisches Szenario implementiert werden. So sollen LEDs durch den Joystick auf dem jeweils anderen Board ein- und ausgeschaltet werden. Dabei soll die Position des Joysticks angeben, welche LED die LED-Bar ein- oder ausschaltet. Des Weiteren soll das Display die zuletzt empfangene Position anzeigen. Damit die MCB1760 Evaluation Boards einfach zu identifizieren sind, soll das Display zudem die Host IP Adresse sowie die Target IP Adresse darstellen. Beim Senden sowie beim Empfangen eines Datenpakets soll der Transmitter bzw. der Receiver kurzzeitig eine LED blinken lassen. Die Zuordnung von Funktionen zu den LEDs der LED-Bar ist \autoref{fig:Szenario} rechts dargestellt. 
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=1\textwidth]{images/Szenario.pdf}
+		\caption[Beispiel mit Zuordnung der LEDs]{Beispiel mit Zuordnung der LEDs.}
+	\label{fig:Szenario}
+\end{figure}
+
+Zudem veranschaulicht \autoref{fig:Szenario} das Funktionsprinzip. Auf dem Host MCB1760 Evaluation Board bewegt der Benutzer den Joystick in die linke Richtung. Das führt dazu, dass beim Remote MCB1760 Evaluation Board die Receiver LED P1.29 kurzzeitig aufleuchtet, sowie die LED P2.3 dauerhaft angeschaltet wird. Bewegt der Benutzer den Joystick erneut in die linke Richtung, erlischt die LED P2.3 wieder.
+
+\subsection{Architektur}
+Bei der Formulierung der Anforderungen in \autoref{subsec:Anforderungen} wurde darauf geachtet, dass diese in möglichst aktiver Form spezifiziert sind. Dadurch können die benötigten Klassen abgeleitet werden, welches sich im Folgenden durch die Ähnlichkeit von Subjekten oder Objekten zu den Klassennamen widerspiegelt.
+
+Die Architektur der Ethernet-Kommunikation ist als Klassendiagramm in \autoref{fig:ClassDiagramEthernet} dargestellt. Zentrales Element ist die Basisklasse \texttt{Ether\-net\-Con\-trol\-ler}, von ihr werden die beiden Klassen \texttt{Ether\-net\-Transmitter} und \texttt{Ether\-net\-Receiver} abgeleitet. Diese beiden Klassen arbeiten in separaten Tasks und sind für das Senden und Empfangen von Datenpaketen verantwortlich. Auf der linken Seite in \autoref{fig:ClassDiagramEthernet} sind die Klassen \texttt{Running\-Indicator\-Led} und \texttt{Joystick} abgebildet, welche ebenfalls in eigenen Tasks ausgeführt werden. Die Klasse \texttt{Running\-Indicator\-Led} lässt die LED P1.31 zyklisch blinken, mit einer Periodendauer von einer Sekunde. Sie dient zu Debugging zwecken und um unmittelbar zu erkennen, ob das Target läuft. Die Klasse \texttt{Joystick} pollt regelmäßig die Position des Joysticks. Auf der rechten Seite sind die Klassen \texttt{LedBar}, \texttt{Display} und \texttt{Led} zu finden. Dabei liegt zwischen den Klassen \texttt{LedBar} und \texttt{Led} eine Komposition mit der Multiplizität vier vor, wodurch der LED-Bar die LEDs zugeordnet sind, welche eine Joystick Position repräsentieren. Außerhalb des Pakets \texttt{DefaultPkg} sind Abhängigkeiten zu externen Bibliotheken in orange eingezeichnet. Die verwendeten Bibliotheken, Network und Graphics Component, stammen aus der MDK Middleware und vereinfachen das Verwenden dieser Peripheriegeräte. Mögliche Vorgehensweisen beim Einbinden externer Quellen beschreiben \citet{ExternalSources}.
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=1\textwidth]{images/ClassDiagramEthernet.pdf}
+		\caption[Klassendiagramm Ethernet-Kommunikation]{Klassendiagramm zur Ethernet-Kommunikation. Klassen, die in eigenen Tasks laufen sind rot eingezeichnet.}
+	\label{fig:ClassDiagramEthernet}
+\end{figure}
+
+\subsection{Design und Coding}
+In diesem Kapitel werden Attribute, Funktionen und Statecharts wichtiger Klassen im Detail vorgestellt.
+
+\subsubsection*{Ethernet-Controller, Transmitter und Receiver}
+Der Ethernet-Controller basiert auf der MDK Middleware Network Component in der Version 7.4.0. Die Network Component beinhaltet eine Vielzahl an Services, Sockets (TCP, UDP und BSD), sowie eine Ethernet Schnittstelle inklusive eines IPv4/IPv6 Protocol Stacks. In dieser Arbeit wird der BSD Socket als Datagram Socket (UDP) zusammen mit dem IPv4 Protocol Stack verwendet. Der BSD Socket stellt eine API zur Verfügung, die das Aufbauen und Abhandeln einer Netzwerkkommunikation unterstützt. Ursprünglich wurden die BSD Sockets für unixnahe Betriebssysteme entwickelt. Mittlerweile sind sie in den POSIX Standard aufgenommen und wurden auch von Microsoft Windows übernommen. Ein Vorteil der BSD Sockets ist, dass mit geringem Konfigurationsaufwand zwischen Stream Sockets (TCP) und Datagram Sockets (UDP) gewechselt werden kann. 
+
+Die Klasse \texttt{Ether\-net\-Con\-trol\-ler} mit ihren Attributen und Operationen ist in \autoref{fig:EthernetController} dargestellt. Zum Spezifizieren der IP-Adressen dienen die Attribute \texttt{hostIpAddr} und \texttt{remoteIpAddr} vom Typ String. Die IP-Adresse werden in Rhapsody über den Features Dialog der beiden Attribute initial festgelegt. Zum Flashen des zweiten Targets können die IP-Adressen einfach getauscht werden.
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=0.475\textwidth]{images/EthernetController.pdf}
+		\caption{Basisklasse des Ethernet-Controllers mit abgeleiteten Klassen.}
+	\label{fig:EthernetController}
+\end{figure}
+
+\lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
+\begin{lstlisting}[caption={Konstruktor des Ethernet-Controllers}, label={lst:EthernetControllerConstructor}, captionpos=b]
+unsigned char buf[8];
+
+if (status != netOK)   
+{	
+	// Initialize the network component only once
+	status = netInitialize (); (*@\label{netInitialize}@*)
+
+	// Set the host ip address once
+	netIP_aton (hostIpAddr, NET_ADDR_IP4, buf);
+	netIF_SetOption (
+		NET_IF_CLASS_ETH | 0, 
+		netIF_OptionIP4_Address, 
+		buf, NET_ADDR_IP4_LEN);
+}
+\end{lstlisting}
+
+\autoref{lst:EthernetControllerConstructor} zeigt den Konstruktor des \texttt{Ether\-net\-Con\-trol\-lers}. Der Konstruktor verwendet ausschließlich Funktionen der Network Component, was am Prefix \texttt{net} zu erkennen ist. In \autoref{netInitialize} wird die Funktion \texttt{netInitialize} aufgerufen. Diese Funktion muss bei Systemstart einmalig ausgeführt werden. Sie initialisiert Systemressourcen, Protokolle und zwei Tasks für den Network Core. Bei erfolgreicher Initialisierung wird dem Attribut \texttt{status} der Wert \texttt{netOK} zugewiesen. Mit der übergeordneten Abfrage wird sichergestellt, dass die Initialisierung auch nur einmalig durchgeführt wird, auch wenn der Konstruktor des \texttt{Ether\-net\-Con\-trol\-lers} durch die beiden Instanzen der abgeleiteten Klassen zweimal durchlaufen wird. Die Funktion \texttt{netIP\_aton} konvertiert eine IP-Adresse vom Typ String in eine binäre Form. Dadurch ist es anschließend möglich, die Host IP-Adresse dynamisch mit Hilfe der Funktion \texttt{netIF\_SetOption} zu setzen. Somit ist die Konfiguration der Host IP-Adresse ebenfalls in Rhapsody möglich und benötigt keine manuelle Anpassung innerhalb der Keil Umgebung.
+
+Das Sequenzdiagramm in \autoref{fig:EthernetTransmitter} stellt das Verhalten des Ethernet-Transmitters dar. Der \texttt{Ether\-net\-Transmitter} erstellt in seinem Konstruktor einen Socket vom Typ Datagram Sockets (UDP), zu erkennen am Übergabeparameter \texttt{SOCK\_DGRAM}. Dem Socket weißt er durch Aufruf von \texttt{connect} die Remote IP-Adresse, also die IP-Adresse des anderen Endpunkts, zu. Aufgrund des gewählten Typ Datagram Sockets (UDP), richtet der \texttt{Ether\-net\-Transmitter} zudem ein Adressfilter zwischen den Endpunkten ein. Im weiteren Ablauf reagiert der \texttt{Ether\-net\-Transmitter} auf das Event \texttt{evNew\-Joy\-stick\-Position} welches vom Joystick abgefeuert wird. Durch die Operation \texttt{transmitData} handelt der \texttt{Ether\-net\-Transmitter} seine Sendeaktivitäten ab. Die Funktion \texttt{send} sorgt dafür, dass die Daten im Buffer \texttt{dbuf} übertragen werden und dass das Event \texttt{evBlink} die Sende-LED P1.28 blinken lässt. 
+
+\begin{figure}%
+	\centering
+	\subfigure[Initialisierung und Sendeablauf des Ethernet-Transmitters.]{
+					\label{fig:EthernetTransmitter}
+					\includegraphics[width=1\textwidth]{images/EthernetTransmitter.pdf}
+	}
+	\subfigure[Initialisierung des Ethernet-Receivers und Ablauf beim Empfangen von Daten.]{
+					\label{fig:EthernetReceiver}
+					\includegraphics[width=1\textwidth]{images/EthernetReceiver.pdf}
+	}%
+	\caption{Sequenzdiagramme des Ethernet-Transmitters und -Receivers.}
+	\label{fig:EthernetTransCeiver}
+\end{figure}
+
+Der \texttt{Ether\-net\-Receiver} erstellt in seinem Konstruktor ebenfalls einen Socket vom Typ Datagram Sockets (UDP) und bindet diesen mit der Funktion \texttt{bind} an die Remote IP-Adresse sowie an den Ziel-Port. Der Ziel-Port \texttt{dstPort} kann für beide Targets gleich bleiben, er definiert an welchem Port auf eingehende Datenpakete gehorcht wird. Anschließend durchläuft der \texttt{Ether\-net\-Transmitter} eine Endlosschleife. In dieser ruft er seine Operation \texttt{receiveData} auf, welche das Empfangen von Daten behandelt. Die Funktion \texttt{recv} empfängt eingehende Daten auf dem zuvor spezifizierten Port. Wenn der Network Core erkennt, dass ein Betriebssystem im Einsatz ist, betreibt der Network Core die Funktion \texttt(recv) automatisch im Blocking Mode. Dadurch ist es zwingend erforderlich, dass die Klasse \texttt{Ether\-net\-Receiver} in einem separaten Task ausgeführt wird. Der Blocking Mode ist zudem mit einem Timeout verbunden, der bei Ablauf in den Errorcode \texttt{BSD\_ERROR\_TIMEOUT} resultiert. Nach Ablauf der vorkonfigurierten Zeit von 20 Sekunden, oder falls zuvor Daten Empfangen wurden, ruft der \texttt{Ether\-net\-Receiver} die Funktion \texttt(recv) erneut auf. Hat der \texttt(Ether\-net\-Receiver) Daten Empfangen, werden diese auf ihre Gültigkeit überprüft. Dazu dient ein minimales Protokoll, dessen erstes Byte signalisiert, dass ein passendes Datenpakt vorhanden ist. Entspricht das erste Byte dem Wert 0x00, feuert der \texttt{Ether\-net\-Receiver} das Event \texttt{evBlink} an seine LED, damit die Empfangs-LED P1.29 blinkt. Zudem sendet er das Event \texttt{evReceivedData} mit dem Inhalt des zweiten Bytes an die LED-Bar, sowie an das Display. Das Verhalten des \texttt{Ether\-net\-Receiver} ist in \autoref{fig:EthernetReceiver} dargestellt.
+
+Somit gibt es je Target einen \texttt{Ether\-net\-Transmitter} und einen \texttt{Ether\-net\-Receiver}, die in eigenen Tasks ihre Routinen durchlaufen. 
+
+\subsubsection*{Joystick}
+
+Der Joystick verfügt in Summe über sechs verschiedene Richtungen, von denen zunächst die vier Richtungen links, rechts, oben und unten von Interesse sind. Das Abtasten und Auslesen der Position des Joysticks erfolgte in Anlehnung an \citet{Schwerin17}. Dabei wurde die Auswertung der Joystick Position um ein Filter ergänzt, damit nur relevante und neue Positionen via Ethernet übertragen werden. Ursache dafür ist, dass der Joystick nach der Betätigung, in eine der zuvor aufgezählten Richtung, wieder in die zentrale Position zurück kehrt. Dadurch nimmt der Joystick eine für ihn neue Position ein und würde ohne Filter das Senden eines Datenpakets triggern. \autoref{lst:JoystickFilter} zeigt die Implementierung des Filters. Entspricht die Position des Joystick der mittigen Position, wird nie ein Event abgefeuert. Hat der Joystick eine andere Richtung eingenommen, feuert die Klasse \texttt{Joystick} das Event \texttt{evNewJoy\-stick\-Position} an den \texttt{Ether\-net\-Transmitter}.
+
+Die Klasse \texttt{Joystick} hält die Position für eine Dauer von 100 Millisekunden, liest im Anschluss daran den aktuellen Wert aus dem entsprechenden Register aus und filtert diesen. Dieses Sample-and-Hold-Verhalten wurde im zugehörigen Statechart modelliert. Die Halte-Dauer kann im Konstruktor der Klasse \texttt{Joystick} angepasst werden.
+
+\lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
+\begin{lstlisting}[caption={Filter zur Auswertung der Joystick Position}, captionpos=b, label={lst:JoystickFilter}]
+int position = (LPC_GPIO1->FIOPIN >> 20) & Joystick_Mask ;
+
+// Bit 4-7 contain the position information
+position = position >> 3; 
+
+if (position == Joystick_CENTER)
+{   
+	// Only update the position in case the Joystick got back to the center
+	lastPosition = position;  
+}
+else if (position != lastPosition)
+{
+	lastPosition = position;    	
+	FIRE( this->itsEthernetTransmitter, evNewJoystickPosition(position)); 
+}   
+\end{lstlisting}
+
+\subsubsection*{LED-Bar und Display}
+
+Die LED-Bar und das Display sind die Empfänger des Events \texttt{evReceivedData}, welches der Ethernet-Receiver mit dem Inhalt des zweiten Bytes als Parameter abfeuert. Die Klasse \texttt{LedBar} ordnet den empfangenen Parameter der entsprechenden LED zu und ruft die Operation \texttt{toggleLed} der Klasse \texttt{Led} auf. Die Klasse \texttt{Display} nutzt ebenfalls den empfangenen Parameter und zeigt damit die zuletzt empfangene Richtung an.
+
+\subsection{Konfigurieren des Keil Projekts}
+Als Basis für die Implementierung wurde das Blinky-Beispielprojekt verwendet, welches im RXF \begin{itshape}Rpy\_CPP\_CMSIS\_Keil5\_ARM\_MCB1700\_TD\end{itshape} von Willert enthalten ist. Zwar ist das Keil Projekt lediglich rudimentär konfiguriert, stellt aber die funktionsfähige Einbindung von Rhapsody sicher. Im Folgenden werden die wichtigsten Anpassungen in der Konfiguration gegenübergestellt.
+
+\subsubsection*{Manage Run-Time Environment} 
+
+Mittels des Konfigurationsassistenten \includegraphics[width=0.4cm]{images/package.pdf} \begin{itshape}Manage Run-Time Environment\end{itshape} ist es möglich, Software Komponenten einem Keil Projekt hinzuzufügen. Mit dem Ziel eine Ethernet Kommunikation aufzubauen, wird zunächst die aktuellste Version der MDK Middleware dem Projekt hinzugefügt. Jedoch setzt die Network Component in der Version 7.5.0 den Keil CMSIS:CORE in der Version 5.0.1 voraus. Die daraus resultierende Änderung im Ethernet Projekt gegenüber dem Blinky Projekt ist in \autoref{tab:CmsisCore} dargestellt.
+
+\begin{table}
+\footnotesize
+\centering
+\begin{tabular}{p{0.1cm}p{4.1cm}|p{0.2cm}p{2.1cm}l|p{0.2cm}p{2.1cm}l}
+	& & \multicolumn{3}{ c| }{Blinky} &  \multicolumn{3}{ c }{Ethernet} \\
+	\hline
+	& Software Component & Sel. & Variant & Version & Sel. & Variant & Version \\
+	\hline
+	& \includegraphics[width=0.25cm]{images/package.pdf} CMSIS & \cellcolor{KeilGreen} & & & \cellcolor{KeilGreen} & & \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/item.pdf} CORE & \cellcolor{KeilGreen}\CheckedBox  &  & 4.3.0 & \cellcolor{KeilGreen}\CheckedBox &  & 5.0.1 \\
+\end{tabular}
+\caption{Heraufsetzen des CMSIS:CORE von 4.3.0 auf 5.0.1.}
+\label{tab:CmsisCore}
+\end{table}
+
+Die Network Component selbst bietet eine Vielzahl an Software Komponenten, die dem Keil Projekt hinzugefügt werden können. Für den vorliegenden Fall der Ethernet-Kommunikation sind die Komponenten und die benötigten CMSIS Treiber gemäß \autoref{tab:NetworkComponent} zu wählen. Zum Betrieb des Display notwendige Anpassungen sind in \autoref{tab:NetworkComponent} orange gekennzeichnet.
+
+\begin{table}[h!]
+\centering
+\footnotesize
+\begin{tabular}{p{0.01mm}p{4.1cm}p{0.2cm}p{2.2cm}lp{0.2cm}p{2.2cm}l}
+	\toprule
+	& & \multicolumn{3}{ c }{Blinky} &  \multicolumn{3}{ c }{Ethernet} \\ \cmidrule{3-5}  \cmidrule{6-8}
+	& Software Component & Sel. & Variant & Version & Sel. & Variant & Version \\
+	\midrule
+	\cellcolor{Orange} & \includegraphics[width=0.25cm]{images/package.pdf} Board Support & & \tiny{MCB1700} & & \cellcolor{KeilGreen} & \tiny{MCB1700} & \\
+	\cellcolor{Orange} & \hspace{3ex}\includegraphics[width=0.25cm]{images/package.pdf} Graphic LCD (API) &  &  & 1.0.0 & \cellcolor{KeilGreen} &  & 1.0.0 \\
+	\cellcolor{Orange} & \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} Graphic LCD & \Square  &  & 1.0.0 & \cellcolor{KeilGreen}\CheckedBox &  & 5.0.1 \\
+	& \includegraphics[width=0.25cm]{images/package.pdf} CMSIS Driver & & & & \cellcolor{KeilGreen} & & \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/package.pdf} Ethernet MAC (API) & & & 2.01 & \cellcolor{KeilGreen} &  & 2.1.0 \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} Ethernet MAC & \Square  &  & 2.9 & \cellcolor{KeilGreen}\CheckedBox &  & 2.9.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/package.pdf} Ethernet PHY (API) & & & 2.00 & \cellcolor{KeilGreen} &  & 2.1.0 \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} DP83848C & \Square  &  & 6.1 & \cellcolor{KeilGreen}\CheckedBox &  & 6.1.0 \\
+	\cellcolor{Orange} & \hspace{3ex}\includegraphics[width=0.25cm]{images/package.pdf} SPI (API) & & & 2.01 & \cellcolor{KeilGreen} &  & 2.2.0 \\
+	\cellcolor{Orange} & \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} SPI & \Square  &  & 2.1 & \Square &  & 2.1.0 \\
+	\cellcolor{Orange} & \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} SSP & \Square  &  & 2.5 & \cellcolor{KeilGreen}\CheckedBox &  & 2.7.0 \\
+	& \includegraphics[width=0.25cm]{images/package.pdf} Device & & & & \cellcolor{KeilGreen} & & \\
+	\cellcolor{Orange} & \hspace{3ex}\includegraphics[width=0.25cm]{images/item.pdf} GPDMA & \Square &  & 1.2 & \cellcolor{KeilGreen}\CheckedBox &  & 1.2.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/item.pdf} GPIO & \Square &  & 1.1 & \cellcolor{KeilGreen}\CheckedBox &  & 1.1.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/item.pdf} PIN & \Square &  & 1.0 & \cellcolor{KeilGreen}\CheckedBox &  & 1.0.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/item.pdf} Startup & \cellcolor{KeilGreen}\CheckedBox &  & 1.0.0 & \cellcolor{KeilGreen}\CheckedBox &  & 1.0.0 \\
+	& \includegraphics[width=0.25cm]{images/package.pdf} Network & & \tiny{MDK-Pro} & 7.4.0 & \cellcolor{KeilGreen} & \tiny{MDK-Pro} & 7.4.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/item.pdf} CORE & \Square & \tiny{IPv4/IPv6 Release} & 7.4.0 & \cellcolor{KeilGreen}\CheckedBox & \tiny{IPv4/IPv6 Release} & 7.4.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/item.pdf} Legacy API & \Square &  & 7.4.0 & \Square &  & 7.4.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/package.pdf} Interface & & & & \cellcolor{KeilGreen} &  & \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/items.pdf} ETH & 0  &  & 7.4.0 & \cellcolor{KeilGreen} 1 &  & 7.4.0 \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} PPP & \Square &  & 7.4.0 & \Square &  & 7.4.0 \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} SLIP & \Square &  & 7.4.0 & \Square &  & 7.4.0 \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/package.pdf} Service & & & & & & \\
+	& \hspace{3ex}\includegraphics[width=0.25cm]{images/package.pdf} Socket & & & & \cellcolor{KeilGreen} & & \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} BSD & \Square &  & 7.4.0 & \cellcolor{KeilGreen}\CheckedBox &  & 7.4.0 \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} TCP & \Square &  & 7.4.0 & \cellcolor{KeilGreen}\CheckedBox &  & 7.4.0 \\
+	& \hspace{6ex}\includegraphics[width=0.25cm]{images/item.pdf} UDP & \Square &  & 7.4.0 & \cellcolor{KeilGreen}\CheckedBox &  & 7.4.0 \\
+	\bottomrule
+\end{tabular}
+\caption{Benötigte Komponenten der Network Component und deren Abhängigkeiten, sowie die Komponenten zum Betreiben des Displays orange.}
+\label{tab:NetworkComponent}
+\end{table}
+
+\subsubsection*{Target Options}
+
+Mit der Aufnahme der Network Component in das Keil Projekt, steigt der erforderliche RAM-Speicherbedarf der Applikation auf über 41KB (RW-data=352 Bytes + ZI-data=41176 Bytes). Damit wird die vorkonfigurierte RAM-Speichergröße von 32KB überschritten. Jedoch verfügt das Keil MCB1760 Evaluation Board über insgesamt 64KB RAM On-Chip Memory, so dass die weiteren 32KB RAM mit Hilfe des Scatter Files adressiert werden müssen. Das Scatter File (.sct) befindet sich im Flash-Ordner des Keil-Projekts. Allerdings bietet Keil die Möglichkeit, dass Scatter File über die Bedienoberfläche zu generieren, so dass das Scatter File nicht direkt editiert werden muss. Über die \begin{itshape}Target Options\end{itshape} im Reiter \begin{itshape}Target\end{itshape} können im Panel \begin{itshape}Read/Write Memory Areas\end{itshape} die zweiten 32KB RAM-Speicher aktiviert werden. Die Startadresse der zweiten Speicherbank ist mit 0x2007C000 anzugeben, die Größe des Speichers von 32KB ebenfalls als hexadezimaler Wert mit 0x8000.
+
+\subsubsection*{RTX Configuration}
+
+Bei der RTX Configuration geht es primär um das Konfigurieren der CMSIS-RTOS Tasks. Dabei wird die Datei RTX\_Conf\_CM.c editiert. Keil bietet den Komfort, die Datei bequem über den integrierten \begin{itshape}Configuration Wizard\end{itshape} zu bearbeiten. Der erste Parameter \begin{itshape}Number of concurrent running user threads\end{itshape} im Abschnitt \begin{itshape}Thread Configuration\end{itshape} gibt die Anzahl der Tasks an, die zur gleichen Zeit laufen. Die Tasks mit der Ursache CMSIS-RTOS in Tabelle \autoref{tab:DefaultThreads} sind bei jeder Applikation standardmäßig aktiv, die das CMSIS-RTOS verwenden.
+
+Das Willert RXF bringt durch sein kleines Onboard-Betriebssystem mit \begin{itshape}WST\_\-Monitor\_receiveTask\end{itshape} einen weiteren Task mit sich. Zudem beansprucht die Network Component bei der Initialisierung die beiden Tasks \begin{itshape}netCore\_Thread\end{itshape} und \begin{itshape}netETH\_Thread\end{itshape}.
+
+\begin{table}[h!]
+\centering
+	\begin{tabular}{lcl}
+	\toprule
+	Task Name & Priorität & Ursache \\
+	\midrule
+	osTimerThread & 1 & CMSIS-RTOS \\
+	main & 2 & CMSIS-RTOS \\
+	os\_idle\_demon & 255 & CMSIS-RTOS \\
+	WST\_\-Monitor\_receiveTask & 3 & Willert RXF \\
+	netCore\_Thread & 4 & Network Component \\
+	netETH\_Thread & 5 & Network Component \\
+	RunningIndicator & 6 & Ethernet Applikation \\
+	EthernetReceiver & 7 & Ethernet Applikation \\
+	EthernetTransmitter & 8 & Ethernet Applikation \\
+	Joystick & 9 & Ethernet Applikation \\
+	\bottomrule
+	\end{tabular}
+\caption{Verwendete Task für die Ethernet-Kommunikation und deren Ursache.}
+\label{tab:DefaultThreads}
+\end{table}
+
+Zu den bisher aufgezählten Tasks kommen schließlich noch die Tasks hinzu, die durch die Applikation an sich gefordert sind. Gemäß der in rot gekennzeichneten Klassen in Abbildung \autoref{fig:ClassDiagramEthernet} sind das die Tasks RunningIndicator, EthernetReceiver, EthernetTransmitter und Joystick.
+
+Da der Task \begin{itshape}os\_idle\_demon\end{itshape} nicht in die Anzahl der gleichzeitig laufenden Tasks mit eingeht. 
+
+\subsubsection*{RTE Device Configuration}
+
+\subsubsection*{Ethernet Network Configuration}
+ 
