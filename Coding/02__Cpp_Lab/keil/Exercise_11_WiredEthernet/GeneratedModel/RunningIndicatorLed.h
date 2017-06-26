@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: RunningIndicatorLed
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\RunningIndicatorLed.h
 *********************************************************************/
 
@@ -14,17 +14,15 @@
 //## auto_generated
 #include "WSTModelHeadersBase.h"
 //## auto_generated
-#include "rl_net.h"
-//## auto_generated
 #include <stdio.h>
 //## auto_generated
-#include "ExamplePkg.h"
+#include "DefaultPkg.h"
 //## auto_generated
 #include "WSTModelHeadersTSK.h"
 //## link itsLed
 class Led;
 
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class RunningIndicatorLed
 class RunningIndicatorLed : public WST_TSK, public WST_FSM {

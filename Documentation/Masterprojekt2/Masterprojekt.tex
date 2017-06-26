@@ -58,6 +58,7 @@ bibliography=totoc,						% Literaturverzeichnis im Inhalt
 %% \autoref Name "`Kapitel"' statt "`Unterabschnitt"'
 \addto\extrasngerman{%
 \def\subsectionautorefname{Kapitel}%
+\def\sectionautorefname{Kapitel}%
 }
 
 %% Packages für Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%
@@ -124,6 +125,10 @@ block=space										% kleiner horizontaler Platz zwischen den Feldern
 }
 \renewcommand{\lstlistingname}{Quelltext}	% Änder den Name von "`Listing"' auf Quelltext
 \newcommand{\lstnumberautorefname}{Zeile}
+
+% Warning, dass mehrere pdfs auf einer Seite sind unterdrücken
+\pdfsuppresswarningpagegroup=1
+\pdfminorversion=7
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Buch                                                              %%

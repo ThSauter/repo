@@ -1,111 +1,166 @@
 /********************************************************************
 	Rhapsody	: 8.1.4 
 	Login		: Hochschule Ulm
-	Component	: TargetComponent 
+	Component	: MCB1700 
 	Configuration 	: Debug
-	Model Element	: LED
-//!	Generated Date	: Wed, 3, May 2017  
-	File Path	: TargetComponent\Debug\LED.cpp
+	Model Element	: Led
+//!	Generated Date	: Tue, 23, May 2017  
+	File Path	: MCB1700\Debug\Led.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "WSTModelHeadersTSK.h"
 //## auto_generated
-#include "LED.h"
+#include "Led.h"
 //## auto_generated
 #include <lpc17xx.h>
-//## package ExamplePkg
+//## package DefaultPkg
 
-//## class LED
-LED::LED(int aBitArg, WST_TSK* myTask) {
+//## class Led
+Led::Led(int aBitArg, WST_TSK* myTask) {
+    blinkTimeoutMs = 100;
     setTask( myTask, false );
     initStatechart();
-    //#[ operation LED(int)
-    /* Init */
-    
-    if( aBitArg == 0 )
-    {              
-    	LPC_GPIO1->FIODIR |=  (1<<28);
-    }
-    else if ( aBitArg == 1)
-    {               
-    	LPC_GPIO1->FIODIR |=  (1<<29);
-    }       
-    else
+    //#[ operation Led(int)
+    // Init
+    switch (aBitArg)
     {
-    	LPC_GPIO1->FIODIR |=  (1<<31);
-    }
+    	case 0: 
+    		LPC_GPIO1->FIODIR |=  (1U<<28);
+    		break;   
+    	case 1:
+    		LPC_GPIO1->FIODIR |=  (1U<<29);   
+    		break;
+    	case 2: 
+    		LPC_GPIO1->FIODIR |=  (1U<<31);   
+    		break;	      
+    	case 3:
+    	case 4:
+    	case 5:
+    	case 6:
+    		LPC_GPIO2->FIODIR |= (1 << bitIndicator);
+    		break;
+    }         
     
-    bitIndicator = aBitArg;
+    bitIndicator = aBitArg; 
+    
+    
     
     this->setOwner( this );
-    WSTMonitor_sendInit( this, 103, (void*)&bitIndicator);
+    WSTMonitor_sendInit( this, 104, (void*)&bitIndicator);
     
     //#]
 }
 
-LED::LED(WST_TSK* myTask) {
+Led::Led(WST_TSK* myTask) {
+    blinkTimeoutMs = 100;
     setTask( myTask, false );
     initStatechart();
+    //#[ operation Led()
+    LPC_GPIO2 -> FIODIR |= 0x0000007C;
     this->setOwner( this );
-    WSTMonitor_sendInit( this, 103, (void*)&bitIndicator);
+    WSTMonitor_sendInit( this, 104, (void*)&bitIndicator);
     
+    //#]
 }
 
-LED::~LED() {
-    
+Led::~Led() {
+    cancelTimeouts();
     WSTMonitor_sendDestroy( (WST_FSM*)this );
     
 }
 
-void LED::off() {
+void Led::off() {
     //#[ operation off()
-    /* switch off */
-    if( bitIndicator == 0 )
-    {              
-    	LPC_GPIO1->FIOPIN &= ~(1<<28);
-    }
-    else
-    {               
-    	LPC_GPIO1->FIOPIN &= ~(1<<29);
+    // switch off 
+    switch (bitIndicator)
+    {
+    	case 0: 
+    		LPC_GPIO1->FIOPIN &= ~ (1U<<28);
+    		break;   
+    	case 1:
+    		LPC_GPIO1->FIOPIN &= ~ (1U<<29);   
+    		break;
+    	case 2: 
+    		LPC_GPIO1->FIOPIN &= ~ (1U<<31);   
+    		break;	      
+    	case 3:
+    	case 4:
+    	case 5:
+    	case 6:
+    		LPC_GPIO2->FIOCLR |= (1 << bitIndicator);
+    		break;
     }
     //#]
 }
 
-void LED::on() {
+void Led::on() {
     //#[ operation on()
-    /* switch on */
-    if( bitIndicator == 0 )
-    {              
-    	LPC_GPIO1->FIOPIN |=  (1<<28);
-    }
-    else
-    {               
-    	LPC_GPIO1->FIOPIN |=  (1<<29);
+    // switch on 
+    switch (bitIndicator)
+    {
+    	case 0: 
+    		LPC_GPIO1->FIOPIN |=  (1U<<28);
+    		break;   
+    	case 1:
+    		LPC_GPIO1->FIOPIN |=  (1U<<29);   
+    		break;
+    	case 2: 
+    		LPC_GPIO1->FIOPIN |=  (1U<<31);   
+    		break;	      
+    	case 3:
+    	case 4:
+    	case 5:
+    	case 6:
+    		LPC_GPIO2->FIOSET |= (1 << bitIndicator);
+    		break;
     }
     //#]
 }
 
-bool LED::startBehavior() {
+int Led::getBitIndicator() const {
+    return bitIndicator;
+}
+
+void Led::setBitIndicator(int p_bitIndicator) {
+    bitIndicator = p_bitIndicator;
+}
+
+int Led::getBlinkTimeoutMs() const {
+    return blinkTimeoutMs;
+}
+
+void Led::setBlinkTimeoutMs(int p_blinkTimeoutMs) {
+    blinkTimeoutMs = p_blinkTimeoutMs;
+}
+
+bool Led::startBehavior() {
     bool done = false;
     done = WST_FSM::startBehavior();
     return done;
 }
 
-void LED::initStatechart() {
+void Led::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
+    rootState_timeout = NULL;
 }
 
-int LED::getBitIndicator() const {
-    return bitIndicator;
+void Led::cancelTimeouts() {
+    cancel(rootState_timeout);
 }
 
-void LED::setBitIndicator(int p_bitIndicator) {
-    bitIndicator = p_bitIndicator;
+bool Led::cancelTimeout(const IOxfTimeout* arg) {
+    bool res = false;
+    if(rootState_timeout == arg)
+        {
+            rootState_timeout = NULL;
+            res = true;
+        }
+    return res;
 }
 
-void LED::rootState_entDef() {
+void Led::rootState_entDef() {
     {
         rootState_subState = Off;
         rootState_active = Off;
@@ -115,13 +170,13 @@ void LED::rootState_entDef() {
     }
 }
 
-IOxfReactive::TakeEventStatus LED::rootState_processEvent() {
+IOxfReactive::TakeEventStatus Led::rootState_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (rootState_active) {
         // State Off
         case Off:
         {
-            if(IS_EVENT_TYPE_OF(evToggle_ExamplePkg_id))
+            if(IS_EVENT_TYPE_OF(evToggle_DefaultPkg_id))
                 {
                     rootState_subState = On;
                     rootState_active = On;
@@ -130,7 +185,17 @@ IOxfReactive::TakeEventStatus LED::rootState_processEvent() {
                     //#]
                     res = eventConsumed;
                 }
-            else if(IS_EVENT_TYPE_OF(evOn_ExamplePkg_id))
+            else if(IS_EVENT_TYPE_OF(evBlink_DefaultPkg_id))
+                {
+                    rootState_subState = BlinkOn;
+                    rootState_active = BlinkOn;
+                    //#[ state BlinkOn.(Entry) 
+                    on();
+                    //#]
+                    rootState_timeout = scheduleTimeout(blinkTimeoutMs, NULL);
+                    res = eventConsumed;
+                }
+            else if(IS_EVENT_TYPE_OF(evOn_DefaultPkg_id))
                 {
                     rootState_subState = On;
                     rootState_active = On;
@@ -145,7 +210,7 @@ IOxfReactive::TakeEventStatus LED::rootState_processEvent() {
         // State On
         case On:
         {
-            if(IS_EVENT_TYPE_OF(evToggle_ExamplePkg_id))
+            if(IS_EVENT_TYPE_OF(evToggle_DefaultPkg_id))
                 {
                     rootState_subState = Off;
                     rootState_active = Off;
@@ -154,7 +219,7 @@ IOxfReactive::TakeEventStatus LED::rootState_processEvent() {
                     //#]
                     res = eventConsumed;
                 }
-            else if(IS_EVENT_TYPE_OF(evOff_ExamplePkg_id))
+            else if(IS_EVENT_TYPE_OF(evOff_DefaultPkg_id))
                 {
                     rootState_subState = Off;
                     rootState_active = Off;
@@ -162,6 +227,54 @@ IOxfReactive::TakeEventStatus LED::rootState_processEvent() {
                     off();
                     //#]
                     res = eventConsumed;
+                }
+            else if(IS_EVENT_TYPE_OF(evBlink_DefaultPkg_id))
+                {
+                    rootState_subState = BlinkOff;
+                    rootState_active = BlinkOff;
+                    //#[ state BlinkOff.(Entry) 
+                    off();
+                    //#]
+                    rootState_timeout = scheduleTimeout(blinkTimeoutMs, NULL);
+                    res = eventConsumed;
+                }
+            
+        }
+        break;
+        // State BlinkOn
+        case BlinkOn:
+        {
+            if(IS_EVENT_TYPE_OF(WST_TMR_id))
+                {
+                    if(getCurrentEvent() == rootState_timeout)
+                        {
+                            cancel(rootState_timeout);
+                            rootState_subState = Off;
+                            rootState_active = Off;
+                            //#[ state Off.(Entry) 
+                            off();
+                            //#]
+                            res = eventConsumed;
+                        }
+                }
+            
+        }
+        break;
+        // State BlinkOff
+        case BlinkOff:
+        {
+            if(IS_EVENT_TYPE_OF(WST_TMR_id))
+                {
+                    if(getCurrentEvent() == rootState_timeout)
+                        {
+                            cancel(rootState_timeout);
+                            rootState_subState = On;
+                            rootState_active = On;
+                            //#[ state On.(Entry) 
+                            on();
+                            //#]
+                            res = eventConsumed;
+                        }
                 }
             
         }
@@ -174,5 +287,5 @@ IOxfReactive::TakeEventStatus LED::rootState_processEvent() {
 }
 
 /*********************************************************************
-	File Path	: TargetComponent\Debug\LED.cpp
+	File Path	: MCB1700\Debug\Led.cpp
 *********************************************************************/

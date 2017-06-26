@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: Joystick
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\Joystick.cpp
 *********************************************************************/
 
@@ -14,7 +14,7 @@
 #include "EthernetTransmitter.h"
 //## auto_generated
 #include <lpc17xx.h>
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class Joystick
 Joystick::Joystick(WST_TSK* myTask) {
@@ -43,21 +43,21 @@ Joystick::~Joystick() {
 void Joystick::sample() {
     //#[ operation sample()
     int position = (LPC_GPIO1->FIOPIN >> 20) & Joystick_Mask ;
-    // last 7 Bits now are related to Joystick
     
+    // Bit 4-7 contain the position information
     position = position >> 3; 
     
     if (position == Joystick_CENTER)
     {   
-    	// only rewrite the position in case the joystick got back to the center
-    	lastPosition = position;  
+    	// Only update the position in case the Joystick got back to the center
+        lastPosition = position;  
     }
     else if (position != lastPosition)
     {
-    	lastPosition = position;    
-    	
+    	lastPosition = position;    	
     	FIRE( this->itsEthernetTransmitter, evNewJoystickPosition(position)); 
-    }   
+    } 
+      
     //#]
 }
 

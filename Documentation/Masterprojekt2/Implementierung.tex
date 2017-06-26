@@ -1,5 +1,5 @@
 \chapter{Implementierungen}
-\section{Ethernet}
+\section{Ethernet}\label{sec:Ethernet} 
 
 Dieses Kapitel beschreibt die Einbindung der Ethernet Schnittstelle des Keil MCB1760 Evaluation Boards. Ziel ist es, dass zwei Boards über ihre Ethernet Schnittstelle Daten austauschen können. In der Implementierung nach \citet{Steinmeyer} wurde die gewünschte Funktionalität bereits umgesetzt, jedoch auf der Basis des RTX RL-ARM Echtzeitbetriebssystems und einer damit überholten Version der Keil MDK. Zudem soll die gesamte Implementierung in Rhapsody stattfinden, so dass der generierte Code in der IDE Keil uVision lediglich übersetzt und auf das Target geflasht werden muss. 
 
@@ -35,7 +35,7 @@ Die Architektur der Ethernet-Kommunikation ist als Klassendiagramm in \autoref{f
 \begin{figure}[h!]
 	\centering
 		\includegraphics[width=1\textwidth]{images/ClassDiagramEthernet.pdf}
-		\caption[Klassendiagramm Ethernet-Kommunikation]{Klassendiagramm zur Ethernet-Kommunikation. Klassen, die in eigenen Tasks laufen sind rot eingezeichnet.}
+		\caption{Klassendiagramm zur Ethernet-Kommunikation. Klassen, die in eigenen Tasks laufen sind rot eingezeichnet.}
 	\label{fig:ClassDiagramEthernet}
 \end{figure}
 
@@ -43,13 +43,13 @@ Die Architektur der Ethernet-Kommunikation ist als Klassendiagramm in \autoref{f
 In diesem Kapitel werden Attribute, Funktionen und Statecharts wichtiger Klassen im Detail vorgestellt.
 
 \subsubsection*{Ethernet-Controller, Transmitter und Receiver}
-Der Ethernet-Controller basiert auf der MDK Middleware Network Component in der Version 7.4.0. Die Network Component beinhaltet eine Vielzahl an Services, Sockets (TCP, UDP und BSD), sowie eine Ethernet Schnittstelle inklusive eines IPv4/IPv6 Protocol Stacks. In dieser Arbeit wird der BSD Socket als Datagram Socket (UDP) zusammen mit dem IPv4 Protocol Stack verwendet. Der BSD Socket stellt eine API zur Verfügung, die das Aufbauen und Abhandeln einer Netzwerkkommunikation unterstützt. Ursprünglich wurden die BSD Sockets für unixnahe Betriebssysteme entwickelt. Mittlerweile sind sie in den POSIX Standard aufgenommen und wurden auch von Microsoft Windows übernommen. Ein Vorteil der BSD Sockets ist, dass mit geringem Konfigurationsaufwand zwischen Stream Sockets (TCP) und Datagram Sockets (UDP) gewechselt werden kann. 
+Der Ethernet-Controller basiert auf der MDK Middleware Network Component in der Version 7.4.1. Die Network Component beinhaltet eine Vielzahl an Services, Sockets (TCP, UDP und BSD), sowie eine Ethernet Schnittstelle inklusive eines IPv4/IPv6 Protocol Stacks. In dieser Arbeit wird der BSD Socket als Datagram Socket (UDP) zusammen mit dem IPv4 Protocol Stack verwendet. Der BSD Socket stellt eine API zur Verfügung, die das Aufbauen und Abhandeln einer Netzwerkkommunikation unterstützt. Ursprünglich wurden die BSD Sockets für unixnahe Betriebssysteme entwickelt. Mittlerweile sind sie in den POSIX Standard aufgenommen und wurden auch von Microsoft Windows übernommen. Ein Vorteil der BSD Sockets ist, dass mit geringem Konfigurationsaufwand zwischen Stream Sockets (TCP) und Datagram Sockets (UDP) gewechselt werden kann. 
 
 Die Klasse \texttt{Ether\-net\-Con\-trol\-ler} mit ihren Attributen und Operationen ist in \autoref{fig:EthernetController} dargestellt. Zum Spezifizieren der IP-Adressen dienen die Attribute \texttt{hostIpAddr} und \texttt{remoteIpAddr} vom Typ String. Die IP-Adresse werden in Rhapsody über den Features Dialog der beiden Attribute initial festgelegt. Zum Flashen des zweiten Targets können die IP-Adressen einfach getauscht werden.
 
 \begin{figure}[h!]
 	\centering
-		\includegraphics[width=0.475\textwidth]{images/EthernetController.pdf}
+		\includegraphics[width=0.49\textwidth]{images/EthernetController.pdf}
 		\caption{Basisklasse des Ethernet-Controllers mit abgeleiteten Klassen.}
 	\label{fig:EthernetController}
 \end{figure}
@@ -68,7 +68,8 @@ if (status != netOK)
 	netIF_SetOption (
 		NET_IF_CLASS_ETH | 0, 
 		netIF_OptionIP4_Address, 
-		buf, NET_ADDR_IP4_LEN);
+		buf, 
+		NET_ADDR_IP4_LEN);
 }
 \end{lstlisting}
 
@@ -124,6 +125,7 @@ else if (position != lastPosition)
 Die LED-Bar und das Display sind die Empfänger des Events \texttt{evReceivedData}, welches der Ethernet-Receiver mit dem Inhalt des zweiten Bytes als Parameter abfeuert. Die Klasse \texttt{LedBar} ordnet den empfangenen Parameter der entsprechenden LED zu und ruft die Operation \texttt{toggleLed} der Klasse \texttt{Led} auf. Die Klasse \texttt{Display} nutzt ebenfalls den empfangenen Parameter und zeigt damit die zuletzt empfangene Richtung an.
 
 \subsection{Konfigurieren des Keil Projekts}
+
 Als Basis für die Implementierung wurde das Blinky-Beispielprojekt verwendet, welches im RXF \textit{Rpy\_CPP\_CMSIS\_Keil5\_ARM\_MCB1700\_TD} von Willert enthalten ist. Zwar ist das Keil Projekt lediglich rudimentär konfiguriert, stellt aber die funktionsfähige Einbindung von Rhapsody sicher. Im Folgenden werden die wichtigsten Anpassungen in der Konfiguration gegenübergestellt.
 
 \subsubsection*{Manage Run-Time Environment} 
@@ -181,9 +183,9 @@ Die Network Component beinhaltet eine Vielzahl an Komponenten, die dem Keil Proj
 
 Mit der Aufnahme der Network Component in das Keil Projekt, steigt der erforderliche RAM-Speicherbedarf der Applikation auf über 41KB (RW-data=352 Bytes + ZI-data=41176 Bytes). Damit wird die vorkonfigurierte RAM-Speichergröße von 32KB überschritten. Jedoch verfügt das Keil MCB1760 Evaluation Board über insgesamt 64KB RAM On-Chip Memory, so dass die weiteren 32KB RAM mit Hilfe des Scatter Files adressiert werden müssen. Das Scatter File (.sct) befindet sich im Flash-Ordner des Keil-Projekts. Allerdings bietet Keil die Möglichkeit, dass Scatter File über die Bedienoberfläche zu generieren, so dass das Scatter File nicht direkt editiert werden muss. Über die \begin{itshape}Target Options\end{itshape} im Reiter \begin{itshape}Target\end{itshape} können im Panel \begin{itshape}Read/Write Memory Areas\end{itshape} die zweiten 32KB RAM-Speicher aktiviert werden. Die Startadresse der zweiten Speicherbank ist mit 0x2007C000 anzugeben, die Größe des Speichers von 32KB ebenfalls als hexadezimaler Wert mit 0x8000.
 
-\subsubsection*{RTX Configuration}
+\subsubsection*{CMSIS Configuration}
 
-Bei der RTX Configuration geht es primär um das Konfigurieren der CMSIS-RTOS Tasks. Dabei wird die Datei \textit{RTX\_Conf\_CM.c}, die Teil der CMSIS Component ist, editiert. Keil bietet den Komfort, die Datei über den integrierten \begin{itshape}Configuration Wizard\end{itshape} zu bearbeiten. Der erste Parameter \textit{Number of concurrent running user threads} im Abschnitt \textit{Thread Configuration} gibt die Anzahl der Tasks an, die zur gleichen Zeit laufen. Die Tasks mit der Ursache CMSIS-RTOS in Tabelle \autoref{tab:DefaultThreads} sind bei jeder Applikation standardmäßig aktiv, die das CMSIS-RTOS verwenden.
+Bei der CMSIS Configuration geht es primär um das Konfigurieren des CMSIS RTX Kernel. Dabei wird die Datei \textit{RTX\_Conf\_CM.c}, die Teil der CMSIS Component ist, editiert. Keil bietet den Komfort, die Datei über den integrierten \begin{itshape}Configuration Wizard\end{itshape} zu bearbeiten. Der erste Parameter \textit{Number of concurrent running user threads} im Abschnitt \textit{Thread Configuration} gibt die Anzahl der Tasks an, die zur gleichen Zeit laufen. Die Tasks mit der Ursache CMSIS-RTOS in Tabelle \autoref{tab:DefaultThreads} sind bei jeder Applikation standardmäßig aktiv, die das CMSIS-RTOS verwenden.
 
 \begin{table}[!b]
 \centering
@@ -238,9 +240,11 @@ Unter den weiteren Parametern im Abschnitt \textit{Thread Configuration} ist vor
 \label{tab:RtxConfig}
 \end{table}
 
-\subsubsection*{Startup Device Configuration}
+\subsubsection*{Device Configuration}
 
-Das Startup File \textit{startup\_LPC17xx.s (Startup)} ist Teil der Device Component. Dieses File kann ebenfalls über den \textit{Configuration Wizard} bearbeitet werden. Nach \citet{NetworkComponent2017} ist bei Verwendung des Ethernet Cores eine Vergößerung der Stack Size um 512 Bytes erforderlich. Eine Anpassung des Heaps ist nicht erforderlich, da die Security Komponente nicht verwendet wird. Die Änderung im Startup File ist in \autoref{tab:StartupConfig} dargestellt.
+Die Datei \textit{startup\_LPC17xx.s (Startup)} bildet zusammen mit der Datei \textit{startup\_LPC17xx.c (Startup)} den Start-up Code, welcher direkt nach einem RESET des Targets ausgeführt wird. Die beiden Dateien sind Teil der Device Component und können ebenfalls über den \textit{Configuration Wizard} bearbeitet werden. Von größerem Interesse ist die Datei \textit{startup\_LPC17xx.s (Startup)} bei die Zuordnung von Speicher erfolgt. In der Datei \textit{startup\_LPC17xx.c (Startup)} geht es im Wesentlichen um die Clock Konfiguration, welche aber bei ihrer Standardeinstellung belassen wird.
+
+Nach \citet{NetworkComponent2017} ist bei Verwendung des Ethernet Cores eine Vergößerung der Stack Size um 512 Bytes erforderlich. Eine Anpassung des Heaps ist nicht erforderlich, da in dieser Implementierung die Security Komponente nicht verwendet wird. Die Änderung im Startup File ist in \autoref{tab:StartupConfig} dargestellt.
 
 \begin{table}[!ht]
 \footnotesize
@@ -256,7 +260,7 @@ Das Startup File \textit{startup\_LPC17xx.s (Startup)} ist Teil der Device Compo
   \hspace{3ex}\textSFii\textSFx\textSFx Heap Size (in Bytes) & 0x0000 1000 & 0x0000 1000 \\
 	\bottomrule
 	\end{tabular}
-\caption{Anpassungen in der RTX Configuration \textit{RTX\_Conf\_CM.c}.}
+\caption{Anpassungen in der Startup Configuration \textit{startup\_LPC17xx.s (Startup)} für die Ethernet-Kommunikation.}
 \label{tab:StartupConfig}
 \end{table}
 
@@ -292,4 +296,310 @@ Die Ethernet-Konfiguration erfolgt über die Konfigurationsdateien, die zur Netwo
 	\end{tabular}
 \caption{Anpassungen in der Ethernet Network Configuration \textit{Net\_Config\_ETH\_0.h}.}
 \label{tab:EthernetNetworkConfig}
+\end{table}
+
+\section{SD-Karte}
+
+Im Fokus dieses Kapitels steht die Inbetriebnahme des SD-Karten Slots des Keil MCB1760 Evaluation Boards. Der Schacht für die microSD-Karte befindet sich unterhalb des Displays, wie \autoref{fig:MCB1760EvalBoard} zu entnehmen ist. Das Ziel der Inbetriebnahme ist es, beispielhaft Daten auf die SD-Karte zu schreiben, lesen und diese wieder zu löschen. Wie auch schon bei der Ethernet-Applikation in \autoref{sec:Ethernet} soll die Implementierung in Rational Rhapsody erfolgen und die IDE Keil uVision lediglich zum Übersetzen und Flashen dienen.
+
+\subsection{Anforderungen}
+
+Ein beispielhaftes Szenario soll die funktionsfähige Inbetriebnahme der SD-Karte demonstrieren. Dabei soll der Joystick bei Betätigung in eine Richtung seine neue Position auf der SD-Karte aufzeichnen. Unter einer Positionsänderung des Joysticks sind die vier Richtungen links, rechts, oben und unten zu verstehen. Wenn der Joystick nach einer Richtungsänderung zurück in die zentrale Position geht, wird das nicht als Positionsänderung gewertet. Die SD-Karte soll sämtliche Aktivitäten und ihren Status über das Display ausgeben. \autoref{fig:SDCardSzenario} veranschaulicht das Funktionsprinzip. 
+\begin{figure}[!hb]
+	\centering
+		\includegraphics[width=1\textwidth]{images/SDCardSzenario.pdf}
+		\caption{Beispielhaftes Logging der Joystick Position auf dem Display und auf der SD-Karte.}
+	\label{fig:SDCardSzenario}
+\end{figure}
+
+Zusätzlich ist es möglich, auf den Joystick zu drücken, was im Folgenden als Richtung \textit{SELECT} bezeichnet wird. Die Richtung \textit{SELECT} soll eine besondere Funktion im Beispielszenario einnehmen. Drückt der Benutzer den Joystick zweimal hintereinander, dann soll die SD-Karte die angelegte Log-Datei löschen. Bei erstmaligem Drücken soll die SD-Karte dem Benutzer über das Display mitteilen, dass die SD-Karte durch erneutes Drücken des Joysticks die angelegte Log-Datei löscht. Wählt der Benutzer jedoch eine andere Richtung, soll die SD-Karte wieder in den Log-Status zurückkehren. Ebenso soll die SD-Karte eine minimale Fehlerbehandlung enthalten und dem Benutzer über das Display entsprechende Fehlermeldungen anzeigen.
+
+Zur Verifizierung der Lesefunktion soll die SD-Karte überprüfen, ob bereits eine Log-Datei durch vorherige Verwendung angelegt wurde. Wenn das der Fall ist, soll die SD-Karte die letzte Zeile der Log-Datei auslesen, die fortlaufende Nummer extrahieren und den Zähler auf diesen Wert setzen. 
+
+\subsection{Architektur}
+
+Das Klassendiagramm in \autoref{fig:ClassDiagramSDCard} stellt die Architektur des SD-Karten Loggings dar. Im Fokus des Diagramms steht die Klasse \texttt{SDCard}. Sie besitzt eine gerichtete Assoziation zur Klasse \texttt{Clock} und zur Klasse \texttt{Display}. Dadurch kann die Klasse \texttt{SDCard} einen Zeitstempel abfragen und den aktuellen Status auf dem Display ausgeben. 
+
+\begin{figure}[!b]
+	\centering
+		\includegraphics[width=1\textwidth]{images/ClassDiagramSDCard.pdf}
+		\caption{Klassendiagramm zum Logging der Joystick Positionen auf der SD-Karte. Klassen, die in eigenen Threads laufen sind rot eingezeichnet.}
+	\label{fig:ClassDiagramSDCard}
+\end{figure}
+
+In \autoref{fig:ClassDiagramSDCard} links dargestellt sind beiden Klassen \texttt{Jostick} und \texttt{Running\-Indicator\-Led}, welche in eigenen Threads laufen. Dabei verfügt die Klasse \texttt{Jostick} über eine gerichtete Assoziation zur Klasse \texttt{SDCard}. Somit kann die Klasse \texttt{Joystick}, welche in einem festgelegten Intervall die Joystick Position pollt, die Klasse \texttt{SDCard} über Positionsänderungen informieren. Die Klasse \texttt{Joystick} verfügt über eine weitere Assoziation zur Klasse \texttt{LedBar}, wodurch die Joystick Position mit Hilfe von vier LEDs visualisiert wird. Wie in den vorherigen Implementierungen lässt die Klasse \texttt{Running\-Indicator\-Led} die LED P1.31 zyklisch blinken und dient lediglich zu Debugging zwecken. Die in \autoref{fig:ClassDiagramSDCard} rechts in orange dargestellten Dateien außerhalb des Pakets \texttt{DefaultPkg} stellen Abhängigkeiten zu externen Bibliotheken dar. Die verwendeten Bibliotheken stammen aus der MDK Middleware und vereinfachen das Betreiben der File System und Graphics Component.
+
+\subsection{Design und Coding}
+
+Dieses Kapitel behandelt Attribute, Funktionen und Statecharts wichtiger Klassen.
+
+\subsubsection*{SD-Karte}
+
+Die Implementierung der SD-Karte erfolgt durch die MDK Middleware File System Component in der Version 6.9.8. Die File System Component unterstützt eine Vielzahl an Speichern und Speichergeräten, welchen jeweils ein Laufwerksbuchstabe zugewiesen ist. Der Laufwerksbuchstabe wird an Systemroutinen übergeben, wo er zur Initialisierung eines Dateisystems verwendet wird. Das Dateisystem, wie beispielsweise File Allocation Table (FAT) File System oder Embedded File System (EFS) wird in Abhängigkeit vom Laufwerk festgelegt. Die Klasse \texttt{SDCard} mit ihren Attributen und Operationen ist in \autoref{fig:SDCardClass} dargestellt. Dabei legt das Attribut \texttt{drive} den Laufwerksbuchstaben "`M0:"' und das damit verbundene Dateisystem FAT fest.
+
+\begin{figure}[!b]
+	\centering
+		\includegraphics[width=0.5\textwidth]{images/SDCardClass.pdf}
+		\caption{Klassendiagramm der SD-Karte.}
+	\label{fig:SDCardClass}
+\end{figure}
+
+\paragraph{Initialisierung:}
+Das Sequenzdiagramm in \autoref{fig:SDCardInit} stellt den Ablauf der Operation \texttt{init\-And\-Mount} dar. Dabei erfolgt das Initialisieren und Mounten des Dateisystems über die Systemroutinen \texttt{finit} und \texttt{fmount}. Außerdem sind die entsprechenden Statusmeldungen an das Display im Erfolgsfall (grün) und Fehlerfall (rot) eingezeichnet.
+
+\begin{figure}[!hbt]
+	\centering
+		\includegraphics[width=1\textwidth]{images/SDCardInit.pdf}
+		\caption{Initialisieren und Mounten der SD-Karte.}
+	\label{fig:SDCardInit}
+\end{figure}
+
+\paragraph{Lesen:}
+Leseoperationen erfolgen mit Hilfe der Standard Input und Output Library \texttt{stdio.h}. Die Library \texttt{stdio.h} benutzt Datenströme (Stream)zur Kommunikation mit physikalischen Peripheriegeräten wie Tastatur und Drucker, oder auch zur Kommunikation mit jeder anderen Art von Dateien, welche das System unterstützt. Dabei werden die Streams immer identisch angewendet, unabhängig davon, ob mit einem Gerät oder einer Datei kommuniziert wird. Durch die Funktion \texttt{fopen} wird ein Stream geöffnet und mit einem Gerät oder einer Datei verbunden. Bei erfolgreichem Öffnen des Streams gibt die Funktion \texttt{fopen} einen Zeiger auf ein FILE-Objekt zurück. Dieser Zeiger beinhaltet alle Informationen des Datenstroms und muss bei jeder weiteren Dateioperation als Parameter übergeben werden.
+
+Der für dieses Szenario implementierte Lese-Mechanismus ist als Sequenzdiagramm in \autoref{fig:SDCardRead} abgebildet. Nach dem Öffnen des Streams wird mit der Funktion \texttt{fgets} Zeile für Zeile aus dem Logfile ausgelesen, bis das Ende der Datei erreicht ist. 
+
+\begin{figure}[!hbt]
+	\centering
+		\includegraphics[width=1\textwidth]{images/SDCardRead.pdf}
+		\caption{Lesen der SD-Karte.}
+	\label{fig:SDCardRead}
+\end{figure}
+
+Da alle Zeilen des Logfiles das gleiche Format haben, kann aus der letzten Zeile die fortlaufende Nummer extrahiert und zum Setzen des Zählers benutzt werden (siehe \autoref{fig:SDCardSzenario}). Den entsprechenden Ausschnitt aus der Operation \texttt{read} zeigt \autoref{lst:ExtractCounter}. Dabei wird zunächst der Teil der Zeichenkette ab dem \#-Symbol extrahiert. Danach wird mit der Funktion \texttt{scanf} der Dezimalwert ausgelesen und in \texttt{counter} geschrieben.
+
+Im Anschluss wird das Event \texttt{evSDLog} mit der Bezeichnung "`R:" für \textit{Read} und der letzten gelesenen Zeile als Parameter an das Display gefeuert. Nach erfolgter Dateioperation muss der Datenstrom wieder mittels \texttt{fclose} geschlossen werden.
+
+\lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
+\begin{lstlisting}[caption={Extrahieren des aktuellen Zählstandes aus dem Logfile.}, captionpos=b, label={lst:ExtractCounter}]
+// Set counter to last value
+substring = strstr(line, "# ");
+if (substring != NULL)
+{
+	/* Found "# " in row. Extract decimal */
+	sscanf(substring + 3, "%d", &counter);
+}  
+\end{lstlisting}
+
+\paragraph{Schreiben:}
+Wie die Leseoperationen bedienen sich auch die Schreiboperationen bei der Standard Input und Output Library \texttt{stdio.h}. Gleichermaßen gilt es zunächst einen Stream zu Öffnen um einen Zeiger auf ein FILE-Objekt zu erhalten. Im Gegensatz zur Leseoperation, welche die Funktion \texttt{fopen} mit dem Parameter "`r"' für \textit{Read mode} aufruft, wird bei der Schreiboperation der Parameter "`a"' für \textit{Append mode} verwendet. Der \textit{Append mode} öffnet eine bestehende Datei und fügt dieser Inhalte hinzu. Falls die Datei noch nicht besteht, wird eine leere Datei angelegt. Wenn eine Datei im \textit{Append mode} geöffnet wird, werden die neuen Inhalte stets am Ende der Datei hinzugefügt.
+
+\begin{figure}[!b]
+	\centering
+		\includegraphics[width=1\textwidth]{images/SDCardWrite.pdf}
+		\caption{Schreiben auf die SD-Karte.}
+	\label{fig:SDCardWrite}
+\end{figure}
+
+Der implementierte Schreib-Mechanismus ist in \autoref{fig:SDCardWrite} als Sequenzdiagramm dargestellt. Nach dem Öffnen des Datenstroms wird die Zeichenkette \texttt{str}  durch die Funktion \texttt{fprintf} in den Stream geschrieben. Die Funktion \texttt{fflush} sorgt letztendlich dafür, dass die Schreiboperation ausgeführt wird. Das bedeutet, dass die zugehörigen Buffer geleert und deren Inhalt in die entsprechende Datei geschrieben wird. Sollte der Rückgabewert der Funktion \texttt{fflush} ungleich Null sein, so ist ein Fehler aufgetreten. Die Klasse \texttt{SDCard} feuert in diesem Fall das Event \texttt{evSDLog} mit einer entsprechenden Fehlermeldung an das Display, sowie das Event \texttt{evError} an sich selbst (siehe rote Markierungen in \autoref{fig:SDCardWrite}). Durch das Event \texttt{evError} geht die Klasse \texttt{SDCard} in einen internen Fehlerstatus. Bei einer erfolgreichen Schreiboperation feuert die Klasse \texttt{SDCard} ebenfalls das Event \texttt{evSDLog} an das Display. In diesem Fall beinhaltet der Parameter des Events \texttt{evSDLog} den Bezeichner "`W:"' für \textit{Write} sowie die aktuell geschriebene Zeile. Zuletzt muss der Datenstrom durch die Funktion \texttt{fclose} wieder geschlossen werden.
+
+\paragraph{Datei anlegen:}
+Das Anlegen einer Datei geschieht implizit beim Aufruf der Funktion \texttt{fopen}. Dabei ist der Übergabeparameter für den Zugriffsmodus entscheidend. Mit "`a"' für \textit{Append mode} wird nur dann eine leere Datei angelegt, wenn diese noch nicht existiert. Mit dem Parameter "`w"' für \textit{Write mode} wird bei jedem Aufruf eine leere Datei angelegt. Eine existierende Datei wird dabei überschrieben.
+
+\paragraph{Datei löschen:}
+Zum Löschen einer Datei dient die Funktion \texttt{fdelete}. Als Parameter wird dieser Funktion der Name einer zu löschenden Datei oder eines Verzeichnisses übergeben. Mit einem weiteren Parameter "`/S"' wird spezifiziert, ob bei Angabe eines Verzeichnisses alle Dateien und Unterverzeichnisse ebenfalls gelöscht werden sollen. Die Funktion \texttt{fdelete} liefert einen Rückgabewert vom Typ \texttt{fsStatus} der eine detaillierte Fehlerbehandlung ermöglicht. 
+
+\subsubsection*{Joystick}
+
+\subsubsection*{Clock}
+
+\subsubsection*{Display}
+
+\subsection{Konfigurieren des Keil Projekts}
+
+Wie in auch in den vorherigen Implementierungen wurde das Blinky-Beispielprojekt aus dem RXF \textit{Rpy\_CPP\_CMSIS\_Keil5\_ARM\_MCB1700\_TD} von Willert verwendet. Dadurch ist das Zusammenspiel von Rational Rhapsody, dem Willert RXF und der IDE Keil uVision sichergestellt. Nachfolgend werden die wichtigsten Anpassungen in der Konfiguration dargestellt.
+
+\subsubsection*{Manage Run-Time Environment} 
+
+Zur Verwendung der SD-Karte ist es nötig dem Keil Projekt, mit Hilfe des Konfigurationsassistenten \includegraphics[width=0.3cm]{images/package.pdf} \textit{Manage Run"=Time Environment}, Software Komponenten hinzuzufügen. Zuallerst wird der Software Pack \textit{Keil::MDK"=Middleware} in der Version 7.4.1 (2017-04-21) dem Projekt hinzugefügt. In diesem Paket ist die File System Component in der Version 6.9.8 (2017-04-21) enthalten. Zur Verwendung der File System Component wird der \textit{ARM::CMSIS:CORE} in der Version 5.0.1 benötigt. Zwar erstellt die File System Component keinen eigenen Thread, greift aber dennoch auf die Schnittstellen des Betriebssystems zu. Das geschieht beispielsweise dann, wenn eine Datei geöffnet wird und mittels Mutex ein exklusiver Zugriff auf die Datei gewährleistet wird. Die entsprechende Anpassung in der Run-Time Environment ist in \autoref{tab:RuntimeEnvSdCard} rot markiert.
+
+Die File System Component unterstützt sowohl das Betreiben rudimentärer Flash-Speicher-Chips in NAND- oder NOR-Architektur, als auch den Datenaustausch mit einem USB Massenspeicher oder einer SD Speicherkarte. Die benötigten Komponenten der File System Component für den Einsatz der SD Speicherkarte sind in \autoref{tab:RuntimeEnvSdCard} gelb gekennzeichnet. 
+
+\begin{table}[!ht]
+\centering
+\footnotesize
+\begin{tabular}{p{0.01mm}p{4.6cm}p{0.2cm}p{2.2cm}lp{0.2cm}p{2.2cm}l}
+	\toprule
+	& & \multicolumn{3}{ c }{Blinky} & \multicolumn{3}{ c }{SD Card} \\ \cmidrule{3-5}  \cmidrule{6-8}
+	& Software Component & Sel. & Variant & Version & Sel. & Variant & Version \\
+	\midrule
+	& $\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} Board Support & & \tiny{MCB1700} & 1.0.0 & \cellcolor{KeilGreen} & \tiny{MCB1700} & 1.0.0 \\
+	& \textSFxi\hspace{2ex}$\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} Graphic LCD (API) &  &  & 1.0.0 & \cellcolor{KeilGreen} &  & 1.0.0 \\
+	\textcolor{Orange}{ \pmboxdrawuni{258E}} & \textSFxi\hspace{2ex}\textSFii\textSFx\textSFx	\includegraphics[width=0.2cm]{images/item.pdf} Graphic LCD & \HollowBox &  & 1.0.0 & \cellcolor{KeilGreen}\CheckedBox &  & 5.0.1 \\
+	& $\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} CMSIS & \cellcolor{KeilGreen} & & & \cellcolor{KeilGreen} & & \\
+	\textcolor{Red}{ \pmboxdrawuni{258E}} & \textSFxi\hspace{2ex}\textSFii\textSFx\textSFx	\includegraphics[width=0.2cm]{images/item.pdf} CORE & \cellcolor{KeilGreen}\CheckedBox  &  & 4.3.0 & \cellcolor{KeilGreen}\CheckedBox &  & 5.0.1 \\
+	& $\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} CMSIS Driver & & & & \cellcolor{KeilGreen} & & \\
+	& \textSFxi\hspace{2ex}$\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} SPI (API) & & & 2.01 & \cellcolor{KeilGreen} &  & 2.2.0 \\
+	& \textSFxi\hspace{5ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} SPI & \HollowBox  &  & 2.1 & \HollowBox &  & 2.1.0 \\
+	\textcolor{Yellow}{ \pmboxdrawuni{258E}} & \textSFxi\hspace{5ex}\textSFii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} SSP & \HollowBox  &  & 2.5 & \cellcolor{KeilGreen}\CheckedBox &  & 2.7.0 \\
+	& $\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} Compiler & & \tiny{ARM Compiler} & 1.2.0 & \cellcolor{KeilGreen} & \tiny{ARM Compiler} & 1.2.0 \\
+	& \textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} Event Recorder & \HollowBox  & \tiny{DAP} & 1.1.0 & \HollowBox & \tiny{DAP} & 1.1.0 \\
+	& \textSFxi\hspace{2ex}$\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} I/O &  &  & & \cellcolor{KeilGreen} &  & \\
+	\textcolor{Yellow}{ \pmboxdrawuni{258E}} & \textSFxi\hspace{5ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} File & \HollowBox & \tiny{File System} & 1.2.0 & \cellcolor{KeilGreen} \CheckedBox & \tiny{File System} & 1.2.0 \\
+	& \textSFxi\hspace{5ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} STDERR & \HollowBox & \tiny{User} & 1.2.0 & \HollowBox & \tiny{User} & 1.2.0 \\
+	& \textSFxi\hspace{5ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} STDIN & \HollowBox & \tiny{User} & 1.2.0 & \HollowBox & \tiny{User} & 1.2.0 \\
+	& \textSFxi\hspace{5ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} STDOUT & \HollowBox & \tiny{User} & 1.2.0 & \HollowBox & \tiny{User} & 1.2.0 \\
+	& \textSFxi\hspace{5ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} TTY & \HollowBox & \tiny{User} & 1.2.0 & \HollowBox & \tiny{User} & 1.2.0 \\
+	& $\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} Device & & & & \cellcolor{KeilGreen} & & \\
+	\textcolor{Yellow}{ \pmboxdrawuni{258E}} & \textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} GPDMA & \HollowBox &  & 1.2 & \cellcolor{KeilGreen}\CheckedBox &  & 1.2.0 \\
+	\textcolor{Yellow}{ \pmboxdrawuni{258E}} & \textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} GPIO & \HollowBox &  & 1.1 & \cellcolor{KeilGreen}\CheckedBox &  & 1.1.0 \\
+	\textcolor{Yellow}{ \pmboxdrawuni{258E}} & \textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} PIN & \HollowBox &  & 1.0 & \cellcolor{KeilGreen}\CheckedBox &  & 1.0.0 \\
+	& \textSFxi\hspace{2ex}\textSFii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} Startup & \cellcolor{KeilGreen}\CheckedBox &  & 1.0.0 & \cellcolor{KeilGreen}\CheckedBox &  & 1.0.0 \\
+	& $\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} File System & & \tiny{MDK-Pro} & 6.9.8 & \cellcolor{KeilGreen} & \tiny{MDK-Pro} & 6.9.8 \\
+	\textcolor{Yellow}{ \pmboxdrawuni{258E}} & \hspace{3.2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} CORE & \HollowBox & \tiny{SFN} & 6.9.8 & \cellcolor{KeilGreen}\CheckedBox & \tiny{LFN} & 6.9.8 \\
+	& \hspace{3.2ex}$\boxminus$\textSFx \includegraphics[width=0.25cm]{images/package.pdf} Drive & & & & \cellcolor{KeilGreen} &  & \\
+	\textcolor{Yellow}{ \pmboxdrawuni{258E}} & \hspace{3.2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/items.pdf} Memory Card & 0  &  & 6.9.8 & \cellcolor{KeilGreen} 1 &  & 6.9.8 \\
+	& \hspace{3.2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/items.pdf} NAND & 0  &  & 6.9.8 & 0 &  & 6.9.8 \\
+	& \hspace{3.2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/items.pdf} NOR & 0  &  & 6.9.8 & 0 &  & 6.9.8 \\
+	& \hspace{3.2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/item.pdf} RAM & \HollowBox &  & 6.9.8 & \HollowBox &  & 6.9.8 \\
+	& \hspace{3.2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx \includegraphics[width=0.20cm]{images/items.pdf} USB & 0  &  & 6.9.8 & 0 &  & 6.9.8 \\
+	\bottomrule
+\end{tabular}
+\caption{Heraufsetzen des CMSIS:CORE (rot), benötigte Komponenten der File System Component und deren Abhängigkeiten (gelb), sowie die Komponenten zum Betreiben des Displays (orange).}
+\label{tab:RuntimeEnvSdCard}
+\end{table}
+
+\subsubsection*{CMSIS Configuration} 
+Die CMSIS Configuration behandelt die Einstellung des CMSIS RTX Kernel. Zwar legt die File System Component keine neuen Threads an, benötigt aber dennoch das CMSIS-RTOS zum Betrieb. Beispielsweise werden die Mechanismen zum Erstellen eines Mutex verwendet. Die Anforderungen an den CMSIS RTX Kernel werden in der Datei \textit{RTX\_Conf\_CM.c} eingepflegt, welche Teil der CMSIS Component ist. Diese Datei kann über den \textit{Configuration Wizard} von Keil editiert werden. Im Abschnitt \textit{Thread Configuration} in der Datei \textit{RTX\_Conf\_CM.c} spezifiziert der erste Parameter \textit{Number of concurrently running user threads} die Anzahl nebenläufiger Tasks. Die Tasks der SD-Karten Applikation sind in \autoref{tab:DefaultThreadsSDCard} aufgelistet. Dabei sind die Tasks mit der Ursache CMSIS-RTOS und Willert RXF identisch zu den Tasks in \autoref{tab:DefaultThreads} aus der Ethernet-Applikation. 
+
+\begin{table}[!hbt]
+\centering
+\footnotesize
+	\begin{tabular}{lcl}
+	\toprule
+	Task Name & Priorität & Ursache \\
+	\midrule
+	osTimerThread & 1 & CMSIS-RTOS \\
+	main & 2 & CMSIS-RTOS \\
+	os\_idle\_demon & 255 & CMSIS-RTOS \\
+	WST\_\-Monitor\_receiveTask & 3 & Willert RXF \\
+	RunningIndicator & 4 & SD-Karte Applikation \\
+	Joystick & 5 & SD-Karte Applikation \\
+	\bottomrule
+	\end{tabular}
+\caption{Verwendete Task für den Betrieb der SD-Karte und deren Ursache.}
+\label{tab:DefaultThreadsSDCard}
+\end{table}
+
+Gemäß \citet{CmsisRtos2017} geht der Task \textit{os\_idle\_demon} nicht in die Anzahl der gleichzeitig laufenden Tasks mit ein, weshalb der Parameter \textit{Number of concurrent running user threads} auf den Wert fünf gesetzt wird. Dementsprechend ist auch der Parameter \textit{Number of threads with user-provided stack size} auf den Wert vier zu setzen, da hier der main-Task nicht mitgezählt wird. 
+
+Abhängig vom gewählten Drive Type gibt \citet{FileSystemComponentResourceRequirements2017} vor, wie die Parameter bezüglich der \textit{Default}, \textit{Main} und \textit{Total Thread stack size} zu konfigurieren sind. Für den hier gewählten Drive Type \textit{Memory Card drive 0} in Kombination mit dem CMSIS Treiber für SPI sind keine weiteren Anpassung nötig. Die Änderungen in der Datei \textit{RTX\_Conf\_CM.c} gegenüber dem Blinky-Projekt sind in \autoref{tab:RtxConfigSDCard} zusammengefasst.
+
+\begin{table}[!htb]
+\footnotesize
+\centering
+	\begin{tabular}{p{7.6cm}p{3.0cm}p{3.0cm}}
+	\toprule
+	& Blinky & SD-Karte \\ \cmidrule{2-3}
+	Option & Value & Value \\
+	\midrule
+	$\boxminus$\textSFx Thread Configuration & &  \\
+	\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx Number of concurrent running user threads & 6 & 5 (-1) \\
+	\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx Default Thread stack size [bytes] & 200 & 200 \\
+	\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx Main Thread stack size [bytes] & 1024 & 1024 \\
+	\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx Number of threads with user-provided & 5 & 4 (-1) \\
+	\textSFxi\hspace{2ex}\textSFxi \hspace{1.5ex} stack size &  & \\
+	\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx Total stack size [bytes] for threads with & 4096 & 5632 (+1536)\\
+	\textSFxi\hspace{2ex}\textSFxi \hspace{1.5ex} user-provided stack size &  & \\
+	\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx  Check for stack overflow & \CheckedBox &  \CheckedBox \\
+	\textSFxi\hspace{2ex}\textSFii\textSFx\textSFx  Processor mode for thread execution & Privileged mode & Privileged mode \\
+	$\boxplus$\textSFx RTX Kernel Timer Tick Configuration & & \\
+	$\boxplus$\textSFx System Configuration & & \\
+	\bottomrule
+	\end{tabular}
+\caption{Anpassungen in der RTX Configuration \textit{RTX\_Conf\_CM.c} für die SD-Karte.}
+\label{tab:RtxConfigSDCard}
+\end{table}
+
+Der Vollständigkeit halber wird an dieser Stelle noch auf die Anforderungen bezüglich Mutexes eingegangen, auch wenn im Rahmen dieser Implementierung keine Anpassung nötig sind. Sollen mehr als drei Dateien gleichzeitig geöffnet und bearbeitet werden, muss die Anzahl der Mutexobjekte angepasst werden. Diese Änderung kann nicht über den \textit{Configuration Wizard} erfolgen, sondern muss direkt in der Datei \textit{RTX\_Conf\_CM.c} manuell durchgeführt werden. Dabei ist der Parameter \textit{OS\_MUTEXCNT} zu editieren, welcher standardmäßig auf den Wert acht gesetzt ist. Der Parameter \textit{OS\_MUTEXCNT} setzt sich dabei folgendermaßen zusammen: 2 (internal stdio operations) + 3 (stdin, stdout und stderr file streams) + 3 für jede geöffnete Datei.
+
+\subsubsection*{Device Configuration}
+
+Die Dateien \textit{startup\_LPC17xx.s (Startup)}, \textit{startup\_LPC17xx.c (Startup)} und \textit{RTE\_Device.h (Startup)} implementieren den Start-up Code, welcher direkt nach einem RESET des Targets ausgeführt wird. Alle drei Dateien gehören zur Device Component und können ebenfalls über den \textit{Configuration Wizard} bearbeitet werden. Von größerem Interesse ist zunächst die Datei \textit{startup\_LPC17xx.s (Startup)} bei der festgelegt wird, wie viel Speicher für Stack und Heap zu reservieren sind.
+
+Bei Verwendung der File System Component ist eine Vergrößerung der Stack Size um 512 Bytes nötig. Eine Anpassung des Heaps ist ebenfalls erforderlich und hängt dabei mit der Anzahl gleichzeitig geöffneter Dateien zusammen. Für jede geöffnete Datei müssen 512+96 Bytes reserviert werden. In diesem Fall soll nur eine Datei gleichzeitig geöffnet werden \parencite{FileSystemComponentResourceRequirements2017}.  Wie \autoref{tab:StartupConfigSDCard} zu entnehmen ist, wurde der Heap insgesamt um 4096 Bytes vergrößert. Die Differenz von 3488 Bytes kommt für den Betrieb des Logging-Mechanismus auf dem Display zum Einsatz. Dieser Mechanismus basiert auf der Klasse \texttt{OMString}, welche Teil des Rhapsody OXF ist und zusätlichen Heap benötigt.
+
+\begin{table}[!hbt]
+\footnotesize
+\centering
+	\begin{tabular}{p{7.6cm}p{3.0cm}p{3.0cm}}
+	\toprule
+	& Blinky & SD-Karte \\ \cmidrule{2-3}
+	Option & Value & Value \\
+	\midrule
+	$\boxminus$\textSFx Stack Configuration & &  \\
+	\textSFxi\hspace{2ex}\textSFii\textSFx\textSFx Stack Size (in Bytes) & 0x0000 0200 & 0x0000 0400 (+512) \\
+	$\boxminus$\textSFx Heap Configuration & & \\
+  \hspace{3ex}\textSFii\textSFx\textSFx Heap Size (in Bytes) & 0x0000 1000 & 0x0000 2000 (+4096) \\
+	\bottomrule
+	\end{tabular}
+\caption{Anpassungen in der Startup Configuration \textit{startup\_LPC17xx.s (Startup)} für die SD-Karte.}
+\label{tab:StartupConfigSDCard}
+\end{table}
+
+Die Datei \textit{RTE\_Device.h (Startup)} muss ebenfalls angepasst werden. In ihr erfolgt die Pin Konfiguration für die verschiedenen Schnittstellen des Keil MCB1760 Eval Boards. Da in dieser Implementierung die SD-Karte mittels SPI angesprochen wird, müssen die entsprechenden Pins dem SPI Treiber \textit{Driver\_SPI0} zugewiesen werden. Die Zuordnung der Pins zu den jeweiligen SPI-Leitungen ist in \autoref{tab:DeviceConfigSDCard} abgebildet. Der SPI Treiber \textit{Driver\_SPI1} ist ebenfalls aktiviert, er ist zum Betrieb des Displays nötig.
+
+\begin{table}[!htb]
+\footnotesize
+\centering
+	\begin{tabular}{p{10.6cm}p{1.5cm}p{1.5cm}}
+	\toprule
+	& Blinky & SD-Karte \\ \cmidrule{2-3}
+	Option & Value & Value \\
+	\midrule
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{USB Controller [Driver\_USBD and Driver\_USBH]} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{ENET (Ethernet Interface) [Driver\_ETH\_MAC0]} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{I2C0 (Inter-integrated Circuit Interface 0) [Driver\_I2C0]} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{I2C1 (Inter-integrated Circuit Interface 1) [Driver\_I2C1]} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{I2C2 (Inter-integrated Circuit Interface 2) [Driver\_I2C2]} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{UART0 (Universal asynchronous receiver transmitter)} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{UART1 (Universal asynchronous receiver transmitter)} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{UART2 (Universal asynchronous receiver transmitter)} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{UART3 (Universal asynchronous receiver transmitter)} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{CAN1 Controller [Driver\_CAN1]} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{CAN2 Controller [Driver\_CAN2]} & \HollowBox & \HollowBox \\
+	$\boxminus$\textSFx SSP0 (Synchronous Serial Port 0) [Driver\_SPI0] & \HollowBox & \CheckedBox \\
+	\textSFxi\hspace{2ex}$\boxminus$\textSFx Pin Configuration & & \\
+	\textSFxi\hspace{2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx SSP0\_SSEL & & P0\_16 \\
+	\textSFxi\hspace{2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx SSP0\_SCK & & P0\_15 \\
+	\textSFxi\hspace{2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx SSP0\_MISO & & P0\_17 \\
+	\textSFxi\hspace{2ex}\textSFxi\hspace{2ex}\textSFviii\textSFx\textSFx SSP0\_MOSI & & P0\_18 \\
+	\textSFxi\hspace{2ex}$\boxminus$\textSFx DMA & & \\
+	\textSFxi\hspace{2ex}\hspace{3ex}$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{Tx} & \HollowBox & \HollowBox \\
+	\textSFxi\hspace{2ex}\hspace{3ex}$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{Rx} & \HollowBox & \HollowBox \\
+	$\boxminus$\textSFx SSP1 (Synchronous Serial Port 1) [Driver\_SPI1] & \HollowBox & \CheckedBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{SPI (Serial Periperhal Interface [Driver\_SPI2]} & \HollowBox & \HollowBox \\
+	$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{I2S0 (Integrated Interhip Sound 0 [Driver\_SAI0]} & \HollowBox & \HollowBox \\
+	\bottomrule
+	\end{tabular}
+\caption{Anpassungen in der File System Configuration \textit{FS\_Config\_MC\_0.h (Drive:Memory Card)}.}
+\label{tab:DeviceConfigSDCard}
+\end{table}
+
+
+
+\subsubsection*{File System Configuration}
+
+Die Konfiguration des File Systems geschieht über die Dateien \textit{FS\_Config.c (CORE)} und \textit{FS\_Config\_MC\_0.h (Drive:Memory Card)}. Durch die zuvor erfolgte Konfiguration der \textit{Run-Time Environment} wurden die beiden Dateien der File System Component hinzugefügt. Die Datei \textit{FS\_Config.c (CORE)} kann bei den Standardeinstellungen belassen werden, wohingegen bei der Datei \textit{FS\_Config\_MC\_0.h (Drive:Memory Card)} eine wichtige Änderung vorzunehmen ist. Dies betrifft den Parameter \textit{Memory Card Interface Mode}, welcher von \textit{Native} auf \textit{SPI} umgestellt wird.
+
+\begin{table}[!htb]
+\footnotesize
+\centering
+	\begin{tabular}{p{7.6cm}p{3.0cm}p{3.0cm}}
+	\toprule
+	& Blinky & SD-Karte \\ \cmidrule{2-3}
+	Option & Value & Value \\
+	\midrule
+	$\boxminus$\textSFx Memory Card Drive 0 & &  \\
+	\hspace{3.2ex}\textSFviii\textSFx\textSFx Connected to hadware via Driver\_MCI\# & 0 & 0 \\
+	\hspace{3.2ex}\textSFviii\textSFx\textSFx Connected to hadware via Driver\_SPI\# & 0 & 0 \\
+	\hspace{3.2ex}\textSFviii\textSFx\textSFx Memory Card Interface Mode & Native & SPI \\
+	\hspace{3.2ex}\textSFviii\textSFx\textSFx Drive Cache Size & 4 KB & 4 KB \\
+	\hspace{3.2ex}$\boxplus$\textSFx \textcolor[rgb]{0.5,0.5,0.5}{Locate Drive Cahce and Drive Buffer} & \HollowBox & \HollowBox \\
+	\hspace{3.2ex}\textSFviii\textSFx\textSFx Filename Chache Size & 0 & 0 \\
+	\hspace{3.2ex}\textSFii\textSFx\textSFx Use FAT Journal & \HollowBox & \HollowBox \\
+	\bottomrule
+	\end{tabular}
+\caption{Anpassungen in der File System Configuration \textit{FS\_Config\_MC\_0.h (Drive:Memory Card)}.}
+\label{tab:FileSystemConfigSDCard}
 \end{table}

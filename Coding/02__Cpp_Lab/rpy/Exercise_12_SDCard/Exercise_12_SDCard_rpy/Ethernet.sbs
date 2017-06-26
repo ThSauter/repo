@@ -1,0 +1,119 @@
+I-Logix-RPY-Archive version 8.12.0 C++ 9641846
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Libs.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "Libs";
+		- _id = GUID 42c00cd3-6361-4a1e-bb8f-00e4e7c935f2;
+	}
+	- _id = GUID 10a80df9-c24a-4dbf-b4e6-4c34695177ae;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 1;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Package";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "UseAsExternal";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "Ethernet";
+	- _modifiedTimeWeak = 5.27.2017::9:39:37;
+	- weakCGTime = 5.27.2017::9:39:37;
+	- strongCGTime = 5.17.2017::8:49:36;
+	- _defaultComposite = GUID 2bc8d13b-a9e2-439f-b37a-7020f0166799;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 2bc8d13b-a9e2-439f-b37a-7020f0166799;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 5.17.2017::8:49:36;
+			- weakCGTime = 5.17.2017::8:49:36;
+			- strongCGTime = 5.17.2017::8:49:36;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IModule 
+					- _id = GUID fb591d48-3b7e-470d-b47e-b213b8c42297;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UseAsExternal";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "rl_net";
+					- _modifiedTimeWeak = 5.17.2017::8:49:36;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID c4d4ba7a-429b-431e-9999-a530afca5b18;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _implicitClass = { IClass 
+						- _id = GUID c4d4ba7a-429b-431e-9999-a530afca5b18;
+						- _myState = 10240;
+						- _name = "rl_net";
+						- _modifiedTimeWeak = 5.17.2017::8:49:10;
+						- weakCGTime = 5.17.2017::8:49:10;
+						- strongCGTime = 5.17.2017::8:49:10;
+						- _multiplicity = "";
+						- _itsStateChart = { IHandle 
+							- _m2Class = "";
+						}
+						- _classModifier = Unspecified;
+					}
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 5.17.2017::8:49:6;
+}
+

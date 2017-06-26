@@ -4,23 +4,24 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: EthernetReceiver
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\EthernetReceiver.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "EthernetReceiver.h"
+//## link itsDisplay
+#include "Display.h"
 //## link itsLed
 #include "Led.h"
 //## link itsLedBar
 #include "LedBar.h"
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class EthernetReceiver
-int EthernetReceiver::dstPort = 1001;
-
 EthernetReceiver::EthernetReceiver(WST_TSK* myTask) {
     setTask( this, true );
+    itsDisplay = NULL;
     itsLed = NULL;
     itsLedBar = NULL;
     initStatechart();
@@ -37,7 +38,6 @@ EthernetReceiver::EthernetReceiver(WST_TSK* myTask) {
     
     // Set Ip adress  
     netIP_aton (remoteIpAddr, NET_ADDR_IP4, buf);
-    //netIF_SetOption (NET_IF_CLASS_ETH | 0, netIF_OptionIP4_Address, buf, NET_ADDR_IP4_LEN);
     
     addr.sin_addr.s_b1 = buf[0];
     addr.sin_addr.s_b2 = buf[1];
@@ -46,35 +46,51 @@ EthernetReceiver::EthernetReceiver(WST_TSK* myTask) {
     
     // Bind to socket 
     bind (sock, (SOCKADDR *)&addr, sizeof(addr));
-    
-    // Connect socket
-    connect (sock, (SOCKADDR *)&addr, sizeof (addr));
     this->setOwner( this );
-    WSTMonitor_sendInit( this, 102, (void*)&addr);
+    WSTMonitor_sendInit( this, 102, (void*)&itsDisplay);
     
     //#]
 }
 
 EthernetReceiver::~EthernetReceiver() {
-    //#[ operation ~EthernetReceiver()
-    closesocket (sock);
-    
-    WSTMonitor_sendDestroy( (WST_FSM*)this );
-    
-    //#]
     cleanUpRelations();
     cancelTimeouts();
+    WSTMonitor_sendDestroy( (WST_FSM*)this );
+    
 }
 
 void EthernetReceiver::receiveData() {
     //#[ operation receiveData()
-    receive_data(sock, dbuf);
+    extern int recv (int sock, char *buf, int len, int flags);
+    int res;
+    res = recv (sock, dbuf, sizeof (dbuf), 0);
+        
+    if (res <= 0)
+    { 
+    	// only for debugging purposes
+    	;
+    }    
       
-    if (dbuf[0] == 0x01) {
+    if (dbuf[0] == 0x01) { 
+    
+    	// Valid identifier, received Data
     	FIRE(this->itsLed, evBlink()); 
-    	FIRE(this->itsLedBar, evReceivedData((char)dbuf[1]));
+    	FIRE(this->itsLedBar, evReceivedData((char)dbuf[1]));    
+    	FIRE(this->itsDisplay, evReceivedData((char)dbuf[1]));
     }
     //#]
+}
+
+Display* EthernetReceiver::getItsDisplay() const {
+    return itsDisplay;
+}
+
+void EthernetReceiver::setItsDisplay(Display* p_Display) {
+    if(p_Display != NULL)
+        {
+            p_Display->_setItsEthernetReceiver(this);
+        }
+    _setItsDisplay(p_Display);
 }
 
 Led* EthernetReceiver::getItsLed() const {
@@ -110,6 +126,15 @@ void EthernetReceiver::initStatechart() {
 }
 
 void EthernetReceiver::cleanUpRelations() {
+    if(itsDisplay != NULL)
+        {
+            EthernetReceiver* p_EthernetReceiver = itsDisplay->getItsEthernetReceiver();
+            if(p_EthernetReceiver != NULL)
+                {
+                    itsDisplay->__setItsEthernetReceiver(NULL);
+                }
+            itsDisplay = NULL;
+        }
     if(itsLed != NULL)
         {
             itsLed = NULL;
@@ -134,44 +159,20 @@ bool EthernetReceiver::cancelTimeout(const IOxfTimeout* arg) {
     return res;
 }
 
-SOCKADDR_IN EthernetReceiver::getAddr() const {
-    return addr;
+void EthernetReceiver::__setItsDisplay(Display* p_Display) {
+    itsDisplay = p_Display;
 }
 
-void EthernetReceiver::setAddr(SOCKADDR_IN p_addr) {
-    addr = p_addr;
+void EthernetReceiver::_setItsDisplay(Display* p_Display) {
+    if(itsDisplay != NULL)
+        {
+            itsDisplay->__setItsEthernetReceiver(NULL);
+        }
+    __setItsDisplay(p_Display);
 }
 
-char EthernetReceiver::getDbuf(int i1) const {
-    return dbuf[i1];
-}
-
-void EthernetReceiver::setDbuf(int i1, char p_dbuf) {
-    dbuf[i1] = p_dbuf;
-}
-
-int EthernetReceiver::getDstPort() {
-    return dstPort;
-}
-
-void EthernetReceiver::setDstPort(int p_dstPort) {
-    dstPort = p_dstPort;
-}
-
-int EthernetReceiver::getSock() const {
-    return sock;
-}
-
-void EthernetReceiver::setSock(int p_sock) {
-    sock = p_sock;
-}
-
-uint16 EthernetReceiver::ClassWSTMonitor_getTypeSize1() {
-    return sizeof( SOCKADDR_IN );
-}
-
-uint16 EthernetReceiver::ClassWSTMonitor_getTypeSize2() {
-    return sizeof( int );
+void EthernetReceiver::_clearItsDisplay() {
+    itsDisplay = NULL;
 }
 
 void EthernetReceiver::rootState_entDef() {
@@ -207,14 +208,6 @@ IOxfReactive::TakeEventStatus EthernetReceiver::rootState_processEvent() {
         }
     this->activeState[ 0 ] = rootState_active;
     return res;
-}
-
-uint16 WSTMonitor_getTypeSize1() {
-    return EthernetReceiver::ClassWSTMonitor_getTypeSize1( );
-}
-
-uint16 WSTMonitor_getTypeSize2() {
-    return EthernetReceiver::ClassWSTMonitor_getTypeSize2( );
 }
 
 /*********************************************************************

@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: LedBar
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\LedBar.h
 *********************************************************************/
 
@@ -14,14 +14,12 @@
 //## auto_generated
 #include "WSTModelHeadersBase.h"
 //## auto_generated
-#include "rl_net.h"
-//## auto_generated
 #include <stdio.h>
 //## auto_generated
-#include "ExamplePkg.h"
+#include "DefaultPkg.h"
 //## link itsLeds
 #include "Led.h"
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class LedBar
 class LedBar : public WST_FSM {

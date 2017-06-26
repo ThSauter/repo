@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: LedBar
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\LedBar.cpp
 *********************************************************************/
 
@@ -12,7 +12,7 @@
 #include "WSTModelHeadersTSK.h"
 //## auto_generated
 #include "LedBar.h"
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class LedBar
 LedBar::LedBar(WST_TSK* myTask) {
@@ -155,7 +155,7 @@ IOxfReactive::TakeEventStatus LedBar::rootState_processEvent() {
         // State Idle
         case Idle:
         {
-            if(IS_EVENT_TYPE_OF(evReceivedData_ExamplePkg_id))
+            if(IS_EVENT_TYPE_OF(evReceivedData_DefaultPkg_id))
                 {
                     OMSETPARAMS(evReceivedData);
                     //#[ transition 0 

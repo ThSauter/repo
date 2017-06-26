@@ -21,6 +21,8 @@
 #define RTE_DEVICE_STARTUP_LPC17XX      /* Device Startup for NXP17XX */
 #define RTE_Drivers_ETH_MAC0            /* Driver ETH_MAC0 */
 #define RTE_Drivers_PHY_DP83848C        /* Driver PHY DP83848C */
+#define RTE_Drivers_SPI0                /* Driver SPI0 */
+        #define RTE_Drivers_SPI1                /* Driver SPI1 */
 #define RTE_Network_Core                /* Network Core */
           #define RTE_Network_IPv4                /* Network IPv4 Stack */
           #define RTE_Network_IPv6                /* Network IPv6 Stack */

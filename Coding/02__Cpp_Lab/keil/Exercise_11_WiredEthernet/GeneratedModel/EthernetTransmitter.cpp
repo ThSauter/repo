@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: EthernetTransmitter
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\EthernetTransmitter.cpp
 *********************************************************************/
 
@@ -12,11 +12,9 @@
 #include "EthernetTransmitter.h"
 //## link itsLed
 #include "Led.h"
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class EthernetTransmitter
-int EthernetTransmitter::dstPort = 1001;
-
 EthernetTransmitter::EthernetTransmitter(WST_TSK* myTask) {
     setTask( this, true );
     itsLed = NULL;
@@ -34,15 +32,11 @@ EthernetTransmitter::EthernetTransmitter(WST_TSK* myTask) {
     
     // Set Ip adress  
     netIP_aton (remoteIpAddr, NET_ADDR_IP4, buf);
-    //netIF_SetOption (NET_IF_CLASS_ETH | 0, netIF_OptionIP4_Address, buf, NET_ADDR_IP4_LEN);
     
     addr.sin_addr.s_b1 = buf[0];
     addr.sin_addr.s_b2 = buf[1];
     addr.sin_addr.s_b3 = buf[2];
     addr.sin_addr.s_b4 = buf[3];
-    
-    // Bind to socket 
-    bind (sock, (SOCKADDR *)&addr, sizeof(addr));
     
     // Connect socket
     connect (sock, (SOCKADDR *)&addr, sizeof (addr));
@@ -51,7 +45,7 @@ EthernetTransmitter::EthernetTransmitter(WST_TSK* myTask) {
     
     
     this->setOwner( this );
-    WSTMonitor_sendInit( this, 106, (void*)&addr);
+    WSTMonitor_sendInit( this, 106, (void*)&itsLed);
     
     //#]
 }
@@ -64,15 +58,25 @@ EthernetTransmitter::~EthernetTransmitter() {
 
 void EthernetTransmitter::transmitData() {
     //#[ operation transmitData()
+    extern int send (int sock, const char *buf, int len, int flags);
+    int res = 0; 
     dbuf[0] = 0x01;  
     
-    if (dbuf[0] == 0x00)
+    if (dbuf[1] == 0x00)
     {   
     	// In case of any invalid joystick position
     	dbuf[1] = 0xFF;
     }
     
-    send_data(sock, (char *)&dbuf);
+    if (res <= 0) {
+    	// Send the data to Led Server.
+    	res = send (sock, (char *)&dbuf, 2, 0);
+    	if (res < 0) {
+    		;
+    	}
+    }
+    
+    //send_data(sock, (char *)&dbuf);
     
     // The led toggles when data is sent   
     FIRE(this->itsLed, evBlink());
@@ -109,38 +113,6 @@ void EthernetTransmitter::cleanUpRelations() {
         }
 }
 
-SOCKADDR_IN EthernetTransmitter::getAddr() const {
-    return addr;
-}
-
-void EthernetTransmitter::setAddr(SOCKADDR_IN p_addr) {
-    addr = p_addr;
-}
-
-char EthernetTransmitter::getDbuf(int i1) const {
-    return dbuf[i1];
-}
-
-void EthernetTransmitter::setDbuf(int i1, char p_dbuf) {
-    dbuf[i1] = p_dbuf;
-}
-
-int EthernetTransmitter::getDstPort() {
-    return dstPort;
-}
-
-void EthernetTransmitter::setDstPort(int p_dstPort) {
-    dstPort = p_dstPort;
-}
-
-int EthernetTransmitter::getSock() const {
-    return sock;
-}
-
-void EthernetTransmitter::setSock(int p_sock) {
-    sock = p_sock;
-}
-
 void EthernetTransmitter::rootState_entDef() {
     {
         rootState_subState = state_0;
@@ -156,7 +128,7 @@ IOxfReactive::TakeEventStatus EthernetTransmitter::rootState_processEvent() {
     // State state_0
     if(rootState_active == state_0)
         {
-            if(IS_EVENT_TYPE_OF(evNewJoystickPosition_ExamplePkg_id))
+            if(IS_EVENT_TYPE_OF(evNewJoystickPosition_DefaultPkg_id))
                 {
                     OMSETPARAMS(evNewJoystickPosition);
                     //#[ transition 1 

@@ -1,45 +1,54 @@
 /********************************************************************
 	Rhapsody	: 8.1.4 
 	Login		: Hochschule Ulm
-	Component	: TargetComponent 
+	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: TestBuilder
-//!	Generated Date	: Wed, 3, May 2017  
-	File Path	: TargetComponent\Debug\TestBuilder.cpp
+//!	Generated Date	: Tue, 23, May 2017  
+	File Path	: MCB1700\Debug\TestBuilder.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "WSTModelHeadersTSK.h"
 //## auto_generated
 #include "TestBuilder.h"
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class TestBuilder
-TestBuilder::TestBuilder(WST_TSK* myTask) : itsLED2(1), itsLED1(0), itsLED3(2) {
+TestBuilder::TestBuilder(WST_TSK* myTask) : itsLed31(2), itsLed28(0), itsLed29(1) {
     setTask( myTask, false );
     {
         {
-            itsSequentialController.setShouldDelete(false);
+            itsRunningIndicatorLed.setShouldDelete(false);
         }
         {
-            itsActiveController.setShouldDelete(false);
+            itsEthernetReceiver.setShouldDelete(false);
         }
         {
-            itsLED2.setShouldDelete(false);
+            itsLed31.setShouldDelete(false);
         }
         {
-            itsLED1.setShouldDelete(false);
+            itsLed28.setShouldDelete(false);
         }
         {
-            itsEthernetController.setShouldDelete(false);
+            itsEthernetTransmitter.setShouldDelete(false);
         }
         {
-            itsLED3.setShouldDelete(false);
+            itsLed29.setShouldDelete(false);
+        }
+        {
+            itsJoystick.setShouldDelete(false);
+        }
+        {
+            itsLedBar.setShouldDelete(false);
+        }
+        {
+            itsDisplay.setShouldDelete(false);
         }
     }
     initRelations();
     this->setOwner( this );
-    WSTMonitor_sendInit( this, 104, (void*)&itsActiveController);
+    WSTMonitor_sendInit( this, 105, (void*)&itsDisplay);
     
 }
 
@@ -49,80 +58,115 @@ TestBuilder::~TestBuilder() {
     
 }
 
-ActiveController* TestBuilder::getItsActiveController() const {
-    return (ActiveController*) &itsActiveController;
+Display* TestBuilder::getItsDisplay() const {
+    return (Display*) &itsDisplay;
 }
 
-EthernetController* TestBuilder::getItsEthernetController() const {
-    return (EthernetController*) &itsEthernetController;
+EthernetReceiver* TestBuilder::getItsEthernetReceiver() const {
+    return (EthernetReceiver*) &itsEthernetReceiver;
 }
 
-LED* TestBuilder::getItsLED1() const {
-    return (LED*) &itsLED1;
+EthernetTransmitter* TestBuilder::getItsEthernetTransmitter() const {
+    return (EthernetTransmitter*) &itsEthernetTransmitter;
 }
 
-LED* TestBuilder::getItsLED2() const {
-    return (LED*) &itsLED2;
+Joystick* TestBuilder::getItsJoystick() const {
+    return (Joystick*) &itsJoystick;
 }
 
-LED* TestBuilder::getItsLED3() const {
-    return (LED*) &itsLED3;
+Led* TestBuilder::getItsLed28() const {
+    return (Led*) &itsLed28;
 }
 
-SequentialController* TestBuilder::getItsSequentialController() const {
-    return (SequentialController*) &itsSequentialController;
+Led* TestBuilder::getItsLed29() const {
+    return (Led*) &itsLed29;
+}
+
+Led* TestBuilder::getItsLed31() const {
+    return (Led*) &itsLed31;
+}
+
+LedBar* TestBuilder::getItsLedBar() const {
+    return (LedBar*) &itsLedBar;
+}
+
+RunningIndicatorLed* TestBuilder::getItsRunningIndicatorLed() const {
+    return (RunningIndicatorLed*) &itsRunningIndicatorLed;
 }
 
 bool TestBuilder::startBehavior() {
     bool done = true;
-    done &= itsActiveController.startBehavior();
-    done &= itsEthernetController.startBehavior();
-    done &= itsLED1.startBehavior();
-    done &= itsLED2.startBehavior();
-    done &= itsLED3.startBehavior();
-    done &= itsSequentialController.startBehavior();
+    done &= itsDisplay.startBehavior();
+    done &= itsEthernetReceiver.startBehavior();
+    done &= itsEthernetTransmitter.startBehavior();
+    done &= itsJoystick.startBehavior();
+    done &= itsLed28.startBehavior();
+    done &= itsLed29.startBehavior();
+    done &= itsLed31.startBehavior();
+    done &= itsLedBar.startBehavior();
+    done &= itsRunningIndicatorLed.startBehavior();
     done &= WST_FSM::startBehavior();
     return done;
 }
 
 void TestBuilder::initRelations() {
-    itsActiveController.setItsLED(&itsLED1);
-    itsSequentialController.setItsLED(&itsLED2);
-    itsEthernetController.setItsLED(&itsLED3);
+    itsRunningIndicatorLed.setItsLed(&itsLed31);
+    itsEthernetReceiver.setItsLed(&itsLed29);
+    itsEthernetTransmitter.setItsLed(&itsLed28);
+    itsJoystick.setItsEthernetTransmitter(&itsEthernetTransmitter);
+    itsEthernetReceiver.setItsLedBar(&itsLedBar);
+    itsEthernetReceiver.setItsDisplay(&itsDisplay);
 }
 
 uint16 TestBuilder::ClassWSTMonitor_getTypeSize3() {
-    return sizeof( ActiveController );
+    return sizeof( Display );
 }
 
 uint16 TestBuilder::ClassWSTMonitor_getTypeSize4() {
-    return sizeof( EthernetController );
+    return sizeof( EthernetReceiver );
 }
 
 uint16 TestBuilder::ClassWSTMonitor_getTypeSize5() {
-    return sizeof( LED );
+    return sizeof( EthernetTransmitter );
 }
 
 uint16 TestBuilder::ClassWSTMonitor_getTypeSize6() {
-    return sizeof( SequentialController );
+    return sizeof( Joystick );
+}
+
+uint16 TestBuilder::ClassWSTMonitor_getTypeSize7() {
+    return sizeof( Led );
+}
+
+uint16 TestBuilder::ClassWSTMonitor_getTypeSize8() {
+    return sizeof( LedBar );
+}
+
+uint16 TestBuilder::ClassWSTMonitor_getTypeSize9() {
+    return sizeof( RunningIndicatorLed );
 }
 
 void TestBuilder::setTask(WST_TSK* myTask, bool activeInstance) {
     WST_FSM::setTask( myTask, activeInstance );
     {
-        itsLED2.setTask( myTask, false );
-        itsLED1.setTask( myTask, false );
-        itsLED3.setTask( myTask, false );
+        itsLed31.setTask( myTask, false );
+        itsLed28.setTask( myTask, false );
+        itsLed29.setTask( myTask, false );
+        itsLedBar.setTask( myTask, false );
+        itsDisplay.setTask( myTask, false );
     }
 }
 
 void TestBuilder::destroy() {
-    itsActiveController.destroy();
-    itsEthernetController.destroy();
-    itsLED1.destroy();
-    itsLED2.destroy();
-    itsLED3.destroy();
-    itsSequentialController.destroy();
+    itsDisplay.destroy();
+    itsEthernetReceiver.destroy();
+    itsEthernetTransmitter.destroy();
+    itsJoystick.destroy();
+    itsLed28.destroy();
+    itsLed29.destroy();
+    itsLed31.destroy();
+    itsLedBar.destroy();
+    itsRunningIndicatorLed.destroy();
     WST_FSM::destroy();
 }
 
@@ -142,6 +186,18 @@ uint16 WSTMonitor_getTypeSize6() {
     return TestBuilder::ClassWSTMonitor_getTypeSize6( );
 }
 
+uint16 WSTMonitor_getTypeSize7() {
+    return TestBuilder::ClassWSTMonitor_getTypeSize7( );
+}
+
+uint16 WSTMonitor_getTypeSize8() {
+    return TestBuilder::ClassWSTMonitor_getTypeSize8( );
+}
+
+uint16 WSTMonitor_getTypeSize9() {
+    return TestBuilder::ClassWSTMonitor_getTypeSize9( );
+}
+
 /*********************************************************************
-	File Path	: TargetComponent\Debug\TestBuilder.cpp
+	File Path	: MCB1700\Debug\TestBuilder.cpp
 *********************************************************************/

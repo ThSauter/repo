@@ -1,43 +1,41 @@
 /*********************************************************************
 	Rhapsody	: 8.1.4 
 	Login		: Hochschule Ulm
-	Component	: TargetComponent 
+	Component	: MCB1700 
 	Configuration 	: Debug
-	Model Element	: LED
-//!	Generated Date	: Wed, 3, May 2017  
-	File Path	: TargetComponent\Debug\LED.h
+	Model Element	: Led
+//!	Generated Date	: Tue, 23, May 2017  
+	File Path	: MCB1700\Debug\Led.h
 *********************************************************************/
 
-#ifndef LED_H
-#define LED_H
+#ifndef Led_H
+#define Led_H
 
 //## auto_generated
 #include "WSTModelHeadersBase.h"
 //## auto_generated
-#include "rl_net.h"
+#include <stdio.h>
 //## auto_generated
-#include "ExamplePkg.h"
-//## package ExamplePkg
+#include "DefaultPkg.h"
+//## package DefaultPkg
 
-//## class LED
-class LED : public WST_FSM {
+//## class Led
+class Led : public WST_FSM {
     ////    Constructors and destructors    ////
     
 public :
 
-    //## operation LED(int)
-    LED(int aBitArg, WST_TSK* myTask = 0);
+    //## operation Led(int)
+    Led(int aBitArg, WST_TSK* myTask = 0);
+    
+    //## operation Led()
+    Led(WST_TSK* myTask = 0);
     
     //## auto_generated
-    LED(WST_TSK* myTask = 0);
-    
-    //## auto_generated
-    virtual ~LED();
+    virtual ~Led();
     
     ////    Operations    ////
-
-private :
-
+    
     //## operation off()
     void off();
     
@@ -45,9 +43,19 @@ private :
     void on();
     
     ////    Additional operations    ////
-
-public :
-
+    
+    //## auto_generated
+    int getBitIndicator() const;
+    
+    //## auto_generated
+    void setBitIndicator(int p_bitIndicator);
+    
+    //## auto_generated
+    int getBlinkTimeoutMs() const;
+    
+    //## auto_generated
+    void setBlinkTimeoutMs(int p_blinkTimeoutMs);
+    
     //## auto_generated
     virtual bool startBehavior();
 
@@ -55,20 +63,18 @@ protected :
 
     //## auto_generated
     void initStatechart();
-
-private :
-
-    //## auto_generated
-    int getBitIndicator() const;
     
     //## auto_generated
-    void setBitIndicator(int p_bitIndicator);
+    void cancelTimeouts();
+    
+    //## auto_generated
+    virtual bool cancelTimeout(const IOxfTimeout* arg);
     
     ////    Attributes    ////
-
-protected :
-
+    
     int bitIndicator;		//## attribute bitIndicator
+    
+    int blinkTimeoutMs;		//## attribute blinkTimeoutMs
     
     ////    Framework operations    ////
 
@@ -92,36 +98,56 @@ public :
     //## statechart_method
     inline bool Off_IN() const;
     
+    // BlinkOn:
+    //## statechart_method
+    inline bool BlinkOn_IN() const;
+    
+    // BlinkOff:
+    //## statechart_method
+    inline bool BlinkOff_IN() const;
+    
     ////    Framework    ////
 
 protected :
 
 //#[ ignore
-    enum LED_Enum {
+    enum Led_Enum {
         OMNonState = 0,
         On = 1,
-        Off = 2
+        Off = 2,
+        BlinkOn = 3,
+        BlinkOff = 4
     };
     
     int rootState_subState;
     
     int rootState_active;
+    
+    IOxfTimeout* rootState_timeout;
 //#]
 };
 
-inline bool LED::rootState_IN() const {
+inline bool Led::rootState_IN() const {
     return true;
 }
 
-inline bool LED::On_IN() const {
+inline bool Led::On_IN() const {
     return rootState_subState == On;
 }
 
-inline bool LED::Off_IN() const {
+inline bool Led::Off_IN() const {
     return rootState_subState == Off;
+}
+
+inline bool Led::BlinkOn_IN() const {
+    return rootState_subState == BlinkOn;
+}
+
+inline bool Led::BlinkOff_IN() const {
+    return rootState_subState == BlinkOff;
 }
 
 #endif
 /*********************************************************************
-	File Path	: TargetComponent\Debug\LED.h
+	File Path	: MCB1700\Debug\Led.h
 *********************************************************************/

@@ -1,0 +1,20 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- filesTable = { IRPYRawContainer 
+	- size = 13;
+	- value = "Exercise_12_SDCard.rpy" ""
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre803Cpp.sbs" "CGCompatibilityPre803Cpp"
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre804Cpp.sbs" "CGCompatibilityPre804Cpp"
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre805Cpp.sbs" "CGCompatibilityPre805Cpp"
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre806Cpp.sbs" "CGCompatibilityPre806Cpp"
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre812Cpp.sbs" "CGCompatibilityPre812Cpp"
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre813Cpp.sbs" "CGCompatibilityPre813Cpp"
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre814Cpp.sbs" "CGCompatibilityPre814Cpp"
+	"Exercise_12_SDCard_rpy\\CGCompatibilityPre81Cpp.sbs" "CGCompatibilityPre81Cpp"
+	"Exercise_12_SDCard_rpy\\DefaultPkg.sbs" "DefaultPkg"
+	"Exercise_12_SDCard_rpy\\Display.sbs" "Libs::Display"
+	"Exercise_12_SDCard_rpy\\Libs.sbs" "Libs"
+	"Exercise_12_SDCard_rpy\\MCB1700.cmp" "MCB1700"
+	
+}
+

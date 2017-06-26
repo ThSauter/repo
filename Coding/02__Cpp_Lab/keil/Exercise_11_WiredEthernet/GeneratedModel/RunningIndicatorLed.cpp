@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: RunningIndicatorLed
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\RunningIndicatorLed.cpp
 *********************************************************************/
 
@@ -12,7 +12,7 @@
 #include "RunningIndicatorLed.h"
 //## link itsLed
 #include "Led.h"
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class RunningIndicatorLed
 RunningIndicatorLed::RunningIndicatorLed(WST_TSK* myTask) {

@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: EthernetReceiver
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\EthernetReceiver.h
 *********************************************************************/
 
@@ -14,22 +14,23 @@
 //## auto_generated
 #include "WSTModelHeadersBase.h"
 //## auto_generated
-#include "rl_net.h"
-//## auto_generated
 #include <stdio.h>
 //## auto_generated
-#include "ExamplePkg.h"
+#include "DefaultPkg.h"
 //## auto_generated
 #include "WSTModelHeadersTSK.h"
 //## class EthernetReceiver
 #include "EthernetController.h"
+//## link itsDisplay
+class Display;
+
 //## link itsLed
 class Led;
 
 //## link itsLedBar
 class LedBar;
 
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class EthernetReceiver
 class EthernetReceiver : public WST_TSK, public WST_FSM, public EthernetController {
@@ -40,7 +41,7 @@ public :
     //## operation EthernetReceiver()
     EthernetReceiver(WST_TSK* myTask = 0);
     
-    //## operation ~EthernetReceiver()
+    //## auto_generated
     virtual ~EthernetReceiver();
     
     ////    Operations    ////
@@ -49,6 +50,12 @@ public :
     void receiveData();
     
     ////    Additional operations    ////
+    
+    //## auto_generated
+    Display* getItsDisplay() const;
+    
+    //## auto_generated
+    void setItsDisplay(Display* p_Display);
     
     //## auto_generated
     Led* getItsLed() const;
@@ -78,52 +85,10 @@ protected :
     
     //## auto_generated
     virtual bool cancelTimeout(const IOxfTimeout* arg);
-
-private :
-
-    //## auto_generated
-    SOCKADDR_IN getAddr() const;
-    
-    //## auto_generated
-    void setAddr(SOCKADDR_IN p_addr);
-    
-    //## auto_generated
-    char getDbuf(int i1) const;
-    
-    //## auto_generated
-    void setDbuf(int i1, char p_dbuf);
-    
-    //## auto_generated
-    static int getDstPort();
-    
-    //## auto_generated
-    static void setDstPort(int p_dstPort);
-    
-    //## auto_generated
-    int getSock() const;
-    
-    //## auto_generated
-    void setSock(int p_sock);
-
-public :
-
-    static uint16 ClassWSTMonitor_getTypeSize1();
-    
-    static uint16 ClassWSTMonitor_getTypeSize2();
-    
-    ////    Attributes    ////
-
-protected :
-
-    SOCKADDR_IN addr;		//## attribute addr
-    
-    char dbuf[4];		//## attribute dbuf
-    
-    static int dstPort;		//## attribute dstPort
-    
-    int sock;		//## attribute sock
     
     ////    Relations and components    ////
+    
+    Display* itsDisplay;		//## link itsDisplay
     
     Led* itsLed;		//## link itsLed
     
@@ -133,6 +98,15 @@ protected :
 
 public :
 
+    //## auto_generated
+    void __setItsDisplay(Display* p_Display);
+    
+    //## auto_generated
+    void _setItsDisplay(Display* p_Display);
+    
+    //## auto_generated
+    void _clearItsDisplay();
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -164,10 +138,6 @@ protected :
     IOxfTimeout* rootState_timeout;
 //#]
 };
-
-uint16 WSTMonitor_getTypeSize1();
-
-uint16 WSTMonitor_getTypeSize2();
 
 inline bool EthernetReceiver::rootState_IN() const {
     return true;

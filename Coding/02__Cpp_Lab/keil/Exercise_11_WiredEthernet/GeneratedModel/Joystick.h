@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: Joystick
-//!	Generated Date	: Tue, 9, May 2017  
+//!	Generated Date	: Tue, 23, May 2017  
 	File Path	: MCB1700\Debug\Joystick.h
 *********************************************************************/
 
@@ -14,17 +14,15 @@
 //## auto_generated
 #include "WSTModelHeadersBase.h"
 //## auto_generated
-#include "rl_net.h"
-//## auto_generated
 #include <stdio.h>
 //## auto_generated
-#include "ExamplePkg.h"
+#include "DefaultPkg.h"
 //## auto_generated
 #include "WSTModelHeadersTSK.h"
 //## link itsEthernetTransmitter
 class EthernetTransmitter;
 
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class Joystick
 class Joystick : public WST_TSK, public WST_FSM {

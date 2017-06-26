@@ -1,11 +1,11 @@
 /*********************************************************************
 	Rhapsody	: 8.1.4 
 	Login		: Hochschule Ulm
-	Component	: TargetComponent 
+	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: TestBuilder
-//!	Generated Date	: Wed, 3, May 2017  
-	File Path	: TargetComponent\Debug\TestBuilder.h
+//!	Generated Date	: Tue, 23, May 2017  
+	File Path	: MCB1700\Debug\TestBuilder.h
 *********************************************************************/
 
 #ifndef TestBuilder_H
@@ -14,18 +14,24 @@
 //## auto_generated
 #include "WSTModelHeadersBase.h"
 //## auto_generated
-#include "rl_net.h"
+#include <stdio.h>
 //## auto_generated
-#include "ExamplePkg.h"
-//## classInstance itsActiveController
-#include "ActiveController.h"
-//## classInstance itsEthernetController
-#include "EthernetController.h"
-//## classInstance itsLED1
-#include "LED.h"
-//## classInstance itsSequentialController
-#include "SequentialController.h"
-//## package ExamplePkg
+#include "DefaultPkg.h"
+//## classInstance itsDisplay
+#include "Display.h"
+//## classInstance itsEthernetReceiver
+#include "EthernetReceiver.h"
+//## classInstance itsEthernetTransmitter
+#include "EthernetTransmitter.h"
+//## classInstance itsJoystick
+#include "Joystick.h"
+//## classInstance itsLed28
+#include "Led.h"
+//## classInstance itsLedBar
+#include "LedBar.h"
+//## classInstance itsRunningIndicatorLed
+#include "RunningIndicatorLed.h"
+//## package DefaultPkg
 
 //## class TestBuilder
 class TestBuilder : public WST_FSM {
@@ -42,22 +48,31 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
-    ActiveController* getItsActiveController() const;
+    Display* getItsDisplay() const;
     
     //## auto_generated
-    EthernetController* getItsEthernetController() const;
+    EthernetReceiver* getItsEthernetReceiver() const;
     
     //## auto_generated
-    LED* getItsLED1() const;
+    EthernetTransmitter* getItsEthernetTransmitter() const;
     
     //## auto_generated
-    LED* getItsLED2() const;
+    Joystick* getItsJoystick() const;
     
     //## auto_generated
-    LED* getItsLED3() const;
+    Led* getItsLed28() const;
     
     //## auto_generated
-    SequentialController* getItsSequentialController() const;
+    Led* getItsLed29() const;
+    
+    //## auto_generated
+    Led* getItsLed31() const;
+    
+    //## auto_generated
+    LedBar* getItsLedBar() const;
+    
+    //## auto_generated
+    RunningIndicatorLed* getItsRunningIndicatorLed() const;
     
     //## auto_generated
     virtual bool startBehavior();
@@ -77,21 +92,33 @@ public :
     
     static uint16 ClassWSTMonitor_getTypeSize6();
     
+    static uint16 ClassWSTMonitor_getTypeSize7();
+    
+    static uint16 ClassWSTMonitor_getTypeSize8();
+    
+    static uint16 ClassWSTMonitor_getTypeSize9();
+    
     ////    Relations and components    ////
 
 protected :
 
-    ActiveController itsActiveController;		//## classInstance itsActiveController
+    Display itsDisplay;		//## classInstance itsDisplay
     
-    EthernetController itsEthernetController;		//## classInstance itsEthernetController
+    EthernetReceiver itsEthernetReceiver;		//## classInstance itsEthernetReceiver
     
-    LED itsLED1;		//## classInstance itsLED1
+    EthernetTransmitter itsEthernetTransmitter;		//## classInstance itsEthernetTransmitter
     
-    LED itsLED2;		//## classInstance itsLED2
+    Joystick itsJoystick;		//## classInstance itsJoystick
     
-    LED itsLED3;		//## classInstance itsLED3
+    Led itsLed28;		//## classInstance itsLed28
     
-    SequentialController itsSequentialController;		//## classInstance itsSequentialController
+    Led itsLed29;		//## classInstance itsLed29
+    
+    Led itsLed31;		//## classInstance itsLed31
+    
+    LedBar itsLedBar;		//## classInstance itsLedBar
+    
+    RunningIndicatorLed itsRunningIndicatorLed;		//## classInstance itsRunningIndicatorLed
     
     ////    Framework operations    ////
 
@@ -112,7 +139,13 @@ uint16 WSTMonitor_getTypeSize5();
 
 uint16 WSTMonitor_getTypeSize6();
 
+uint16 WSTMonitor_getTypeSize7();
+
+uint16 WSTMonitor_getTypeSize8();
+
+uint16 WSTMonitor_getTypeSize9();
+
 #endif
 /*********************************************************************
-	File Path	: TargetComponent\Debug\TestBuilder.h
+	File Path	: MCB1700\Debug\TestBuilder.h
 *********************************************************************/

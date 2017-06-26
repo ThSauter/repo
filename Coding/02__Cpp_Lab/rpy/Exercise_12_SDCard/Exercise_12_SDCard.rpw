@@ -1,0 +1,154 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+{ CGEMdiWorkspace 
+	- stubList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- isLoadOnDemand = 0;
+	- myViewsWithID = { IRPYRawContainer 
+		- size = 4;
+		- value = 
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 50;
+				- m_nTop = 50;
+				- m_nRight = 1314;
+				- m_nBottom = 365;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "LedBar";
+				- _name = "StatechartDiagram";
+				- _id = GUID 4a85745c-ba46-45ef-b047-370a7ab31681;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1227 256 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 75;
+				- m_nTop = 75;
+				- m_nRight = 1339;
+				- m_nBottom = 390;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "SDCard";
+				- _name = "StatechartDiagram";
+				- _id = GUID 845c44fd-ca0e-4501-be98-9e51dc8047f3;
+			}
+			- _UpLeft = 0 40 ;
+			- _DownRight = 1555 364 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 0;
+				- m_nTop = 0;
+				- m_nRight = 1264;
+				- m_nBottom = 315;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStructureDiagram";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "TestBuilder";
+				- _name = "RunTime";
+				- _id = GUID 06628181-07e8-4d7b-accc-985ac969c6fe;
+			}
+			- _UpLeft = 0 50 ;
+			- _DownRight = 1443 351 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 2;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 150;
+				- m_nTop = 150;
+				- m_nRight = 1364;
+				- m_nBottom = 501;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Overview";
+				- _id = GUID 52c01b27-da69-48a6-b576-84a5dd3e10b3;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 2078 619 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 3;
+			- m_bIsActiveView = 1;
+		}
+	}
+	- _fullName = "C:\\02__Cpp_Lab\\rpy\\Exercise_12_SDCard\\Exercise_12_SDCard";
+	- m_SearchScopeList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- bUsingCustomBrowserView = 0;
+	- bUsingQueries = 0;
+	- bApplyOnDiagrams = 0;
+	- liQueryIDs = { IRPYRawContainer 
+		- size = 0;
+	}
+	- liElementTypes = { IRPYRawContainer 
+		- size = 0;
+	}
+	- mapOslcRmCollections = { IRPYRawContainer 
+		- size = 0;
+	}
+
+	- m_favoritesTree = {
+		count=1;
+		{ - favoritesItem
+			generation = 0;
+			name = Favorites;
+			idOrFolder = folder;
+		}
+	}
+
+}
+

@@ -20,7 +20,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Willert Embedded UML RXF}{5}{subsection.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Keil uVision}{6}{subsection.13}
+\contentsline {subsection}{\numberline {2.3.3}Keil uVision}{5}{subsection.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Implementierungen}{7}{chapter.14}
 \defcounter {refsection}{0}\relax 
@@ -32,8 +32,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.3}Design und Coding}{10}{subsection.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.4}Konfigurieren des Keil Projekts}{14}{subsection.60}
+\contentsline {subsection}{\numberline {3.1.4}Konfigurieren des Keil Projekts}{14}{subsection.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abk\"urzungsverzeichnis}{19}{chapter*.71}
+\contentsline {section}{\numberline {3.2}SD-Karte}{19}{section.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{21}{chapter*.72}
+\contentsline {subsection}{\numberline {3.2.1}Anforderungen}{19}{subsection.73}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Architektur}{20}{subsection.75}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Design und Coding}{21}{subsection.77}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Initialisierung:}{22}{section*.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Lesen:}{22}{section*.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Schreiben:}{24}{section*.92}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Datei anlegen:}{25}{section*.94}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Datei l\"oschen:}{25}{section*.95}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.4}Konfigurieren des Keil Projekts}{25}{subsection.99}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abk\"urzungsverzeichnis}{31}{chapter*.110}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{33}{chapter*.111}

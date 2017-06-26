@@ -1,12 +1,11 @@
-I-Logix-RPY-Archive version 8.13.0 * 9794446
+I-Logix-RPY-Archive version 8.12.0 * 9641846
 { CGEMdiWorkspace 
 	- stubList = { IRPYRawContainer 
-		- size = 2;
-		- value = GUID 839b3570-feed-482e-8776-cdf59c7831ae; GUID 12831e05-d580-d500-2767-cffc5fe8467e; 
+		- size = 0;
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 4;
+		- size = 7;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -19,20 +18,20 @@ I-Logix-RPY-Archive version 8.13.0 * 9794446
 				- m_ptMaxPositionY = -30;
 				- m_nLeft = 0;
 				- m_nTop = 0;
-				- m_nRight = 1190;
-				- m_nBottom = 394;
+				- m_nRight = 999;
+				- m_nBottom = 346;
 			}
-			- _wasOpenedOnCloseProject = 1;
+			- _wasOpenedOnCloseProject = 0;
 			- _theDiagram = { IHandle 
-				- _m2Class = "IMSC";
+				- _m2Class = "IStateChartDiagram";
 				- _filename = "DefaultPkg.sbs";
 				- _subsystem = "DefaultPkg";
-				- _class = "EthernetController";
-				- _name = "FlowChartBSD";
-				- _id = GUID 654eb8e7-52d7-440f-a106-3d42644a8628;
+				- _class = "Display";
+				- _name = "StatechartDiagram";
+				- _id = GUID 6708a919-a15b-4018-89c6-c01e49075f52;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1153 315 ;
+			- _DownRight = 962 287 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 			- m_bIsActiveView = 0;
@@ -46,25 +45,141 @@ I-Logix-RPY-Archive version 8.13.0 * 9794446
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -30;
-				- m_nLeft = 50;
-				- m_nTop = 50;
-				- m_nRight = 1240;
-				- m_nBottom = 444;
+				- m_nLeft = 150;
+				- m_nTop = 150;
+				- m_nRight = 1364;
+				- m_nBottom = 501;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
-				- _m2Class = "IDiagram";
-				- _filename = "";
-				- _subsystem = "";
-				- _class = "";
-				- _name = "EthernetController";
-				- _id = GUID 0b89939f-e988-47b5-9a6b-c1b7d80c35ee;
+				- _m2Class = "IMSC";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "EthernetReceiver";
+				- _name = "EthernetReceiver";
+				- _id = GUID 3dded617-c214-4528-97d2-1bc29dcb00d2;
 			}
-			- _UpLeft = 0 20 ;
-			- _DownRight = 1222 518 ;
+			- _UpLeft = 0 7 ;
+			- _DownRight = 1981 605 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+			- m_bIsActiveView = 1;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 50;
+				- m_nTop = 50;
+				- m_nRight = 1264;
+				- m_nBottom = 401;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "EthernetReceiver";
+				- _name = "StatechartDiagram";
+				- _id = GUID 38e37491-c1e4-4b76-992b-c492243d2d23;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1177 292 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 3;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 125;
+				- m_nTop = 125;
+				- m_nRight = 1339;
+				- m_nBottom = 476;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IMSC";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "EthernetTransmitter";
+				- _name = "EthernetTransmitter";
+				- _id = GUID 8bc34be5-c090-4a75-b2d7-a2d5064482bf;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1589 367 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
-			- m_bIsActiveView = 1;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 100;
+				- m_nTop = 100;
+				- m_nRight = 1314;
+				- m_nBottom = 451;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "EthernetTransmitter";
+				- _name = "StatechartDiagram";
+				- _id = GUID 162d4e90-e4b2-46b1-b5b0-a105eea1fe09;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1177 292 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 2;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 150;
+				- m_nTop = 150;
+				- m_nRight = 1149;
+				- m_nBottom = 496;
+			}
+			- _wasOpenedOnCloseProject = 0;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "DefaultPkg.sbs";
+				- _subsystem = "DefaultPkg";
+				- _class = "LedBar";
+				- _name = "StatechartDiagram";
+				- _id = GUID 4a85745c-ba46-45ef-b047-370a7ab31681;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1133 338 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -89,43 +204,14 @@ I-Logix-RPY-Archive version 8.13.0 * 9794446
 				- _name = "Overview";
 				- _id = GUID 52c01b27-da69-48a6-b576-84a5dd3e10b3;
 			}
-			- _UpLeft = 0 21 ;
-			- _DownRight = 1435 377 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1471 365 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 2;
-			- m_bIsActiveView = 0;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 50;
-				- m_nTop = 50;
-				- m_nRight = 1240;
-				- m_nBottom = 444;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IDiagram";
-				- _filename = "";
-				- _subsystem = "";
-				- _class = "";
-				- _name = "EthernetController";
-				- _id = GUID 0b89939f-e988-47b5-9a6b-c1b7d80c35ee;
-			}
-			- _UpLeft = 58 44 ;
-			- _DownRight = 1106 349 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 4;
 			- m_bIsActiveView = 0;
 		}
 	}
-	- _fullName = "C:\\90__Studium\\Master\\Semester_III\\PROJ\\repo\\Coding\\02__Cpp_Lab\\rpy\\Exercise_11_WiredEthernet\\Exercise_11_WiredEthernet";
+	- _fullName = "C:\\02__Cpp_Lab\\rpy\\Exercise_11_WiredEthernet\\Exercise_11_WiredEthernet";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}

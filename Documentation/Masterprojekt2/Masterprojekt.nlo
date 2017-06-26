@@ -2,7 +2,7 @@
 \nomenclatureentry{a$CPU$@[{$CPU$}]\begingroup Central Processing Unit\nomeqref {\relax 2.0}|nompageref}{5}
 \nomenclatureentry{a$RTOS$@[{$RTOS$}]\begingroup Real Time Operating System\nomeqref {\relax 2.0}|nompageref}{5}
 \nomenclatureentry{a$IDE$@[{$IDE$}]\begingroup Integrated Development Environment\nomeqref {\relax 2.0}|nompageref}{5}
-\nomenclatureentry{a$MDK$@[{$MDK$}]\begingroup Microcontroller Development Kit\nomeqref {\relax 2.0}|nompageref}{6}
-\nomenclatureentry{a$RTE$@[{$RTE$}]\begingroup Run-Time-Environment\nomeqref {\relax 2.0}|nompageref}{6}
+\nomenclatureentry{a$MDK$@[{$MDK$}]\begingroup Microcontroller Development Kit\nomeqref {\relax 2.0}|nompageref}{5}
+\nomenclatureentry{a$RTE$@[{$RTE$}]\begingroup Run-Time-Environment\nomeqref {\relax 2.0}|nompageref}{5}
 \nomenclatureentry{a$CMSIS$@[{$CMSIS$}]\begingroup Cortex Microcontroller Software Interface Standard\nomeqref {\relax 2.0}|nompageref}{6}
 \nomenclatureentry{a$RL-ARM$@[{$RL-ARM$}]\begingroup Real-Time Library for ARM microprocessors\nomeqref {\relax 2.0}|nompageref}{6}

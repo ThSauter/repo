@@ -1,103 +1,62 @@
 /********************************************************************
 	Rhapsody	: 8.1.4 
 	Login		: Hochschule Ulm
-	Component	: TargetComponent 
+	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: EthernetController
-//!	Generated Date	: Wed, 3, May 2017  
-	File Path	: TargetComponent\Debug\EthernetController.cpp
+//!	Generated Date	: Tue, 23, May 2017  
+	File Path	: MCB1700\Debug\EthernetController.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "EthernetController.h"
-//## link itsLED
-#include "LED.h"
-//## package ExamplePkg
+//## package DefaultPkg
 
 //## class EthernetController
 int EthernetController::dstPort = 1001;
 
-unsigned char EthernetController::remoteIpAddr[4] = {192, 168, 0, 100};
+const char* EthernetController::hostIpAddr = {"192.168.0.100"};
 
-EthernetController::EthernetController(WST_TSK* myTask) {
-    setTask( this, true );
-    itsLED = NULL;
-    initStatechart();
+const char* EthernetController::remoteIpAddr = {"192.168.0.101"};
+
+netStatus EthernetController::status = (netStatus)-1;
+
+EthernetController::EthernetController() {
     //#[ operation EthernetController()
-    //UDP stuff
+    unsigned char buf[8];
     
-    
-    sock = socket (AF_INET, SOCK_DGRAM, 0);
-    
-    addr.sin_port      = htons(dstPort);
-    addr.sin_family    = PF_INET;
-    addr.sin_addr.s_b1 = remoteIpAddr[0];
-    addr.sin_addr.s_b2 = remoteIpAddr[1];
-    addr.sin_addr.s_b3 = remoteIpAddr[2];
-    addr.sin_addr.s_b4 = remoteIpAddr[3];
-    bind (sock, (SOCKADDR *)&addr, sizeof(addr));
-    
-    connect (sock, (SOCKADDR *)&addr, sizeof (addr));
-    //UDP stuff
-    
-    
-    
-    this->setOwner( this );
-    WSTMonitor_sendInit( this, 105, (void*)&addr);
+    if (status != netOK)   
+    {	
+        // Initialize the network component only once
+    	status = netInitialize ();
+    	
+    	// Set the host ip adress once
+    	netIP_aton (hostIpAddr, NET_ADDR_IP4, buf);
+        netIF_SetOption (NET_IF_CLASS_ETH | 0, netIF_OptionIP4_Address, buf, NET_ADDR_IP4_LEN);
+    }
+    WSTMonitor_sendInit( this, 101, (void*)&addr);
     
     //#]
 }
 
 EthernetController::~EthernetController() {
-    cleanUpRelations();
-    cancelTimeouts();
+    //#[ operation ~EthernetController()
+    closesocket (sock);
     WSTMonitor_sendDestroy( (WST_FSM*)this );
     
+    //#]
 }
 
-LED* EthernetController::getItsLED() const {
-    return itsLED;
+const char* EthernetController::getHostIpAddress() {
+    //#[ operation getHostIpAddress()
+    return hostIpAddr;
+    //#]
 }
 
-void EthernetController::setItsLED(LED* p_LED) {
-    itsLED = p_LED;
-}
-
-bool EthernetController::startBehavior() {
-    bool done = false;
-    done = WST_FSM::startBehavior();
-    if(done)
-        {
-            startDispatching();
-        }
-    return done;
-}
-
-void EthernetController::initStatechart() {
-    rootState_subState = OMNonState;
-    rootState_active = OMNonState;
-    rootState_timeout = NULL;
-}
-
-void EthernetController::cleanUpRelations() {
-    if(itsLED != NULL)
-        {
-            itsLED = NULL;
-        }
-}
-
-void EthernetController::cancelTimeouts() {
-    cancel(rootState_timeout);
-}
-
-bool EthernetController::cancelTimeout(const IOxfTimeout* arg) {
-    bool res = false;
-    if(rootState_timeout == arg)
-        {
-            rootState_timeout = NULL;
-            res = true;
-        }
-    return res;
+const char* EthernetController::getRemoteIpAddress() {
+    //#[ operation getRemoteIpAddress()
+    return remoteIpAddr;
+    //#]
 }
 
 SOCKADDR_IN EthernetController::getAddr() const {
@@ -124,12 +83,12 @@ void EthernetController::setDstPort(int p_dstPort) {
     dstPort = p_dstPort;
 }
 
-unsigned char EthernetController::getRemoteIpAddr(int i1) {
-    return remoteIpAddr[i1];
+const char* EthernetController::getHostIpAddr() {
+    return hostIpAddr;
 }
 
-void EthernetController::setRemoteIpAddr(int i1, unsigned char p_remoteIpAddr) {
-    remoteIpAddr[i1] = p_remoteIpAddr;
+const char* EthernetController::getRemoteIpAddr() {
+    return remoteIpAddr;
 }
 
 int EthernetController::getSock() const {
@@ -140,45 +99,30 @@ void EthernetController::setSock(int p_sock) {
     sock = p_sock;
 }
 
-void EthernetController::rootState_entDef() {
-    {
-        rootState_subState = state_0;
-        rootState_active = state_0;
-        //#[ state state_0.(Entry) 
-        send_data(sock, (char *)&dbuf); 
-        //#]
-        rootState_timeout = scheduleTimeout(1000, NULL);
-    }
+netStatus EthernetController::getStatus() {
+    return status;
 }
 
-IOxfReactive::TakeEventStatus EthernetController::rootState_processEvent() {
-    IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    // State state_0
-    if(rootState_active == state_0)
-        {
-            if(IS_EVENT_TYPE_OF(WST_TMR_id))
-                {
-                    if(getCurrentEvent() == rootState_timeout)
-                        {
-                            cancel(rootState_timeout);
-                            //#[ transition 1 
-                            FIRE(this->itsLED, evToggle());
-                            //#]
-                            rootState_subState = state_0;
-                            rootState_active = state_0;
-                            //#[ state state_0.(Entry) 
-                            send_data(sock, (char *)&dbuf); 
-                            //#]
-                            rootState_timeout = scheduleTimeout(1000, NULL);
-                            res = eventConsumed;
-                        }
-                }
-            
-        }
-    this->activeState[ 0 ] = rootState_active;
-    return res;
+void EthernetController::setStatus(netStatus p_status) {
+    status = p_status;
+}
+
+uint16 EthernetController::ClassWSTMonitor_getTypeSize1() {
+    return sizeof( SOCKADDR_IN );
+}
+
+uint16 EthernetController::ClassWSTMonitor_getTypeSize2() {
+    return sizeof( int );
+}
+
+uint16 WSTMonitor_getTypeSize1() {
+    return EthernetController::ClassWSTMonitor_getTypeSize1( );
+}
+
+uint16 WSTMonitor_getTypeSize2() {
+    return EthernetController::ClassWSTMonitor_getTypeSize2( );
 }
 
 /*********************************************************************
-	File Path	: TargetComponent\Debug\EthernetController.cpp
+	File Path	: MCB1700\Debug\EthernetController.cpp
 *********************************************************************/
