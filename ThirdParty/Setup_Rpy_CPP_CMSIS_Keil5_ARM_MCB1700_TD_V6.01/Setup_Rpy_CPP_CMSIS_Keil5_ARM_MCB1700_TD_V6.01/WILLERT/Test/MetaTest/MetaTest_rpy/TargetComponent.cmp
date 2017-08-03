@@ -1,0 +1,438 @@
+I-Logix-RPY-Archive version 8.11.0 C++ 8254044
+{ IComponent 
+	- _id = GUID e0d637fa-b61c-449c-b72d-414f989ee17d;
+	- _myState = 8192;
+	- _name = "TargetComponent";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD.sbs";
+			- _subsystem = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD";
+			- _class = "";
+			- _name = "RXFComponent";
+			- _id = GUID d5b44ea0-9660-b6c5-6318-11aceea67d78;
+		}
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD.sbs";
+			- _subsystem = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD";
+			- _class = "";
+			- _name = "LiveAnimation";
+			- _id = GUID c68b1011-4030-1faa-fd65-9b1a6a305635;
+		}
+	}
+	- _modifiedTimeWeak = 2.10.2015::9:37:40;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\fs20 $Id: TargetComponent.\\ulwave cmp\\ulnone  16182 2008-08-08 13:38:20Z \\ulwave er\\ulnone  $\\par
+$URL: http://\\ulwave svn\\ulnone .\\ulwave willert\\ulnone .de/V5/Component/trunk/RXF/IP/WST_OORTX/Samples/Model/PEPS/PEPS_rpy/TargetComponent.\\ulwave cmp\\ulnone  $\\par
+\\par
+\\par
+}
+";
+	}
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "stdio.h";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 64230b4c-bfbf-499e-8f3d-ef3927701ef1;
+		- _myState = 65536;
+		- _name = "Files";
+		- _modifiedTimeWeak = 1.2.1990::0:0:0;
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 7;
+			- value = 
+			{ IHandle 
+				- _m2Class = "IClass";
+				- _filename = "TestPart04_Huge_Pkg.sbs";
+				- _subsystem = "TestPart04_Huge_Pkg";
+				- _class = "";
+				- _name = "TestPart04_Huge_Controller";
+				- _id = GUID 519095e6-b711-4383-93ec-c0136615a355;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "TestControlPkg.sbs";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "TestControlPkg";
+				- _id = GUID ee3f34d3-1d0b-49dd-bca6-3631afdaf2dd;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "TestPart01_PEPS_Pkg.sbs";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "TestPart01_PEPS_Pkg";
+				- _id = GUID 44aa1857-ce12-4fcb-bce5-045353898d04;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "TestPart02_Port_Pkg.sbs";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "TestPart02_Port_Pkg";
+				- _id = GUID 3559ce7c-db2d-41e2-8907-7b1b8ba8a2f4;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "TestPart03_FSM_Pkg.sbs";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "TestPart03_FSM_Pkg";
+				- _id = GUID 8eef82d3-8196-4d69-9161-ace95470bedd;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "TestPart05_CON_Pkg.sbs";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "TestPart05_CON_Pkg";
+				- _id = GUID 64521002-3f4b-4ae2-9a50-4d0c2606c2ec;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "TestPart04_Huge_Pkg.sbs";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "TestPart04_Huge_Pkg";
+				- _id = GUID 67957628-6fd5-4ea6-9181-568bf774d976;
+			}
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID d266ed33-fe7e-4be2-8325-79a6e928b5ca;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID bd9b2b54-7246-4238-8340-90279adab2b3;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "ShowClassicCGRetirementWarning";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 6;
+									- value = 
+									{ IProperty 
+										- _Name = "WSTInitialLargeBuffers";
+										- _Value = "10U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialMediumBuffers";
+										- _Value = "20U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialSmallBuffers";
+										- _Value = "120U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTLargeBufferSize";
+										- _Value = "256U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTMediumBufferSize";
+										- _Value = "64U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTSmallBufferSize";
+										- _Value = "32U";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Debug";
+			- _modifiedTimeWeak = 4.23.2013::12:10:24;
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 0c7fdd6d-5178-4ca5-8ddb-650ed4ad2c3b;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Samples\\Model\\Blinky\\TargetComponent\\DefaultConfig\\TargetComponent.mak";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID b3ee9ee3-b1de-43cc-bdd9-bba91c7da2ba;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Samples\\Model\\Blinky\\TargetComponent\\DefaultConfig\\MainTargetComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID 504f6142-84e7-40d6-bd7c-5a50a8e6ca14;
+				- _name = "Debug";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 4.23.2013::12:10:24;
+			- strongCGTime = 4.23.2013::12:10:24;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+		{ ICodeGenConfigInfo 
+			- _id = GUID d266ed33-fe7e-4be2-8325-79a6e928b5ca;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 3;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "ShowClassicCGRetirementWarning";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 6;
+									- value = 
+									{ IProperty 
+										- _Name = "WSTInitialLargeBuffers";
+										- _Value = "10U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialMediumBuffers";
+										- _Value = "20U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialSmallBuffers";
+										- _Value = "120U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTLargeBufferSize";
+										- _Value = "256U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTMediumBufferSize";
+										- _Value = "64U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTSmallBufferSize";
+										- _Value = "32U";
+										- _Type = String;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "BuildCommandSet";
+										- _Value = "Release";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Debug,Release";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "C_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "BuildCommandSet";
+										- _Value = "Release";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Debug,Release";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Release";
+			- _modifiedTimeWeak = 6.19.2008::17:37:15;
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID ec32d92d-e3fb-4de7-9f5a-bb86172e5c26;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_C_KeilRTX_Keil_ARM_MCB1700_Dev\\Samples\\Model\\PEPS\\TargetComponent\\DefaultConfig\\TargetComponent.mak";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID f212bcc7-4645-4ffe-b3bd-02960911b1b2;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_C_KeilRTX_Keil_ARM_MCB1700_Dev\\Samples\\Model\\PEPS\\TargetComponent\\DefaultConfig\\MainTargetComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID 1e000c2d-0b5a-4108-9cac-01ede7b17ffc;
+				- _name = "Release";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 6.19.2008::17:37:15;
+			- strongCGTime = 6.19.2008::17:37:15;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 2.10.2015::9:37:40;
+	- strongCGTime = 2.10.2015::9:37:40;
+}
+

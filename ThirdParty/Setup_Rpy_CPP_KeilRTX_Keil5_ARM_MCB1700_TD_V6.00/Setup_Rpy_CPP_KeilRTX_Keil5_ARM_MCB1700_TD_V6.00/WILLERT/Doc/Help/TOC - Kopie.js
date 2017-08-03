@@ -1,0 +1,11 @@
+document.write("  <ul id=\"Navigation\">");
+document.write("    <li><a href=\"WST_1-Introduction.html\">Introduction</a></li>");
+document.write("    <ul id=\"Navigation2\">");
+document.write("    	<li><a href=\"#\">Entry 1</a></li>");
+document.write("    	<li><a href=\"#\">Entry 2</a></li>");
+document.write("    </ul>");
+document.write("    <li><a href=\"mehrspaltige.htm\">Sample Topic 1</a></li>");
+document.write("    <li><a href=\"fixbereiche.htm\">Sample Topic 2</a></li>");
+document.write("    <li><a href=\"navigationsleisten.htm\">Sample Topic 2</a></li>");
+document.write("    <li><a href=\"browserweichen.htm\">Sample Topic 4</a></li>");
+document.write("  </ul>");

@@ -1,0 +1,248 @@
+I-Logix-RPY-Archive version 8.11.0 Java 8254044
+{ IProfile 
+	- _id = GUID bd9acd79-7332-441d-af5c-4fb8fa22f717;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 2;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 4;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Class";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "ImplementStatechart";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Configuration";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "MainGenerationScheme";
+								- _Value = "UserInitializationOnly";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Full, UserInitializationOnly, None";
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Dependency";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "UsageType";
+								- _Value = "Implementation";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Specification,Implementation,Existence";
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Statechart";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "EventConsumptionScheme";
+								- _Value = "SingleExitPoint";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Default,SingleExitPoint";
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "JAVA_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Framework";
+						- Properties = { IRPYRawContainer 
+							- size = 28;
+							- value = 
+							{ IProperty 
+								- _Name = "ActiveBase";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "ActiveBaseIncludeFiles";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "ActiveBaseUsage";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "ActiveInit";
+								- _Value = "";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "ActiveThreadName";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "BaseActiveFrameworkImport";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "BaseReactiveFrameworkImport";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "DefaultReactivePortBase";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventBase";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventBaseUsage";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "EventGenerationPattern";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventIdType";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventIncludeFiles";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventMultiGenerationPattern";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventSetParamsStatement";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventToPortGenerationPattern";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventToPortMultiGenerationPattern";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "IncludeHeaderFile";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "InnerReactiveClassName";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "InnerReactiveInstanceName";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "ReactiveBase";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "ReactiveBaseUsage";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "ReactiveInit";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "ReactiveInterface";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "ServicesFrameworkImport";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "StateActiveFrameworkImport";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "StateReactiveFrameworkImport";
+								- _Value = "";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "TimeReactiveFrameworkImport";
+								- _Value = "";
+								- _Type = String;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "NoFrameworkInJava";
+	- _modifiedTimeWeak = 3.26.2015::11:41:23;
+	- weakCGTime = 3.26.2015::11:41:23;
+	- strongCGTime = 3.26.2015::11:36:51;
+	- _defaultComposite = GUID 11de943c-4464-43f7-a7bb-1d8ae2b2a296;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 11de943c-4464-43f7-a7bb-1d8ae2b2a296;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.1.1970::1:0:0;
+}
+

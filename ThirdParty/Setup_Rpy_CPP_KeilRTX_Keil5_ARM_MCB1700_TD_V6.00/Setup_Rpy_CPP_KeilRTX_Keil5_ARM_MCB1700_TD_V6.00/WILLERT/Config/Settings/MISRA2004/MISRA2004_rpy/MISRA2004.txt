@@ -1,0 +1,1 @@
+MISRA2004 : Code generation settings for support in the MISRA-C 2004 standard

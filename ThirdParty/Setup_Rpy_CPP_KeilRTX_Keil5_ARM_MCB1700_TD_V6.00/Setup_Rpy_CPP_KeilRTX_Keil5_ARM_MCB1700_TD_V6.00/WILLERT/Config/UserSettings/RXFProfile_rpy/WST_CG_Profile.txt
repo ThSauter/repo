@@ -1,0 +1,1 @@
+The Profile WST_CG_Profile.sbs includes all target independent Stereotypes which modify the codegeneration.

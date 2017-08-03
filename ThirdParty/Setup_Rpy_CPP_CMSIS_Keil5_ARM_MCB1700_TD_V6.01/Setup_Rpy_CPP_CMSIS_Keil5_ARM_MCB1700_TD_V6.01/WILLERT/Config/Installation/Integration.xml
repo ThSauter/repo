@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WSTModify>
+	<Willert>
+		<MacroVariableTable>
+			<Item>
+				<MacroString>WST_RELEASE_NAME</MacroString>
+				<Variable>ReleaseName</Variable>
+				<IsPath>false</IsPath>
+				<!--The product name plus the product version-->
+			</Item>
+			<Item>
+				<MacroString>WST_PRODUCT_NAME</MacroString>
+				<Variable>ProductNameShort</Variable>
+				<IsPath>false</IsPath>
+				<!--The product name-->
+			</Item>
+			<Item>
+				<MacroString>WST_PRODUCT_VERSION</MacroString>
+				<Variable>ProductVersionString</Variable>
+				<IsPath>false</IsPath>
+				<!--The product version-->
+			</Item>
+			<Item>
+				<MacroString>INSTALLDATE</MacroString>
+				<Variable>Date</Variable>
+				<IsPath>false</IsPath>
+				<!-- Date in ISO 8601 format: YYYY-MM-DD -->
+			</Item>
+			<Item>
+				<MacroString>INSTALLTIME</MacroString>
+				<Variable>Time</Variable>
+				<IsPath>false</IsPath>
+				<!-- Time in the following format: HH-MM-SS -->
+			</Item>
+			<Item>
+				<MacroString>WILLERT</MacroString>
+				<Variable>INSTALLFOLDER</Variable>
+				<IsPath>true</IsPath>
+				<!--The full location of the "Willert" folder (Parent folder)-->
+			</Item>
+		
+		
+			<Item>
+				<MacroString>KEIL</MacroString>
+				<Variable>KEILPATH</Variable>
+				<IsPath>true</IsPath>
+				<!--Where Compiler is installed -->
+			</Item>
+			<Item>
+				<MacroString>RPY</MacroString>
+				<Variable>RPYPATH</Variable>
+				<IsPath>true</IsPath>
+				<!-- Where Modeling Tool is installed -->
+			</Item>
+			<Item>
+				<MacroString>ENV_PROGRAMFILES</MacroString>
+				<Variable>ENV_PROGRAMFILES</Variable>
+				<IsPath>true</IsPath>
+				<!-- Env-->
+			</Item>
+			<Item>
+				<MacroString>ENV_HOMEDRIVE</MacroString>
+				<Variable>ENV_HOMEDRIVE</Variable>
+				<IsPath>false</IsPath>
+				<!-- Env-->
+			</Item>
+			<Item>
+				<MacroString>ENV_HOMEPATH</MacroString>
+				<Variable>ENV_HOMEPATH</Variable>
+				<IsPath>true</IsPath>
+				<!-- Env-->
+			</Item>
+		</MacroVariableTable>
+		<ModifyFiles>
+		</ModifyFiles>
+	</Willert>
+
+	<KEIL>
+	    <ToolMenu regroot="HKCU" path="Software\Keil\@VERSION@\ToolM">
+	      <Item iden="Mtx">
+	        <Key name="Mtx">Run Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01 UML Target Debugger</Key>
+	        <Key name="Mex">@WILLERT_1@\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\Tools\TargetDebugger\Embedded_Uml_Target_Debugger.bat</Key>
+	        <Key name="Mag">--xml "$PXMLData.xml" --communication Keil.dll --directconfig "#X/$P%P"</Key>
+	        <Key name="Mfg" type="DWord">2304</Key>
+	        <Key name="Mid">
+	        </Key>
+	      </Item>
+	    </ToolMenu>
+
+	</KEIL>
+
+	<RPY>
+		<RootPath>
+			@RPY_1@
+		</RootPath>
+		<site_prp name="SiteC++.prp" type="prp">
+			<SubLocation>
+				Share\Properties\
+			</SubLocation>
+			<FactoryRef>
+				FactoryC++.prp
+			</FactoryRef>
+			<Property name="Environment" type="Enum" metaclass="Configuration" subject="CPP_CG">
+				<Item>Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6_01</Item>
+			</Property>
+			<Include>
+				<Item>
+					@WILLERT_1@\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\Config\UserSettings\WST_RXF_V6.prp
+				</Item>
+			</Include>
+		</site_prp>
+		<FolderDataCopy>
+			<NameReplace>
+				<String name="_RPYVER_">752</String>
+			</NameReplace>
+			<FolderCopy backup="true">
+				<From folder="install">
+					Config\Settings\
+				</From>
+				<To folder="rpy">
+					Share\Settings\
+				</To>
+			</FolderCopy>
+		</FolderDataCopy>
+		<FileDataCopy>
+			<From folder="install" filter="*">
+				Config\UserSettings\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile_rpy
+			</From>
+			<To folder="rpy">
+				Share\Profiles\WST_RXF_V6
+			</To>
+		</FileDataCopy>
+		<FileDataCopy>
+			<From folder="install" filter="WSTProfile.*">
+				Config\UserSettings\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile_rpy
+			</From>
+			<To folder="rpy">
+				Share\Settings\WSTProfile\
+			</To>
+		</FileDataCopy>
+
+	</RPY>
+
+	<RPYPROG>
+		<RootPath>
+			@RPYPROG_1@
+		</RootPath>
+	</RPYPROG>
+
+
+	
+</WSTModify>

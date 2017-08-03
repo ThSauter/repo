@@ -1,0 +1,401 @@
+I-Logix-RPY-Archive version 8.6.0 C 2071424
+{ IComponent 
+	- _id = GUID e0d637fa-b61c-449c-b72d-414f989ee17d;
+	- _myState = 139264;
+	- _name = "TargetComponent";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "@WILLERT_3@\\Rpy_C_embOS_IAR_RX_Dev\\Config\\UserSettings\\Rpy_C_embOS_IAR_RX_Profile_rpy\\Rpy_C_embOS_IAR_RX_Profile.sbs";
+			- _subsystem = "Rpy_C_embOS_IAR_RX_Dev_Profile";
+			- _class = "";
+			- _name = "RXFComponent";
+			- _id = GUID d8cd655d-120b-1a84-23b5-945a75535a9d;
+		}
+	}
+	- _description = { IDescription 
+		- _text = "$Id: TargetComponent.cmp 16182 2008-08-08 13:38:20Z er $
+$URL: http://svn.willert.de/V5/Component/trunk/RXF/IP/WST_OORTX/Samples/Model/Blinky/Blinky_rpy/TargetComponent.cmp $
+
+";
+	}
+	- Tags = { IRPYRawContainer 
+		- size = 5;
+		- value = 
+		{ ITag 
+			- _id = GUID 4a0ba388-c42c-4ad1-aa5b-d5ead7734e14;
+			- _name = "rootDescription";
+			- ValueSpecifications = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ILiteralSpecification 
+					- _id = GUID d85d28a4-6d42-4587-9ff0-d02facbe65f1;
+					- _value = "Path to the GettingStarted example project";
+				}
+			}
+			- _typeOf = { IHandle 
+				- _m2Class = "IType";
+				- _filename = "PredefinedTypes.sbs";
+				- _subsystem = "PredefinedTypes";
+				- _class = "";
+				- _name = "RhpString";
+				- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+			}
+			- _isOrdered = 0;
+			- _base = { IHandle 
+				- _m2Class = "ITag";
+				- _filename = "";
+				- _subsystem = "Rpy_C_embOS_IAR_RX";
+				- _class = "RXFComponent";
+				- _name = "rootDescription";
+				- _id = GUID f93b6442-6a04-48e8-b23f-2c790ba90d05;
+			}
+		}
+		{ ITag 
+			- _id = GUID 1f06aeb8-3003-4467-8cf6-39170ba638e5;
+			- _name = "rootTitle";
+			- ValueSpecifications = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ILiteralSpecification 
+					- _id = GUID 692ef5bf-3b0a-4a87-ab67-25ae5f130557;
+					- _value = "GettingStarted Path";
+				}
+			}
+			- _typeOf = { IHandle 
+				- _m2Class = "IType";
+				- _filename = "PredefinedTypes.sbs";
+				- _subsystem = "PredefinedTypes";
+				- _class = "";
+				- _name = "RhpString";
+				- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+			}
+			- _isOrdered = 0;
+			- _base = { IHandle 
+				- _m2Class = "ITag";
+				- _filename = "";
+				- _subsystem = "Rpy_C_embOS_IAR_RX";
+				- _class = "RXFComponent";
+				- _name = "rootTitle";
+				- _id = GUID f2a4d960-f8e8-4701-be03-c02a1de7a42a;
+			}
+		}
+		{ ITag 
+			- _id = GUID e16e0a7d-4a81-4881-ac68-486621cd8490;
+			- _name = "toolchainProjectFile";
+			- ValueSpecifications = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ILiteralSpecification 
+					- _id = GUID 2ff9d14a-5148-41e0-b355-683482fda0f3;
+					- _value = "GettingStarted.ewp";
+				}
+			}
+			- _typeOf = { IHandle 
+				- _m2Class = "IType";
+				- _filename = "PredefinedTypes.sbs";
+				- _subsystem = "PredefinedTypes";
+				- _class = "";
+				- _name = "RhpString";
+				- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+			}
+			- _isOrdered = 0;
+			- _base = { IHandle 
+				- _m2Class = "ITag";
+				- _filename = "";
+				- _subsystem = "Rpy_C_embOS_IAR_RX";
+				- _class = "RXFComponent";
+				- _name = "toolchainProjectFile";
+				- _id = GUID 93b52199-df28-4870-b6e4-53a4c2dace35;
+			}
+		}
+		{ ITag 
+			- _id = GUID bfaf5e74-9ada-41f7-985b-483b24ad856a;
+			- _name = "relativeGeneratedFilePath";
+			- ValueSpecifications = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ILiteralSpecification 
+					- _id = GUID 354d6b45-3f5f-4701-8804-94aea6608113;
+					- _value = ".";
+				}
+			}
+			- _typeOf = { IHandle 
+				- _m2Class = "IType";
+				- _filename = "PredefinedTypes.sbs";
+				- _subsystem = "PredefinedTypes";
+				- _class = "";
+				- _name = "RhpString";
+				- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+			}
+			- _isOrdered = 0;
+			- _base = { IHandle 
+				- _m2Class = "ITag";
+				- _filename = "";
+				- _subsystem = "Rpy_C_embOS_IAR_RX";
+				- _class = "RXFComponent";
+				- _name = "relativeGeneratedFilePath";
+				- _id = GUID fe05f954-bd7f-42a9-aa66-e1514315ff6e;
+			}
+		}
+		{ ITag 
+			- _id = GUID 1a54653f-891e-4b86-b814-2caf4d55374e;
+			- _name = "relativeRxfPath";
+			- ValueSpecifications = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ILiteralSpecification 
+					- _id = GUID 370f690d-c2e4-4eb9-9038-d8054cd6228a;
+					- _value = ".";
+				}
+			}
+			- _typeOf = { IHandle 
+				- _m2Class = "IType";
+				- _filename = "PredefinedTypes.sbs";
+				- _subsystem = "PredefinedTypes";
+				- _class = "";
+				- _name = "RhpString";
+				- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+			}
+			- _isOrdered = 0;
+			- _base = { IHandle 
+				- _m2Class = "ITag";
+				- _filename = "";
+				- _subsystem = "Rpy_C_embOS_IAR_RX";
+				- _class = "RXFComponent";
+				- _name = "relativeRxfPath";
+				- _id = GUID c7ae458e-f8e1-41b8-80b8-e08bbb47e1a1;
+			}
+		}
+	}
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 64230b4c-bfbf-499e-8f3d-ef3927701ef1;
+		- _myState = 65536;
+		- _name = "Files";
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID bd9b2b54-7246-4238-8340-90279adab2b3;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID bd9b2b54-7246-4238-8340-90279adab2b3;
+			- _myState = 8192;
+			- _name = "Debug";
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 0c7fdd6d-5178-4ca5-8ddb-650ed4ad2c3b;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_C_embOS_IAR_RX_Dev\\Samples\\Model\\Blinky\\TargetComponent\\DefaultConfig\\TargetComponent.mak";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID b3ee9ee3-b1de-43cc-bdd9-bba91c7da2ba;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_C_embOS_IAR_RX_Dev\\Samples\\Model\\Blinky\\TargetComponent\\DefaultConfig\\MainTargetComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IClass";
+					- _filename = "ExamplePkg.sbs";
+					- _subsystem = "ExamplePkg";
+					- _class = "";
+					- _name = "TestBuilder";
+					- _id = GUID dab5083c-b1a0-4645-876e-8c0acbab2178;
+				}
+			}
+			- _root = { IFolder 
+				- _id = GUID 504f6142-84e7-40d6-bd7c-5a50a8e6ca14;
+				- _name = "Debug";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 6.18.2008::13:9:49;
+			- strongCGTime = 6.18.2008::13:9:49;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+		{ ICodeGenConfigInfo 
+			- _id = GUID d266ed33-fe7e-4be2-8325-79a6e928b5ca;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "C_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Rpy_C_embOS_IAR_RX_Dev";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "BuildCommandSet";
+										- _Value = "Release";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Debug,Release";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Release";
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID ec32d92d-e3fb-4de7-9f5a-bb86172e5c26;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_C_embOS_IAR_RX_Dev\\Samples\\Model\\Blinky\\TargetComponent\\DefaultConfig\\TargetComponent.mak";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID f212bcc7-4645-4ffe-b3bd-02960911b1b2;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Program Files\\Telelogic\\Rhapsody 7.1\\Share\\WST_RXF_V5\\Rpy_C_embOS_IAR_RX_Dev\\Samples\\Model\\Blinky\\TargetComponent\\DefaultConfig\\MainTargetComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID 1e000c2d-0b5a-4108-9cac-01ede7b17ffc;
+				- _name = "Release";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 6.19.2008::17:37:15;
+			- strongCGTime = 6.19.2008::17:37:15;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+	}
+	- HandlesInMe = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "ExamplePkg.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "ExamplePkg";
+			- _id = GUID 44aa1857-ce12-4fcb-bce5-045353898d04;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "@WILLERT_3@\\Rpy_C_embOS_IAR_RX_Dev\\Config\\UserSettings\\Rpy_C_embOS_IAR_RX_Profile_rpy\\Rpy_C_embOS_IAR_RX_Profile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Rpy_C_embOS_IAR_RX_Dev_Profile";
+			- _id = GUID ccbaa044-c563-69b9-1a81-2eac1ac0bbb8;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "@WILLERT_3@\\Rpy_C_embOS_IAR_RX_Dev\\Config\\UserSettings\\Rpy_C_embOS_IAR_RX_Profile_rpy\\WSTProfile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "WSTProfile";
+			- _id = GUID 839b3570-feed-482e-8776-cdf59c7831ae;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 1.10.2012::12:59:9;
+	- strongCGTime = 3.10.2008::13:36:30;
+}
+

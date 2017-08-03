@@ -1,0 +1,191 @@
+
+@page {
+  size: A4;
+  margin-left: 3cm;
+  @bottom-right {
+    content: counter(page);
+  }
+}
+
+body {
+    color: black; background-color: white;
+	font-family: "Trebuchet MS",Helvetica,Arial,sans-serif;
+    line-height: 1.2;
+    font-size: 11pt;
+    margin: 0; padding: 1em 0;
+    text-align: center;  /* Zentrierung im Internet Explorer */
+  }
+
+  div#chapter {
+  	page-break-after: always;
+  }
+
+  h1.chapter {
+    margin-top: 3cm;
+    margin-bottom: 1.5cm;
+	font-size: 32pt;
+	color: darkgray;
+  }
+
+  div#View {
+    text-align: left;    /* Seiteninhalt links ausrichten */
+    margin: 0 auto;      /* standardkonforme horizontale Zentrierung */
+    width: 100%;
+    padding: 0;
+    /* background: white url(Images/Willert-Logo-Grey.png) no-repeat right top; */
+  }
+
+  h1 {
+  font-size: x-large;
+  margin: 0;
+  padding: 0.3em;
+  margin-top:80px;
+  font-family: "Trebuchet MS",Helvetica,Arial,sans-serif;
+  line-height: normal;
+  text-align: left;
+  font-weight: bolder;
+  }
+  
+  h2 {
+  font-family: "Trebuchet MS",Helvetica,Arial,sans-serif;
+  font-size: large;
+  line-height: normal;
+  font-weight: bolder;
+    text-align: left;    /* Seiteninhalt links ausrichten */
+}
+h3 {
+  font-size: large;
+  font-weight: normal;
+  text-align: left;
+    text-align: left;    /* Seiteninhalt links ausrichten */
+}
+h4 {
+  font-size: small;
+  font-weight: inherit;
+  text-align: left;
+  font-family: "Trebuchet MS",Helvetica,Arial,sans-serif;
+  line-height: normal;
+  text-transform: uppercase;
+    text-align: left;    /* Seiteninhalt links ausrichten */
+}
+pre {
+  font-family: "Courier New",Courier,monospace;
+  font-weight: bold;
+  font-size: x-small;
+  text-align: left;
+}
+  #Navigation {
+   display: none;
+  }
+  #Navigation2 {
+   display: none;
+  }
+
+  div#Content {
+    /* margin: 0 0 1em 150px; */
+    padding: 0 1em;
+  }
+  * html div#Content {
+    height: 1em;  /* Workaround gegen den 3-Pixel-Bug des Internet Explorer bis Version 6 */
+    margin-bottom: 0;
+  }
+  div#Content p {
+    font-size: 1em;
+    margin: 1em 0;
+  }
+
+  p#HighlightFooter {
+    clear: both;
+    font-size: 0.83em;
+    margin: 0; padding: 0.1em;
+    text-align: center;
+    background-color: #fed;
+    border-top: 1px solid silver;
+  }
+  p#Footer {
+    clear: both;
+    font-size: 0.6em;
+    margin: 0; padding: 0.1em;
+    text-align: center;
+    background-color: #eee;
+    border-top: 1px solid silver;
+  }  
+
+  table {
+    page-break-inside: avoid;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid grey;
+  }
+
+  td {
+	padding: 5px;
+    vertical-align: top;
+  }
+  
+  th {
+	padding: 5px;
+    vertical-align: top;
+	background-color: lightgray
+  }
+  
+  tr {
+    page-break-inside: avoid;
+  }  
+
+  td table {
+    border: 1px solid lightgray;
+  }
+
+  td table td {
+    border: 1px solid lightgray;
+    font-size: 10pt;
+  }
+
+  td table th {
+    border: 1px solid lightgray;
+	background-color: #f6f6f6;
+    font-size: 10pt;
+  }
+
+  thead {
+    display: table-header-group;
+  }  
+  
+  ul.toc a::after {
+    content: " - page " target-counter(attr(href), page);
+  }
+
+  ul.toc {
+    line-height: 1.8;
+    font-size: 12pt;
+  }  
+  
+  img {
+    padding: 0px;
+    border: 0px;
+    margin: 10px;
+  }  
+  
+table.frontPage {
+    border-collapse: collapse;
+    margin-left: 5%;
+    width: 90%;
+    border: 1px solid grey;
+
+}
+
+table.frontPage {page-break-after: always;}
+
+table.frontPage, table.frontPage td {
+    border: 1px solid grey;
+}
+
+table.frontPage td {
+	padding: 10px;
+    vertical-align: top;
+}
+
+table.frontPage td:nth-child(odd) {
+	background-color: lightgray
+}  

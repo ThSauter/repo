@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ WST Installation File V6
+ ========================
+ $URL: https://svn.willert.de/V6/trunk/Component/Shared/Config/Installation/PreConfig.xml $
+ $Id: PreConfig.xml 33449 2016-01-14 13:13:42Z eroemer $
+ Generated on 2016-04-22 14:39:20.
+
+ Version information:
+ Octopus			33762
+ Macro Replacement	33643
+ Setup Generator	33762
+-->
+<WSTInstallerVariables>
+	<Willert>
+		<ProductName>
+			Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD
+		</ProductName>
+		<Description>
+			Please enter a base path where Willert Software Tools Programs and the RXF should be installed. A product name subfolder will be appended automatically during setup. This folder needs to have read/write access not only during setup, but each time the RXF is being used.
+		</Description>
+		<ProductId>
+			e466a3a2-5bc3-881d-eefd-018fe7737eea
+		</ProductId>
+		<ProductVersion>
+			V6.00
+		</ProductVersion>
+		<ReleaseNameShort>
+			WST_RXF_V6
+		</ReleaseNameShort>
+		<RegRoot>
+			HKCU
+		</RegRoot>
+		<RegParent>
+			SOFTWARE\Willert
+		</RegParent>
+		<RegPath>
+			SOFTWARE\Willert\WST_RXF_V6
+		</RegPath>
+		<RegKey>
+			InstallationBaseDirectory
+		</RegKey>
+		<Shortcuts>
+			<Item name="Bill of Material" description="List of all source file versions and MD5 hashes contained in the product.">
+				Doc\BillOfMaterial.htm
+			</Item>
+			<Item name="Release Notes" description="Release history including a list of new features, changes and bug fixes.">
+				Doc\ReleaseNotes.htm
+			</Item>
+			<Item name="RXF User Manual" description="RXF User manual including a getting started tutorial.">
+				Doc\Help\RXF Documentation.hta
+			</Item>
+			<Item name="Blinky Sample Model" description="A simple example UML model.">
+				Samples\Model\.rpy
+			</Item>
+
+			<Item name="Embedded UML Target Debugger" description="UML-level debugging on a real-time target.">
+				Tools\TargetDebugger\Embedded_Uml_Target_Debugger.bat
+			</Item>
+
+		</Shortcuts>
+		<ModifyFilesExt>
+			*.c,*.cpp,*.h,*.prp,*.ini,*.bat,*.uvproj,*.uvprojx,*.uvopt,*.uvoptx,*.txt,*.properties,*.rpy,*.sbs,*.cmp,*.cls,*.xml,*.xmi,*.html,*.htm,*.hts,.project,.cproject,*.eww,*.ewp,*.ewd,*.vcproj,*.vcxproj,*.filters,*.sln,*.awk,*.lnt,*.rtf,*.hep,*.launch
+		</ModifyFilesExt>
+	</Willert>
+	<SoftwareRequirement>
+
+		<KEIL checkfile="yes">
+			<Description>
+				Please enter the path to the Keil main directory (Excluding the CPU-name directory)
+			</Description>
+	
+			<RegRoot>
+				HKLM
+			</RegRoot>
+			<RegPath>
+				SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Keil &#181;Vision4\App1
+			</RegPath>
+			<RegKey>
+				Directory
+			</RegKey>
+	
+			<CheckFile>
+				ARM\ARMCC\bin\armcc.exe
+			</CheckFile>
+		</KEIL>
+		
+		
+		
+
+		<RPY checkfile="yes">
+			<Description>
+				Please enter the path to your Rhapsody data folder (containing Share folder)
+			</Description>
+			<RegRoot>
+				HKLM
+			</RegRoot>
+			<RegPath>
+				SOFTWARE\Telelogic\Rhapsody\@VERSION@
+			</RegPath>
+			<RegKey>
+				UserDirectory
+			</RegKey>
+			<CheckFile>
+				Share\Properties\factory.prp
+			</CheckFile>
+			<CustomAction>
+				DLL
+			</CustomAction>
+		</RPY>
+		
+		
+		<RPYPROG checkfile="yes">
+			<Description>
+				Please enter the path to your Rhapsody program files folder (containing Rhapsody.exe)
+			</Description>
+			<RegRoot>
+				HKLM
+			</RegRoot>
+			<RegPath>
+				SOFTWARE\Telelogic\Rhapsody\@VERSION@
+			</RegPath>
+			<RegKey>
+				InstallationDirectory
+			</RegKey>
+			<CheckFile>
+				Rhapsody.exe
+			</CheckFile>
+		</RPY>
+		
+
+	</SoftwareRequirement>
+</WSTInstallerVariables>

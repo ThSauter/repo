@@ -1,0 +1,8 @@
+<h2><a name="KeilRTX_Restrictions" id="KeilRTX_Restrictions"></a>KeilRTX Restrictions</h2>
+<p>
+<ul>
+  <li>Task Suicide<br>
+Active objects can only be destroyed by other objects (murder). Suicide of an active object (e.g. via the statechart's termination connector) is not supported. Reason: Dynamically allocated stack memory cannot be returned. KeilRTX API has limitations, there is no simple solution to implement suicide.
+</li>
+</ul>
+</p>

@@ -1,0 +1,102 @@
+/**
+*
+*
+*
+* $Id: MemoryTypePragmas.txt 24905 2011-06-09 07:45:50Z er $
+8 $URL: https://svn.willert.de/V6/trunk/Component/Modelling/Rpy/Tools/MemoryTypePragmas.txt $
+*
+* Willert Software Tools - Memory Type pragmas
+* 
+*
+* Email: support@willert.de
+*
+* 
+* 
+*
+**/
+
+
+/*****************************************************************************
+ * 
+ * @WST_START_PRODUCT_INFOS@
+ * ...
+ * ...
+ * This space left between the WST_xxx_PRODUCT_INFOS macros is reserved
+ * for information about the released product components.
+ * ...
+ * ...
+ * The WST-Generator replace the macros and fill this space with the
+ * appropriate contents.
+ * ...
+ * ...
+ * ...
+ * @WST_STOP_PRODUCT_INFOS@
+ *
+ *****************************************************************************/
+
+
+
+CODE FAST                       #pragma arm section code   = "%s"		/* Fast memory code, named section								*/
+CODE                            #pragma arm section code				/* code, default section										*/
+CODE SLOW                       #pragma arm section code   = "%s"		/* Slow memory code, named section								*/
+CODE                            #pragma arm section code				/* code, default section										*/
+DATA FAST NOINIT 8              #pragma arm section rwdata = "%s"		/* Fast memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA FAST INIT   8              #pragma arm section rwdata = "%s"		/* Fast memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA FAST CONST  8              #pragma arm section rodata = "%s"		/* Fast memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA FAST NOINIT 16             #pragma arm section rwdata = "%s"		/* Fast memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA FAST INIT   16             #pragma arm section rwdata = "%s"		/* Fast memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA FAST CONST  16             #pragma arm section rodata = "%s"		/* Fast memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA FAST NOINIT 24             #pragma arm section rwdata = "%s"		/* Fast memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA FAST INIT   24             #pragma arm section rwdata = "%s"		/* Fast memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA FAST CONST  24             #pragma arm section rodata = "%s"		/* Fast memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA FAST NOINIT 32             #pragma arm section rwdata = "%s"		/* Fast memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA FAST INIT   32             #pragma arm section rwdata = "%s"		/* Fast memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA FAST CONST  32             #pragma arm section rodata = "%s"		/* Fast memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA FAST NOINIT UNSPECIFIED	#pragma arm section rwdata = "%s"		/* Fast memory non-constant not-initialized data, named section	*/
+DATA NOINIT                     #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA FAST INIT   UNSPECIFIED    #pragma arm section rwdata = "%s"		/* Fast memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA FAST CONST  UNSPECIFIED    #pragma arm section rodata = "%s"		/* Fast memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA SLOW NOINIT 8              #pragma arm section rwdata = "%s"		/* Slow memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA SLOW INIT   8              #pragma arm section rwdata = "%s"		/* Slow memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA SLOW CONST  8              #pragma arm section rodata = "%s"		/* Slow memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA SLOW NOINIT 16             #pragma arm section rwdata = "%s"		/* Slow memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA SLOW INIT   16             #pragma arm section rwdata = "%s"		/* Slow memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA SLOW CONST  16             #pragma arm section rodata = "%s"		/* Slow memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA SLOW NOINIT 24             #pragma arm section rwdata = "%s"		/* Slow memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA SLOW INIT   24             #pragma arm section rwdata = "%s"		/* Slow memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA SLOW CONST  24             #pragma arm section rodata = "%s"		/* Slow memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA SLOW NOINIT 32             #pragma arm section rwdata = "%s"		/* Slow memory non-constant not-initialized data, named section	*/
+DATA NOINIT			            #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA SLOW INIT   32             #pragma arm section rwdata = "%s"		/* Slow memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA SLOW CONST  32             #pragma arm section rodata = "%s"		/* Slow memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/
+DATA SLOW NOINIT UNSPECIFIED	#pragma arm section rwdata = "%s"		/* Slow memory non-constant not-initialized data, named section	*/
+DATA NOINIT                     #pragma arm section rwdata				/* Non-constant not-initialized data, default section			*/
+DATA SLOW INIT   UNSPECIFIED    #pragma arm section rwdata = "%s"		/* Slow memory non-constant initialized data, named section		*/
+DATA INIT                       #pragma arm section rwdata				/* Non-constant initialized data, default section				*/
+DATA SLOW CONST  UNSPECIFIED    #pragma arm section rodata = "%s"		/* Slow memory constant data, named section						*/
+DATA CONST                      #pragma arm section rodata				/* Constant data, default section								*/

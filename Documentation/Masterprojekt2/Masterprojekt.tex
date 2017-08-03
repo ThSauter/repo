@@ -84,6 +84,7 @@ dashed=false,									% Bei mehreren Werken eines Autors alle einzeln anzeigen
 backend=biber, 
 block=space										% kleiner horizontaler Platz zwischen den Feldern
 ]{biblatex}										% Literaturangaben mit BibTeX
+\DeclareNameAlias{sortname}{last-first}
 \addbibresource{MasterBib.bib}
 \setlength{\bibitemsep}{1em}	% Abstand zwischen den Literaturangaben
 \setlength{\bibhang}{2em}   	% Einzug nach jeweils erster Zeile
@@ -114,7 +115,7 @@ block=space										% kleiner horizontaler Platz zwischen den Feldern
   frame=none,
   xleftmargin=\parindent,
   language=C,
-	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbers=left,                     % where to put the line-numbers; possible values are (none, left, right)
   showstringspaces=false,
 	%numberstyle=\tiny,								% the style that is used for the line-numbers 
   basicstyle=\footnotesize\ttfamily,

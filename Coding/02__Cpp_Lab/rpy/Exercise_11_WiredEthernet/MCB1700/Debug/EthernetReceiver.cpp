@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: EthernetReceiver
-//!	Generated Date	: Sat, 20, May 2017  
+//!	Generated Date	: Tue, 1, Aug 2017  
 	File Path	: MCB1700/Debug/EthernetReceiver.cpp
 *********************************************************************/
 
@@ -46,9 +46,6 @@ EthernetReceiver::EthernetReceiver(IOxfActive* theActiveContext) {
     
     // Bind to socket 
     bind (sock, (SOCKADDR *)&addr, sizeof(addr));
-    
-    // Connect socket
-    connect (sock, (SOCKADDR *)&addr, sizeof (addr));
     //#]
 }
 
@@ -59,9 +56,19 @@ EthernetReceiver::~EthernetReceiver() {
 
 void EthernetReceiver::receiveData() {
     //#[ operation receiveData()
-    receive_data(sock, dbuf);
+    extern int recv (int sock, char *buf, int len, int flags);
+    int res;
+    res = recv (sock, dbuf, sizeof (dbuf), 0);
+        
+    if (res <= 0)
+    { 
+    	// only for debugging purposes
+    	;
+    }    
       
-    if (dbuf[0] == 0x01) {
+    if (dbuf[0] == 0x01) { 
+    
+    	// Valid identifier, received Data
     	FIRE(this->itsLed, evBlink()); 
     	FIRE(this->itsLedBar, evReceivedData((char)dbuf[1]));    
     	FIRE(this->itsDisplay, evReceivedData((char)dbuf[1]));

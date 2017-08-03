@@ -1,0 +1,133 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 26;
+	- value = "MCB1700\\Debug\\DefaultPkg.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\DefaultPkg.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\Display.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\Display.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\EthernetController.cpp" 7.26.2017::15:13:49
+	"MCB1700\\Debug\\EthernetController.h" 7.26.2017::15:13:49
+	"MCB1700\\Debug\\EthernetReceiver.cpp" 7.26.2017::15:13:49
+	"MCB1700\\Debug\\EthernetReceiver.h" 7.26.2017::15:13:49
+	"MCB1700\\Debug\\EthernetTransmitter.cpp" 7.26.2017::15:13:49
+	"MCB1700\\Debug\\EthernetTransmitter.h" 7.26.2017::15:13:49
+	"MCB1700\\Debug\\Joystick.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\Joystick.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\Led.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\Led.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\LedBar.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\LedBar.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\RunningIndicatorLed.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\RunningIndicatorLed.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\TestBuilder.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\TestBuilder.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\UartController.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\UartController.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\UartReceiver.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\UartReceiver.h" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\UartTransmitter.cpp" 8.3.2017::4:48:42
+	"MCB1700\\Debug\\UartTransmitter.h" 8.3.2017::4:48:42
+	
+}
+- size = 11;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "MCB1700.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "MCB1700\\Debug";
+	- _id = GUID 07cbf8a8-7755-4165-8d91-fa3f251ef73e;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "UartTransmitter";
+	- _id = GUID aa7065b8-5eb9-49bc-9897-cb9193561cca;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "RunningIndicatorLed";
+	- _id = GUID 85cc7090-8ea9-41aa-a79b-d49f655e74fc;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "LedBar";
+	- _id = GUID dd8f497a-eac2-4815-82c8-b84b67f3d3a9;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "DefaultPkg";
+	- _id = GUID a6cff529-c390-404d-a784-4baed8ff40ad;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "TestBuilder";
+	- _id = GUID 6b7d70c7-ea2f-4968-ad24-487708a260c9;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "Led";
+	- _id = GUID 8671dd30-b1da-4f73-8ad6-a1608c1ae9ff;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "Display";
+	- _id = GUID b743dad8-317b-4431-9bcd-77af3af3de97;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "UartReceiver";
+	- _id = GUID f3efa2fe-0993-476d-ad40-cb0bd8f9969d;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "Joystick";
+	- _id = GUID ea0c96e2-eb9a-40f7-b3ea-bc9afba543d2;
+}
+- genTime = 8.3.2017::4:48:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "DefaultPkg.sbs";
+	- _subsystem = "DefaultPkg";
+	- _class = "";
+	- _name = "UartController";
+	- _id = GUID 01490b81-ae3c-4c22-b82a-b5decad2b57e;
+}
+- genTime = 8.3.2017::4:48:42;
+

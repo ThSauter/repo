@@ -1,0 +1,13 @@
+	<KEIL>
+	    <ToolMenu regroot="HKCU" path="Software\Keil\@VERSION@\ToolM">
+	      <Item iden="Mtx">
+	        <Key name="Mtx">Run Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01 UML Target Debugger</Key>
+	        <Key name="Mex">@WILLERT_1@\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\Tools\TargetDebugger\Embedded_Uml_Target_Debugger.bat</Key>
+	        <Key name="Mag">--xml "$PXMLData.xml" --communication Keil.dll --directconfig "#X/$P%P"</Key>
+	        <Key name="Mfg" type="DWord">2304</Key>
+	        <Key name="Mid">
+	        </Key>
+	      </Item>
+	    </ToolMenu>
+
+	</KEIL>

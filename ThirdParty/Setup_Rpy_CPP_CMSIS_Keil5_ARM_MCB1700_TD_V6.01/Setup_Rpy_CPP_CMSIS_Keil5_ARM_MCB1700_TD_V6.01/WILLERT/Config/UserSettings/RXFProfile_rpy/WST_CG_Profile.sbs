@@ -1,0 +1,397 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 2030848
+{ IProfile 
+	- _id = GUID 198390c0-3c25-77ce-027f-7a374fb23d02;
+	- _myState = 8192;
+	- _name = "WST_CG_Profile";
+	- Declaratives = { IRPYRawContainer 
+		- size = 5;
+		- value = 
+		{ IStereotype 
+			- _id = GUID 62451380-a4cf-02ef-e896-879ccc53d977;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 3;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UseAsExternal";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Package";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UseAsExternal";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Type";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UseAsExternal";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "Format";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Fill.FillColor";
+										- _Value = "192,192,192";
+										- _Type = Color;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Interface";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Fill.FillColor";
+										- _Value = "192,192,192";
+										- _Type = Color;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "External";
+			- _description = { IDescription 
+				- _text = "Implies that the class is external";
+			}
+			- _m2Classes = { IRPYRawContainer 
+				- size = 2;
+				- value = "Class"; "Package"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID 55363583-4c7d-b924-ae06-aa96ee0d2a0a;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Ordered";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Ordered";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "AssociationEnd"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID b70cc541-0290-884f-7612-ca8108f905c3;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 10;
+									- value = 
+									{ IProperty 
+										- _Name = "ClearGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "DeleteComponentGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "GetEndGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "GetGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoveComponentHelpersGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoveGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoveHelpersGenerate";
+										- _Value = "False";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "True,False,FromModifier";
+									}
+									{ IProperty 
+										- _Name = "SetComponentHelpersGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "SetGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "SetHelpersGenerate";
+										- _Value = "False";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "True,False,FromModifier";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "C_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "RemoveKeyGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoveKeyHelpersGenerate";
+										- _Value = "False";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "True,False,FromModifier";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "SimplifiedAccess";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "AssociationEnd"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID c21e0670-e5dd-b37b-b1cb-6ed869432526;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 8;
+									- value = 
+									{ IProperty 
+										- _Name = "DeleteComponentGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "GetEndGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "GetGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoveComponentHelpersGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoveHelpersGenerate";
+										- _Value = "False";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "True,False,FromModifier";
+									}
+									{ IProperty 
+										- _Name = "SetComponentHelpersGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "SetGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "SetHelpersGenerate";
+										- _Value = "False";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "True,False,FromModifier";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "C_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "RemoveKeyGenerate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoveKeyHelpersGenerate";
+										- _Value = "False";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "True,False,FromModifier";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "FullAccess";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "AssociationEnd"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID e0be3238-0082-8c85-390a-1b82f2b1d703;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "C_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Type";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Visibility";
+										- _Value = "Private";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Private, Public";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Private";
+			- _description = { IDescription 
+				- _text = "Used so that any type appears in the .c file instead of the .h file";
+			}
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "Type"; 
+			}
+		}
+	}
+	- weakCGTime = 2.5.2013::8:25:56;
+	- strongCGTime = 2.5.2013::8:23:10;
+	- _defaultComposite = GUID d736e286-c852-9064-0090-d5148839299b;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID d736e286-c852-9064-0090-d5148839299b;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 2.5.2013::8:25:56;
+			- strongCGTime = 2.5.2013::8:23:10;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

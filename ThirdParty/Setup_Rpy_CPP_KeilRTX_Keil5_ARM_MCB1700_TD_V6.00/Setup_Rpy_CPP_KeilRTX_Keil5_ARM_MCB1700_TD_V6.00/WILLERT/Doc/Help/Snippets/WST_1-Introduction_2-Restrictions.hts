@@ -1,0 +1,26 @@
+<h2><a name="Target_Debugger_Restrictions" id="Target_Debugger_Restrictions"></a>Embedded UML Target Debugger Restrictions</h2>
+<p>
+<ul>
+
+<li/>Roundtripping<br/>The current implementation of the WSTMonitor causes restrictions
+  regarding code roundtripping. It is planned to solve this issue
+  in the near future. The WSTMonitor is required to communicate
+  with the Embedded UML Target Debugger.
+
+
+<li/>Keil UVSOCK Communication from PC to Target<br/>
+  
+  Currently the Target Debugger monitor part (C++ code on target)
+  has problems to receive commands via Keil UVSOCK.
+  When used in C++ code, the Keil UVSOCK interface seems to skip
+  some bytes during data reception. As a workaround all communication
+  from Target Debugger (host) to C++ Monitor (target) is
+  deactivated. Several Target Debugger features (e.g. query
+  attributes, query states, suspend, set filters and breakpoints)
+  are currently not available in the C++ evaluation version.
+  We are in contact with Keil and trying to solve this problem
+  with the Keil UVSOCK communication interface.
+
+
+</ul>
+</p>

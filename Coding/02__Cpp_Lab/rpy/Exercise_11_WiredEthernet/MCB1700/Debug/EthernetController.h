@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: EthernetController
-//!	Generated Date	: Sat, 20, May 2017  
+//!	Generated Date	: Thu, 3, Aug 2017  
 	File Path	: MCB1700/Debug/EthernetController.h
 *********************************************************************/
 
@@ -36,10 +36,10 @@ public :
     ////    Operations    ////
     
     //## operation getHostIpAddress()
-    char* getHostIpAddress();
+    const char* getHostIpAddress();
     
-    //## operation getTargetIpAddress()
-    char* getTargetIpAddress();
+    //## operation getRemoteIpAddress()
+    const char* getRemoteIpAddress();
     
     ////    Additional operations    ////
 
@@ -89,7 +89,7 @@ protected :
 
     SOCKADDR_IN addr;		//## attribute addr
     
-    char dbuf[2];		//## attribute dbuf
+    char dbuf[4];		//## attribute dbuf
     
     static int dstPort;		//## attribute dstPort
     

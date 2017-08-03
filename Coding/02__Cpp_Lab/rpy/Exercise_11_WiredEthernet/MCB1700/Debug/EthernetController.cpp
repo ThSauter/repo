@@ -4,7 +4,7 @@
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: EthernetController
-//!	Generated Date	: Sat, 20, May 2017  
+//!	Generated Date	: Thu, 3, Aug 2017  
 	File Path	: MCB1700/Debug/EthernetController.cpp
 *********************************************************************/
 
@@ -30,7 +30,7 @@ EthernetController::EthernetController() {
         // Initialize the network component only once
     	status = netInitialize ();
     	
-    	// Set the host ip address once
+    	// Set the host ip adress once
     	netIP_aton (hostIpAddr, NET_ADDR_IP4, buf);
         netIF_SetOption (NET_IF_CLASS_ETH | 0, netIF_OptionIP4_Address, buf, NET_ADDR_IP4_LEN);
     }
@@ -43,23 +43,15 @@ EthernetController::~EthernetController() {
     //#]
 }
 
-char* EthernetController::getHostIpAddress() {
+const char* EthernetController::getHostIpAddress() {
     //#[ operation getHostIpAddress()
-    char* temp;   
-    // hostIpAddr is a const char*
-    strcpy(temp, hostIpAddr); 
-    
-    return temp;
+    return hostIpAddr;
     //#]
 }
 
-char* EthernetController::getTargetIpAddress() {
-    //#[ operation getTargetIpAddress()
-    char* temp;   
-    // hostIpAddr is a const char*
-    strcpy(temp, hostIpAddr); 
-    
-    return temp;
+const char* EthernetController::getRemoteIpAddress() {
+    //#[ operation getRemoteIpAddress()
+    return remoteIpAddr;
     //#]
 }
 

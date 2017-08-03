@@ -1,0 +1,876 @@
+I-Logix-RPY-Archive version 8.7.1 C++ 5074847
+{ IProfile 
+	- _id = GUID 12831e05-d580-d500-2767-cffc5fe8467e;
+	- _myState = 8192;
+	- _name = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile";
+	- _lastID = 3;
+	- Declaratives = { IRPYRawContainer 
+		- size = 9;
+		- value = 
+		{ IStereotype 
+			- _id = GUID d5b44ea0-9660-b6c5-6318-11aceea67d78;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 3;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "GenerateForwardDeclarations";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 3;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 35;
+									- value = 
+									{ IProperty 
+										- _Name = "MainFunctionArgList";
+										- _Value = "sint16 argc, char_t* argv[]";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ImplementationProlog";
+										- _Value = "// WST_RXF.h include needed only at this point 
+#define WST_CORRECT_HEADER_ORDER
+#include \"WST_RXF.h\"";
+										- _Type = MultiLine;
+									}									
+									{ IProperty 
+										- _Name = "MainFunctionRetType";
+										- _Value = "sint16";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ContainerSet";
+										- _Value = "OMContainers";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "OMContainers, STLContainers, OMUContainers";
+									}
+									{ IProperty 
+										- _Name = "Environment";
+										- _Value = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6_01";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6_01,Cygwin,Microsoft";
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_DebugMode";
+										- _Value = "WST_MEM_NO_DEBUG";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "WST_MEM_NO_DEBUG,WST_MEM_DEBUG";
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_UseStatistics";
+										- _Value = "WST_MEM_NO_STATISTICS";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "WST_MEM_NO_STATISTICS,WST_MEM_STATISTICS";
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_getMemoryMode";
+										- _Value = "WST_MEM_REQUEST_ONE_POOL";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "WST_MEM_REQUEST_ONE_POOL,WST_MEM_REQUEST_ALL_POOLS";
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_criticalRegions";
+										- _Value = "WST_MEM_DISABLE_INTERRUPTS";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "WST_MEM_DISABLE_INTERRUPTS,WST_MEM_USE_MUTEX";
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_UseTail";
+										- _Value = "WST_MEM_NO_TAIL";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "WST_MEM_NO_TAIL,WST_MEM_USE_TAIL";
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_TinyPool";
+										- _Value = "uint32 tinyBuffers[ WST_INITIAL_TINY_BUFFERS ]  [ ( WST_TINY_BUFFER_SIZE + sizeof( WST_MEM_Block) + 3 ) / 4 ];";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_SmallPool";
+										- _Value = "uint32 smallBuffers[ WST_INITIAL_SMALL_BUFFERS ]  [ ( WST_SMALL_BUFFER_SIZE + sizeof( WST_MEM_Block) + 3 ) / 4 ];";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_MediumPool";
+										- _Value = "uint32 mediumBuffers[ WST_INITIAL_MEDIUM_BUFFERS ][ ( WST_MEDIUM_BUFFER_SIZE + sizeof( WST_MEM_Block) + 3 ) / 4 ];";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_LargePool";
+										- _Value = "uint32 largeBuffers[ WST_INITIAL_LARGE_BUFFERS ]  [ ( WST_LARGE_BUFFER_SIZE + sizeof( WST_MEM_Block) + 3 ) / 4 ];";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_MEM_HugePool";
+										- _Value = "uint32 hugeBuffers[ WST_INITIAL_HUGE_BUFFERS ]  [ ( WST_HUGE_BUFFER_SIZE + sizeof( WST_MEM_Block) + 3 ) / 4 ];";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTHugeBufferSize";
+										- _Value = "0U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialHugeBuffers";
+										- _Value = "0U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialLargeBuffers";
+										- _Value = "2U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialMediumBuffers";
+										- _Value = "6U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialSmallBuffers";
+										- _Value = "12U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTInitialTinyBuffers";
+										- _Value = "0U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTLargeBufferSize";
+										- _Value = "96U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTMaxTimeouts";
+										- _Value = "32U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTMediumBufferSize";
+										- _Value = "32U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTSmallBufferSize";
+										- _Value = "16U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WSTTinyBufferSize";
+										- _Value = "0U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_TMM_msPerTick";
+										- _Value = "10U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_DefaultMsqSize";
+										- _Value = "32U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_DefaultTaskStackSize";
+										- _Value = "512U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_MainTaskStackSize";
+										- _Value = "512U";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_MonitorTaskPriority";
+										- _Value = "WST_RTOS_TASK_PRIORITY_LOW";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_MainTaskPrioity";
+										- _Value = "WST_RTOS_TASK_PRIORITY_NORMAL";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_TaskDefaultPriority";
+										- _Value = "WST_RTOS_TASK_PRIORITY_NORMAL";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_TimerTaskPriority";
+										- _Value = "WST_RTOS_TASK_PRIORITY_HIGHEST";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "WST_TimerTaskStackSize";
+										- _Value = "512U";
+										- _Type = String;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Destructor";
+										- _Value = "virtual";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "auto,virtual,abstract,common";
+									}
+									{ IProperty 
+										- _Name = "Simplify";
+										- _Value = "ByUserPostDefault";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "None,Default,ByUser,ByUserPostDefault";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Framework";
+								- Properties = { IRPYRawContainer 
+									- size = 30;
+									- value = 
+									{ IProperty 
+										- _Name = "ActivateFrameworkDefaultEventLoop";
+										- _Value = "WST_RXF::start();";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ActiveBase";
+										- _Value = "WST_TSK";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ActiveIncludeFiles";
+										- _Value = "\"WSTModelHeadersTSK.h\"";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ActiveMessageQueueSize";
+										- _Value = "WST_TSK_DEFAULT_MESSAGE_QUEUE_SIZE";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ActiveStackSize";
+										- _Value = "WST_TSK_DEFAULT_STACK_SIZE";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ActiveThreadPriority";
+										- _Value = "WST_TSK_DEFAULT_PRIORITY";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "BooleanType";
+										- _Value = "bool";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "CurrentEventId";
+										- _Value = "WST_EVT_getId";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "DefaultMulticastReactivePortBase";
+										- _Value = "WST_PRT_MULTI";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "DefaultMulticastReactivePortIncludeFiles";
+										- _Value = "\"WST_PRT_Multi.h\"";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "DefaultReactivePortBase";
+										- _Value = "WST_PRT_MULTI";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "DefaultReactivePortIncludeFiles";
+										- _Value = "\"WST_PRT_Multi.h\"";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "EventBase";
+										- _Value = "WST_EVT";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "EventGenerationPattern";
+										- _Value = "FIRE($meArrow$target, $event)";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "EventIdType";
+										- _Value = "WST_EVT_ID_t";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "EventIncludeFiles";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "EventMultiGenerationPattern";
+										- _Value = "FIRE($target, $event)";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "FrameworkInitialization";
+										- _Value = "WST_RXF::initialize()";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "HeaderFile";
+										- _Value = "\"WSTModelHeadersBase.h\"";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "NullTransitionId";
+										- _Value = "WST_EVT_null_id ";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ProtectedIncludeFiles";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ReactiveBase";
+										- _Value = "WST_FSM";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ReactiveCtorActiveArgName";
+										- _Value = "myTask";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ReactiveCtorActiveArgType";
+										- _Value = "WST_TSK*";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ReactiveIncludeFiles";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ReactiveSetTask";
+										- _Value = "setTask( $task, $isActive );";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ReactiveStateType";
+										- _Value = "uint16";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "StaticMemoryIncludeFiles";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "TimeoutId";
+										- _Value = "WST_TMR_id";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "TimerMaxTimeouts";
+										- _Value = "WST_MAX_TIMEOUTS";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "STLContainers";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Qualified";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "IncludeFiles";
+										- _Value = "<map>,<iterator>";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "RXFComponent";
+			- _description = { IDescription 
+				- _text = "Components with this Stereotype assigned are prepared for code generation matching the Willert C++ RXF Interface.";
+			}
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "Component"; 
+			}
+			- _newTerm = 1;
+		}
+		{ IStereotype 
+			- _id = GUID 9d34a71a-e8f0-f0a0-b21c-f7a850903788;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "GenerateImplicitConstructors";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "StandardOperations";
+										- _Value = "singleton";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "singletonDeclaration";
+										- _Value = "public:
+	static $Name* getInst();
+	
+protected:
+	$Name();
+	
+private:
+	static $Name* inst;";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "singletonDefinition";
+										- _Value = "$Name* $Name::inst = 0;
+
+$Name::$Name() { 
+	// Empty constructor, for internal use only (Singleton).
+	// Use $Name::getInst() to access instance.
+}
+
+$Name* $Name::getInst() {
+	if (0 == inst)
+	{
+		inst = new $Name();
+	}
+	return inst;
+}";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Animate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "GenerateDestructor";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "WSTDynSingleton";
+			- _description = { IDescription 
+				- _text = "The classic Singleton implementation is automatically applied by using this stereotype.
+
+Warning, applying this stereotype switches animation off for the class. This is a necessary limitation due to the use of StandardOps.";
+			}
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "Class"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID 6a441338-05ef-e272-d884-a06c5f3dc27f;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "GenerateImplicitConstructors";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "StandardOperations";
+										- _Value = "singleton";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "singletonDeclaration";
+										- _Value = "public:
+	static $Name* getInst();
+	
+protected:
+	$Name();
+	
+private:
+	static $Name inst;";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "singletonDefinition";
+										- _Value = "$Name $Name::inst;
+
+$Name::$Name() { 
+	// Empty constructor, for internal use only (Singleton).
+	// Use $Name::getInst() to access instance.
+}
+
+$Name* $Name::getInst() {
+	return &inst;
+}";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Animate";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "GenerateDestructor";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "WSTSingleton";
+			- _description = { IDescription 
+				- _text = "The classic Singleton implementation is automatically applied by using this stereotype.
+
+Warning, applying this stereotype switches animation off for the class. This is a necessary limitation due to the use of StandardOps.";
+			}
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "Class"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID c68b1011-4030-1faa-fd65-9b1a6a305635;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 3;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "WSTAdditionalDefinesTD";
+										- _Value = "-DWST_ANIMATION -DWST_LIVE_ANIMATION -DWST_TARGET_DEBUGGING_ENABLED ";
+										- _Type = String;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "SimplifyTriggeredOperation";
+										- _Value = "ByUserPostDefault";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "None,Copy,Default,ByUser,ByUserPostDefault";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Event";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Simplify";
+										- _Value = "ByUserPostDefault";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "None,Copy,Default,ByUser,ByUserPostDefault";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "WSTLiveAnimation";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 2;
+				- value = "Component"; "Configuration";
+			}
+		}
+		{ IStereotype 
+			- _id = GUID e6a3adb8-7d1b-cff4-aad8-5e97fee94fe4;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Simplify";
+										- _Value = "ByUserPostDefault";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "None,Copy,Default,ByUser,ByUserPostDefault";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "AnimatedOp";
+			- _modifiedTimeWeak = 3.24.2015::8:15:57;
+			- _description = { IDescription 
+				- _text = "Using this stereotype on an operation will cause to monitor function calls with the WST UML Target Debugger.";
+			}
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "Operation"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID 7918679e-6ca5-2306-4e1d-a86e272a03d9;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UseEnumForState";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "WSTUseEnumStateType";
+			- _modifiedTimeWeak = 4.22.2016::8:3:5;
+			- _m2Classes = { IRPYRawContainer 
+				- size = 4;
+				- value = "Class"; "Module"; "Object"; "Package"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID 1f14681b-9cc7-9978-99e9-ca369382ce3d;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 3;
+									- value = 
+									{ IProperty 
+										- _Name = "ActiveMessageQueueSize";
+										- _Value = "Please insert a Value in your Model";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ActiveStackSize";
+										- _Value = "Please insert a Value in your Model";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "Concurrency";
+										- _Value = "active";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "sequential,active";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "WSTStaticTask";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 3;
+				- value = "Actor"; "Class"; "Object"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID 9e087066-2b0d-0383-4162-f27d1040dcba;
+			- _myState = 8192;
+			- _name = "TC_WrapPrivateOperations";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 2;
+				- value = "Component"; "Configuration"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID fea3b7b5-11ac-0ac5-6b83-06efa24e0077;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer  
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "WSTAdditionalDefinesTC";
+										- _Value = "-DWST_TARGET_DEBUGGING_ENABLED -DWST_TESTCONDUCTOR";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "WSTMonitorForTC";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 2;
+				- value = "Component"; "Configuration"; 
+			}
+		}
+	}
+	- weakCGTime = 1.16.2013::12:20:24;
+	- strongCGTime = 11.29.2012::9:22:12;
+	- _defaultComposite = GUID a26af119-ddc5-33ee-ed62-b3e57818c71a;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID a26af119-ddc5-33ee-ed62-b3e57818c71a;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 12.13.2012::10:35:7;
+			- strongCGTime = 11.29.2012::9:22:12;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

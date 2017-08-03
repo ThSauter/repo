@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>High Water Marks - RXF Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="wst.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="wst_print.css" type="text/css" media="print"></head><body>
+<div id="View">
+  <script src="TOC.js" type="text/javascript"> </script> 	
+
+  <div id="Content">
+  <h1><a name="High_water_marks" id="High_water_marks"></a>High Water Marks</h1>
+All static buffers can be configured via properties, which you can set
+in your model. We have implemented high water marks for these so you
+can inspect at runtime how much resources of these buffers are actually
+used.<br>
+  <br>There is a single data field, which you can inspect for the high water marks. This field is a structure that shows:<br>
+  <br>
+
+  <ul>
+    <li>the maximum number of buffers used of the small buffer pool</li>
+
+    <li>the maximum number of&nbsp;buffers used of the medium buffer pool</li>
+
+    <li>the maximum number of&nbsp;buffers used of the large buffer pool</li>
+
+    <li>the maximum number of timeouts used of the timeout buffer pool</li>
+
+    <li>a flag that indicates if the heap was used because a buffer pool was exhausted, in the case you enabled a <a href="WST_3-Technology_1-Memory-Management_Deterministic-Realtime-Memory-Usage.htm#Mixed_Mode_Static_and_Dynamic_Memory">mixed mode of static and dynamic memory</a> management.</li>
+  </ul>The high water marks allow you to fine-tune the number of elements provided in the static pools.<br>
+<br>
+They are enabled if <a href="WST_3-Technology_8-List-of-Defines.htm#WST_CFG_HIGHWATERMARKS_Define">WST_CFG_HIGHWATERMARKS</a>
+is defined, usually this can be done via the generated file
+RxfConstants.h. Then you can add the global structure "highwater" to
+your debugger's watch window to analyze the high water marks after a
+system has performed the desired tasks.<br>
+  <br>
+  <br>
+  <br>
+
+  </div>
+
+  <p id="Footer">This documentation belongs to the Product Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01, released on 2017-02-27. &copy;&nbsp;2016 Willert Software Tools GmbH.</p>
+</div>
+</body></html>

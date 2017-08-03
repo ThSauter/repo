@@ -1,0 +1,510 @@
+I-Logix-RPY-Archive version 8.6.0 C 4058450
+{ IProfile 
+	- _id = GUID 0e80deb0-e278-42f1-9605-a0fb88d21ee5;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 3;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 5;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Attribute";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IsConst";
+								- _Value = "SignatureAndReturnType";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "None, Signature, SignatureAndReturnType";
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Component";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "GenerateComponentCleanup";
+								- _Value = "Never";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Never ,Smart";
+							}
+							{ IProperty 
+								- _Name = "GenerateComponentInitialization";
+								- _Value = "Never";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Never ,Smart";
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Configuration";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "GenerateForwardDeclarations";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "MainGenerationScheme";
+								- _Value = "UserInitializationOnly";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Full,UserInitializationOnly";
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Relation";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IsConst";
+								- _Value = "SignatureAndReturnType";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "None, Signature, SignatureAndReturnType";
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Statechart";
+						- Properties = { IRPYRawContainer 
+							- size = 4;
+							- value = 
+							{ IProperty 
+								- _Name = "EvaluateComponentStatesInCondition";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "EventConsumptionScheme";
+								- _Value = "SingleExitPoint";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Default,SingleExitPoint";
+							}
+							{ IProperty 
+								- _Name = "FlatStateType";
+								- _Value = "RhpInteger";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "StateInOperationReturnType";
+								- _Value = "RhpInteger";
+								- _Type = String;
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "C_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 5;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Class";
+						- Properties = { IRPYRawContainer 
+							- size = 3;
+							- value = 
+							{ IProperty 
+								- _Name = "IsCompletedOperation";
+								- _Value = "Inline";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Inline,Plain";
+							}
+							{ IProperty 
+								- _Name = "IsInOperation";
+								- _Value = "Inline";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Inline,Plain,Never";
+							}
+							{ IProperty 
+								- _Name = "TypedefStructSuffix";
+								- _Value = "_t";
+								- _Type = String;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Configuration";
+						- Properties = { IRPYRawContainer 
+							- size = 10;
+							- value = 
+							{ IProperty 
+								- _Name = "CastReturnValueToVoid";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "EmptyArgumentListName";
+								- _Value = "void";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "GenIndexIAs";
+								- _Value = "iterI";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "GenIndexJAs";
+								- _Value = "iterJ";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "InitializeEmbeddableObjectsByValue";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "MainFunctionArgList";
+								- _Value = "RhpInteger argc, RhpCharacter* argv[]";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "MainFunctionRetType";
+								- _Value = "RhpInteger";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "MisraRule45InReactive";
+								- _Value = "/* polyspace<MISRA-C2004: 11.2: Not a defect: Justified> The following cast is justified and is for Rhapsody auto-generated code use only. Conversions shall not be performed between a pointer to object and any type other than an integral type, another pointer to object type or a pointer to void. */	
+";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "MisraRule45Justification";
+								- _Value = "/* polyspace<MISRA-C2004: 11.2: Not a defect: Justified> The following cast is justified and is for Rhapsody auto-generated code use only. Conversions shall not be performed between a pointer to object and any type other than an integral type, another pointer to object type or a pointer to void. */	
+";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "OptimizeVoidMeCastGeneration";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Event";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "EventIdAsDefine";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "InitCleanUpDestroyFunctionsAsPrivate";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Framework";
+						- Properties = { IRPYRawContainer 
+							- size = 10;
+							- value = 
+							{ IProperty 
+								- _Name = "EmptyClassDeclaration";
+								- _Value = "RiCBoolean dummy;";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventIdType";
+								- _Value = "RiCEventId";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "EventSetDestroyOp";
+								- _Value = "{
+	$me->ric_event.eventDestroyOp = (RiCEventDestroyOp) RiC_Destroy_$Event;
+}
+";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "ReactiveEnableAccessEventData";
+								- _Value = "$Event * params = ($Event *)(($me)->ric_reactive.current_event);
+";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "ReactiveInit";
+								- _Value = "/* polyspace<MISRA-C2004: 11.2: Not a defect: Justified> The following cast is justified and is for Rhapsody auto-generated code use only. Conversions shall not be performed between a pointer to object and any type other than an integral type, another pointer to object type or a pointer to void. */ 
+$base_init($member, (void*)$mePtr, $task, &$VtblName)";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "StaticMemoryPoolDeclaration";
+								- _Value = "RiCMemoryAllocator * $(Class)_myRiCMemoryAllocator(void);
+gen_ptr $(Class)_getRiCMemoryPoolNextChunk(gen_ptr const me);			
+void $(Class)_setRiCMemoryPoolNextChunk(gen_ptr me, gen_ptr nextChunk);
+void $(Class)_RiCMemoryPoolIsEmpty(void);
+void $(Class)_RiCMemoryPoolSetIncrement(RhpPositive value);
+void $(Class)_RiCCallMemoryPoolIsEmpty(RiCBoolean flagValue);
+void $(Class)_RiCSetMemoryAllocator(gen_ptr(*const newAllocator)(RhpPositive));
+";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "StaticMemoryPoolGetMemory";
+								- _Value = "($(Class) *) RiCMemoryAllocator_getMemory($(Class)_myRiCMemoryAllocator(), sizeof($(Class)));
+";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "StaticMemoryPoolImplementation";
+								- _Value = "static RiC_UINT8 $(Class)_RiCMemoryPool[(RiC_RAW_MEMORY_ALIGNMENT-1)+($(BaseNumberOfInstances) * sizeof($(Class)))]; 
+RiCMemoryAllocator * $(Class)_myRiCMemoryAllocator(void) {										
+	static RiCMemoryAllocator allocator;														
+	static RiCBoolean initialized = RiCFALSE;													
+	if (!initialized) {																			
+		initialized = RiCTRUE;																	
+		RiCMemoryAllocator_init(&allocator, (RiC_UINT8 *)&$(Class)_RiCMemoryPool,			
+					sizeof($(Class)), $(BaseNumberOfInstances), $(AdditionalNumberOfInstances), $ProtectStaticMemoryPool,						
+					$(Class)_getRiCMemoryPoolNextChunk,										
+					$(Class)_setRiCMemoryPoolNextChunk,										
+					$(Class)_RiCMemoryPoolIsEmpty);											
+	}																							
+	return &allocator;																			
+}																								
+gen_ptr $(Class)_getRiCMemoryPoolNextChunk(gen_ptr const me)						
+{																					
+	$(Class) * realMe = ($(Class) *)me;
+	gen_ptr next = NULL;								
+	if (realMe) {
+		next = (gen_ptr)(realMe->RiCMemoryPoolNextChunk);
+	}
+	else
+	{
+		next = NULL;
+	}
+	return next;									
+}																					
+void $(Class)_setRiCMemoryPoolNextChunk(gen_ptr me, gen_ptr nextChunk)				
+{																					
+	$(Class) * realMe = ($(Class) *)me;											
+	realMe->RiCMemoryPoolNextChunk = ($(Class) *) nextChunk;						
+}																					
+void $(Class)_RiCMemoryPoolSetIncrement(RhpPositive value)								
+{																					
+	RiCMemoryAllocator_setIncrNum($(Class)_myRiCMemoryAllocator(), value);	
+}																					
+void $(Class)_RiCMemoryPoolIsEmpty()												
+{	
+}																							
+void $(Class)_RiCCallMemoryPoolIsEmpty(RiCBoolean flagValue)								
+{																							
+	RiCMemoryAllocator_callIsEmpty($(Class)_myRiCMemoryAllocator(), flagValue);
+}																							
+void $(Class)_RiCSetMemoryAllocator(gen_ptr(*const newAllocator)(RhpPositive))						
+{																						
+	RiCMemoryAllocator_setAllocator($(Class)_myRiCMemoryAllocator(), newAllocator);	
+}
+";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "StaticMemoryPoolMemberDeclaration";
+								- _Value = "$Class * RiCMemoryPoolNextChunk;";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "StaticMemoryPoolReturnMemory";
+								- _Value = "RiCMemoryAllocator_returnMemory($(Class)_myRiCMemoryAllocator(), $me, sizeof($Class));";
+								- _Type = MultiLine;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Type";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "StructAsTypedef";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "UnionAsTypedef";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "RiCContainers";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 6;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "BoundedUnordered";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IterCreate";
+								- _Value = "RhpPositive pos;
+$IterType $iterator = $CastRT&($me$cname)";
+								- _Type = MultiLine;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "EmbeddedFixed";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "IterType";
+								- _Value = "RhpInteger";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "Loop";
+								- _Value = "RhpInteger pos;
+for (pos = 0; pos < $multiplicity; ++pos)";
+								- _Type = MultiLine;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Fixed";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IterCreate";
+								- _Value = "RhpPositive pos;
+$IterType $iterator = $CastRT&($me$cname)";
+								- _Type = MultiLine;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Qualified";
+						- Properties = { IRPYRawContainer 
+							- size = 3;
+							- value = 
+							{ IProperty 
+								- _Name = "Add";
+								- _Value = "/* polyspace<MISRA-C2004: 11.2: Not a defect: Justified> The following cast is justified and is for Rhapsody auto-generated code use only. Conversions shall not be performed between a pointer to object and any type other than an integral type, another pointer to object type or a pointer to void. */	
+$(CType)_add(&($me$cname), (gen_ptr)$keyName, $item)";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "GetKey";
+								- _Value = "/* polyspace<MISRA-C2004: 11.2: Not a defect: Justified> The following cast is justified and is for Rhapsody auto-generated code use only. Conversions shall not be performed between a pointer to object and any type other than an integral type, another pointer to object type or a pointer to void. */	
+$(CType)_getKey(&($me$cname), (gen_ptr)$keyName)";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "RemoveKey";
+								- _Value = "/* polyspace<MISRA-C2004: 11.2: Not a defect: Justified> The following cast is justified and is for Rhapsody auto-generated code use only. Conversions shall not be performed between a pointer to object and any type other than an integral type, another pointer to object type or a pointer to void. */	
+$(CType)_removeKey(&($me$cname), (gen_ptr)$keyName)";
+								- _Type = String;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "StaticArray";
+						- Properties = { IRPYRawContainer 
+							- size = 4;
+							- value = 
+							{ IProperty 
+								- _Name = "Add";
+								- _Value = "$LoopWithBreak {
+	if (!$me$cname[pos]) {
+		$me$cname[pos] = $item;
+		do_break = 1;
+	}
+}";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "IterType";
+								- _Value = "RhpInteger";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "Loop";
+								- _Value = "RhpInteger pos;
+for(pos = 0; pos < $multiplicity; ++pos)";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "LoopWithBreak";
+								- _Value = "RhpInteger pos;
+RhpInteger do_break;
+do_break = 0;
+for(pos = 0; (pos < $multiplicity) && (do_break == 0); ++pos)";
+								- _Type = MultiLine;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "UnboundedUnordered";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IterCreate";
+								- _Value = "RhpPositive pos;
+$IterType $iterator = $CastRT&($me$cname)";
+								- _Type = MultiLine;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "MISRA2004";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "PredefinedTypes.sbs";
+			- _subsystem = "PredefinedTypes";
+			- _class = "";
+			- _name = "Settings";
+			- _id = GUID c4916b7f-5ca2-41a3-b8a9-6ac22b145b51;
+		}
+	}
+	- weakCGTime = 2.25.2014::19:28:32;
+	- strongCGTime = 2.25.2014::19:28:32;
+	- _defaultComposite = GUID 07e26305-8a09-4fc4-8cfe-9376a0dc4728;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 07e26305-8a09-4fc4-8cfe-9376a0dc4728;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 11.12.2013::14:37:16;
+			- strongCGTime = 11.12.2013::14:35:54;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

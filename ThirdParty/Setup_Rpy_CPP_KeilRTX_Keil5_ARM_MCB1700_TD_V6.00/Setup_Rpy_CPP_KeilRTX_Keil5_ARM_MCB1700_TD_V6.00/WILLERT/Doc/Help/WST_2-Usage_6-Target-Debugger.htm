@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Embedded UML Target Debugger Example - RXF Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="wst.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="wst_print.css" type="text/css" media="print"></head><body>
+<div id="View">
+  <script src="TOC.js" type="text/javascript"> </script> 	
+
+  <div id="Content">
+  <h1><a name="Animation" id="Animation"></a><a name="Target_Animation" id="Target_Animation"></a><a name="Debugging_on_UML_level" id="Debugging_on_UML_level"></a><a name="UML_Debugger" id="UML_Debugger"></a><a name="Monitor_on_target" id="Monitor_on_target"></a>Embedded UML Target Debugger - Usage Example</h1>
+
+  <p>The
+Embedded UML Target Debugger is a product developed by Willert Software
+Tools GmbH. It allows you to analyse the software behavior on target.
+This is similar to a conventional high level language debugger, but on
+UML level. This page will guide you through the first steps how to use
+the&nbsp;Embedded UML Target Debugger.</p>To be able to work with the Embedded UML Target Debugger and view the target animation, &nbsp;please first go through the <a href="WST_2-Usage_3-Getting-Started-1.htm">GettingStarted example</a>.<br>
+  <br>
+<br>
+
+  <h2>Basic Functionality - Getting Started with the Embedded UML Target Debugger</h2>For
+the first steps with our Embedded UML Target Debugger, it is
+recommended to use our example model instead of your own model. This
+example will be based on IBM Rational Rhapsody as UML Tool. However the
+steps and Target Debugger functionality when working with another UML
+tool are very similar. We will use <a name="Blinky_UML_Sample_Model_with_Animation" id="OORTXAnimationDemo_Rhapsody_Sample_Model"></a>Blinky.rpy, which is a good starting point.<br>
+<span style="font-style: italic;"><br>
+Also the EA Blinky sample model can be used.</span><br>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody><tr><td style="width: 120px; vertical-align: top; background-color: rgb(255, 255, 204);">Please Note:</td><td><img style="width: 293px; height: 179px;" alt="" src="Images/TargetDebugger_Filters_EnableTimeoutEvents.png" align="right">For
+Enterprise Architect Users the Embedded UML Target Debugger initially
+look like nothing is happening. After making sure the correct target
+connection has been selected and the right XMLData.xml file is opened,
+the only message received from the target is usually something like
+"Monitor Version is : X.X.X". This is because the Blinky Sample Model
+for EA just uses timeout-events and synchronous function calls instead
+of events as messages. However you can easily make the timeout-events
+visible in the Target Debugger by switching to the "Filters" tab on the
+left side and check the checkbox to enable timeout-events.<br>
+      <br>
+ </td></tr></tbody>
+</table>
+<br><br>
+  In your Rhapsody Model make sure to have the <a name="LiveAnimation_stereotype" id="LiveAnimation_stereotype"></a>LiveAnimation stereotype selected in addition to the RXFComponent stereotype for your active component.<br>
+<span style="font-style: italic;">If you are using Enterprise Architect
+you need to make sure the Animation Tag is set to "true" for your
+configuration (this should be the default).</span><br style="font-style: italic;">
+  <img style="width: 504px; height: 196px;" alt="" src="Images/AnimationStereotypes.jpg"><br>
+  <br>
+Make sure you have an empty GettingStarted IDE&nbsp;project you can
+deploy to. You can now perform a Generate/Make/Run in Rhapsody, which
+will deploy the files to your IDE, and build the <a href="WST_2-Usage_3-Getting-Started-1.htm">GettingStarted example</a>.
+After a successful build in your IDE, flash the executable to the
+target but do not start program execution yet. The target program must
+be reset and stopped. Otherwise the Embedded UML Target Debugger will
+miss important information about dynamically created objects the target
+sends.<br>
+  <br> Now start the&nbsp;Embedded UML Target Debugger on
+the PC. You can use the shortcut in the Windows Start menu to start the
+UML Target Debugger. It which launch the batch file
+located under &lt;Willert folder&gt;\&lt;your
+product&gt;\Tools\TargetDebugger\Embedded_Uml_Target_Debugger.bat:<br>
+  &nbsp;<img style="width: 526px; height: 227px;" alt="" src="Images/StartMenuLaunchAnimation1.jpg">
+
+  <p><img style="width: 800px; height: 554px;" alt="" src="Images/AnimationOpenXML1.jpg"></p><br>
+  The Embedded UML Target Debugger first need to read the <a name="XML_file_for_animation" id="XML_file_for_animation"></a>XML
+file which has been generated using a
+simplifier helper during Rhapsody's code generation This file is called
+XMLData.xml and located in the directory where
+Rhapsody generates the code. You can open the XML file using <span style="font-style: italic;">File | Open XML File</span> or via button on the toolbar:&nbsp;
+
+  <p><img style="width: 248px; height: 160px;" alt="" src="Images/AnimationOpenXML2.jpg"></p><br>
+After the XMLData.xml file was opened, you have to select the target
+communication plugin you want to use from the drop down list. In the
+next step you can select the communication parameters depending on the
+communication interface. This example works with a serial
+communication.<br>
+  <br>
+  <img style="width: 208px; height: 127px;" alt="" src="Images/AnimationSelectCommunication2.jpg"><br>
+  <br>
+  <img style="width: 388px; height: 215px;" alt="" src="Images/AnimationSelectCommunication3.jpg"><br>
+  <br>
+  <img style="width: 202px; height: 70px;" alt="" src="Images/AnimationSelectCommunication4.jpg"><br>
+  <br>
+  In retrospect it is always possible to change the communication plugin and settings by using the toolbar buttons:<br>
+  <br>
+  <img style="width: 347px; height: 148px;" alt="" src="Images/AnimationSelectCommunication1.jpg"><br>
+  <br>
+  
+
+  
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+    <tbody>
+      <tr>
+        <td style="width: 120px; vertical-align: top; background-color: rgb(255, 255, 204);">Please Note:</td>
+
+        <td>When working with&nbsp; <span style="font-weight: bold;">Keil µVision</span>, you can use the UVSOCK plugin which communicates with the target via JTAG:<br>
+      <br>
+Please activate it in Keil µVison's configuration dialog and configure the same
+port number in µVision and the Embedded UML Target Debugger
+communication interface settings (your port number may be different):<br>
+
+      <br>
+
+      <img style="width: 487px; height: 244px;" alt="UVSOCK configuration in Keil uVision" src="Images/TargetDebugger_Keil_uVision_Port_Config.png"><br>
+</td>
+      </tr>
+    </tbody>
+  
+</table>
+<br>
+  <br>
+  The Embedded UML Target Debugger also allows you to add your own <a href="WST_2-Usage_6-Target-Debugger_Custom-Communication-Interface.htm">I/O interface implementation</a>.<br>
+  <br>
+Now it's time to shortly switch back to your IDE and start program
+execution on target, as the Embedded UML Target Debugger now listens
+for commands sent from target. In the tree view on the left you can now
+also see values of attributes, states and highwatermarks.<br>
+  You will see something like this:<br>
+  <br>
+  <img alt="" src="Images/EmbeddedUMLTargetDebugger_800px.png"><br>
+  <br>
+  <br>
+
+  <h2>Advanced Features</h2>The Console window shows information on events: which object sends what
+event to which destination object.<br>
+
+<br>
+
+You can also click on an attribute:
+at that moment in runtime, the Embedded UML Target Debugger on the PC
+will query the target to send the actual value - such information is
+sent only on request by the PC in order to reduce the I/O traffic as
+much as possible. The information shown on events is actually
+transferred in a compact way and not as the strings you see, again to
+reduce traffic and thus runtime disturbance.<br>
+<br>
+<h3>Timing Diagrams</h3>
+The Embedded UML
+Target Debugger is able to switch from the default sequence diagram
+view to a timing diagram view. It is a useful diagram similar to the
+timing diagrams known from technical data sheets to visualize state
+changes proportional to the time axis.<br>
+
+  <img style="width: 740px; height: 474px;" alt="" src="Images/TargetDebugger_TimingDiagram1.png"><br>
+
+  <br>
+
+  Zooming in and out is possible using the mouse wheel, if available. You can also use the buttons of the zoom control panel:<br>
+
+  <img style="width: 336px; height: 82px;" alt="" src="Images/TargetDebugger_TimingDiagramZoom.png"><br>
+
+It allows to enter the number of ticks to be displayed in the window,
+zoom in and out and to specify a zoomed-in visible area by selecting
+the "zoom box" tool and clicking twice into the diagram to specify the
+timeframe to be shown / zoomed in. The auto refresh checkbox controls,
+if the diagram should automatically scroll to the very right of the
+diagram if new events have been received.<br>
+<br>
+
+
+  <h3><a name="Event_Injection_via_Embedded_UML_Target_Debugger" id="Event_Injection_via_Embedded_UML_Target_Debugger"></a>Event Injection</h3>Its
+also possible to inject events by the Embedded UML Target Debugger.
+This requires a right-click on the object to which the event will be
+sent. In the appearing context menu any event can be selected. So its
+possible to check out the reaction of the target, when the event is
+received by the object.<br>
+  <br>
+  <img style="width: 281px; height: 159px;" alt="" src="Images/EventInjection.jpg"><br>
+  <br><a name="Events_with_Parameters"></a>Events may also have standard type
+parameters, which are supported by the Embedded UML Target Debugger.
+Parameters / arguments of events will be displayed as integer values
+inside the animated diagrams. Also event injection with arguments is
+possible. If you have selected to inject an event which has parameters
+(defined in the UML model), a window will pop up and ask for each
+argument. Currently only integer values are supported.<br>
+<br>
+This is a sample procedure of modifying an attribute via an event which has a parameter:<br>
+<br>
+<img style="width: 483px; height: 162px;" alt="" src="Images/TargetDebugger_EventParameters1.png"><br>
+<br>
+<img style="width: 365px; height: 128px;" alt="" src="Images/TargetDebugger_EventParameters2.png"><br>
+<br>
+<img style="width: 153px; height: 107px;" alt="" src="Images/TargetDebugger_EventParameters3.png"> Refreshing queried attribute values works by closing and opening the attribute display.<br>
+<br>
+This sample vied in the timing diagram looks like this:<br>
+<img style="width: 800px; height: 360px;" alt="" src="Images/TargetDebugger_EventParameters4.png"><br>
+
+  <br>
+<br>
+
+  <h3><a name="Filtering_for_Specific_Instances_in_the_Embedded_UML_Target_Debugger" id="Filtering_for_Specific_Instances_in_the_Embedded_UML_Target_Debugger"></a>Filtering</h3>On
+a larger model, showing all events and attributes is confusing, because
+it will not fit in a window and will lead to overhead. Therefore we
+have implemented a filter which can show information for 8 objects as
+maximum. Please select the Filter tab and enable a filter for the
+itsProxy1 object (Proxy's first instance). Afterwards the button on the
+toolbar to enable filter has to be pressed. <img style="width: 31px; height: 29px;" alt="" src="Images/TargetDebuggerToolbar_Filters.jpg" align="top"><br>
+<br>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody><tr><td style="width: 120px; vertical-align: top; background-color: rgb(255, 255, 204);">Please Note:</td><td>Filtering is disabled and will not work if the define <a name="WST_MONITOR_MINIMIZED"></a>WST_MONITOR_MINIMIZED is set. Also manual state queries are disabled in that case. </td></tr></tbody>
+</table>
+<br>
+  <br>
+  <img style="width: 800px; height: 448px;" alt="" src="Images/TargetDebugger_Filters1.png"><br>
+  <br>
+Now you can only see the events being sent by itsProxy. In the
+screenshot you see the first events are also coming from itsActivator1,
+but after the fifth event the filters have been enabled and only events
+from itsProxy1 are displayed.<br>
+  <br>
+You can always&nbsp;change which classes or instances should be
+animated, by checking and unchecking them in the tree view of your
+model in the Filters tab.To apply the changes, it is necessary to press
+the update filters button. <img style="width: 24px; height: 24px;" alt="" src="Images/TargetDebuggerToolbar_RefreshFilters.png"><br>
+  <br>
+  <a name="Timeout_Events_in_Target_Debugger" id="Timeout_Events_in_Target_Debugger"></a>The
+animation of timeout events is also controlled in the filters tab, but
+can be checked independent of the activated or deactivated filtering
+mechanism.<br>
+  <br>
+ <h3>Serial Communication Buffer Overflows</h3>Interrupt based
+serial communication, e.g. available for the ARM Cortex M3 Keil
+environment, relies on send and receive buffers. When compiling the
+monitor sources, the buffer sizes
+and overflow behavior can be set via defines:<br>
+
+  <ul>
+    <li>If
+WST_MONITORIO_WAIT is defined in the file WST_Product.h, the monitor
+will&nbsp;wait until it can send data again,&nbsp;when the transmit
+buffer is full. This way no event will get lost, but the real-time
+behavior is being influenced on a full buffer.</li>
+
+    <li>If
+WST_MONITORIO_WAIT is not defined, events will get lost if the buffer
+is full. In this case the buffer will be overwritten by new events. The
+real-time behavior is not affected. In addition, the debugger is
+informed that events may have been lost. This information is displayed
+in the error window of the debugger.<br></li>
+  </ul>The best solution
+in such cases is to increase the value of SEND_BUFFER_SIZE in the
+monitor I/O file, e.g. WSTMonitorIO_Keil_CortexM3_UART.h, if the
+available RAM allows that.<br>
+  <br>
+
+  <h3><a name="Logging_Server_of_Target_Debugger" id="Logging_Server_of_Target_Debugger"></a>Logging Server</h3>The
+Embedded UML Target Debugger has very open interfaces, also for the
+Data which is being displayed. A built-in&nbsp;TCP/IP server can make
+information about all received events and created or destroyed
+instances available.&nbsp; This information is transformed by
+the&nbsp;Embedded UML Target Debugger into string messages. Every
+message begins with a type identifier and is send out as a block of
+bytes ending with a new line ('\n').<br>
+  <br>
+  There are four message types implemented. Their type identifiers are::<br>
+
+  <ul>
+    <li>EVENT</li>
+
+    <li>INIT</li>
+
+    <li>DEST</li>
+  <li>TIMEOUT<br>
+  </li>
+
+  </ul><br>
+  The content parts of the message string are divided by a semicolon ('<span style="font-weight: bold;">;</span>').<br>All instance names are trailed by the depending class name divided with a colon ('<span style="font-weight: bold;">:</span>').<br>
+<br>
+The following different message packages are supported:<br>
+  <br>
+  An Event occurred:<br>EVENT;&lt;event
+name&gt;;&lt;source instance name&gt;:&lt;source class
+name&gt;;&lt;destination instance name&gt;:&lt; destination class
+name&gt;;&lt;elapsed ticks&gt;;&lt;current state name&gt;\n<br>
+  <br>
+A Timeout Event occurred:<br>
+TIMEOUT;&lt;source instance name&gt;:&lt;source class name&gt;;&lt;elapsed ticks&gt;;&lt;current state name&gt;\n<br>
+<br>
+  A new instance is created:<br>INIT;&lt;instance name&gt;:&lt;class name&gt;\n<br>
+  <br>
+  An instance is destroyed:<br>DEST;&lt;instance name&gt;:&lt;class name&gt;\n<br>
+  <br>
+The logging server is running in the background of the Embedded UML
+Target Debugger as a TCP server at the port 1234. There is no
+possibility to communicate via this server with the&nbsp; Embedded UML
+Target Debugger. The logging server only has the functionality to send
+out information when something has happened on the target. Messages
+sent to the server will be ignored. To check if the server has
+started&nbsp;correctly and the client is connected correctly to the
+server the two following lines must appear in the console tab of the
+target debugger:<br>
+  <img style="width: 317px; height: 106px;" alt="" src="Images/TargetDebugger_Logger1.png"><br>
+<br>
+<h3><a name="Test_Server"></a><a name="Automated_Test"></a>Test Server</h3>
+A test server with an open interface is part of the Embedded UML Target
+Debugger. It can be used to inject events into the running target to
+influence the behaviour of the target system. The injected event is
+handled like a normal event. For injecting an event, the Target
+Debugger's monitor is needed on the target side as part of the Willert
+RXF framework. This additional software needs very little resources
+(e.g. runtime depending on the used interface between host and target)
+to execute the incoming data from the host to inject the event into
+the framework.<br>
+<br>
+The built-in test server is reachable via TCP/IP on port 5050.<br>
+<br>
+Following information are needed about the event:<br>
+<ul>
+  <li>Instance name of the Source</li>
+  <li>Instance name of the Destination</li>
+  <li>Event name</li>
+  <li>Event parameter</li>
+</ul>
+<br>
+To inject an Event the information must be send to the test server as a string. This string has the following format:<br>
+<span style="font-family: monospace;">&lt;destination instance name&gt; &lt;event name&gt; &lt;source instance name&gt; [&lt;Parameter&gt;]\n</span><br>
+<br>
+The event parameter is actually implemented only as an int value and
+only necessary if the injected event needs a parameter. If the injected
+event needs a parameter and the transmitted string contains no
+parameter the injected parameter for the event is autoset to 0 (zero).
+All parameters must be divided with a space character (' '). It is also
+possible to inject more than one event at a time. The injected string
+must be extended with a second string of the same format. These two
+strings must be divided with two semicolons ('<span style="font-weight: bold;">;;</span>') from each other, for example:<br>
+<span style="font-family: monospace;">&lt;destination instance name&gt;
+&lt;event name&gt; &lt;source instance name&gt;
+[&lt;Parameter&gt;];;&lt;destination instance name&gt; &lt;event
+name&gt; &lt;source instance name&gt; [&lt;Parameter&gt;]\n</span><br style="font-family: monospace;">
+<br>
+It is also possible to receive events with the test server:<br>
+<br>
+&#8220;&lt;event&gt; &lt;source&gt; &lt;destination&gt; &lt;elapsed ticks&gt; &lt;current state&gt; [parameter];;&#8221;<br>
+<br>
+Every string is ended with two semicolons &#8220;;;&#8221;.<br>
+<br>
+<h3><a name="User_defined_Types_in_Target_Debugger"></a><a name="UserTypes.xms"></a>User defined Types</h3>
+The Embedded UML Target Debugger generally only supports displaying
+attributes, event arguments etc. interpreted as integer types. But
+attributes defined inside the UML model might also have different types
+like e.g. user defined enumerations. In order to handle these
+attributes and other attributes of the same class which follow behind
+user defined attributes in the struct, the Target Debugger needs to
+know their size in Bytes. The sizes are specified inside a
+&lt;TypeList&gt; in <span style="font-family: monospace;">XMLData.xml</span>, but this file gets overwritten with
+each building in the IDE. However it is supported to store an
+XML-snippet file called "<span style="font-family: monospace;">UserTypes.xms</span>" in the IDE project directory
+and specify user defined type sizes in this file to include those types
+in every <span style="font-family: monospace;">XMLData.xml</span> generation and allow the Embedded UML Target
+Debugger to visualize it and other attributes correctly. The values of
+user defined types will also only be shown as integer values, like
+usually 0 for the first literal of an enumeration, 1 for the second and
+so on.<br>
+<br>
+Example enumeration type in the UML model:<br>
+<img style="width: 389px; height: 185px;" alt="" src="Images/TargetDebugger_AttributeUserTypes0.png"><br>
+<br>
+Contents of user supplied 
+XML-snippet file called "<span style="font-family: monospace;">UserTypes.xms</span>" in the IDE project directory:<br>
+<pre><span style="font-family: monospace;">&lt;Type size="4"&gt;SequentialController_status_t&lt;/Type&gt;<br>&lt;Type size="2"&gt;AnotherUserTypeSample_t&lt;/Type&gt;</span></pre>
+
+<br>
+Visualization of enumeration literal "active"" inside the Embedded UML Target Debugger:<br>
+<img style="width: 176px; height: 107px;" alt="" src="Images/TargetDebugger_AttributeUserTypes1.png"><br>
+<br>
+
+
+  <h2>More Information</h2>To make it easier to navigate to your recent used XML files, you can select them in the file menu:<br>
+  <img style="width: 789px; height: 119px;" alt="" src="Images/TargetDebugger_RecentXML.jpg"><br>
+  <br>
+If you experience strange problems with the Embedded UML Target
+debugger, this could be caused by a non matching monitor version on
+target. To make it easily possible to detect such problems, the error
+log tab "Problems" will show Version conflicts in that case.<br>
+  <br>
+<h3>FAQ</h3>
+
+  If you have any questions, please have a look at the <a href="WST_2-Usage_6-Target-Debugger_FAQ.htm">Animation FAQ page</a> or contact our <a href="WST_9-Support.htm">support</a> team.<br>
+  <br>
+  
+<h3>Custom Interfaces for Target Communication</h3>
+The user can create <a href="WST_2-Usage_6-Target-Debugger_Custom-Communication-Interface.htm">custom communication interface DLLs</a> for the Embedded UML Target debugger.<br>
+
+  <br>
+  </div>
+
+  <p id="Footer">This documentation belongs to the Product Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD_V6.00, released on 2016-04-22. &copy;&nbsp;2016 Willert Software Tools GmbH.</p>
+</div>
+</body></html>

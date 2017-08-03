@@ -1,0 +1,81 @@
+[Helpers]
+numberOfElements=8
+
+#REM: Rhapsody Helpers and Plugins associated with the Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile
+#REM: $Id: RXFProfile.hep 35325 2016-09-22 09:56:52Z eroemer $
+#REM: $URL: https://svn.willert.de/V6/trunk/Component/Modelling/Rpy/Config/UserSettings/RXFProfile_rpy/RXFProfile.hep $
+
+#REM: Add pop-up menu for components to trigger deployment:
+name1=Deploy Files to uVision5 Project
+command1=@WILLERT_1@\@WST_RELEASE_NAME@\Tools\WSTDeployer\WSTDeployer.bat
+arguments1=rpyid($RHPCONNECTIONID) debug deploy
+initialDir1=.
+isPluginCommand1=0
+isPlugin1=0
+isSynced1=0
+applicableTo1=RXFComponent
+isVisible1=1
+
+#REM: Add pop-up menu for components to open the deployment configuration:
+name2=Deployer Configuration
+command2=@WILLERT_1@\@WST_RELEASE_NAME@\Tools\WSTDeployer\WSTDeployer.bat
+arguments2=rpyid($RHPCONNECTIONID) debug configure
+initialDir2=.
+isPluginCommand2=0
+isPlugin2=0
+isSynced2=0
+applicableTo2=RXFComponent
+isVisible2=1
+
+#REM: Add pop-up menu for components to open the assotiated IDE project:
+name3=Open Assotiated uVision5 Project
+command3=@WILLERT_1@\@WST_RELEASE_NAME@\Tools\WSTDeployer\WSTDeployer.bat
+arguments3=rpyid($RHPCONNECTIONID) debug openProject
+initialDir3=.
+isPluginCommand3=0
+isPlugin3=0
+isSynced3=0
+applicableTo3=RXFComponent
+isVisible3=1
+
+#REM: Add tool menu entry to open the deployment configuration:
+name4=Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01 Deployer Configuration
+command4=@WILLERT_1@\@WST_RELEASE_NAME@\Tools\WSTDeployer\WSTDeployer.bat
+arguments4=rpyid($RHPCONNECTIONID) debug configure
+initialDir4=.
+isSynced4=0
+isVisible4=1
+
+#REM: Add tool menu entry to open the assotiated IDE project:
+name5=Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01 Open uVision5 Project
+command5=@WILLERT_1@\@WST_RELEASE_NAME@\Tools\WSTDeployer\WSTDeployer.bat
+arguments5=rpyid($RHPCONNECTIONID) debug openProject
+initialDir5=.
+isSynced5=0
+isVisible5=1
+
+#REM: Manipulate Code Generation by WSTSimplifier:
+name6=WSTSimplifier
+isPlugin6=1
+DLLServerCompatible6=TRUE
+isVisible6=1
+JavaMainClass6=ibm.rpy.SimplifiersConnector
+JavaClassPath6="@WILLERT_1@\@WST_RELEASE_NAME@\Tools\WSTSimplifier\WSTSimplifierCPP.jar"
+RhpVersion6=8.1.2
+
+
+#REM: Add pop-up menu for component to open Target Debugger:
+name7=Start Embedded UML Target Debugger
+command7=@WILLERT_1@\@WST_RELEASE_NAME@\Tools\TargetDebugger\Embedded_Uml_Target_Debugger.bat
+isPluginCommand7=0
+isPlugin7=0
+isSynced7=0
+applicableTo7=RXFComponent
+isVisible7=1
+
+#REM: Add tool menu entry to open Target Debugger:
+name8=Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01 Start Embedded UML Target Debugger
+command8=@WILLERT_1@\@WST_RELEASE_NAME@\Tools\TargetDebugger\Embedded_Uml_Target_Debugger.bat
+isSynced8=0
+isVisible8=1
+

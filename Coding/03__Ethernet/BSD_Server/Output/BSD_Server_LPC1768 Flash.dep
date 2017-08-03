@@ -1,149 +1,0 @@
-Dependencies for Project 'BSD_Server', Target 'LPC1768 Flash': (DO NOT MODIFY !)
-F (.\BSD_Server.c)(0x590991BD)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\bsd_server.o --omf_browse .\output\bsd_server.crf --depend .\output\bsd_server.d)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x589AE220)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include\rl_net.h)(0x5836D5F0)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-I (C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash\RTE_Components.h)(0x5908DE5D)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board\Board_GLCD.h)(0x5877623C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common\GLCD_Config.h)(0x538DDAA8)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board\Board_LED.h)(0x5877623C)
-F (.\Abstract.txt)(0x56122648)()
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common\GLCD_Fonts.c)(0x538DDAA8)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\glcd_fonts.o --omf_browse .\output\glcd_fonts.crf --depend .\output\glcd_fonts.d)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board\Board_GLCD.h)(0x5877623C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common\GLCD_MCB1700.c)(0x560E5038)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\glcd_mcb1700.o --omf_browse .\output\glcd_mcb1700.crf --depend .\output\glcd_mcb1700.d)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\PIN_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPIO_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common\GLCD_Config.h)(0x538DDAA8)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board\Board_GLCD.h)(0x5877623C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_SPI.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_Common.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F66928)
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common\LED_MCB1700.c)(0x53AD4CF4)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\led_mcb1700.o --omf_browse .\output\led_mcb1700.crf --depend .\output\led_mcb1700.d)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\PIN_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPIO_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board\Board_LED.h)(0x5877623C)
-F (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib)(0x589AE220)()
-F (RTE\CMSIS\RTX_Conf_CM.c)(0x553E1F04)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\rtx_conf_cm.o --omf_browse .\output\rtx_conf_cm.crf --depend .\output\rtx_conf_cm.d)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x589AE220)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC\RTX_CM_lib.h)(0x589AE220)
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\EMAC_LPC17xx.c)(0x564490F4)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\emac_lpc17xx.o --omf_browse .\output\emac_lpc17xx.crf --depend .\output\emac_lpc17xx.d)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\EMAC_LPC17xx.h)(0x556DA7FC)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_ETH_MAC.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_ETH.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_Common.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-I (C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768\RTE_Device.h)(0x571DED2C)
-I (C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash\RTE_Components.h)(0x5908DE5D)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x589AE220)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\PIN_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPIO_LPC17xx.h)(0x5582A80A)
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\SSP_LPC17xx.c)(0x571DED2C)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\ssp_lpc17xx.o --omf_browse .\output\ssp_lpc17xx.crf --depend .\output\ssp_lpc17xx.d)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPIO_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPDMA_LPC17xx.h)(0x568FBD28)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\SSP_LPC17xx.h)(0x568FBD28)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\PIN_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_SPI.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_Common.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F66928)
-I (C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768\RTE_Device.h)(0x571DED2C)
-I (C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash\RTE_Components.h)(0x5908DE5D)
-F (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network\Driver\PHY_DP83848C.c)(0x577379AC)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\phy_dp83848c.o --omf_browse .\output\phy_dp83848c.crf --depend .\output\phy_dp83848c.d)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network\Driver\PHY_DP83848C.h)(0x57739F52)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_ETH_PHY.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_ETH.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_Common.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPDMA_LPC17xx.c)(0x56936B86)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\gpdma_lpc17xx.o --omf_browse .\output\gpdma_lpc17xx.crf --depend .\output\gpdma_lpc17xx.d)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPDMA_LPC17xx.h)(0x568FBD28)
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPIO_LPC17xx.c)(0x5582A80A)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\gpio_lpc17xx.o --omf_browse .\output\gpio_lpc17xx.crf --depend .\output\gpio_lpc17xx.d)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\GPIO_LPC17xx.h)(0x5582A80A)
-F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\PIN_LPC17xx.c)(0x5582A80A)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\pin_lpc17xx.o --omf_browse .\output\pin_lpc17xx.crf --depend .\output\pin_lpc17xx.d)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver\PIN_LPC17xx.h)(0x5582A80A)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-F (RTE\Device\LPC1758\RTE_Device.h)(0x571DED2C)()
-F (RTE\Device\LPC1758\startup_LPC17xx.s)(0x56122648)()
-F (RTE\Device\LPC1758\system_LPC17xx.c)(0x56122648)()
-F (RTE\Device\LPC1768\RTE_Device.h)(0x571DED2C)()
-F (RTE\Device\LPC1768\startup_LPC17xx.s)(0x56122648)(--cpu Cortex-M3 --pd "__RTX SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include--pd "__UVISION_VERSION SETA 522" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1"--list .\output\startup_lpc17xx.lst --xref -o .\output\startup_lpc17xx.o --depend .\output\startup_lpc17xx.d)
-F (RTE\Device\LPC1768\system_LPC17xx.c)(0x539B01D8)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\system_lpc17xx.o --omf_browse .\output\system_lpc17xx.crf --depend .\output\system_lpc17xx.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\LPC17xx.h)(0x58493F92)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589AE25C)
-I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include\system_LPC17xx.h)(0x58493F92)
-F (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Lib\ARM\Net_CM3_L.lib)(0x5894347A)()
-F (RTE\Network\Net_Config.c)(0x557ADF58)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork -I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\Device\LPC1768"-I"C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash"-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Boards\Keil\MCB1700\Common-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.3.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include-D__UVISION_VERSION="522" -D_RTE_ -DLPC175x_6x-o .\output\net_config.o --omf_browse .\output\net_config.crf --depend .\output\net_config.d)
-I (C:\Users\Hochschule Ulm\Desktop\Examples\Boards\Keil\MCB1700\Middleware\Network\BSD_Server\RTE\_LPC1768_Flash\RTE_Components.h)(0x5908DE5D)
-I (RTE\Network\Net_Config_ETH_0.h)(0x59098DFB)
-I (RTE\Network\Net_Config_UDP.h)(0x539B01D8)
-I (RTE\Network\Net_Config_TCP.h)(0x539B01D8)
-I (RTE\Network\Net_Config_BSD.h)(0x539B01D8)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include\net_config.h)(0x57FE1EB4)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x589AE220)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include\rl_net_lib.h)(0x582197D8)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_USART.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_Common.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F66928)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_ETH_MAC.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_ETH.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Driver\Include\Driver_ETH_PHY.h)(0x589AE25E)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include\net_modem.h)(0x567BC558)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Network_v6\Include\rl_net.h)(0x5836D5F0)
-F (RTE\Network\Net_Config_BSD.h)(0x539B01D8)()
-F (RTE\Network\Net_Config_ETH_0.h)(0x59098DFB)()
-F (RTE\Network\Net_Config_TCP.h)(0x539B01D8)()
-F (RTE\Network\Net_Config_UDP.h)(0x539B01D8)()

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Getting Started - RXF Documentation</title>
+  
+
+  
+  
+  <link rel="stylesheet" href="wst.css" type="text/css" media="screen">
+
+  
+  <link rel="stylesheet" href="wst_print.css" type="text/css" media="print">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>
+<div id="View">
+<script src="TOC.js" type="text/javascript"> </script>
+<div id="Content">
+<h1><a name="Example_Project" id="Example_Project"></a><a name="Deployment_Example" id="Deployment_Example"></a><a name="Blinky_Sample_Model" id="Blinky_for_KeilRV"></a>Getting Started
+Example - Part 1<br>
+</h1>
+This
+page will guide you through the first steps of using your product
+Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01. The goal is to generate source code from an
+included sample UML project with Rhapsody
+<h2>Generating Code from the Rhapsody Model<br>
+</h2>
+<br>
+<br>
+Open the Rhapsody project Blinky from the directory
+C:\Program Files\Willert\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\Samples\Model\BlinkyMultitasking:<br>
+<br>
+<img style="width: 711px; height: 413px;" alt="" src="Images/RhapsodyOpenBlinkyModel.png"><br>
+<br>
+<br>
+<a name="Profiles"></a>The component <span style="font-style: italic;">TargetComponent</span>
+is using the stereotype <span style="font-style: italic;">RXFComponent</span>,&nbsp;which
+is defined in the profile <span style="font-style: italic;">Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile</span>.
+Each RXF by Willert Software Tools comes with its own profile with the
+stereotype <span style="font-style: italic;">RXFComponent.</span> <span style="font-style: italic;">RXFComponent</span> sets the proper
+environment, some properties for the RXF and defines some Tags. The
+other profile referenced, <span style="font-style: italic;">WSTProfile</span>,
+is used to set Rhapsody GUI details, which makes it easier for you to
+view and maintain your models.<br>
+<br>
+<span style="font-style: italic;">ExamplePkg</span> contains the
+following classes:<br style="font-style: italic;">
+<ul>
+  <li><span style="font-style: italic;">LED</span>, which has an <span style="font-style: italic;">Init()</span>, <span style="font-style: italic;">on()</span> and <span style="font-style: italic;">off()</span> operation and a statechart to
+react to events. 
+  </li>
+  <li><span style="font-style: italic;">SequentialController</span><span style="font-style: italic;"></span> has
+a simple statechart, which toggles the states on and off in an instance
+of LED every 300 ms. </li>
+  <li><span style="font-style: italic;">ActiveController</span> has a
+simple statechart, which toggles the states on and off in another
+instance of LED every 400 ms.</li>
+  <li><span style="font-style: italic;">TestBuilder</span> is a
+structured class, which will instantiate the objects and link them (see
+it's <span style="font-style: italic;">RunTime</span> structure
+diagram).</li>
+</ul>
+<br>
+You can now press the button "Generate/Make/Run" in Rhapsody (or use <span style="font-style: italic;">Generate/Make/Run</span> entry from <span style="font-style: italic;">Code</span> menu) to perform these steps:<br>
+<ul>
+  <li>Generate source files.</li>
+  <ul>
+    <li>Rhapsody will show several generated .c and .h files along with
+a .mak file in the <span style="font-style: italic;">Log</span> tab.</li>
+    <li>A successful code generation will end with the log entries "<span style="font-style: italic;">Code Generation Done</span>" and "<span style="font-style: italic;">0&nbsp; Error(s), 0&nbsp; Warning(s),
+0&nbsp; Message(s)</span>".<br>
+    </li>
+  </ul>
+  <li>The build step in Rhapsody will actually generate configuration
+files, the building of the executable will be performed inside
+Keil uVision 5. Those configuration files are mainly:<br>
+  </li>
+  <ul>
+    <li>RhapsodyMake.bat to launch the WSTDeployer later on.</li>
+    <li><a id="RxfDimensions.h" name="RxfDimensions.h"></a>RxfDimensions.h,
+which is an include file that contains constants, which are derived
+from properties set in the model like buffer sizes etc.<br>
+These all deal with dimensions for the RXF, and because these are
+inserted in an include file you do not need to set these constants in
+your IDE later.</li>
+    <li><a id="RxfConstants.h" name="RxfConstants.h"></a>RxfConstants.h,
+which sets constants with respect to the version of the RXF and its
+configuration. Samples are <span style="font-style: italic;">WST_DEBUG_BUILDSET</span>
+or <span style="font-style: italic;">WST_RXF_V6</span>.</li>
+    <li>WSTMemoryTypes.h, which is used for <a href="WST_3-Technology_1-Memory-Management.htm">Memory Section
+Management</a> so you can locate code and data exact where you like it.</li>
+  </ul>
+  <li>"Run" starts the WSTDeployer to bring all generated files into
+your IDE.<br>
+  </li>
+</ul>
+<br>
+<table style="text-align: left; width: 100%; background-color: rgb(255, 255, 153);" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="width: 100px;"><span style="font-weight: bold;">Note</span></td>
+      <td>Each Rhapsody model must have a reference to the profile <span style="font-style: italic;">Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile</span> and use
+the stereotype RXFComponent.<br>
+This will allow you to use the Deployer and make the right environment
+settings available. <span style="font-style: italic;">Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile.sbs</span>
+is installed in <span style="font-style: italic;">"@WILLERT_1@\ @WST_RELEASE_NAME@\Config\UserSettings\ @WST_PRODUCT_NAME@_Profile_rpy"</span>.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<h2><a name="Deployer" id="Deployer"></a>WSTDeployer</h2>
+<span style="font-style: italic;"></span>The WSTDeployer will deploy
+Rhapsody generated source files and
+some generated configuration files into your IDE.<br>
+<br>
+It will ask you to specify the
+location of the Keil uVision 5 project to deploy to when it is
+called for the first time:<br>
+<br>
+<img style="width: 530px; height: 200px;" alt="" src="Images/DeployerConfigDialog.png"><br>
+<br>
+Make sure to select the empty <span style="font-style: italic;">GettingStarted</span>
+Keil uVision 5-project file, which is delivered with your product
+for the first use. It can be found in this directory:
+C:\Program Files\Willert\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\Samples\Code\GettingStarted.<br>
+<br>
+After you saved the path to GettingStarted, the files are deployed to
+the Keil uVision 5 project:<br>
+<br>
+<img style="width: 278px; height: 128px;" alt="" src="Images/DeployerDeployingFiles.png"><br>
+<br>
+Sometimes on small models and fast machines you just see this dialog
+flicker very quickly and then already disappear again, as deployment is
+a quick operation when there's only little model content.<br>
+<br>
+<br><a href="WST_2-Usage_3-Getting-Started-2.htm"><img style="border: 0px solid ; width: 90px; height: 90px;" alt="Continue reading Part 2 of this Getting Started Tutorial" src="Images/Clipart-continue_button.png" align="middle"></a><a href="WST_2-Usage_3-Getting-Started-2.htm"><big>Continue Reading Part 2 of this Getting Started Tutorial</big></a><br>
+<br>
+<br>
+</div>
+<p id="Footer">This documentation belongs to the Product
+Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01, released on 2017-02-27.
+&copy;&nbsp;2016 Willert Software Tools GmbH.</p>
+</div>
+
+</body></html>

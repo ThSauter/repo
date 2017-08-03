@@ -39,7 +39,7 @@ Die Architektur der Ethernet-Kommunikation ist als Klassendiagramm in \autoref{f
 	\label{fig:ClassDiagramEthernet}
 \end{figure}
 
-\subsection{Design und Coding}\label{subsec:DesignUndCoding}
+\subsection{Design und Coding}\label{subsec:EthDesignUndCoding} 
 In diesem Kapitel werden Attribute, Funktionen und Statecharts wichtiger Klassen im Detail vorgestellt.
 
 \subsubsection*{Ethernet-Controller, Transmitter und Receiver}
@@ -103,10 +103,10 @@ Die Klasse \texttt{Joystick} hält die Position für eine Dauer von 100 Millisekun
 
 \lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
 \begin{lstlisting}[caption={Filter zur Auswertung der Joystick Position}, captionpos=b, label={lst:JoystickFilter}]
-int position = (LPC_GPIO1->FIOPIN >> 20) & Joystick_Mask ;
+int position = (LPC_GPIO1->FIOPIN >> 20) & Joystick_Mask;
 
 // Bit 4-7 contain the position information
-position = position >> 3; 
+position = position >> 3; (*@\label{joystickPosition}@*)
 
 if (position == Joystick_CENTER)
 {   
@@ -266,7 +266,7 @@ Nach \citet{NetworkComponent2017} ist bei Verwendung des Ethernet Cores eine Ver
 
 \subsubsection*{Ethernet Network Configuration}
 
-Die Ethernet-Konfiguration erfolgt über die Konfigurationsdateien, die zur Network Component gehören. Dabei ist in Konfigurationsdatei \textit{Net\_Config\_ETH\_0.h (Interface:ETH)} eine Anpassung vorzunehmen, welche die Option \textit{Dynamic Host Configuration} betrifft. Wenn diese Option aktiviert ist, werden IP-Adresse, Netzmaske und Standardgateway automatisch von einem DHCP Server bezogen. Da der Demonstrationsaufbau über keinen DHCP Server verfügt und die IP-Adressen statisch vergeben werden, muss diese Option deaktiviert werden. \autoref{tab:EthernetNetworkConfig} zeigt, dass die IP-Adresse in dieser Datei auch manuell konfiguriert werden kann. Jedoch wird diese Option zur Laufzeit überschrieben, da die Implementierungen beschrieben in \autoref{subsec:DesignUndCoding} die IP-Adresse festlegen.
+Die Ethernet-Konfiguration erfolgt über die Konfigurationsdateien, die zur Network Component gehören. Dabei ist in Konfigurationsdatei \textit{Net\_Config\_ETH\_0.h (Interface:ETH)} eine Anpassung vorzunehmen, welche die Option \textit{Dynamic Host Configuration} betrifft. Wenn diese Option aktiviert ist, werden IP-Adresse, Netzmaske und Standardgateway automatisch von einem DHCP Server bezogen. Da der Demonstrationsaufbau über keinen DHCP Server verfügt und die IP-Adressen statisch vergeben werden, muss diese Option deaktiviert werden. \autoref{tab:EthernetNetworkConfig} zeigt, dass die IP-Adresse in dieser Datei auch manuell konfiguriert werden kann. Jedoch wird diese Option zur Laufzeit überschrieben, da die Implementierungen beschrieben in \autoref{subsec:EthDesignUndCoding} die IP-Adresse festlegen.
  
 \begin{table}[!ht]
 \footnotesize
@@ -300,11 +300,12 @@ Die Ethernet-Konfiguration erfolgt über die Konfigurationsdateien, die zur Netwo
 
 \section{SD-Karte}
 
-Im Fokus dieses Kapitels steht die Inbetriebnahme des SD-Karten Slots des Keil MCB1760 Evaluation Boards. Der Schacht für die microSD-Karte befindet sich unterhalb des Displays, wie \autoref{fig:MCB1760EvalBoard} zu entnehmen ist. Das Ziel der Inbetriebnahme ist es, beispielhaft Daten auf die SD-Karte zu schreiben, lesen und diese wieder zu löschen. Wie auch schon bei der Ethernet-Applikation in \autoref{sec:Ethernet} soll die Implementierung in Rational Rhapsody erfolgen und die IDE Keil uVision lediglich zum Übersetzen und Flashen dienen.
+Im Fokus dieses Kapitels steht die Inbetriebnahme des SD-Karten Slots des Keil MCB1760 Evaluation Boards. Der Schacht für die microSD-Karte befindet sich unterhalb des Displays, wie \autoref{fig:MCB1760EvalBoard} zu entnehmen ist. Das Ziel der Inbetriebnahme ist es, beispielhaft Daten auf die SD-Karte zu schreiben, Daten zu lesen und diese wieder zu löschen. Wie auch schon bei der Ethernet-Applikation in \autoref{sec:Ethernet} soll die Implementierung in Rational Rhapsody erfolgen und die IDE Keil uVision lediglich zum Übersetzen und Flashen dienen.
 
 \subsection{Anforderungen}
 
 Ein beispielhaftes Szenario soll die funktionsfähige Inbetriebnahme der SD-Karte demonstrieren. Dabei soll der Joystick bei Betätigung in eine Richtung seine neue Position auf der SD-Karte aufzeichnen. Unter einer Positionsänderung des Joysticks sind die vier Richtungen links, rechts, oben und unten zu verstehen. Wenn der Joystick nach einer Richtungsänderung zurück in die zentrale Position geht, wird das nicht als Positionsänderung gewertet. Die SD-Karte soll sämtliche Aktivitäten und ihren Status über das Display ausgeben. \autoref{fig:SDCardSzenario} veranschaulicht das Funktionsprinzip. 
+
 \begin{figure}[!hb]
 	\centering
 		\includegraphics[width=1\textwidth]{images/SDCardSzenario.pdf}
@@ -357,7 +358,7 @@ Das Sequenzdiagramm in \autoref{fig:SDCardInit} stellt den Ablauf der Operation 
 \paragraph{Lesen:}
 Leseoperationen erfolgen mit Hilfe der Standard Input und Output Library \texttt{stdio.h}. Die Library \texttt{stdio.h} benutzt Datenströme (Stream)zur Kommunikation mit physikalischen Peripheriegeräten wie Tastatur und Drucker, oder auch zur Kommunikation mit jeder anderen Art von Dateien, welche das System unterstützt. Dabei werden die Streams immer identisch angewendet, unabhängig davon, ob mit einem Gerät oder einer Datei kommuniziert wird. Durch die Funktion \texttt{fopen} wird ein Stream geöffnet und mit einem Gerät oder einer Datei verbunden. Bei erfolgreichem Öffnen des Streams gibt die Funktion \texttt{fopen} einen Zeiger auf ein FILE-Objekt zurück. Dieser Zeiger beinhaltet alle Informationen des Datenstroms und muss bei jeder weiteren Dateioperation als Parameter übergeben werden.
 
-Der für dieses Szenario implementierte Lese-Mechanismus ist als Sequenzdiagramm in \autoref{fig:SDCardRead} abgebildet. Nach dem Öffnen des Streams wird mit der Funktion \texttt{fgets} Zeile für Zeile aus dem Logfile ausgelesen, bis das Ende der Datei erreicht ist. 
+Der für dieses Szenario implementierte Lese-Mechanismus ist als Sequenzdiagramm in \autoref{fig:SDCardRead} abgebildet. Nach dem Öffnen des Streams wird mit der Funktion \texttt{fgets} Zeile für Zeile aus der Log-Datei ausgelesen, bis das Ende der Datei erreicht ist. 
 
 \begin{figure}[!hbt]
 	\centering
@@ -366,9 +367,7 @@ Der für dieses Szenario implementierte Lese-Mechanismus ist als Sequenzdiagramm 
 	\label{fig:SDCardRead}
 \end{figure}
 
-Da alle Zeilen des Logfiles das gleiche Format haben, kann aus der letzten Zeile die fortlaufende Nummer extrahiert und zum Setzen des Zählers benutzt werden (siehe \autoref{fig:SDCardSzenario}). Den entsprechenden Ausschnitt aus der Operation \texttt{read} zeigt \autoref{lst:ExtractCounter}. Dabei wird zunächst der Teil der Zeichenkette ab dem \#-Symbol extrahiert. Danach wird mit der Funktion \texttt{scanf} der Dezimalwert ausgelesen und in \texttt{counter} geschrieben.
-
-Im Anschluss wird das Event \texttt{evSDLog} mit der Bezeichnung "`R:" für \textit{Read} und der letzten gelesenen Zeile als Parameter an das Display gefeuert. Nach erfolgter Dateioperation muss der Datenstrom wieder mittels \texttt{fclose} geschlossen werden.
+Da alle Zeilen der Log-Datei das gleiche Format haben, kann aus der letzten Zeile die fortlaufende Nummer extrahiert und zum Setzen des Zählers benutzt werden (siehe \autoref{fig:SDCardScenario1}). Den entsprechenden Ausschnitt aus der Operation \texttt{read} zeigt \autoref{lst:ExtractCounter}. Dabei wird zunächst der Teil der Zeichenkette ab dem \#-Symbol extrahiert. Danach wird mit der Funktion \texttt{scanf} der Dezimalwert ausgelesen und in \texttt{counter} geschrieben. Im Anschluss wird das Event \texttt{evSDLog} mit der Bezeichnung "`R: "' für \textit{Read} und der letzten gelesenen Zeile als Parameter an das Display gefeuert, wie \autoref{fig:SDCardScenario2} zeigt. Nach erfolgter Dateioperation muss der Datenstrom wieder mittels \texttt{fclose} geschlossen werden.
 
 \lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
 \begin{lstlisting}[caption={Extrahieren des aktuellen Zählstandes aus dem Logfile.}, captionpos=b, label={lst:ExtractCounter}]
@@ -382,7 +381,7 @@ if (substring != NULL)
 \end{lstlisting}
 
 \paragraph{Schreiben:}
-Wie die Leseoperationen bedienen sich auch die Schreiboperationen bei der Standard Input und Output Library \texttt{stdio.h}. Gleichermaßen gilt es zunächst einen Stream zu Öffnen um einen Zeiger auf ein FILE-Objekt zu erhalten. Im Gegensatz zur Leseoperation, welche die Funktion \texttt{fopen} mit dem Parameter "`r"' für \textit{Read mode} aufruft, wird bei der Schreiboperation der Parameter "`a"' für \textit{Append mode} verwendet. Der \textit{Append mode} öffnet eine bestehende Datei und fügt dieser Inhalte hinzu. Falls die Datei noch nicht besteht, wird eine leere Datei angelegt. Wenn eine Datei im \textit{Append mode} geöffnet wird, werden die neuen Inhalte stets am Ende der Datei hinzugefügt.
+Wie die Leseoperationen bedienen sich auch die Schreiboperationen bei der Standard Input und Output Library \texttt{stdio.h}. Gleichermaßen gilt es zunächst einen Stream zu Öffnen um einen Zeiger auf ein FILE-Objekt zu erhalten. Im Gegensatz zur Leseoperation, welche die Funktion \texttt{fopen} mit dem Parameter "`r"' für den \textit{Read mode} aufruft, wird bei der Schreiboperation der Parameter "`a"' für den \textit{Append mode} verwendet. Der \textit{Append mode} öffnet eine bestehende Datei und fügt dieser Inhalte hinzu. Falls die Datei noch nicht besteht, wird eine leere Datei angelegt. Wenn eine Datei im \textit{Append mode} geöffnet wird, werden die neuen Inhalte stets am Ende der Datei hinzugefügt.
 
 \begin{figure}[!b]
 	\centering
@@ -391,7 +390,31 @@ Wie die Leseoperationen bedienen sich auch die Schreiboperationen bei der Standa
 	\label{fig:SDCardWrite}
 \end{figure}
 
-Der implementierte Schreib-Mechanismus ist in \autoref{fig:SDCardWrite} als Sequenzdiagramm dargestellt. Nach dem Öffnen des Datenstroms wird die Zeichenkette \texttt{str}  durch die Funktion \texttt{fprintf} in den Stream geschrieben. Die Funktion \texttt{fflush} sorgt letztendlich dafür, dass die Schreiboperation ausgeführt wird. Das bedeutet, dass die zugehörigen Buffer geleert und deren Inhalt in die entsprechende Datei geschrieben wird. Sollte der Rückgabewert der Funktion \texttt{fflush} ungleich Null sein, so ist ein Fehler aufgetreten. Die Klasse \texttt{SDCard} feuert in diesem Fall das Event \texttt{evSDLog} mit einer entsprechenden Fehlermeldung an das Display, sowie das Event \texttt{evError} an sich selbst (siehe rote Markierungen in \autoref{fig:SDCardWrite}). Durch das Event \texttt{evError} geht die Klasse \texttt{SDCard} in einen internen Fehlerstatus. Bei einer erfolgreichen Schreiboperation feuert die Klasse \texttt{SDCard} ebenfalls das Event \texttt{evSDLog} an das Display. In diesem Fall beinhaltet der Parameter des Events \texttt{evSDLog} den Bezeichner "`W:"' für \textit{Write} sowie die aktuell geschriebene Zeile. Zuletzt muss der Datenstrom durch die Funktion \texttt{fclose} wieder geschlossen werden.
+Der implementierte Schreib-Mechanismus ist in \autoref{fig:SDCardWrite} als Sequenzdiagramm dargestellt. Nach dem Öffnen des Datenstroms wird die Zeichenkette \texttt{str}  durch die Funktion \texttt{fprintf} in den Stream geschrieben. Die Funktion \texttt{fflush} sorgt letztendlich dafür, dass die Schreiboperation ausgeführt wird. Das bedeutet, dass die zugehörigen Buffer geleert und deren Inhalt in die entsprechende Datei geschrieben wird. Sollte der Rückgabewert der Funktion \texttt{fflush} ungleich Null sein, so ist ein Fehler aufgetreten. Das ist beispielsweise dann der Fall, wenn keine SD-Karte im Slot eingelegt ist. Die Klasse \texttt{SDCard} feuert in diesem Fall das Event \texttt{evSDLog} mit einer entsprechenden Fehlermeldung an das Display, sowie das Event \texttt{evError} an sich selbst (siehe rote Markierungen in \autoref{fig:SDCardWrite}). Ausgelöst durch das Event \texttt{evError} führt die Klasse \texttt{SDCard} eine entsprechende Fehlerbehandlung durch. Bei einer erfolgreichen Schreiboperation feuert die Klasse \texttt{SDCard} ebenfalls das Event \texttt{evSDLog} an das Display. In diesem Fall beinhaltet der Parameter des Events \texttt{evSDLog} den Bezeichner "`W: "' für \textit{Write} sowie die aktuell geschriebene Zeile. Zuletzt muss der Datenstrom durch die Funktion \texttt{fclose} wieder geschlossen werden.
+
+\begin{figure}
+	\centering
+	\subfigure[Erstellen einer leeren Datei nach Reset und dreifache Schreiboperation.]{
+					\label{fig:SDCardScenario1}
+					\includegraphics[width=0.45\textwidth]{images/SDCardScenario1.pdf}
+	}
+	\hfill 
+	\subfigure[Auslesen einer bestehenden Datei nach einem Reset und einmaliges Schreiben.]{
+					\label{fig:SDCardScenario2}
+					\includegraphics[width=0.45\textwidth]{images/SDCardScenario2.pdf}
+	}
+	\subfigure[Erstmaliges Betätigen von SELECT fordert zum Wiederholen auf.]{
+				\label{fig:SDCardScenario3}
+				\includegraphics[width=0.45\textwidth]{images/SDCardScenario3.pdf}
+	}
+	\hfill 
+	\subfigure[Erneutes Betätigen von SELECT löscht die Datei.]{
+					\label{fig:SDCardScenario4}
+					\includegraphics[width=0.45\textwidth]{images/SDCardScenario4.pdf}
+	}
+	\caption{Verschiedene Statusausgaben auf dem Display.}
+	\label{fig:SDCardStatusOnDisplay}
+\end{figure}
 
 \paragraph{Datei anlegen:}
 Das Anlegen einer Datei geschieht implizit beim Aufruf der Funktion \texttt{fopen}. Dabei ist der Übergabeparameter für den Zugriffsmodus entscheidend. Mit "`a"' für \textit{Append mode} wird nur dann eine leere Datei angelegt, wenn diese noch nicht existiert. Mit dem Parameter "`w"' für \textit{Write mode} wird bei jedem Aufruf eine leere Datei angelegt. Eine existierende Datei wird dabei überschrieben.
@@ -399,11 +422,47 @@ Das Anlegen einer Datei geschieht implizit beim Aufruf der Funktion \texttt{fope
 \paragraph{Datei löschen:}
 Zum Löschen einer Datei dient die Funktion \texttt{fdelete}. Als Parameter wird dieser Funktion der Name einer zu löschenden Datei oder eines Verzeichnisses übergeben. Mit einem weiteren Parameter "`/S"' wird spezifiziert, ob bei Angabe eines Verzeichnisses alle Dateien und Unterverzeichnisse ebenfalls gelöscht werden sollen. Die Funktion \texttt{fdelete} liefert einen Rückgabewert vom Typ \texttt{fsStatus} der eine detaillierte Fehlerbehandlung ermöglicht. 
 
+Die implementierte Löschprozedur im Rahmen des Beispielszenarios ist in \autoref{fig:SDCardStatechart} in grün gekennzeichnet. Zunächst wird nach einem RESET des Targets die SD-Karte initialisiert und eine Leseoperation ausgeführt, so dass sich die SD-Karte im \textit{Read} State befindet. Der Trigger für nahez alle weiteren Transitionen ist das Event \texttt{evNewJoystickPosition}, welches von der Klasse \texttt{Joystick} abgefeuert wird. Bei jedem Empfangen wird ausgewertet, ob dessen Parameter der Richtung \textit{SELECT} entspricht. Ist das der Fall, so geht die SD-Karte in die Löschprozedur über, indem zunächst der State \textit{Confirm\_Delete} aktiviert wird. In diesem State feuert die Klasse \texttt{SDCard} das Event \texttt{evSDLog} an das Display, wodurch der Benutzer zum erneuten Betätigen der Richtung \textit{SELECT} aufgefordert wird (siehe \autoref{fig:SDCardScenario3}). Triff wiederholt ein Event mit der Richtung \textit{SELECT} als Parameter ein, wird schließlich der State \textit{Delete\_File} eingenommen. Das führt letztendlich zum Aufruf der Operation \texttt{deleteFile}. Wenn der Parameter des Events \texttt{evNewJoystickPosition} ungleich der Richtung \textit{SELECT} ist, kehrt die SD-Karte immer in den \textit{Log} State zurück.
+
+\begin{figure}[!b]
+	\centering
+		\includegraphics[width=0.9\textwidth]{images/SDCardStatechart.pdf}
+		\caption{Statechart zum Initialisieren, Lesen und Schreiben der SD-Karte (blau), sowie zum Löschen einer Datei (grün).}
+	\label{fig:SDCardStatechart}
+\end{figure}
+
 \subsubsection*{Joystick}
+Die Implementierung des Joysticks entspricht im Wesentlichen der Umsetzung aus \autoref{subsec:EthDesignUndCoding}, mit der Ergänzung, dass an dieser Stelle auch die Richtung \textit{SELECT} ausgewertet wird. Dazu ist es nötig, \autoref{joystickPosition} in \autoref{lst:JoystickFilter} auszukommentieren, so dass erweiterte Richtungsinformationen vorhanden sind. Durch die erweiterten Richtungsinformationen ergeben sich dementsprechend andere Bitmuster, was eine Anpassung der Enumeration \texttt{DIRECTION} erfordert. Ein weiterer Unterschied ist, dass die Klasse \texttt{Joystick} bei jeder neuen Richtung das Event \texttt{evNewJoystickPosition} an die Klasse \texttt{SDCard} sendet.
 
 \subsubsection*{Clock}
+Da ein Logging nur dann Sinn macht, wenn es auch mit einem Zeitstempel versehen ist, wurde die Klasse \texttt{Clock} implementiert. Sie greift auf die Real-Time Clock (RTC) \abk{$RTC$}{Real-Time Clock} des Keil MCB1760 Eval Boards zu. Die Prozedur zur Initialisierung der RTC ist in \autoref{lst:RTC} dargestellt. Hier ist zu beachten, dass die auskommentierten Blöcke von \autoref{cdl:line12} bis \autoref{cdl:line14} und \autoref{cdl:line17} bis \autoref{cdl:line19} einmalig vor dem Flashen des Targets einkommentiert und entsprechend aktualisiert werden müssen. Damit wird das Datum und die Uhrzeit des Targets eingestellt und bleibt solange aktuell, bis das Target von der Spannungsversorgung getrennt wird. Zur Ermittlung der Uhrzeit liest die Klasse \texttt{Clock} die entsprechenden Register aus und stellt deren Inhalt über Operationen \texttt{getHour}, \texttt{getMin} und \texttt{getSec} zur Verfügung \parencite[S. 558 ff]{LPC17xxUserManual2010}.
+
+\lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
+\begin{lstlisting}[caption={Initialisierung der RTC.}, captionpos=b, label={lst:RTC}]
+/* Enable CLOCK into RTC */
+LPC_SC->PCONP |= (1 << 9);
+
+/* Disable RTC clock, reset clock, Enable RTC calibration */
+LPC_RTC->CCR = ((1 << SBIT_CTCRST ) | (1 << SBIT_CCALEN));
+LPC_RTC->CALIBRATION = 0x00;
+LPC_RTC->CCR = (1 << SBIT_CLKEN);    /* Enable the clock for RTC */
+
+// Set Date and Time only once
+// Comment these lines after setting the time and date                                           
+// Set Date 29th May 2017 
+//LPC_RTC->DOM    = 29;   // Update date value (*@\label{cdl:line12}@*)
+//LPC_RTC->MONTH  = 5;    // Update month value
+//LPC_RTC->YEAR   = 2017; // Update year value (*@\label{cdl:line14}@*)
+
+// Set Time 22:05:25 AM 
+//LPC_RTC->HOUR   = 22;   // Update hour value (*@\label{cdl:line17}@*)
+//LPC_RTC->MIN    = 05;   // Update min value
+//LPC_RTC->SEC    = 25;   // Update sec value (*@\label{cdl:line19}@*)
+\end{lstlisting}
 
 \subsubsection*{Display}
+
+Das Display dient in diesem Szenario als Statusanzeige und soll über erfolgreiche Lese- und Schreiboperationen informieren, sowie auch Fehlermeldungen darstellen. Dazu soll das Display das Funktionsprinzip einer Kommandozeile nachahmen, in welcher das neuste Ereignis an unterster Stelle hinzugefügt wird. Beim Erreichen der maximalen Zeilenanzahl sollen folglich alle Zeilen um eine Position nach oben geschoben werden, was dazu führt, dass die oberste Zeile entfernt wird. Die maximale Zeilenanzahl wird über das Attribut \texttt{maxLoggedLines} festgelegt und hat initial den Wert sieben.
 
 \subsection{Konfigurieren des Keil Projekts}
 
@@ -575,8 +634,6 @@ Die Datei \textit{RTE\_Device.h (Startup)} muss ebenfalls angepasst werden. In i
 \caption{Anpassungen in der File System Configuration \textit{FS\_Config\_MC\_0.h (Drive:Memory Card)}.}
 \label{tab:DeviceConfigSDCard}
 \end{table}
-
-
 
 \subsubsection*{File System Configuration}
 

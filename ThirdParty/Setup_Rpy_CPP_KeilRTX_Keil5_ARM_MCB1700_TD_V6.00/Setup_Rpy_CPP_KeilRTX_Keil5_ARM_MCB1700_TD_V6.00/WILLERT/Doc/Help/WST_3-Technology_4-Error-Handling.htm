@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Error Handling - RXF Documentation</title>
+
+  
+  
+  <link rel="stylesheet" href="wst.css" type="text/css" media="screen">
+
+  
+  <link rel="stylesheet" href="wst_print.css" type="text/css" media="print">
+
+</head><body>
+<div id="View">
+<script src="TOC.js" type="text/javascript"> </script>
+<div id="Content">
+<h1><a name="Error_handler" id="Error_handler"></a>Error Handling</h1>
+Runtime errors in the RXF or OO RTX are handled by the error
+handler <span style="font-style: italic;">WST_ERR_error()</span>.
+The error handler will catch use of NULL pointers, lack of resources,
+etc.<br>
+<br>
+The error handler function is called from several places in the Framework, the first argument
+indicates the error that occured, the second parameter is not always used but for instance
+in case of an RTOS failure, te RTOS error code is passed here.
+<br>
+<br>
+The function <span style="font-style: italic;">WST_ERR_error()</span>&nbsp;is&nbsp;implemented
+as an endless loop in the source file WST_ERR.c. It is strongly
+recommended to modify WST_ERR.c and provide your own error handler
+implementation which fits your application needs.<br>
+<br>
+You can modify the error handler in several ways:<br>
+<ul>
+  <li>Modify the source file Source\WST_ERR.c
+so your version will be used in any generated application for that product.<br>
+</li>
+  <li>Copy the source file \Source\WST_ERR.c
+to your working directory and add it to your model, so its contents can
+be made specific for your model or project.</li>
+  <li>Insert the source file into your UML model. This way you can maintain it in
+a central place and use it in various projects.</li>
+</ul>
+<h2>Detailed List of Enumerated Error Codes</h2>The error code names
+are mostly self explaining and mostly used only in one or few places in
+the RXF code. I you are manually debugging your code on source code
+level it is recommended to look at the error code and use the call
+stack feature or your debugger to examine when has caused the error.<br>
+<br>
+<table border="1" style="width:auto">
+  <tr>
+    <th>E-NR</th><th>ERROR CODE</th><th>ERROR DESCRIPTION</th>
+  </tr>
+  
+  <tr>
+    <td>0</td>
+    <td><b>WST_ERR_NONE</b></td>
+    <td>This error is not an error, since it is not used in the Framework source-code it should never occur.</td>
+  </tr>
+  <tr>
+      <td>1</td>
+      <td><b>WST_ERR_EMPTY_ME_PTR</b></td>
+      <td>This error is used on multiple places in the framework.
+      Checks on a me-pointer is used often.
+      Use your debuggers call-stack or try some breakpoints to find the correct place of the error.
+      The cause of an error like this is unclear.
+      <ul>
+        <li>Stack error. When the stack is too small it might overwrite call parameters</li>
+        <li>Other memory problems like a wrong memory model.</li>
+        <li>A bit fell over. Does not happen often but is possible.</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><b>WST_ERR_EVENT_QUEUE_FULL</b></td>
+    <td>This is an easy one. The message queue is full.
+    <ul>
+      <li>OO-RTX - Can only happen in older versions of the RXF or in newer versions when "static message queue" is selected. The message queue size must be increased
+    Otherwise message queue's are dynamic and this error can not occur.</li>
+      <li>RTOS - When the RTOS uses a static message queue size, this means that too many message are queued. Increase the size of the queue.</li>
+      For more information on queues see: Memory Management in the this help.
+    </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><b>WST_ERR_EVENT_NULL</b></td>
+    <td>The Framework expected an event but receives a NULL pointer.
+    <ul>
+      <li>OO-RTX - Cannot happen.</li>
+      <li>RTOS - A serious problem occured. An Event was received from the event queue but is dissapeared during execution. Indicates serious stack problems or race conditions.</li>
+    </ul>
+</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><b>WST_ERR_EVENT_QUEUE_EMPTY</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><b>WST_ERR_EVENT_CANCELLED</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><b>WST_ERR_EVENT_DISCARDED</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><b>WST_ERR_EVENT_NULL_DEST</b></td>
+    <td>Attempt to send an event to a NULL destivation.
+    Some CGEN (or equal function) was called with a NULL pointer
+    as argument.<br>
+    Occurs in both RTOS and OO-RTX Frameworks.</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td><b>WST_ERR_EVENT_REUSE</b></td>
+    <td>A static event was re-used, i.e.
+    The event that is sent with a CGEN (or equal) function is
+    still in the queue, waiting to be processed.<br>
+    Enlarge the number of static events or try to process this type of event faster.
+    <br>
+    Occurs in both RTOS and OO-RTX Frameworks.
+    </td>
+    </tr>
+  <tr>
+    <td>8</td>
+    <td><b>WST_ERR_TIMEOUT_HEAP_FULL</b></td>
+    <td>A new timer was used but the timer queue is full.<br>
+    Enlarge the Timer Queue (Property <b>C_CG::&lt;&lt;FrameworkName&gt;&gt;::WSTMaxTimeouts</b></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td><b>WST_ERR_TIMEOUT_NOT_FOUND</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td><b>WST_ERR_REALLOC_MEMORYPOOL</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td><b>WST_ERR_INFINITE_NULL_TRANSITIONS</b></td>
+    <td>A NULL Transition is a transition in a statechart that has no specified trigger.
+    This is possible in UML Statecharts but there is always a danger that there is an
+    infinite loop in the statechart. Therefor the framwork counts the number of NULL Tranisitions
+    and will throw this error if the number is reached.
+    Solution: Do not use NULL transitions (recommended) or increas the number
+    of possible NULl ransitions with the define: <b>WST_DEFAULT_MAX_NULL_STEPS</b>.
+    Is valid for both OO-RTX and RTOS.</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td><b>WST_ERR_NO_LAST_STATE_IN_HISTORY</b></td>
+    <td>No description.</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td><b>WST_ERR_TOO_MANY_NULL_CONFIGS</b></td>
+    <td>No description.</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td><b>WST_ERR_TOO_FEW_NULL_CONFIGS</b></td>
+    <td>For some reason the framework detected more returns from NULL tranisions
+    then there are actuall NULL transition. Uner normal circumstances this does not happen.
+    Probably some data is ovewritten.
+    <br>Can occur in both OO-RTX and RTOS</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td><b>WST_ERR_NULL_DESTINATION</b></td>
+    <td>The destination in a received event is NULL. This should not occur and
+    indicates data corruption.
+    <br>Can occur in both OO-RTX and RTOS</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td><b>WST_ERR_ALLOCATING_ANOTHER_MEMORYPOOL</b></td>
+    <td>old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td><b>WST_ERR_EMPTY_MEMORY_PTR</b></td>
+    <td>An attempt was made to return an empty memory block to the pool.
+    Should not be done, correct the statement.
+    <br>Can occur in both OO-RTX and RTOS</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td><b>WST_ERR_EMPTY_VTBL_PTR</b></td>
+    <td>A VTBL, (Virtual Table) is used to call the generated statechart functions from the framework.
+    The VTBL cannot be NULL, it is a "const" pointer to a const struct and should be located in ROM.
+    <br>Can occur in both OO-RTX and RTOS</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td><b>WST_ERR_EMPTY_STATE_PTR</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td><b>WST_ERR_EMPTY_STR_PTR</b></td>
+    <td></td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td><b>WST_ERR_CONFIG_ERROR</b></td>
+    <td>No fitting static memory blocks are avilable and a new block was requested.
+    When the define <b>NO_MALLOC</b> is set then this error occurs.
+    <br>Eooro is only implemented in the Adapters that use the MQX RTOS.</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td><b>WST_ERR_CONFIG_ERROR_LARGER</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td><b>WST_ERR_NO_MALLOC</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td><b>WST_ERR_ALLOC_FAILED</b></td>
+    <td>Internal memory allocation for the framework has failed.
+    This happens when static memmory allocation is activated.<br>
+    You might want to increase the number of memory blocks,
+    or use dynmaic memory allocation.
+    <br> Does only occur when using an RTOS.</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td><b>WST_ERR_NOT_IMPLEMENTED</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.
+    <br> Might be used in the future to indicate new features
+    that are not yet implemented in the framework.</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td><b>WST_ERR_VERSION_ERROR</b></td>
+    <td>Old error, not used anymore. Still there for compatibility reasons.</td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td><b>WST_ERR_INVALID_MEMORY_PTR</b></td>
+    <td>Occurs when the user attempts to free a memory block that
+    has not been allocated by the user.
+    <br> Solution: Don't do that!</td>
+  </tr>
+  <tr>
+    <td>28</td>
+    <td><b>WST_ERR_ALLOC_TOO_LARGE</b></td>
+    <td>There is no memory block of the requested size available _and_ <b>USE_MALLOC</b>
+    is not set. The framework has no other choice then to throw this error.
+    <br> Solution: Set <b>USE_MALLOC></b> or enlarge the used memory blocks.
+    <br> Can occur in both RTOS and OO-RTX.</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td><b>WST_ERR_EVENT_NOT_CONSUMED</b></td>
+    <td>Only for certifiable versions of the framework.
+    Occurs when an event was discarded _and_ there was no alternative function to handle defered events.</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td><b>WST_ERR_FSM_BEHAVIOR_NOT_STARTED</b></td>
+    <td>Only for certifiable versions of the framework.
+    Occurs when the framwork is running, tries to handle a statechart
+    but the behavior of a statechart was not started. </td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td><b>WST_ERR_FSM_EMPTY_DISPATCHEVENT_PTR</b></td>
+    <td>Only for certifiable versions of the framework.
+    Occurs when the framwork is running, tries to handle a statechart
+    but the virtual table of the object does not have a pointer
+    to the event handling function (rootstate_dispatchevent). </td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td><b>WST_ERR_FSM_EMPTY_ENTDEF_PTR</b></td>
+    <td>Only for certifiable versions of the framework.
+    Occurs when the framwork is running, tries to handle a statechart
+    but the virtual table of the object does not have a pointer
+    to the start function (rootstate_entrydev). </td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td><b>WST_ERR_FSM_BEHAVIOR_ALREADY_STARTED</b></td>
+    <td>Only for certifiable versions of the framework.
+    The start function of a Statechart was already called.</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td><b>WST_ERR_FIRE_DESTINATION_NULL</b></td>
+    <td>Only for certifiable versions of the framework.
+    The destination of the event sended is empty.</td>
+  </tr>
+</table>
+<b><i>
+  <br>
+    We use 40 and up for the non OO-RTX RTOS error codes
+  <br>
+    (if you are using a non-OO-RTX product)
+  <br>
+</i></b>
+<table border="1" style="width:auto">
+  <tr>
+    <th>E-NR</th><th>ERROR CODE</th><th>ERROR DESCRIPTION</th>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td><b>WST_ERR_TASK_START_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>41</td>
+    <td><b>WST_ERR_TASK_INIT_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>42</td>
+    <td><b>WST_ERR_TASK_EXECUTE_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>43</td>
+    <td><b>WST_ERR_TIMER_TASK_START_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td><b>WST_ERR_EVENT_GET_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td><b>WST_ERR_EVENT_PUT_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td><b>WST_ERR_MAINTASK_START_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>47</td>
+    <td><b>WST_ERR_MUTEX_INIT_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>48</td>
+    <td><b>WST_ERR_MUTEX_ENTER_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>49</td>
+    <td><b>WST_ERR_MUTEX_EXIT_FAILED</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td><b>WST_ERR_MUTEX_CLEANUP_FAILED</b></td>
+    <td></td>
+  </tr>
+</table>
+<b><i>
+  <br>
+    We use 70 and up for the Embedded UML Target Debugger / Monitor error codes
+  <br>
+    (if the Target Debugger is part of your product)
+  <br>
+</i></b>
+<table border="1" style="width:auto">
+  <tr>
+    <th>E-NR</th><th>ERROR CODE</th><th>ERROR DESCRIPTION</th>
+  </tr>
+  <tr>
+    <td>70</td>
+    <td><b>WST_ERR_ANIMATION_INIT_FAILED</b></td>
+    <td>The initialization of the task that controls the communication has failed.</td>
+  </tr>
+  <tr>
+    <td>71</td>
+    <td><b>WST_ERR_ANIMATION_IO_FAILED</b></td>
+    <td></td>
+  </tr>
+</table>
+<b><i>
+  <br>
+    We use 80 and up for container class releated errors
+  <br>
+    (if WST Container Classes are part of your product)
+  <br>
+</i></b>
+<table border="1" style="width:600px">
+  <tr>
+    <th>E-NR</th><th>ERROR CODE</th><th>ERROR DESCRIPTION</th>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td><b>WST_CON_LST_INVALID</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>81</td>
+    <td><b>WST_CON_LST_EMPTYD</b></td>
+    <td></td>
+  </tr>
+  
+</table>
+
+</div>
+<p id="Footer">This documentation belongs to the Product
+Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD_V6.00, released on 2016-04-22.
+&copy;&nbsp;2016 Willert Software Tools GmbH.</p>
+</div>
+</body></html>

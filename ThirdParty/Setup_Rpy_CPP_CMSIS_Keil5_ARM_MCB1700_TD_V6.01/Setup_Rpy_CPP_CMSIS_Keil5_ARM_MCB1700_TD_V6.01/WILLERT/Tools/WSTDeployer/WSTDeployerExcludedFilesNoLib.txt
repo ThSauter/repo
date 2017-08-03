@@ -1,0 +1,6 @@
+
+// $Id: WSTDeployerExcludedFilesNoLib.txt 24854 2011-05-24 15:25:17Z er $
+// $URL: https://svn.willert.de/V6/trunk/Component/Shared/Tools/WSTDeployer/WSTDeployerExcludedFilesNoLib.txt $
+
+RTA_Config.c
+WSTMonitorIO_ADSP_BF53x_SERIAL_IO.c

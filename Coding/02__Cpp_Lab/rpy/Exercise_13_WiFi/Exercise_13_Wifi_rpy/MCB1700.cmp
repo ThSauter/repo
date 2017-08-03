@@ -1,0 +1,284 @@
+I-Logix-RPY-Archive version 8.12.0 C++ 9641846
+{ IComponent 
+	- _id = GUID 513bcae0-663e-4ff2-9f28-0d43ebbb21b8;
+	- _myState = 139264;
+	- _name = "MCB1700";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "C:\\Users\\Hochschule Ulm\\Willert\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Config\\UserSettings\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile_rpy\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile.sbs";
+			- _subsystem = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile";
+			- _class = "";
+			- _name = "RXFComponent";
+			- _id = GUID d5b44ea0-9660-b6c5-6318-11aceea67d78;
+		}
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "C:\\Users\\Hochschule Ulm\\Willert\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Config\\UserSettings\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile_rpy\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile.sbs";
+			- _subsystem = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile";
+			- _class = "";
+			- _name = "WSTLiveAnimation";
+			- _id = GUID c68b1011-4030-1faa-fd65-9b1a6a305635;
+		}
+	}
+	- _modifiedTimeWeak = 7.26.2017::15:7:19;
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "<stdio.h>";
+	- m_includePath = "C:\\Keil_v5\\ARM\\PACK\\Keil\\MDK-Middleware\\7.4.0\\Board";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID f31ab606-9f10-4592-b7b8-4afb70704c93;
+		- _myState = 73728;
+		- _name = "Files";
+		- _modifiedTimeWeak = 1.2.1990::0:0:0;
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID 07cbf8a8-7755-4165-8d91-fa3f251ef73e;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID 07cbf8a8-7755-4165-8d91-fa3f251ef73e;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Environment";
+										- _Value = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6_01";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6_01,Microsoft,Cygwin,MSVC9";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Debug";
+			- _modifiedTimeWeak = 1.24.2013::10:50:31;
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 3ab77e1f-9223-42da-bcac-8e0b18072ffc;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Users\\Hochschule Ulm\\Willert\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Samples\\Model\\Blinky\\TargetComponent\\Debug\\TargetComponent.mak";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID 0857a299-30df-456e-a417-f3a07cd59b0f;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:\\Users\\Hochschule Ulm\\Willert\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Samples\\Model\\Blinky\\TargetComponent\\Debug\\MainTargetComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IClass";
+					- _filename = "DefaultPkg.sbs";
+					- _subsystem = "DefaultPkg";
+					- _class = "";
+					- _name = "TestBuilder";
+					- _id = GUID 6b7d70c7-ea2f-4968-ad24-487708a260c9;
+				}
+			}
+			- _root = { IFolder 
+				- _id = GUID 588f9d41-371b-4b6b-afe6-e0eaa26deb9e;
+				- _myState = 8192;
+				- _name = "Debug";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 1.24.2013::10:50:31;
+			- strongCGTime = 1.24.2013::9:16:36;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+	}
+	- HandlesInMe = { IRPYRawContainer 
+		- size = 14;
+		- value = 
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "DefaultPkg.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "DefaultPkg";
+			- _id = GUID a6cff529-c390-404d-a784-4baed8ff40ad;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "C:\\Users\\Hochschule Ulm\\Willert\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Config\\UserSettings\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile_rpy\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile";
+			- _id = GUID 12831e05-d580-d500-2767-cffc5fe8467e;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "C:\\Users\\Hochschule Ulm\\Willert\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01\\Config\\UserSettings\\Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_Profile_rpy\\WSTProfile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "WSTProfile";
+			- _id = GUID 839b3570-feed-482e-8776-cdf59c7831ae;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre803Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre803Cpp";
+			- _id = GUID 2c6673a1-7843-43a4-92d5-93795ef7e229;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre804Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre804Cpp";
+			- _id = GUID 17b86635-8a53-4a10-9901-f57883be4aa2;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre805Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre805Cpp";
+			- _id = GUID a32649f4-8029-4846-82f3-6deba65e416d;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre806Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre806Cpp";
+			- _id = GUID ebf790f8-a405-40ba-af1e-eeb76a25e1d0;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre81Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre81Cpp";
+			- _id = GUID dcd2cdb5-4c74-4d47-99ca-1b358b271e5f;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre812Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre812Cpp";
+			- _id = GUID 3026d3ea-02b4-49ae-b086-6982c27412f0;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre813Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre813Cpp";
+			- _id = GUID 803c9619-7509-44c3-bfdf-6fee2352ab55;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre814Cpp.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre814Cpp";
+			- _id = GUID cffbed2a-cf85-4cf9-9c94-13d34d25c47b;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Libs.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Libs";
+			- _id = GUID 42c00cd3-6361-4a1e-bb8f-00e4e7c935f2;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Display.sbs";
+			- _subsystem = "Libs";
+			- _class = "";
+			- _name = "Display";
+			- _id = GUID cc13cb9c-5c45-45f0-91b8-ddc69a56214d;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Ethernet.sbs";
+			- _subsystem = "Libs";
+			- _class = "";
+			- _name = "Ethernet";
+			- _id = GUID 10a80df9-c24a-4dbf-b4e6-4c34695177ae;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 7.26.2017::15:7:19;
+	- strongCGTime = 5.17.2017::8:59:10;
+}
+

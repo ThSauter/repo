@@ -1,0 +1,17 @@
+== Product Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD ==
+RXF ............... : Willert RXF
+IDE ............... : Keil uVision 5
+Debugger .......... : Keil uVision
+Modelling ......... : IBM Rational Rhapsody
+Language .......... : C++
+RTOS .............. : Keil CMSIS RTOS
+CompilerAndTarget . : Keil MDK-ARM
+Board ............. : Keil MCB1700
+Extension ......... : Embedded UML Target Debugger
+
+
+Version: V6.01
+
+Install date: 2017-02-27, 11:38:09
+
+Copyright (c) 2016, Willert Software Tools GmbH

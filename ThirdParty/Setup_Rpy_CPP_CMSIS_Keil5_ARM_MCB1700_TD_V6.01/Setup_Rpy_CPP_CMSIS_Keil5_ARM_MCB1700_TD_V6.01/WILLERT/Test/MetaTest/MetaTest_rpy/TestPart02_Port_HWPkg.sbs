@@ -1,0 +1,71 @@
+I-Logix-RPY-Archive version 8.11.0 C++ 8254044
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "TestPart02_Port_Pkg.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "TestPart02_Port_Pkg";
+		- _id = GUID 3559ce7c-db2d-41e2-8907-7b1b8ba8a2f4;
+	}
+	- _id = GUID 6fd7475d-8983-47e8-a0f6-ae5fc4573be6;
+	- _myState = 8192;
+	- _name = "TestPart02_Port_HWPkg";
+	- _modifiedTimeWeak = 2.9.2015::10:4:6;
+	- _lastID = 5;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ISubsystem 
+			- fileName = "TestPart02_Port_SampleHW_Pkg";
+			- _id = GUID c3fd318f-245b-49b4-8f20-8e9c7c7b0fb2;
+		}
+	}
+	- weakCGTime = 2.9.2015::10:4:6;
+	- strongCGTime = 4.23.2013::11:41:2;
+	- _defaultComposite = GUID 7b663eae-5ce8-4bd5-afee-1531d478dd98;
+	- _eventsBaseID = 5201;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 7b663eae-5ce8-4bd5-afee-1531d478dd98;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 5.3.2013::6:55:49;
+			- weakCGTime = 5.3.2013::6:55:49;
+			- strongCGTime = 4.23.2013::11:41:2;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Events = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IEvent 
+			- _id = GUID c18ef974-ee0e-4d19-ae2a-7e850dcea2c5;
+			- _myState = 8192;
+			- _name = "evPortsTestDone";
+			- _modifiedTimeWeak = 1.1.1970::1:0:0;
+			- _virtual = 0;
+			- Args = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IEvent 
+			- _id = GUID 2aa347dc-221c-4bee-9d96-5ac6e43a5855;
+			- _myState = 8192;
+			- _name = "evStartPortsTest";
+			- _modifiedTimeWeak = 1.1.1970::1:0:0;
+			- _virtual = 0;
+			- Args = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+	}
+	- _configurationRelatedTime = 4.23.2013::12:39:26;
+}
+

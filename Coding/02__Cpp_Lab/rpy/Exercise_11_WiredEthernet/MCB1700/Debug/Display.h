@@ -1,22 +1,28 @@
 /*********************************************************************
-	Rhapsody	: 8.1.4 
-	Login		: Hochschule Ulm
+	Rhapsody	: 8.2 
+	Login		: sauter
 	Component	: MCB1700 
 	Configuration 	: Debug
 	Model Element	: Display
-//!	Generated Date	: Wed, 17, May 2017  
-	File Path	: MCB1700\Debug\Display.h
+//!	Generated Date	: Tue, 1, Aug 2017  
+	File Path	: MCB1700/Debug/Display.h
 *********************************************************************/
 
 #ifndef Display_H
 #define Display_H
 
 //## auto_generated
-#include "WSTModelHeadersBase.h"
+#include <oxf/oxf.h>
 //## auto_generated
 #include <stdio.h>
 //## auto_generated
 #include "DefaultPkg.h"
+//## auto_generated
+#include <oxf/omreactive.h>
+//## auto_generated
+#include <oxf/state.h>
+//## auto_generated
+#include <oxf/event.h>
 //## dependency Board_GLCD
 //#[ ignore
 extern "C"
@@ -37,16 +43,16 @@ class EthernetReceiver;
 //## package DefaultPkg
 
 //## class Display
-class Display : public WST_FSM {
+class Display : public OMReactive {
     ////    Constructors and destructors    ////
     
 public :
 
     //## operation Display()
-    Display(WST_TSK* myTask = 0);
+    Display(IOxfActive* theActiveContext = 0);
     
     //## auto_generated
-    virtual ~Display();
+    ~Display();
     
     ////    Operations    ////
     
@@ -129,5 +135,5 @@ inline bool Display::Refresh_IN() const {
 
 #endif
 /*********************************************************************
-	File Path	: MCB1700\Debug\Display.h
+	File Path	: MCB1700/Debug/Display.h
 *********************************************************************/

@@ -1,0 +1,384 @@
+<DataModel application="Application" tool="Rhapsody">
+  <Target>
+    <Endianness>Little</Endianness>
+    <Alignment>1</Alignment>
+    <TypeList>
+      <Type size="0">*</Type>
+      <Type size="0">char</Type>
+      <Type size="0">int</Type>
+      <Type size="0">Display</Type>
+      <Type size="0">Joystick</Type>
+      <Type size="0">Led</Type>
+      <Type size="0">LedBar</Type>
+      <Type size="0">RunningIndicatorLed</Type>
+      <Type size="0">UartReceiver</Type>
+      <Type size="0">UartTransmitter</Type>
+    </TypeList>
+  </Target>
+  <Language>CPP</Language>
+  <EventList>
+    <Event id="16401" name="evToggle">
+      <ArgumentsList/>
+    </Event>
+    <Event id="16402" name="evOn">
+      <ArgumentsList/>
+    </Event>
+    <Event id="16403" name="evOff">
+      <ArgumentsList/>
+    </Event>
+    <Event id="16404" name="evReceivedData">
+      <ArgumentsList>
+        <Parameter>
+          <Name>data</Name>
+          <Type>char</Type>
+        </Parameter>
+      </ArgumentsList>
+    </Event>
+    <Event id="16405" name="evNewJoystickPosition">
+      <ArgumentsList>
+        <Parameter>
+          <Name>joystickPosition</Name>
+          <Type>char</Type>
+        </Parameter>
+      </ArgumentsList>
+    </Event>
+    <Event id="16406" name="evBlink">
+      <ArgumentsList/>
+    </Event>
+  </EventList>
+  <Operations/>
+  <HighWater>
+    <HighWaterList>
+      <CurrentAndMax>
+        <Name>hugeBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>0U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>largeBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>2U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>mediumBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>6U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>smallBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>12U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>tinyBuffersMax</Name>
+        <Type>uint16</Type>
+        <Max>0U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>maxTimeouts</Name>
+        <Type>uint16</Type>
+        <Max>32U</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+    </HighWaterList>
+  </HighWater>
+  <Class>
+    <Name>RunningIndicatorLed</Name>
+    <ID>101</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">On</State>
+    <State id="2">Off</State>
+    <AttributeList>
+      <Attribute>
+        <Name>itsLed</Name>
+        <Type>Led*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>Led</Name>
+    <ID>102</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">On</State>
+    <State id="2">Off</State>
+    <State id="3">BlinkOn</State>
+    <State id="4">BlinkOff</State>
+    <AttributeList>
+      <Attribute>
+        <Name>bitIndicator</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>blinkTimeoutMs</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>TestBuilder</Name>
+    <ID>103</ID>
+    <parallelStateCount>0</parallelStateCount>
+    <AttributeList>
+      <Attribute>
+        <Name>itsDisplay</Name>
+        <Type>Display</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsJoystick</Name>
+        <Type>Joystick</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed28</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed29</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed31</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLedBar</Name>
+        <Type>LedBar</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsRunningIndicatorLed</Name>
+        <Type>RunningIndicatorLed</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsUartReceiver</Name>
+        <Type>UartReceiver</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsUartTransmitter</Name>
+        <Type>UartTransmitter</Type>
+        <Visible>True</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>Joystick</Name>
+    <ID>104</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">Sample</State>
+    <State id="2">Hold</State>
+    <AttributeList>
+      <Attribute>
+        <Name>lastPosition</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>sampleTime</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsUartTransmitter</Name>
+        <Type>UartTransmitter*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>LedBar</Name>
+    <ID>105</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">ProcessLeds</State>
+    <State id="2">Idle</State>
+    <AttributeList>
+      <Attribute>
+        <Name>joystickPosition</Name>
+        <Type>char</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLeds</Name>
+        <Type>Led</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>Display</Name>
+    <ID>106</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <State id="0">OMNonState</State>
+    <State id="1">Refresh</State>
+    <AttributeList>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>UartController</Name>
+    <ID>107</ID>
+    <parallelStateCount>0</parallelStateCount>
+    <AttributeList>
+      <Attribute>
+        <Name>dbuf</Name>
+        <Type>int</Type>
+        <Visible>True</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>0</ActiveClass>
+  </Class>
+  <Class>
+    <Name>UartReceiver</Name>
+    <ID>108</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <Parent>UartController</Parent>
+    <State id="0">OMNonState</State>
+    <State id="1">state_0</State>
+    <AttributeList>
+      <Attribute>
+        <Name>itsDisplay</Name>
+        <Type>Display*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLed</Name>
+        <Type>Led*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>itsLedBar</Name>
+        <Type>LedBar*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_timeout</Name>
+        <Type>IOxfTimeout*</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+  <Class>
+    <Name>UartTransmitter</Name>
+    <ID>109</ID>
+    <parallelStateCount>1</parallelStateCount>
+    <Parent>UartController</Parent>
+    <State id="0">OMNonState</State>
+    <State id="1">state_0</State>
+    <AttributeList>
+      <Attribute>
+        <Name>itsLed</Name>
+        <Type>Led*</Type>
+        <Visible>True</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_subState</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+      <Attribute>
+        <Name>rootState_active</Name>
+        <Type>int</Type>
+        <Visible>False</Visible>
+      </Attribute>
+    </AttributeList>
+    <ActiveClass>1</ActiveClass>
+  </Class>
+</DataModel>

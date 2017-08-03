@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Memeory Management - RXF Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="wst.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="wst_print.css" type="text/css" media="print"></head><body>
+<div id="View">
+  <script src="TOC.js" type="text/javascript"> </script> 	
+
+  <div id="Content">
+  <h1><a name="Memory_Section_Management" id="Memory_Section_Management"></a>Memory Management: Allocating Sections<br>
+</h1>Your
+toolchain will most probably put code in ROM as well as string
+literals, but you might want to fine-tune the location where specific
+code and data to meet your physical resources.<br>
+  <br> If you do
+not specify anything in C sources, a default allocation scheme will be
+used by your locator. However, most toolchains allow you to use
+compiler pragmas, which define the start and end of a
+certain&nbsp;section. The locator can be instructed to allocate these
+sections at a specific address: in combination with the&nbsp;memory
+layout of your hardware you are able to locate specific code and data
+exact where you want it.<br>
+  <br>
+The source code of the OO RTX is for most parts common for any RXF we
+release; apart from the target, compiler and RTOS adaptations the very
+same code is processed by many different compilers and excecuted in a
+wide variety of CPUs. We therefore implemented macro constants, which
+indicate the start and end of some section. The actual translation
+towards a compiler or toolchain specific pragma is done in a toolchain
+specific include file, which is part of this product release.<br>
+  <br>
+  The macros and their corresponding implementation of the toolchain specific pragmas offer:<br>
+
+  <ul>
+    <li>the memory categories:&nbsp;OORTX, OSAL, APPL</li>
+
+    <li>the phases:&nbsp;ONPOWER, DOWNPOWER, SLEEP, RUNNING</li>
+
+    <li>for code: CODE</li>
+
+    <li>for data sizes: 8 (bits), 16 (bits), 24 (bits), 32 (bits), UNSPECIFIED (bits)</li>
+
+    <li>for data types:&nbsp;INIT, NOINIT, CONST</li>
+
+    <li>for memory types: FAST, SLOW<br></li>
+  </ul>When
+you setup a macro scheme, which supports the above, you will end up with
+an impressive list of macros that results in a long include file
+WSTMemoryTypes.h where the corresponding compiler pragmas are defined.
+So we actually generate this WSTMemoryTypes.h using two input files:<br>
+
+  <ul>
+    <li>a file that defines the memory categories, running phases, code and data types and memory types</li>
+
+    <li>a file that defines the toolchain specific compiler pragmas for these</li>
+  </ul>The
+file WSTMemoryTypes.h, which is generated using this input, is included
+in both the generated source files and the RXF source files. After
+linking your application, you can inspect the resulting memory map. You
+must instruct your locator where to place all sections if you want to
+override its default behavior.<br>
+  <br>
+  <br>
+
+  </div>
+
+  <p id="Footer">This documentation belongs to the Product Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01, released on 2017-02-27. &copy;&nbsp;2016 Willert Software Tools GmbH.</p>
+</div>
+</body></html>

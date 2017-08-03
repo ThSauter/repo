@@ -1,0 +1,53 @@
+Subject General
+  Metaclass Model
+    Property AutoSynchronize Bool "True"
+  end
+end  
+Subject ConfigurationManagement
+  Metaclass General
+    Property CMTool Enum "None, ClearCase,Subversion" "None"
+    Property DefaultLockReserveOnCheckOut Bool "False"
+    Property EncloseCommentsInQuotes Enum "Yes,No" "No"
+    Property GUI Enum "Flat,Tree" "Tree"
+    Property UserDefCommand_1_Title String "Update file"
+    Property UserDefCommand_1 String "svn update \"\"ARG= $Path\"\""
+    Property UseSCCtool Enum "Yes,No" "No"
+    Property UseUnitTimeStamps Bool "True"
+  end
+  Metaclass Subversion
+    Property AddMember String "\"$OMROOT/etc/Executer.exe\" \"svn add \\\"$UnitPath\\\"; svn propset svn:needs-lock x \\\"$UnitPath\\\"; svn commit \\\"$UnitPath\\\" -m'Add'\""
+    Property Archive File ""
+    Property ArchiveSelection Enum "Directory,File,None" "Directory"
+    Property AskOnCheckoutReadWrite Enum "Yes, No" "Yes"
+    Property AskOnLoadFromArchive Enum "Yes, No" "Yes"
+    Property CheckIn String "\"$OMROOT/etc/Executer.exe\" \"svn commit \\\"$UnitPath\\\"; svn unlock \\\"$UnitPath\\\", attrib +r \\\"$UnitPath\\\"\""
+    Property CheckOut String "\"$OMROOT/etc/Executer.exe\" \"svn revert \\\"$UnitPath\\\"; svn update \\\"$UnitPath\\\"; attrib -r \\\"$UnitPath\\\"\""
+    Property CMHeaderItsVersion String "\\$Revision: ([0-9]+) \\$"
+    Property DeleteActivation Enum "Disable,UserConfirmation,Automatic" "Disable"
+    Property EnableCheckoutBranch Enum "Yes,No" "No"
+    Property HeaderFile String "$OMROOT/cm/SVNHeader.txt"
+    Property History String "\"$OMROOT/etc/Executer.exe\" \"svn log \\\"$UnitPath\\\"\""
+    Property ListArchive String "\"$OMROOT/etc/Executer.exe\" \"svn list \\\"$archive\\\" -R --xml\""
+    Property ListArchiveItsLockedBy String "\\<owner\\>(.+)\\</owner\\>"
+    Property ListArchiveItsVersion String "revision=\"([0-9]+)\"\\>"
+    Property ListArchiveItsWorkingFile String "\\<name\\>(.+)\\</name\\>"
+    Property ListArchiveRevisionPart String ""
+    Property Lock String "\"$OMROOT/etc/Executer.exe\" \"svn lock \\\"$UnitPath\\\"\""
+    Property LockItem String "\"$OMROOT/etc/Executer.exe\" \"svn lock \\\"$UnitPath\\\"; attrib +r \\\"$UnitPath\\\"\""
+    Property LogPart String "( $log ? -m\\\"$log\\\" : -m\\\"no comment given\\\")"
+    Property MoveActivation Enum "Disable,UserConfirmation,Automatic" "Disable"
+    Property MultiRecordDelimiter String "(kind=\"file\"\\>)"
+    Property ReadOnly String ""
+    Property ReadWrite String ""
+    Property Rename String "\"$OMROOT/etc/Executer.exe\" \"svn move \\\"$oldName\\\" \\\"$newName\\\"; svn commit \\\"$newName\\\" -m'Rename'; svn lock \\\"$UnitPath\\\"; attrib +r \\\"$UnitPath\\\"\""
+    Property RenameActivation Enum "Disable,UserConfirmation,Automatic" "UserConfirmation"
+    Property RenameDirectory String "\"$OMROOT/etc/Executer.exe\" \"svn move \\\"$oldName\\\" \\\"$newName\\\" --force; svn commit \\\"$newName\\\" -m'Rename'\""
+    Property RenameItem String "\"$OMROOT/etc/Executer.exe\" \"svn move \\\"$oldName\\\" \\\"$newName\\\"\""
+    Property RevertItem String "\"$OMROOT/etc/Executer.exe\" \"svn revert \\\"$UnitPath\\\"\""
+    Property ShowAllFilesInArchive Enum "Yes,No" "No"
+    Property ShowNewItemsInSynchronize Enum "Yes,No" "Yes"
+    Property SupportTreeRepository String ""
+    Property UnLockItem String "\"$OMROOT/etc/Executer.exe\" \"attrib +r \\\"$UnitPath\\\"; svn unlock \\\"$UnitPath\\\"\""
+  end
+end
+end

@@ -1,0 +1,20 @@
+I-Logix-RPY-Archive version 8.12.0 * 9641846
+
+- filesTable = { IRPYRawContainer 
+	- size = 13;
+	- value = "Exercise_13_Wifi.rpy" ""
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre803Cpp.sbs" "CGCompatibilityPre803Cpp"
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre804Cpp.sbs" "CGCompatibilityPre804Cpp"
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre805Cpp.sbs" "CGCompatibilityPre805Cpp"
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre806Cpp.sbs" "CGCompatibilityPre806Cpp"
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre812Cpp.sbs" "CGCompatibilityPre812Cpp"
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre813Cpp.sbs" "CGCompatibilityPre813Cpp"
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre814Cpp.sbs" "CGCompatibilityPre814Cpp"
+	"Exercise_13_Wifi_rpy\\CGCompatibilityPre81Cpp.sbs" "CGCompatibilityPre81Cpp"
+	"Exercise_13_Wifi_rpy\\DefaultPkg.sbs" "DefaultPkg"
+	"Exercise_13_Wifi_rpy\\Display.sbs" "Libs::Display"
+	"Exercise_13_Wifi_rpy\\Libs.sbs" "Libs"
+	"Exercise_13_Wifi_rpy\\MCB1700.cmp" "MCB1700"
+	
+}
+

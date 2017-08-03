@@ -1,0 +1,25 @@
+
+Subject CG
+   	Metaclass Configuration
+		Property GenerateForwardDeclarations Bool "False"
+  	end
+end
+
+Subject CPP_CG
+   	Metaclass Configuration
+		Property Environment Enum "MSVC,MSVCDLL,MSVCStandardLibrary,VxWorks,VxWorks6diab,VxWorks6gnu,VxWorks6diab_RTP,VxWorks6gnu_RTP,Solaris2,Cygwin,MicrosoftWinCE600,OseSfk,Linux,Solaris2GNU,QNXNeutrinoGCC, QNXNeutrinoMomentics,NucleusPLUS-PPC,WorkbenchManaged,WorkbenchManaged653,WorkbenchManaged_RTP" "MSVC"
+		Property EmptyArgumentListName String " void "
+	end
+end
+
+
+end
+
+//
+// SiteC++.prp
+// 
+// Willert Software Tools - Sample site specific properties file.
+//
+// Email: support@willert.de
+//
+//

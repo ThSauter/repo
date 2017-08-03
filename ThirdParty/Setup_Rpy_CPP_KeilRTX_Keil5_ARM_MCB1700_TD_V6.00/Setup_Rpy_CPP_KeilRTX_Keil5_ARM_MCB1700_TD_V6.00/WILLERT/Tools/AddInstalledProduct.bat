@@ -1,0 +1,5 @@
+"@WILLERT_1@\@WST_RELEASE_NAME@\Tools\xmlstarlet-1.0.3\xml.exe" ed --delete "/WSTProducts/RXF[.='Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD_V6.00']" "@WILLERT_1@\WSTInstalledProducts.xml" > "@WILLERT_1@\WSTInstalledProducts.xml.tmp1"
+"@WILLERT_1@\@WST_RELEASE_NAME@\Tools\xmlstarlet-1.0.3\xml.exe" ed --subnode "/WSTProducts" --type elem -n RXF -v Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD_V6.00 "@WILLERT_1@\WSTInstalledProducts.xml.tmp1" > "@WILLERT_1@\WSTInstalledProducts.xml.tmp2"
+"@WILLERT_1@\@WST_RELEASE_NAME@\Tools\xmlstarlet-1.0.3\xml.exe" fo --indent-tab "@WILLERT_1@\WSTInstalledProducts.xml.tmp2" > "@WILLERT_1@\WSTInstalledProducts.xml"
+del "@WILLERT_1@\WSTInstalledProducts.xml.tmp1"
+del "@WILLERT_1@\WSTInstalledProducts.xml.tmp2"

@@ -1,0 +1,189 @@
+I-Logix-RPY-Archive version 8.7.1 C++ 5074847
+{ IComponent 
+	- _id = GUID 513bcae0-663e-4ff2-9f28-0d43ebbb21b8;
+	- _myState = 139264;
+	- _name = "TargetComponent";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD.sbs";
+			- _subsystem = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD";
+			- _class = "";
+			- _name = "RXFComponent";
+			- _id = GUID 18a04e12-dcf6-567a-b9ef-1efeaf80d515;
+		}
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD.sbs";
+			- _subsystem = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD";
+			- _class = "";
+			- _name = "LiveAnimation";
+			- _id = GUID f7436a48-83d4-eb11-3a25-f390114f3e83;
+		}
+	}
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID f31ab606-9f10-4592-b7b8-4afb70704c93;
+		- _myState = 73728;
+		- _name = "Files";
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID 07cbf8a8-7755-4165-8d91-fa3f251ef73e;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID 07cbf8a8-7755-4165-8d91-fa3f251ef73e;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Environment";
+										- _Value = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD_V6_00";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD_V6_00,Microsoft,Cygwin,MSVC9";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Debug";
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 3ab77e1f-9223-42da-bcac-8e0b18072ffc;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "@WILLERT_3@\\@WST_RELEASE_NAME@\\Samples\\Model\\Blinky\\TargetComponent\\Debug\\TargetComponent.mak";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID 0857a299-30df-456e-a417-f3a07cd59b0f;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "@WILLERT_3@\\@WST_RELEASE_NAME@\\Samples\\Model\\Blinky\\TargetComponent\\Debug\\MainTargetComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IClass";
+					- _filename = "ExamplePkg.sbs";
+					- _subsystem = "ExamplePkg";
+					- _class = "";
+					- _name = "TestBuilder";
+					- _id = GUID 6b7d70c7-ea2f-4968-ad24-487708a260c9;
+				}
+			}
+			- _root = { IFolder 
+				- _id = GUID 588f9d41-371b-4b6b-afe6-e0eaa26deb9e;
+				- _myState = 8192;
+				- _name = "Debug";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 1.24.2013::10:50:31;
+			- strongCGTime = 1.24.2013::9:16:36;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+	}
+	- HandlesInMe = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "ExamplePkg.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "ExamplePkg";
+			- _id = GUID a6cff529-c390-404d-a784-4baed8ff40ad;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD";
+			- _id = GUID 9776b0aa-41da-7348-2ef0-f01c3c4e3c46;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "WSTProfile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "WSTProfile";
+			- _id = GUID 839b3570-feed-482e-8776-cdf59c7831ae;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 1.24.2013::10:50:31;
+	- strongCGTime = 1.24.2013::9:16:43;
+}

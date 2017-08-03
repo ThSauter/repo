@@ -1,0 +1,14 @@
+ INFO 2016-04-21T16:37:32.504 UML Target Debugger started 
+ INFO 2016-04-21T16:37:32.504 Internal Revision: $Id: Parameters.h 33461 2016-01-15 12:50:36Z mspieker $ 
+ INFO 2016-04-21T16:37:32.504 Launch LiveAnimation with Parameters "" "" false 
+ INFO 2016-04-21T16:37:32.504 creating MainWindow 
+ INFO 2016-04-21T16:37:32.551 initializing LiveAnimation 
+ INFO 2016-04-21T16:37:32.598 calling function openCommunication with parameters "" false 
+ INFO 2016-04-21T16:37:32.613 Please select Plugin Communication 
+ INFO 2016-04-21T16:37:48.525 UML Target Debugger started 
+ INFO 2016-04-21T16:37:48.525 Internal Revision: $Id: Parameters.h 33461 2016-01-15 12:50:36Z mspieker $ 
+ INFO 2016-04-21T16:37:48.525 Launch LiveAnimation with Parameters "" "" false 
+ INFO 2016-04-21T16:37:48.541 creating MainWindow 
+ INFO 2016-04-21T16:37:48.572 initializing LiveAnimation 
+ INFO 2016-04-21T16:37:48.619 calling function openCommunication with parameters "" false 
+ INFO 2016-04-21T16:37:48.634 Please select Plugin Communication 

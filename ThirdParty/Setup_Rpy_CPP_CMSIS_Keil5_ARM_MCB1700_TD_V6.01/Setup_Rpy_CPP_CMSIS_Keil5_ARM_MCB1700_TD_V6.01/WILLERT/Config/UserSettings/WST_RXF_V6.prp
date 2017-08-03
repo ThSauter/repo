@@ -1,0 +1,229 @@
+ 
+Subject CPP_CG
+
+	Metaclass Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6_01
+
+	    Property WSTComment						String	"This property file includes the Metaclass definition and properties specific for the Willert Realtime eXecution Framework (RXF). $Id: WST_RXF_V6.prp 35025 2016-08-09 11:42:33Z eroemer $ $URL: https://svn.willert.de/V6/trunk/Component/Modelling/Rpy/Config/UserSettings/WST_RXF_V6.prp $"
+	    Property AdditionalReservedWords   		String  ""
+		Property DependencyRule             	String	"$OMFileObjPath : $OMFileImpPath $OMFileSpecPath $OMFileDependencies"
+        Property FileDependencies           	String	"$OMSpecIncludeInElements $OMImpIncludeInElements"
+        Property GeneratedAllDependencyRule		Bool	"False"
+        Property HasIDEInterface           		Bool    "False"
+        Property IDEInterfaceDLL           		String  ""
+        Property ImpExtension              		String  ".cpp"
+        Property Include						String	"!INCLUDE"
+        Property IsFileNameShort           		Bool    "False"
+        Property ObjCleanCommand            	String	"if exist $OMFileObjPath del $OMFileObjPath"
+        Property ObjectName                		String  ""
+        Property ObjectsDirectory          		String  ""
+        Property QuoteOMROOT               		Bool    "True"
+        Property RemoteHost                		String  "WST_RXF"
+        Property SpecExtension             		String  ".h"
+        Property UseRemoteHost             		Bool    "True"
+        Property ReactiveVtblKind				Enum	"OXF,IDF" "OXF"
+
+        Property OSFileSystemCaseSensitive 		Bool    "False"
+		Property PathDelimiter 					String	"\\"
+        
+        Property WSTReleasePath					String	"@WILLERT_3@\\@WST_RELEASE_NAME@"
+    	Property BuildCommandSet				Enum	"Debug,Release" "Debug"
+        Property CPPCompileDebug				String  "-D_DEBUG -DWST_CFG_HIGHWATERMARKS "
+        Property CPPCompileRelease				String  "-DNDEBUG "
+        Property CPPCompileSwitches				String  "-DWST_RXF_V6  $(OMCPPCompileCommandSet)"
+        Property InvokeExecutable				String  "\"$OMROOT/etc/Executer.exe\" \"echo Nothing to be done on Run\""
+        Property InvokeMake                		String  "\"$OMROOT/etc/Executer.exe\" \"\\\"$WSTReleasePath\\Tools\\RhapsodyMake.bat\\\" $makefile $maketarget\""
+        Property EntryPoint                		String  "WST_RXF_Main"
+		Property LinkDebug						String	""
+		Property LinkRelease					String	""
+		Property LinkSwitches					String	""
+        Property ErrorMessageTokensFormat 		String	"ToTalNumberOfTokens=2,FileTokenPosition=1,LineTokenPosition=2"
+        Property ParseErrorMessage				String	"(.*)\\(([0-9]+)\\).*"
+        Property LibExtension              		String  ".lib"
+        Property ExeExtension              		String  ".dat"
+        Property MakeExtension                	String  ".bat"
+		Property CPPCompileCommand				String "	@%MYECHO% RXF V6 uses the external IDE as build environment. $(TO_OBJECT) should be build there based on $OMFileImpPath."
+        Property MakeFileContent            	MultiLine "@echo off
+rem ######################################################################
+rem ######### Auto generated batch file to prepare the RXF and ###########
+rem ######### Rhapsody generated files for building in an      ###########
+rem ######### external IDE.                                    ###########
+rem ######################################################################
+rem ##
+rem ## Based on properties version:
+rem ## $Id: WST_RXF_V6.prp 35025 2016-08-09 11:42:33Z eroemer $
+rem ## $URL: https://svn.willert.de/V6/trunk/Component/Modelling/Rpy/Config/UserSettings/WST_RXF_V6.prp $
+rem ##
+
+set WST_JAVA_PATH=\"@RPYPROG_3@\\jdk\\jre\\bin\"
+set WST_RELEASE_PATH=$(WSTReleasePath)
+set WST_RELEASE_MEMSECTIONS=%WST_RELEASE_PATH%\\Config\\MemorySections
+set WST_RELEASE_TOOLS=%WST_RELEASE_PATH%\\Tools
+set MYECHO=\"%WST_RELEASE_TOOLS%\\MyEcho\"
+
+@%MYECHO% Preparing header files for environment $(Environment)...
+
+set TARGET_TYPE=$OMTargetType
+set TARGET_NAME=$OMTargetName
+set BUILDSET=$OMBuildSet
+set COMPILE_SWITCHES_PRP=$CPPCompileSwitches
+
+rem The batch file cannot expand the $(CPPCompileDebug) inside $CPPCompileSwitches, so we remove that from the string and add it manually dependent on the active buildset.
+if \"%BUILDSET%\" == \"Debug\" set RPY_COMPILE_SWITCHES=%COMPILE_SWITCHES_PRP:$(CPPCompileDebug)=% $OMCPPCompileDebug
+if \"%BUILDSET%\" == \"Release\" set RPY_COMPILE_SWITCHES=%COMPILE_SWITCHES_PRP:$(CPPCompileRelease)=% $OMCPPCompileRelease
+
+if \"%1\" == \"clean\" (
+	call :clean
+	goto end
+)
+if \"%1\"==\"rebuild\" (
+	call :clean
+)
+call :CreateOutput
+
+%WST_JAVA_PATH%\"\\java\" -jar \"%WST_RELEASE_TOOLS%/CheckModified.jar\" TargetComponent.bat RxfDimensions.h
+if errorlevel == 1	 			call :RxfDimensions
+        
+%WST_JAVA_PATH%\"\\java\" -jar \"%WST_RELEASE_TOOLS%/CheckModified.jar\" TargetComponent.bat RxfConstants.h
+if errorlevel == 1				call :RxfConstants
+
+
+call :DeployerFileLists
+
+
+%WST_JAVA_PATH%\"\\java\" -jar \"%WST_RELEASE_TOOLS%/CheckModified.jar\" TargetComponent.bat WSTMemoryTypes.h
+if errorlevel == 1	 			call :WSTMemoryTypes  
+
+
+goto end
+
+
+rem ############################### CLEAN ##############################
+:clean
+%MYECHO% -------
+%MYECHO% Cleaning
+%MYECHO% -------
+if exist RxfDimensions.h  	 		del RxfDimensions.h
+if exist RxfConstants.h  	 		del RxfConstants.h
+if exist WSTMemoryTypes.h  	 		del WSTMemoryTypes.h 
+exit /B
+
+
+rem ############################ CreateOutput ###########################
+:CreateOutput
+rem Generate output exe or lib to enable Run button:
+if \"%TARGET_TYPE%\" == \"Executable\" %MYECHO% > %TARGET_NAME%$(ExeExtension)
+if \"%TARGET_TYPE%\" == \"Library\" %MYECHO% > %TARGET_NAME%$(LibExtension)
+exit /B
+
+
+rem ############################ WSTMemoryTypes ###########################
+:WSTMemoryTypes
+%MYECHO% -------
+%MYECHO% Creating WSTMemoryTypes.h
+%MYECHO% -------
+rem -------------------------------------------------------------------------------------------------------
+rem IMPORTANT NOTE REGARDING MEMORY SECTION MECHANISM:
+rem -------------------------------------------------------------------------------------------------------
+rem The RXF allows to generate WSTMemoryTypes.h with the compiler pragmas needed to define named sections.
+rem To enable this mechanism, please install gnu awk and make it available in your PATH environment and
+rem remove the \"rem\" comment-statements in the following three lines while adding \"rem\" to the default line
+rem which creates an empty WSTMemoryTypes.h file to speed up compilation.
+rem -------------------------------------------------------------------------------------------------------
+rem if not exist \"WSTMemoryTypeMacro.template\" copy \"%WST_RELEASE_MEMSECTIONS%\\WSTMemoryTypeMacro.template\" WSTMemoryTypeMacro.template
+rem if not exist \"WSTMemoryTypePragmas.txt\" copy \"%WST_RELEASE_MEMSECTIONS%\\WSTMemoryTypePragmas.txt\" WSTMemoryTypePragmas.txt
+rem awk.exe -f \"%WST_RELEASE_TOOLS%\\macroAndPragma2Header.awk\" pragmaFile=WSTMemoryTypePragmas.txt useShortSectionNames=0 WSTMemoryTypeMacro.template > WSTMemoryTypes.h
+%MYECHO% /* Empty memory section allocation file to speed up compilation. Please see MakefileContent property for details. */ > WSTMemoryTypes.h
+exit /B
+
+
+rem ############################ RxfDimensions ###########################
+:RxfDimensions
+rem Generate RxfDimensions.h with all actual dimensions, set via properties in Rhapsody
+%MYECHO% -------
+%MYECHO% Generating RxfDimensions.h
+%MYECHO% -------
+%MYECHO% /* This file is generated by $OMMakefileName; do not edit! */					>  RxfDimensions.h
+%MYECHO% 																				>> RxfDimensions.h
+
+
+%MYECHO% ^#define WST_MAX_TIMEOUTS					$(WSTMaxTimeouts)					>> RxfDimensions.h
+
+
+
+%MYECHO% ^#define WST_TSK_DEFAULT_MESSAGE_QUEUE_SIZE	$(WST_DefaultMsqSize)			>> RxfDimensions.h
+%MYECHO% ^#define WST_TSK_DEFAULT_STACK_SIZE			$(WST_DefaultTaskStackSize)		>> RxfDimensions.h
+%MYECHO% ^#define WST_RTOS_MAIN_STACK_SIZE				$(WST_MainTaskStackSize)		>> RxfDimensions.h
+%MYECHO% ^#define WST_MONITOR_TASK_PRIORITY				$(WST_MonitorTaskPriority)		>> RxfDimensions.h
+%MYECHO% ^#define WST_MAIN_TASK_PRIORITY				$(WST_MainTaskPrioity)			>> RxfDimensions.h
+%MYECHO% ^#define WST_TSK_DEFAULT_PRIORITY				$(WST_TaskDefaultPriority)		>> RxfDimensions.h
+%MYECHO% ^#define WST_TMM_TASK_PRIORITY					$(WST_TimerTaskPriority)		>> RxfDimensions.h  
+%MYECHO% ^#define WST_TMM_TASK_STACK_SIZE				$(WST_TimerTaskStackSize)		>> RxfDimensions.h
+                                                                                                 	
+
+%MYECHO% ^#define WST_TINY_BUFFER_SIZE					$(WSTTinyBufferSize)			>> RxfDimensions.h
+%MYECHO% ^#define WST_SMALL_BUFFER_SIZE					$(WSTSmallBufferSize)			>> RxfDimensions.h
+%MYECHO% ^#define WST_MEDIUM_BUFFER_SIZE				$(WSTMediumBufferSize)			>> RxfDimensions.h
+%MYECHO% ^#define WST_LARGE_BUFFER_SIZE					$(WSTLargeBufferSize)			>> RxfDimensions.h
+%MYECHO% ^#define WST_HUGE_BUFFER_SIZE					$(WSTHugeBufferSize)			>> RxfDimensions.h
+%MYECHO% ^#define WST_INITIAL_TINY_BUFFERS				$(WSTInitialTinyBuffers)		>> RxfDimensions.h
+%MYECHO% ^#define WST_INITIAL_SMALL_BUFFERS				$(WSTInitialSmallBuffers)		>> RxfDimensions.h
+%MYECHO% ^#define WST_INITIAL_MEDIUM_BUFFERS			$(WSTInitialMediumBuffers)		>> RxfDimensions.h
+%MYECHO% ^#define WST_INITIAL_LARGE_BUFFERS				$(WSTInitialLargeBuffers)		>> RxfDimensions.h
+%MYECHO% ^#define WST_INITIAL_HUGE_BUFFERS				$(WSTInitialHugeBuffers)		>> RxfDimensions.h
+%MYECHO% ^#define WST_MS_PER_TICK						$(WST_TMM_msPerTick)			>> RxfDimensions.h
+exit /B
+
+
+rem ############################ RxfConstants ###########################
+:RxfConstants
+rem The file RxfConstants.h is included by WST.h which is included by the RXF sources 
+%MYECHO% ---------
+%MYECHO% Generating RxfConstants.h
+%MYECHO% ---------
+%MYECHO% /* This file is generated by $OMMakefileName via Rhapsody; do not edit! */		>  RxfConstants.h
+%MYECHO% -@D@ %RPY_COMPILE_SWITCHES%														>> RxfConstants.h
+%MYECHO% -@D@ $(WSTAdditionalDefinesMEM)												>> RxfConstants.h
+%MYECHO% -@D@ $(WSTAdditionalDefinesTD)													>> RxfConstants.h
+%MYECHO% -@D@ $(WSTAdditionalDefinesTC)													>> RxfConstants.h
+%MYECHO% -@D@ -DWST_RPY_VTBL_KIND_$(ReactiveVtblKind)									>> RxfConstants.h
+
+%MYECHO% -@D@ -D$(WST_MEM_DebugMode)													>> RxfConstants.h
+%MYECHO% -@D@ -D$(WST_MEM_getMemoryMode)												>> RxfConstants.h
+%MYECHO% -@D@ -D$(WST_MEM_criticalRegions)												>> RxfConstants.h
+%MYECHO% -@D@ -D$(WST_MEM_UseStatistics)												>> RxfConstants.h	
+%MYECHO% -@D@ -D$(WST_MEM_UseTail)														>> RxfConstants.h
+%MYECHO% ^#define WST_MEM_TINY_POOL_DEFINITION 		$(WST_MEM_TinyPool)					>> RxfConstants.h
+%MYECHO% ^#define WST_MEM_SMALL_POOL_DEFINITION 	$(WST_MEM_SmallPool)				>> RxfConstants.h
+%MYECHO% ^#define WST_MEM_MEDIUM_POOL_DEFINITION	$(WST_MEM_MediumPool)				>> RxfConstants.h
+%MYECHO% ^#define WST_MEM_LARGE_POOL_DEFINITION		$(WST_MEM_LargePool)				>> RxfConstants.h
+%MYECHO% ^#define WST_MEM_HUGE_POOL_DEFINITION		$(WST_MEM_HugePool)					>> RxfConstants.h
+
+exit /B
+
+
+rem ############################ DeployerFileLists ###########################
+:DeployerFileLists
+rem We need to extract macros, so we handle deployer file lists
+rem here and not in RhapsodyMake.bat.
+if not exist CurrentFileList.txt copy NUL CurrentFileList.txt
+copy CurrentFileList.txt PreviousFileList.txt
+dir /s /on /b *.cpp *.c *.h > CurrentFileList.txt
+exit /B
+
+
+rem ############################ THE END ###########################
+:end
+"
+
+	end
+end
+
+
+Subject CPP_CG
+	Metaclass Configuration
+		Property WSTAdditionalDefinesMEM String ""
+		Property WSTAdditionalDefinesTD String ""
+		Property WSTAdditionalDefinesTC String ""
+		Property WSTAdditionalDefinesComment String "The WSTAdditionalDefinesMEM and WSTAdditionalDefinesTD properties allow RXF profiles to add defines to a header file, e.g. NO_MALLOC for the StaticComponent Stereotype."
+	end
+end

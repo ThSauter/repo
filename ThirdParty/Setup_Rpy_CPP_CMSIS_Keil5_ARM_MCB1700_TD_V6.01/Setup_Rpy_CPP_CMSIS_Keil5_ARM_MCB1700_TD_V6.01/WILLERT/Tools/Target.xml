@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<TargetConfiguration>
+  <Target>
+  
+    <Endianness>Little</Endianness>
+  
+    <Alignment unit="Byte">4</Alignment>
+  
+    <!--Type defines, size attribute is in bytes-->
+  
+    <TypeList>
+		<Type size="1">signed char</Type>
+		<Type size="1">unsigned char</Type>
+		<Type size="1">char</Type>
+		<Type size="2">signed short</Type>
+		<Type size="2">unsigned short</Type>
+		<Type size="4">signed int</Type>
+		<Type size="4">unsigned int</Type>
+		<Type size="4">int</Type>
+		<Type size="4">float</Type>
+		<Type size="0">WST_FSM</Type>
+		<Type size="0">WST_TSK</Type>
+		<Type size="0">RiCCollection</Type>
+		<Type size="0">RiCList</Type>
+		<Type size="0">RiCMap</Type>
+		<Type size="1">uint8</Type>
+		<Type size="1">sint8</Type>
+		<Type size="2">uint16</Type>
+		<Type size="2">sint16</Type>
+		<Type size="4">uint32</Type>
+		<Type size="4">sint32</Type>
+		<Type size="1">WSTBoolean</Type>
+		<Type size="1">boolean</Type>
+		<Type size="8">double</Type>
+		<Type size="4">*</Type>
+    </TypeList>
+  </Target>
+  
+  <Defines>
+  	<Define name="EXAMPLE">1</Define>
+  </Defines>
+ 
+  <HighWater>
+    <HighWaterList>
+     
+      <Attribute>
+        <Name>bufferOverflow</Name>
+        <Type>unsigned char</Type>
+        <Visible>True</Visible>
+      </Attribute>
+    
+     <!-- Configuration files can also include CurrentAndMax elements. These will be used as default values, when no RxfDimensions.h file was found. -->
+    
+      <CurrentAndMax>
+        <Name>timeoutsMax</Name>
+        <Type>unsigned short</Type>
+        <Max>32</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>largeBuffersMax</Name>
+        <Type>unsigned short</Type>
+        <Max>1</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>mediumBuffersMax</Name>
+        <Type>unsigned short</Type>
+        <Max>6</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+      <CurrentAndMax>
+        <Name>smallBuffersMax</Name>
+        <Type>unsigned short</Type>
+        <Max>12</Max>
+        <Visible>True</Visible>
+      </CurrentAndMax>
+    
+	</HighWaterList>
+  </HighWater>
+  
+</TargetConfiguration>

@@ -1,0 +1,4437 @@
+I-Logix-RPY-Archive version 8.11.0 C++ 8254044
+{ ISubsystem 
+	- _id = GUID 67957628-6fd5-4ea6-9181-568bf774d976;
+	- _myState = 8192;
+	- _name = "TestPart04_Huge_Pkg";
+	- _modifiedTimeWeak = 2.9.2015::15:33:33;
+	- _theMainDiagram = { IHandle 
+		- _m2Class = "IDiagram";
+		- _filename = "Overview.omd";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "Overview";
+		- _id = GUID 54d91baf-17b9-4e35-a4cf-14c09c9fb24a;
+	}
+	- _lastID = 1;
+	- Declaratives = { IRPYRawContainer 
+		- size = 4;
+		- value = 
+		{ ISubsystem 
+			- fileName = "TestPart04_Huge_Sub000_Pkg";
+			- _id = GUID ae9dcc14-a6cc-4d7d-afb8-a1c12b359b12;
+		}
+		{ ISubsystem 
+			- fileName = "TestPart04_Huge_Sub001_Pkg";
+			- _id = GUID d110365c-5f82-4493-8feb-fb3c9e46c195;
+		}
+		{ ISubsystem 
+			- fileName = "TestPart04_Huge_Sub002_Pkg";
+			- _id = GUID 1bc20189-9e48-412c-b936-d2c742b5b846;
+		}
+		{ ISubsystem 
+			- fileName = "TestPart04_Huge_Sub003_Pkg";
+			- _id = GUID 8f257abf-a78a-4f3d-a4af-92800fd8eb15;
+		}
+	}
+	- weakCGTime = 2.9.2015::15:33:33;
+	- strongCGTime = 4.24.2013::7:26:49;
+	- _defaultComposite = GUID ff851f13-0e9e-40ed-882a-4311ac279121;
+	- _eventsBaseID = 27801;
+	- Classes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IClass 
+			- _id = GUID ff851f13-0e9e-40ed-882a-4311ac279121;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 2.9.2015::15:33:33;
+			- weakCGTime = 2.9.2015::15:33:33;
+			- strongCGTime = 4.24.2013::7:26:49;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 519095e6-b711-4383-93ec-c0136615a355;
+			- _myState = 8192;
+			- _name = "TestPart04_Huge_Controller";
+			- Dependencies = { IRPYRawContainer 
+				- size = 100;
+				- value = 
+				{ IDependency 
+					- _id = GUID b0457856-e590-47e3-801c-bfea30ecc37a;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_000";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_000";
+						- _id = GUID df22ae5e-f9a8-42ee-8db3-1e1cc1adfd9a;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 7aecc022-4817-46cf-b5ef-4e72ee379396;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_001";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_001";
+						- _id = GUID c9628cbf-f088-4a15-a5ea-a717c243b75d;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 521082c4-7019-4f3f-a80a-894a49e02b16;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_002";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_002";
+						- _id = GUID 46e62750-5563-42b9-a6d6-1dcc7d0344f1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 713e53df-d612-4eb7-896e-776d4c0faadb;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_003";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_003";
+						- _id = GUID ecc71bc5-7374-4ba7-83b7-1cc976befaea;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6667efbd-0a61-49ad-8459-98234177f283;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_004";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_004";
+						- _id = GUID f114793f-2f3a-4c82-ace6-f667a1ed10f7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f1e79ad7-0b7b-4aee-8397-09b7949687cd;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_005";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_005";
+						- _id = GUID b46b4b18-930f-40da-b78e-99a4ffbd1ec6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c2a2a221-9696-4ae7-8ce3-cdb2c700e925;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_006";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_006";
+						- _id = GUID 2ad35537-f164-4360-97d4-7a689892f037;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 506c4b0c-ff27-4d8f-b1f0-9c2a7e79ef53;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_007";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_007";
+						- _id = GUID 641350ee-0320-4aa7-956c-8ae6c9fafa95;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 18f0f884-0c46-4f0c-94e7-c61a7a4d12dd;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_008";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_008";
+						- _id = GUID b7a690d4-5d22-4ccd-97cc-6ec22a9fa41a;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 9285ddc2-97fa-4315-8f6a-6706a485c53b;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_009";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_009";
+						- _id = GUID e887374c-90d7-49a0-bbb7-b93ddff7cec4;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a2088909-2ef1-4b1b-9b13-f0a14b8dedab;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_010";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_010";
+						- _id = GUID 985b61a1-3d1f-4c15-9f68-98bc3ca67ae6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 09614491-3b15-4697-bc78-883bbb8985a3;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_011";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_011";
+						- _id = GUID 69b23352-3eff-409c-94d5-d72094d8928e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 73bd43d1-5e7a-419c-89aa-a6b1fbcb330c;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_012";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_012";
+						- _id = GUID 952dd98d-2eb4-4b1c-8f15-16245cc82d96;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a415d081-e650-429f-b910-104c7aa2ce5d;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_013";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_013";
+						- _id = GUID ea2c9437-1f8b-457b-bd62-446f481f2536;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 36cece98-cdea-4cec-be06-524ca5e847c4;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_014";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_014";
+						- _id = GUID 2a564995-4509-4231-8f6f-03bf36475265;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f3b0c6f8-ae9b-4652-aac1-3822c4a94147;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_015";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_015";
+						- _id = GUID c191c35c-8f30-4e75-91e4-89098d7ab6c9;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 7718024f-d0f2-4589-932a-595dff30ecb3;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_016";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_016";
+						- _id = GUID 36026a39-f8f9-4deb-90a1-b66cd7c6ea29;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 144ef7f3-d4fa-4bf5-82cb-b442db0b7880;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_017";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_017";
+						- _id = GUID bb0a7fbf-7cea-4ab4-9aa4-2520ddd61edb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6b46554c-656d-4a6d-bd34-de5928c1d12f;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_018";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_018";
+						- _id = GUID f3248c81-56e0-4949-acfe-36c78cc61bbb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6865b18e-4c47-44c0-a4a8-8758b766273d;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_019";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_019";
+						- _id = GUID 490a33d7-564b-45da-942a-1911e769fde7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6821fafa-0ddd-4ceb-8586-1f2e60364ebb;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_020";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_020";
+						- _id = GUID 4684aec8-4796-4f7d-aa22-30ce795970d6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a87e839b-4dbd-487c-b023-53eab1e12294;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_021";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_021";
+						- _id = GUID 03007335-2208-4215-afb3-0193eb53c8fb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6b2c4d08-2d54-408c-b529-1cd60de56942;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_022";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_022";
+						- _id = GUID bdd503d9-6c85-47e4-9241-2d61ca124884;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 54f082f6-43c0-4724-82df-d2e174e7a08e;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_023";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_023";
+						- _id = GUID 75a73dee-943b-4485-8c7e-73945cb159e7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5e4e18a1-135b-43ab-a723-25939b8a0062;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class000_024";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub000_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub000_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class000_024";
+						- _id = GUID ddaf4fb2-903b-4a07-b0f2-50ec44fdbc43;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 35046006-8111-48a3-a40e-c290261b5bb3;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_000";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_000";
+						- _id = GUID 6a720815-0a39-4a13-a497-9d39c48ad64f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID eac5512d-4497-4f72-8808-61fa8cc34198;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_001";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_001";
+						- _id = GUID 796bc73c-cded-48b5-a941-b73f5bf802c0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ce169277-2928-4b33-b550-7a1a62062df8;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_002";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_002";
+						- _id = GUID 5352a346-e3ac-4629-a811-2c13a2fa5fcf;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a5a9a973-253e-468f-91ae-485d64233560;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_003";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_003";
+						- _id = GUID 2ea20ed3-c2a7-4ba6-9ceb-9fff4ac6e2ca;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 7a6066b7-7142-48a0-acd4-1a5f68926714;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_004";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_004";
+						- _id = GUID 12c8de64-2d55-49ac-831c-33d1db0cb8fd;
+					}
+				}
+				{ IDependency 
+					- _id = GUID e887cbc3-e45e-4489-a9c9-2367b6e1daf9;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_005";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_005";
+						- _id = GUID 31be7dd1-2d21-4c57-87a9-27849e72b022;
+					}
+				}
+				{ IDependency 
+					- _id = GUID bd105ae7-fcff-4a4f-9e52-df5f3650a4a9;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_006";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_006";
+						- _id = GUID 69793267-5c57-4ea1-ae02-2fdbb5c29798;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 91ec84c2-2feb-44f2-bbbb-b49c42945148;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_007";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_007";
+						- _id = GUID ac13ec3c-4fbe-4864-ba83-c175d767ca4c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 327b125a-0dfa-4eec-97f1-398c6ec32f2d;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_008";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_008";
+						- _id = GUID 1c793772-7135-4efc-a64a-d35a5d2872e3;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a41eac5b-74cc-46a3-b86c-8efde539a3a9;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_009";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_009";
+						- _id = GUID 986251aa-ab11-4969-babd-983680978c08;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 079b05ba-d665-4398-beab-db2285d55847;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_010";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_010";
+						- _id = GUID 5f006f07-8d01-4a5a-bb9f-90c5f79c8b4b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 48b4d761-3826-4624-9cf1-eb823b3795bd;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_011";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_011";
+						- _id = GUID bb109a36-f489-4802-a987-db148428cc30;
+					}
+				}
+				{ IDependency 
+					- _id = GUID e7f1145e-6875-4431-90ca-d207643995fe;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_012";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_012";
+						- _id = GUID 485ac9e5-ca17-43c5-9adc-4c7ebb6b97ca;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5a31a95a-4341-48c8-9938-578968119e0f;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_013";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_013";
+						- _id = GUID 11f0555d-e940-4ceb-873f-5031c3e41a51;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1c7be703-076a-4578-a67c-beabbf9f9ba5;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_014";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_014";
+						- _id = GUID 5aae59f8-ea76-4ad2-b8d6-f3fe22e97795;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 05eb04ab-7192-4c8f-949e-df93a4e661ad;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_015";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_015";
+						- _id = GUID 0407961a-f52d-45ca-adeb-4e9331301d1e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d15cb703-b9e6-4a31-bd67-89652ecf6321;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_016";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_016";
+						- _id = GUID eace9ee2-f735-42cc-a924-cc406d2ce8a4;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d8577e12-9bde-4658-944c-63079e8432f8;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_017";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_017";
+						- _id = GUID 4f8e652e-f893-4b10-a8ed-446a12a27a01;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1733f30a-5038-4f74-8d91-98075e060c4a;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_018";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_018";
+						- _id = GUID 90b967e4-a055-4095-b35d-a14b60f6af22;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 0bc00336-7134-42c1-b674-a3b3fc82eba2;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_019";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_019";
+						- _id = GUID b4c93dba-c9ff-4ccf-8935-73975ea593f3;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 09e11463-8290-448f-9482-cc9763ca007e;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_020";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_020";
+						- _id = GUID cb97b089-d81a-4019-a9ee-c189adedab59;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 83df900b-d61a-4a49-9551-8d021cd7d8bb;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_021";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_021";
+						- _id = GUID d03bf6f5-f6e8-49cf-99ba-aa5514f3b59f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 97b90bbe-25e6-4281-9212-4c8f20951175;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_022";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_022";
+						- _id = GUID 0855465a-ee66-4ce2-bcb1-ed80a5969331;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 357a81ef-c69e-4275-975e-5355573a3e10;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_023";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_023";
+						- _id = GUID 65b04663-8bb1-4e03-878e-9d2a71c3110c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 7323a000-a08e-4756-8f57-6ed30720153f;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class001_024";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub001_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub001_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class001_024";
+						- _id = GUID ff5c79e5-3ebe-459d-a3a2-9333849c7ba4;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1fd7d216-13e9-498a-99a8-e57fe650746b;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_000";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_000";
+						- _id = GUID 1aea880d-d8d0-4b6a-9c1f-5625133f9e47;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 88533f6a-f98d-42dc-a72e-fa6aabfa6091;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_001";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_001";
+						- _id = GUID 4d727fd9-733e-4b63-a0c9-6cb939dd12af;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a1bac7d7-6d31-439e-bdbc-49d64cf464e2;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_002";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_002";
+						- _id = GUID 5ea9fc5c-efc5-4392-aebe-110ea4293f22;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 43c90de1-5ecd-4e17-bca5-b2512e898a86;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_003";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_003";
+						- _id = GUID a0a22c89-2c70-47a6-a614-42905e2df6a5;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1afc0716-db8f-4c43-9625-a9158b925110;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_004";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_004";
+						- _id = GUID c0ec09ce-d7dc-48d5-896b-43201e776404;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b99348ae-fc9d-4c81-9acc-323ccbcbaeed;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_005";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_005";
+						- _id = GUID 0fc7167d-da10-4ba0-af12-f4a937024568;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 3eb53f00-6e28-44fb-bd24-314ed8d9cac6;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_006";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_006";
+						- _id = GUID 3a985058-8688-45bd-823b-eeed0f252f75;
+					}
+				}
+				{ IDependency 
+					- _id = GUID db00753d-8ba5-4da8-9873-9479e3db6e91;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_007";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_007";
+						- _id = GUID 628b1cc8-1134-45b5-b6f5-4f3f5832a045;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f437c7f5-f6c3-4e71-9da7-f9afd2e41315;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_008";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_008";
+						- _id = GUID 27ea060e-919c-4351-b5b9-16d5aa757384;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1c1393c2-e470-4d0a-9bd0-c622e51a0ece;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_009";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_009";
+						- _id = GUID 78063ee3-aec2-4ec3-905f-d619acbc4f1e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 79679ce8-76e2-4ff9-83b9-d9dc3652d95a;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_010";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_010";
+						- _id = GUID 74f99554-6495-4ad0-8368-b2ed9dc81fbf;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 62306d3c-25c2-41d5-bdf4-f724e4e9b3d6;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_011";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_011";
+						- _id = GUID bd4359e6-1d19-4c82-b4ec-0b910534e666;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 52edc112-f428-4ca3-8a2e-6f28758f8dbd;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_012";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_012";
+						- _id = GUID cff624c5-5d8b-47b8-acd1-8be00c8a6c42;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 030a1b56-f336-41b7-aed0-e7b69cc88972;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_013";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_013";
+						- _id = GUID 99c55ecf-1ead-4677-8ec5-d7c6a1f4d6c3;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d5b670fa-08dd-421b-a761-554fb5b88cad;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_014";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_014";
+						- _id = GUID e7825c55-516b-45f2-a5e5-01ecce8398c7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4a203607-5b2c-4161-9133-f10496be770c;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_015";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_015";
+						- _id = GUID 77936e0a-e193-451d-824c-e9c315eca722;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a5a4ce84-35c4-4441-97b7-aaa8f64a4c3f;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_016";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_016";
+						- _id = GUID cd053286-6742-4e44-978d-10aff6171c69;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b7b2ff22-b684-4378-ae1d-429a50be5132;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_017";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_017";
+						- _id = GUID ec92414b-f78c-438e-aa0f-6141f6748363;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ce5bfce1-0830-412e-a427-5f8e3277c774;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_018";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_018";
+						- _id = GUID ae5a0e2d-c0f7-4552-9ea4-458bf400d006;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6210dd84-03a4-4516-af67-733d27048e5e;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_019";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_019";
+						- _id = GUID ff10126f-e37d-43c9-9d6f-9686266c0c2f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID afebec80-39bc-4f3b-9e4b-26f1a1f75ae2;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_020";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_020";
+						- _id = GUID 796f0156-44e6-42ee-a9f3-9fb0310ca92f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 09780fbb-9244-4b4b-94ad-4f521ae0eeac;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_021";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_021";
+						- _id = GUID 3287ff2b-9fe0-45f8-b968-827e448914b1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1ad9560c-f93d-4f91-9de6-6b8812132522;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_022";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_022";
+						- _id = GUID 43ad1a4a-8ab2-4deb-a354-761e8e75ab40;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d8836e8f-bdb2-4236-88b0-770dff045179;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_023";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_023";
+						- _id = GUID 53eaaac0-891b-4e7f-a16d-544ab418d343;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 0b3f3ed0-a38d-4a82-a5c4-89ac7058a960;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class002_024";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub002_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub002_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class002_024";
+						- _id = GUID 44fa9f74-cfdd-488c-97b1-6344ffb8d1f4;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6c8329d7-bf53-4e90-9f37-ae9b898daa6a;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_000";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_000";
+						- _id = GUID 8e7df6d5-000b-493d-8d7c-31c4f6b574b1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID eb79efcd-dc26-4e26-8bae-49b3197bf492;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_001";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_001";
+						- _id = GUID 413fdc76-27de-4a1c-bd16-6b0077df0209;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 155ff8e3-0bf2-43f5-b94c-be29b391f02a;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_002";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_002";
+						- _id = GUID 490685ca-dfca-477a-a4f9-02fc67f76a22;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 755165fb-6e32-4d9c-b364-f77271f19726;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_003";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_003";
+						- _id = GUID e7d65ebf-4415-4930-8437-45dfbcaa654c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 7f6af6f6-d120-44b2-bb37-9aa2c679b820;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_004";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_004";
+						- _id = GUID 33f585d3-20b7-46a4-a482-4c6bc0ef186b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 3b5d0c2a-6067-433f-9825-88590f23c389;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_005";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_005";
+						- _id = GUID c171e55d-db7d-4e98-8fdf-f5175dcf539f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4c895bec-63dc-43b3-9dd3-dd6281fcff5c;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_006";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_006";
+						- _id = GUID 404ba5e7-f8fc-4b32-96f3-523429214893;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 490dfcc9-ad49-4b2b-93c3-b9036ca6abb6;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_007";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_007";
+						- _id = GUID 478d6d97-ac08-4185-8d5e-46b0962f2f7e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b427d4c7-9270-4d90-a3be-c8ecd426fa80;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_008";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_008";
+						- _id = GUID 42b264ee-a363-4b4b-9be1-743614476f0e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b5c7e981-abce-4f54-a14f-e9e387c4ed96;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_009";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_009";
+						- _id = GUID 22c06e31-269c-4dfb-b86f-1a9581f7e3f7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c8404b8d-e62a-450b-89ba-014b644ebd0e;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_010";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_010";
+						- _id = GUID 88d049e3-ceb7-4e15-9602-85ba6311a0c8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID e60bbd3e-d3a6-4a6d-af88-546a5e19b0b0;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_011";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_011";
+						- _id = GUID 1f84cab0-2294-4ca3-8d79-eb6ff547d6c6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5cee8366-8b24-40ec-bad5-6313a7c8d2d5;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_012";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_012";
+						- _id = GUID 4799eed9-77fc-4cfa-80b7-84ed2b736e24;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 724ae0e4-3418-4b46-a392-597b7272c7c8;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_013";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_013";
+						- _id = GUID 4f7af00c-10e6-4dd6-80d7-86585344da36;
+					}
+				}
+				{ IDependency 
+					- _id = GUID fbf45fd5-882e-4c98-94d2-4e90e3c5ab04;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_014";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_014";
+						- _id = GUID 2d25f1b4-d862-4b08-8e1c-ba6f16d78ba1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID fcbc27d0-3d70-4f33-adf3-a324e01360ca;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_015";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_015";
+						- _id = GUID 034f7516-8033-476a-8360-43806b842611;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 7300d404-d6e4-455d-9218-80d3f481d6aa;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_016";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_016";
+						- _id = GUID 417fdae9-43e1-4e52-bd59-175c8c014c7c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 174e9958-b16e-471f-a738-8d68e59b5e31;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_017";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_017";
+						- _id = GUID 79dadc00-7afe-4af8-bcab-db3cc4ab3762;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5d364290-57d9-4d2f-b803-a6345feef32a;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_018";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_018";
+						- _id = GUID 8528aeb0-4fd8-4239-961d-babc1e6cfff4;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 7cdb76bc-5971-49d6-9728-3b152d714ce9;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_019";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_019";
+						- _id = GUID 41b33567-2b84-431b-a2d9-0da995f15f6c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c7144c69-e6f5-4559-bf1f-aaa96e5f461c;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_020";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_020";
+						- _id = GUID 5b790921-56fe-4f18-9ad9-87485bebc285;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 79414edb-acc1-4c5c-a67f-04ee2ec19877;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_021";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_021";
+						- _id = GUID bfd744f6-5947-4b5d-a2c9-a116268f7758;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 92245478-5ec2-418a-a7ae-9fe578fcb2a1;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_022";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_022";
+						- _id = GUID fde0ca94-fe5b-47ce-8c07-1892035c4574;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6b44da65-46db-488c-964f-dddb97938d4c;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_023";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_023";
+						- _id = GUID 1b5605d3-1804-41a1-b533-98516fd28ec7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b8223003-ed37-422a-a2e1-4f3689b563c1;
+					- _myState = 2048;
+					- _name = "TestPart04_Huge_Class003_024";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestPart04_Huge_Sub003_Pkg.sbs";
+						- _subsystem = "TestPart04_Huge_Pkg::TestPart04_Huge_Sub003_Pkg";
+						- _class = "";
+						- _name = "TestPart04_Huge_Class003_024";
+						- _id = GUID c153f916-d4d9-40bb-a77a-82289149d0a2;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 2.9.2015::14:0:7;
+			- _theMainDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "Overview.omd";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Overview";
+				- _id = GUID 54d91baf-17b9-4e35-a4cf-14c09c9fb24a;
+			}
+			- _lastID = 111;
+			- weakCGTime = 2.9.2015::14:0:7;
+			- strongCGTime = 4.30.2013::14:22:45;
+			- Operations = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IReception 
+					- _id = GUID 13406823-983f-469d-b95f-1485bb1ff270;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _filename = "TestControlPkg.sbs";
+						- _subsystem = "TestControlPkg";
+						- _class = "";
+						- _name = "evStartTest()";
+						- _id = GUID 5f553312-391b-4f84-a835-c641b7c0b7d4;
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 533ad4c1-5f7b-4dfd-b4ac-da32aa9a328e;
+					- _myState = 8192;
+					- _name = "subpackageStart";
+					- _modifiedTimeWeak = 2.9.2015::13:59:13;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC.sbs";
+						- _subsystem = "PredefinedTypesC";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 1ae3fac8-89cb-11d2-b813-00104b3e6572;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "/* Auto generated test sequence for huge package with subpackages and classes. This will trigger all statecharts. */
+
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_000 instantiation and start: */
+{
+	TestPart04_Huge_Class000_000* myTestPart04_Huge_Class000_000 = new TestPart04_Huge_Class000_000( &theMainTask );
+	myTestPart04_Huge_Class000_000->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_000->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_000->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_000->getSampleAttribute() == 0);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_000, evStartTest() );
+	delete( myTestPart04_Huge_Class000_000 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_001 instantiation and start: */
+{
+	TestPart04_Huge_Class000_001* myTestPart04_Huge_Class000_001 = new TestPart04_Huge_Class000_001( &theMainTask );
+	myTestPart04_Huge_Class000_001->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_001->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_001->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_001->getSampleAttribute() == 1);
+	delete( myTestPart04_Huge_Class000_001 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_002 instantiation and start: */
+{
+	TestPart04_Huge_Class000_002* myTestPart04_Huge_Class000_002 = new TestPart04_Huge_Class000_002( &theMainTask );
+	myTestPart04_Huge_Class000_002->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_002->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_002->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_002->getSampleAttribute() == 2);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_002, evStartTest() );
+	delete( myTestPart04_Huge_Class000_002 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_003 instantiation and start: */
+{
+	TestPart04_Huge_Class000_003* myTestPart04_Huge_Class000_003 = new TestPart04_Huge_Class000_003( &theMainTask );
+	myTestPart04_Huge_Class000_003->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_003->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_003->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_003->getSampleAttribute() == 3);
+	delete( myTestPart04_Huge_Class000_003 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_004 instantiation and start: */
+{
+	TestPart04_Huge_Class000_004* myTestPart04_Huge_Class000_004 = new TestPart04_Huge_Class000_004( &theMainTask );
+	myTestPart04_Huge_Class000_004->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_004->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_004->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_004->getSampleAttribute() == 4);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_004, evStartTest() );
+	delete( myTestPart04_Huge_Class000_004 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_005 instantiation and start: */
+{
+	TestPart04_Huge_Class000_005* myTestPart04_Huge_Class000_005 = new TestPart04_Huge_Class000_005( &theMainTask );
+	myTestPart04_Huge_Class000_005->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_005->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_005->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_005->getSampleAttribute() == 5);
+	delete( myTestPart04_Huge_Class000_005 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_006 instantiation and start: */
+{
+	TestPart04_Huge_Class000_006* myTestPart04_Huge_Class000_006 = new TestPart04_Huge_Class000_006( &theMainTask );
+	myTestPart04_Huge_Class000_006->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_006->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_006->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_006->getSampleAttribute() == 6);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_006, evStartTest() );
+	delete( myTestPart04_Huge_Class000_006 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_007 instantiation and start: */
+{
+	TestPart04_Huge_Class000_007* myTestPart04_Huge_Class000_007 = new TestPart04_Huge_Class000_007( &theMainTask );
+	myTestPart04_Huge_Class000_007->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_007->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_007->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_007->getSampleAttribute() == 7);
+	delete( myTestPart04_Huge_Class000_007 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_008 instantiation and start: */
+{
+	TestPart04_Huge_Class000_008* myTestPart04_Huge_Class000_008 = new TestPart04_Huge_Class000_008( &theMainTask );
+	myTestPart04_Huge_Class000_008->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_008->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_008->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_008->getSampleAttribute() == 8);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_008, evStartTest() );
+	delete( myTestPart04_Huge_Class000_008 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_009 instantiation and start: */
+{
+	TestPart04_Huge_Class000_009* myTestPart04_Huge_Class000_009 = new TestPart04_Huge_Class000_009( &theMainTask );
+	myTestPart04_Huge_Class000_009->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_009->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_009->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_009->getSampleAttribute() == 9);
+	delete( myTestPart04_Huge_Class000_009 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_010 instantiation and start: */
+{
+	TestPart04_Huge_Class000_010* myTestPart04_Huge_Class000_010 = new TestPart04_Huge_Class000_010( &theMainTask );
+	myTestPart04_Huge_Class000_010->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_010->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_010->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_010->getSampleAttribute() == 10);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_010, evStartTest() );
+	delete( myTestPart04_Huge_Class000_010 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_011 instantiation and start: */
+{
+	TestPart04_Huge_Class000_011* myTestPart04_Huge_Class000_011 = new TestPart04_Huge_Class000_011( &theMainTask );
+	myTestPart04_Huge_Class000_011->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_011->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_011->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_011->getSampleAttribute() == 11);
+	delete( myTestPart04_Huge_Class000_011 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_012 instantiation and start: */
+{
+	TestPart04_Huge_Class000_012* myTestPart04_Huge_Class000_012 = new TestPart04_Huge_Class000_012( &theMainTask );
+	myTestPart04_Huge_Class000_012->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_012->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_012->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_012->getSampleAttribute() == 12);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_012, evStartTest() );
+	delete( myTestPart04_Huge_Class000_012 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_013 instantiation and start: */
+{
+	TestPart04_Huge_Class000_013* myTestPart04_Huge_Class000_013 = new TestPart04_Huge_Class000_013( &theMainTask );
+	myTestPart04_Huge_Class000_013->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_013->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_013->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_013->getSampleAttribute() == 13);
+	delete( myTestPart04_Huge_Class000_013 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_014 instantiation and start: */
+{
+	TestPart04_Huge_Class000_014* myTestPart04_Huge_Class000_014 = new TestPart04_Huge_Class000_014( &theMainTask );
+	myTestPart04_Huge_Class000_014->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_014->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_014->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_014->getSampleAttribute() == 14);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_014, evStartTest() );
+	delete( myTestPart04_Huge_Class000_014 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_015 instantiation and start: */
+{
+	TestPart04_Huge_Class000_015* myTestPart04_Huge_Class000_015 = new TestPart04_Huge_Class000_015( &theMainTask );
+	myTestPart04_Huge_Class000_015->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_015->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_015->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_015->getSampleAttribute() == 15);
+	delete( myTestPart04_Huge_Class000_015 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_016 instantiation and start: */
+{
+	TestPart04_Huge_Class000_016* myTestPart04_Huge_Class000_016 = new TestPart04_Huge_Class000_016( &theMainTask );
+	myTestPart04_Huge_Class000_016->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_016->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_016->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_016->getSampleAttribute() == 16);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_016, evStartTest() );
+	delete( myTestPart04_Huge_Class000_016 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_017 instantiation and start: */
+{
+	TestPart04_Huge_Class000_017* myTestPart04_Huge_Class000_017 = new TestPart04_Huge_Class000_017( &theMainTask );
+	myTestPart04_Huge_Class000_017->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_017->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_017->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_017->getSampleAttribute() == 17);
+	delete( myTestPart04_Huge_Class000_017 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_018 instantiation and start: */
+{
+	TestPart04_Huge_Class000_018* myTestPart04_Huge_Class000_018 = new TestPart04_Huge_Class000_018( &theMainTask );
+	myTestPart04_Huge_Class000_018->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_018->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_018->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_018->getSampleAttribute() == 18);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_018, evStartTest() );
+	delete( myTestPart04_Huge_Class000_018 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_019 instantiation and start: */
+{
+	TestPart04_Huge_Class000_019* myTestPart04_Huge_Class000_019 = new TestPart04_Huge_Class000_019( &theMainTask );
+	myTestPart04_Huge_Class000_019->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_019->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_019->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_019->getSampleAttribute() == 19);
+	delete( myTestPart04_Huge_Class000_019 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_020 instantiation and start: */
+{
+	TestPart04_Huge_Class000_020* myTestPart04_Huge_Class000_020 = new TestPart04_Huge_Class000_020( &theMainTask );
+	myTestPart04_Huge_Class000_020->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_020->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_020->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_020->getSampleAttribute() == 20);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_020, evStartTest() );
+	delete( myTestPart04_Huge_Class000_020 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_021 instantiation and start: */
+{
+	TestPart04_Huge_Class000_021* myTestPart04_Huge_Class000_021 = new TestPart04_Huge_Class000_021( &theMainTask );
+	myTestPart04_Huge_Class000_021->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_021->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_021->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_021->getSampleAttribute() == 21);
+	delete( myTestPart04_Huge_Class000_021 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_022 instantiation and start: */
+{
+	TestPart04_Huge_Class000_022* myTestPart04_Huge_Class000_022 = new TestPart04_Huge_Class000_022( &theMainTask );
+	myTestPart04_Huge_Class000_022->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_022->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_022->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_022->getSampleAttribute() == 22);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_022, evStartTest() );
+	delete( myTestPart04_Huge_Class000_022 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_023 instantiation and start: */
+{
+	TestPart04_Huge_Class000_023* myTestPart04_Huge_Class000_023 = new TestPart04_Huge_Class000_023( &theMainTask );
+	myTestPart04_Huge_Class000_023->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_023->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_023->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_023->getSampleAttribute() == 23);
+	delete( myTestPart04_Huge_Class000_023 );
+}
+/* Package TestPart04_Huge_Sub000_Pkg, Class TestPart04_Huge_Class000_024 instantiation and start: */
+{
+	TestPart04_Huge_Class000_024* myTestPart04_Huge_Class000_024 = new TestPart04_Huge_Class000_024( &theMainTask );
+	myTestPart04_Huge_Class000_024->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class000_024->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class000_024->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class000_024->getSampleAttribute() == 24);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class000_024, evStartTest() );
+	delete( myTestPart04_Huge_Class000_024 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_000 instantiation and start: */
+{
+	TestPart04_Huge_Class001_000* myTestPart04_Huge_Class001_000 = new TestPart04_Huge_Class001_000( &theMainTask );
+	myTestPart04_Huge_Class001_000->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_000->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_000->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_000->getSampleAttribute() == 0);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_000, evStartTest() );
+	delete( myTestPart04_Huge_Class001_000 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_001 instantiation and start: */
+{
+	TestPart04_Huge_Class001_001* myTestPart04_Huge_Class001_001 = new TestPart04_Huge_Class001_001( &theMainTask );
+	myTestPart04_Huge_Class001_001->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_001->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_001->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_001->getSampleAttribute() == 1);
+	delete( myTestPart04_Huge_Class001_001 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_002 instantiation and start: */
+{
+	TestPart04_Huge_Class001_002* myTestPart04_Huge_Class001_002 = new TestPart04_Huge_Class001_002( &theMainTask );
+	myTestPart04_Huge_Class001_002->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_002->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_002->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_002->getSampleAttribute() == 2);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_002, evStartTest() );
+	delete( myTestPart04_Huge_Class001_002 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_003 instantiation and start: */
+{
+	TestPart04_Huge_Class001_003* myTestPart04_Huge_Class001_003 = new TestPart04_Huge_Class001_003( &theMainTask );
+	myTestPart04_Huge_Class001_003->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_003->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_003->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_003->getSampleAttribute() == 3);
+	delete( myTestPart04_Huge_Class001_003 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_004 instantiation and start: */
+{
+	TestPart04_Huge_Class001_004* myTestPart04_Huge_Class001_004 = new TestPart04_Huge_Class001_004( &theMainTask );
+	myTestPart04_Huge_Class001_004->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_004->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_004->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_004->getSampleAttribute() == 4);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_004, evStartTest() );
+	delete( myTestPart04_Huge_Class001_004 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_005 instantiation and start: */
+{
+	TestPart04_Huge_Class001_005* myTestPart04_Huge_Class001_005 = new TestPart04_Huge_Class001_005( &theMainTask );
+	myTestPart04_Huge_Class001_005->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_005->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_005->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_005->getSampleAttribute() == 5);
+	delete( myTestPart04_Huge_Class001_005 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_006 instantiation and start: */
+{
+	TestPart04_Huge_Class001_006* myTestPart04_Huge_Class001_006 = new TestPart04_Huge_Class001_006( &theMainTask );
+	myTestPart04_Huge_Class001_006->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_006->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_006->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_006->getSampleAttribute() == 6);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_006, evStartTest() );
+	delete( myTestPart04_Huge_Class001_006 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_007 instantiation and start: */
+{
+	TestPart04_Huge_Class001_007* myTestPart04_Huge_Class001_007 = new TestPart04_Huge_Class001_007( &theMainTask );
+	myTestPart04_Huge_Class001_007->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_007->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_007->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_007->getSampleAttribute() == 7);
+	delete( myTestPart04_Huge_Class001_007 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_008 instantiation and start: */
+{
+	TestPart04_Huge_Class001_008* myTestPart04_Huge_Class001_008 = new TestPart04_Huge_Class001_008( &theMainTask );
+	myTestPart04_Huge_Class001_008->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_008->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_008->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_008->getSampleAttribute() == 8);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_008, evStartTest() );
+	delete( myTestPart04_Huge_Class001_008 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_009 instantiation and start: */
+{
+	TestPart04_Huge_Class001_009* myTestPart04_Huge_Class001_009 = new TestPart04_Huge_Class001_009( &theMainTask );
+	myTestPart04_Huge_Class001_009->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_009->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_009->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_009->getSampleAttribute() == 9);
+	delete( myTestPart04_Huge_Class001_009 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_010 instantiation and start: */
+{
+	TestPart04_Huge_Class001_010* myTestPart04_Huge_Class001_010 = new TestPart04_Huge_Class001_010( &theMainTask );
+	myTestPart04_Huge_Class001_010->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_010->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_010->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_010->getSampleAttribute() == 10);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_010, evStartTest() );
+	delete( myTestPart04_Huge_Class001_010 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_011 instantiation and start: */
+{
+	TestPart04_Huge_Class001_011* myTestPart04_Huge_Class001_011 = new TestPart04_Huge_Class001_011( &theMainTask );
+	myTestPart04_Huge_Class001_011->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_011->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_011->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_011->getSampleAttribute() == 11);
+	delete( myTestPart04_Huge_Class001_011 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_012 instantiation and start: */
+{
+	TestPart04_Huge_Class001_012* myTestPart04_Huge_Class001_012 = new TestPart04_Huge_Class001_012( &theMainTask );
+	myTestPart04_Huge_Class001_012->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_012->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_012->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_012->getSampleAttribute() == 12);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_012, evStartTest() );
+	delete( myTestPart04_Huge_Class001_012 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_013 instantiation and start: */
+{
+	TestPart04_Huge_Class001_013* myTestPart04_Huge_Class001_013 = new TestPart04_Huge_Class001_013( &theMainTask );
+	myTestPart04_Huge_Class001_013->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_013->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_013->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_013->getSampleAttribute() == 13);
+	delete( myTestPart04_Huge_Class001_013 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_014 instantiation and start: */
+{
+	TestPart04_Huge_Class001_014* myTestPart04_Huge_Class001_014 = new TestPart04_Huge_Class001_014( &theMainTask );
+	myTestPart04_Huge_Class001_014->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_014->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_014->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_014->getSampleAttribute() == 14);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_014, evStartTest() );
+	delete( myTestPart04_Huge_Class001_014 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_015 instantiation and start: */
+{
+	TestPart04_Huge_Class001_015* myTestPart04_Huge_Class001_015 = new TestPart04_Huge_Class001_015( &theMainTask );
+	myTestPart04_Huge_Class001_015->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_015->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_015->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_015->getSampleAttribute() == 15);
+	delete( myTestPart04_Huge_Class001_015 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_016 instantiation and start: */
+{
+	TestPart04_Huge_Class001_016* myTestPart04_Huge_Class001_016 = new TestPart04_Huge_Class001_016( &theMainTask );
+	myTestPart04_Huge_Class001_016->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_016->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_016->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_016->getSampleAttribute() == 16);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_016, evStartTest() );
+	delete( myTestPart04_Huge_Class001_016 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_017 instantiation and start: */
+{
+	TestPart04_Huge_Class001_017* myTestPart04_Huge_Class001_017 = new TestPart04_Huge_Class001_017( &theMainTask );
+	myTestPart04_Huge_Class001_017->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_017->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_017->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_017->getSampleAttribute() == 17);
+	delete( myTestPart04_Huge_Class001_017 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_018 instantiation and start: */
+{
+	TestPart04_Huge_Class001_018* myTestPart04_Huge_Class001_018 = new TestPart04_Huge_Class001_018( &theMainTask );
+	myTestPart04_Huge_Class001_018->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_018->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_018->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_018->getSampleAttribute() == 18);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_018, evStartTest() );
+	delete( myTestPart04_Huge_Class001_018 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_019 instantiation and start: */
+{
+	TestPart04_Huge_Class001_019* myTestPart04_Huge_Class001_019 = new TestPart04_Huge_Class001_019( &theMainTask );
+	myTestPart04_Huge_Class001_019->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_019->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_019->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_019->getSampleAttribute() == 19);
+	delete( myTestPart04_Huge_Class001_019 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_020 instantiation and start: */
+{
+	TestPart04_Huge_Class001_020* myTestPart04_Huge_Class001_020 = new TestPart04_Huge_Class001_020( &theMainTask );
+	myTestPart04_Huge_Class001_020->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_020->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_020->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_020->getSampleAttribute() == 20);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_020, evStartTest() );
+	delete( myTestPart04_Huge_Class001_020 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_021 instantiation and start: */
+{
+	TestPart04_Huge_Class001_021* myTestPart04_Huge_Class001_021 = new TestPart04_Huge_Class001_021( &theMainTask );
+	myTestPart04_Huge_Class001_021->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_021->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_021->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_021->getSampleAttribute() == 21);
+	delete( myTestPart04_Huge_Class001_021 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_022 instantiation and start: */
+{
+	TestPart04_Huge_Class001_022* myTestPart04_Huge_Class001_022 = new TestPart04_Huge_Class001_022( &theMainTask );
+	myTestPart04_Huge_Class001_022->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_022->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_022->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_022->getSampleAttribute() == 22);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_022, evStartTest() );
+	delete( myTestPart04_Huge_Class001_022 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_023 instantiation and start: */
+{
+	TestPart04_Huge_Class001_023* myTestPart04_Huge_Class001_023 = new TestPart04_Huge_Class001_023( &theMainTask );
+	myTestPart04_Huge_Class001_023->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_023->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_023->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_023->getSampleAttribute() == 23);
+	delete( myTestPart04_Huge_Class001_023 );
+}
+/* Package TestPart04_Huge_Sub001_Pkg, Class TestPart04_Huge_Class001_024 instantiation and start: */
+{
+	TestPart04_Huge_Class001_024* myTestPart04_Huge_Class001_024 = new TestPart04_Huge_Class001_024( &theMainTask );
+	myTestPart04_Huge_Class001_024->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class001_024->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class001_024->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class001_024->getSampleAttribute() == 24);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class001_024, evStartTest() );
+	delete( myTestPart04_Huge_Class001_024 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_000 instantiation and start: */
+{
+	TestPart04_Huge_Class002_000* myTestPart04_Huge_Class002_000 = new TestPart04_Huge_Class002_000( &theMainTask );
+	myTestPart04_Huge_Class002_000->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_000->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_000->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_000->getSampleAttribute() == 0);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_000, evStartTest() );
+	delete( myTestPart04_Huge_Class002_000 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_001 instantiation and start: */
+{
+	TestPart04_Huge_Class002_001* myTestPart04_Huge_Class002_001 = new TestPart04_Huge_Class002_001( &theMainTask );
+	myTestPart04_Huge_Class002_001->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_001->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_001->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_001->getSampleAttribute() == 1);
+	delete( myTestPart04_Huge_Class002_001 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_002 instantiation and start: */
+{
+	TestPart04_Huge_Class002_002* myTestPart04_Huge_Class002_002 = new TestPart04_Huge_Class002_002( &theMainTask );
+	myTestPart04_Huge_Class002_002->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_002->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_002->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_002->getSampleAttribute() == 2);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_002, evStartTest() );
+	delete( myTestPart04_Huge_Class002_002 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_003 instantiation and start: */
+{
+	TestPart04_Huge_Class002_003* myTestPart04_Huge_Class002_003 = new TestPart04_Huge_Class002_003( &theMainTask );
+	myTestPart04_Huge_Class002_003->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_003->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_003->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_003->getSampleAttribute() == 3);
+	delete( myTestPart04_Huge_Class002_003 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_004 instantiation and start: */
+{
+	TestPart04_Huge_Class002_004* myTestPart04_Huge_Class002_004 = new TestPart04_Huge_Class002_004( &theMainTask );
+	myTestPart04_Huge_Class002_004->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_004->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_004->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_004->getSampleAttribute() == 4);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_004, evStartTest() );
+	delete( myTestPart04_Huge_Class002_004 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_005 instantiation and start: */
+{
+	TestPart04_Huge_Class002_005* myTestPart04_Huge_Class002_005 = new TestPart04_Huge_Class002_005( &theMainTask );
+	myTestPart04_Huge_Class002_005->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_005->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_005->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_005->getSampleAttribute() == 5);
+	delete( myTestPart04_Huge_Class002_005 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_006 instantiation and start: */
+{
+	TestPart04_Huge_Class002_006* myTestPart04_Huge_Class002_006 = new TestPart04_Huge_Class002_006( &theMainTask );
+	myTestPart04_Huge_Class002_006->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_006->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_006->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_006->getSampleAttribute() == 6);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_006, evStartTest() );
+	delete( myTestPart04_Huge_Class002_006 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_007 instantiation and start: */
+{
+	TestPart04_Huge_Class002_007* myTestPart04_Huge_Class002_007 = new TestPart04_Huge_Class002_007( &theMainTask );
+	myTestPart04_Huge_Class002_007->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_007->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_007->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_007->getSampleAttribute() == 7);
+	delete( myTestPart04_Huge_Class002_007 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_008 instantiation and start: */
+{
+	TestPart04_Huge_Class002_008* myTestPart04_Huge_Class002_008 = new TestPart04_Huge_Class002_008( &theMainTask );
+	myTestPart04_Huge_Class002_008->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_008->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_008->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_008->getSampleAttribute() == 8);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_008, evStartTest() );
+	delete( myTestPart04_Huge_Class002_008 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_009 instantiation and start: */
+{
+	TestPart04_Huge_Class002_009* myTestPart04_Huge_Class002_009 = new TestPart04_Huge_Class002_009( &theMainTask );
+	myTestPart04_Huge_Class002_009->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_009->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_009->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_009->getSampleAttribute() == 9);
+	delete( myTestPart04_Huge_Class002_009 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_010 instantiation and start: */
+{
+	TestPart04_Huge_Class002_010* myTestPart04_Huge_Class002_010 = new TestPart04_Huge_Class002_010( &theMainTask );
+	myTestPart04_Huge_Class002_010->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_010->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_010->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_010->getSampleAttribute() == 10);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_010, evStartTest() );
+	delete( myTestPart04_Huge_Class002_010 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_011 instantiation and start: */
+{
+	TestPart04_Huge_Class002_011* myTestPart04_Huge_Class002_011 = new TestPart04_Huge_Class002_011( &theMainTask );
+	myTestPart04_Huge_Class002_011->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_011->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_011->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_011->getSampleAttribute() == 11);
+	delete( myTestPart04_Huge_Class002_011 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_012 instantiation and start: */
+{
+	TestPart04_Huge_Class002_012* myTestPart04_Huge_Class002_012 = new TestPart04_Huge_Class002_012( &theMainTask );
+	myTestPart04_Huge_Class002_012->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_012->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_012->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_012->getSampleAttribute() == 12);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_012, evStartTest() );
+	delete( myTestPart04_Huge_Class002_012 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_013 instantiation and start: */
+{
+	TestPart04_Huge_Class002_013* myTestPart04_Huge_Class002_013 = new TestPart04_Huge_Class002_013( &theMainTask );
+	myTestPart04_Huge_Class002_013->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_013->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_013->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_013->getSampleAttribute() == 13);
+	delete( myTestPart04_Huge_Class002_013 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_014 instantiation and start: */
+{
+	TestPart04_Huge_Class002_014* myTestPart04_Huge_Class002_014 = new TestPart04_Huge_Class002_014( &theMainTask );
+	myTestPart04_Huge_Class002_014->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_014->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_014->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_014->getSampleAttribute() == 14);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_014, evStartTest() );
+	delete( myTestPart04_Huge_Class002_014 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_015 instantiation and start: */
+{
+	TestPart04_Huge_Class002_015* myTestPart04_Huge_Class002_015 = new TestPart04_Huge_Class002_015( &theMainTask );
+	myTestPart04_Huge_Class002_015->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_015->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_015->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_015->getSampleAttribute() == 15);
+	delete( myTestPart04_Huge_Class002_015 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_016 instantiation and start: */
+{
+	TestPart04_Huge_Class002_016* myTestPart04_Huge_Class002_016 = new TestPart04_Huge_Class002_016( &theMainTask );
+	myTestPart04_Huge_Class002_016->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_016->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_016->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_016->getSampleAttribute() == 16);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_016, evStartTest() );
+	delete( myTestPart04_Huge_Class002_016 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_017 instantiation and start: */
+{
+	TestPart04_Huge_Class002_017* myTestPart04_Huge_Class002_017 = new TestPart04_Huge_Class002_017( &theMainTask );
+	myTestPart04_Huge_Class002_017->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_017->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_017->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_017->getSampleAttribute() == 17);
+	delete( myTestPart04_Huge_Class002_017 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_018 instantiation and start: */
+{
+	TestPart04_Huge_Class002_018* myTestPart04_Huge_Class002_018 = new TestPart04_Huge_Class002_018( &theMainTask );
+	myTestPart04_Huge_Class002_018->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_018->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_018->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_018->getSampleAttribute() == 18);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_018, evStartTest() );
+	delete( myTestPart04_Huge_Class002_018 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_019 instantiation and start: */
+{
+	TestPart04_Huge_Class002_019* myTestPart04_Huge_Class002_019 = new TestPart04_Huge_Class002_019( &theMainTask );
+	myTestPart04_Huge_Class002_019->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_019->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_019->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_019->getSampleAttribute() == 19);
+	delete( myTestPart04_Huge_Class002_019 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_020 instantiation and start: */
+{
+	TestPart04_Huge_Class002_020* myTestPart04_Huge_Class002_020 = new TestPart04_Huge_Class002_020( &theMainTask );
+	myTestPart04_Huge_Class002_020->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_020->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_020->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_020->getSampleAttribute() == 20);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_020, evStartTest() );
+	delete( myTestPart04_Huge_Class002_020 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_021 instantiation and start: */
+{
+	TestPart04_Huge_Class002_021* myTestPart04_Huge_Class002_021 = new TestPart04_Huge_Class002_021( &theMainTask );
+	myTestPart04_Huge_Class002_021->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_021->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_021->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_021->getSampleAttribute() == 21);
+	delete( myTestPart04_Huge_Class002_021 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_022 instantiation and start: */
+{
+	TestPart04_Huge_Class002_022* myTestPart04_Huge_Class002_022 = new TestPart04_Huge_Class002_022( &theMainTask );
+	myTestPart04_Huge_Class002_022->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_022->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_022->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_022->getSampleAttribute() == 22);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_022, evStartTest() );
+	delete( myTestPart04_Huge_Class002_022 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_023 instantiation and start: */
+{
+	TestPart04_Huge_Class002_023* myTestPart04_Huge_Class002_023 = new TestPart04_Huge_Class002_023( &theMainTask );
+	myTestPart04_Huge_Class002_023->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_023->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_023->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_023->getSampleAttribute() == 23);
+	delete( myTestPart04_Huge_Class002_023 );
+}
+/* Package TestPart04_Huge_Sub002_Pkg, Class TestPart04_Huge_Class002_024 instantiation and start: */
+{
+	TestPart04_Huge_Class002_024* myTestPart04_Huge_Class002_024 = new TestPart04_Huge_Class002_024( &theMainTask );
+	myTestPart04_Huge_Class002_024->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class002_024->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class002_024->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class002_024->getSampleAttribute() == 24);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class002_024, evStartTest() );
+	delete( myTestPart04_Huge_Class002_024 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_000 instantiation and start: */
+{
+	TestPart04_Huge_Class003_000* myTestPart04_Huge_Class003_000 = new TestPart04_Huge_Class003_000( &theMainTask );
+	myTestPart04_Huge_Class003_000->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_000->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_000->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_000->getSampleAttribute() == 0);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_000, evStartTest() );
+	delete( myTestPart04_Huge_Class003_000 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_001 instantiation and start: */
+{
+	TestPart04_Huge_Class003_001* myTestPart04_Huge_Class003_001 = new TestPart04_Huge_Class003_001( &theMainTask );
+	myTestPart04_Huge_Class003_001->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_001->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_001->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_001->getSampleAttribute() == 1);
+	delete( myTestPart04_Huge_Class003_001 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_002 instantiation and start: */
+{
+	TestPart04_Huge_Class003_002* myTestPart04_Huge_Class003_002 = new TestPart04_Huge_Class003_002( &theMainTask );
+	myTestPart04_Huge_Class003_002->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_002->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_002->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_002->getSampleAttribute() == 2);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_002, evStartTest() );
+	delete( myTestPart04_Huge_Class003_002 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_003 instantiation and start: */
+{
+	TestPart04_Huge_Class003_003* myTestPart04_Huge_Class003_003 = new TestPart04_Huge_Class003_003( &theMainTask );
+	myTestPart04_Huge_Class003_003->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_003->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_003->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_003->getSampleAttribute() == 3);
+	delete( myTestPart04_Huge_Class003_003 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_004 instantiation and start: */
+{
+	TestPart04_Huge_Class003_004* myTestPart04_Huge_Class003_004 = new TestPart04_Huge_Class003_004( &theMainTask );
+	myTestPart04_Huge_Class003_004->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_004->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_004->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_004->getSampleAttribute() == 4);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_004, evStartTest() );
+	delete( myTestPart04_Huge_Class003_004 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_005 instantiation and start: */
+{
+	TestPart04_Huge_Class003_005* myTestPart04_Huge_Class003_005 = new TestPart04_Huge_Class003_005( &theMainTask );
+	myTestPart04_Huge_Class003_005->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_005->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_005->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_005->getSampleAttribute() == 5);
+	delete( myTestPart04_Huge_Class003_005 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_006 instantiation and start: */
+{
+	TestPart04_Huge_Class003_006* myTestPart04_Huge_Class003_006 = new TestPart04_Huge_Class003_006( &theMainTask );
+	myTestPart04_Huge_Class003_006->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_006->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_006->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_006->getSampleAttribute() == 6);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_006, evStartTest() );
+	delete( myTestPart04_Huge_Class003_006 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_007 instantiation and start: */
+{
+	TestPart04_Huge_Class003_007* myTestPart04_Huge_Class003_007 = new TestPart04_Huge_Class003_007( &theMainTask );
+	myTestPart04_Huge_Class003_007->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_007->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_007->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_007->getSampleAttribute() == 7);
+	delete( myTestPart04_Huge_Class003_007 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_008 instantiation and start: */
+{
+	TestPart04_Huge_Class003_008* myTestPart04_Huge_Class003_008 = new TestPart04_Huge_Class003_008( &theMainTask );
+	myTestPart04_Huge_Class003_008->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_008->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_008->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_008->getSampleAttribute() == 8);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_008, evStartTest() );
+	delete( myTestPart04_Huge_Class003_008 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_009 instantiation and start: */
+{
+	TestPart04_Huge_Class003_009* myTestPart04_Huge_Class003_009 = new TestPart04_Huge_Class003_009( &theMainTask );
+	myTestPart04_Huge_Class003_009->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_009->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_009->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_009->getSampleAttribute() == 9);
+	delete( myTestPart04_Huge_Class003_009 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_010 instantiation and start: */
+{
+	TestPart04_Huge_Class003_010* myTestPart04_Huge_Class003_010 = new TestPart04_Huge_Class003_010( &theMainTask );
+	myTestPart04_Huge_Class003_010->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_010->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_010->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_010->getSampleAttribute() == 10);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_010, evStartTest() );
+	delete( myTestPart04_Huge_Class003_010 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_011 instantiation and start: */
+{
+	TestPart04_Huge_Class003_011* myTestPart04_Huge_Class003_011 = new TestPart04_Huge_Class003_011( &theMainTask );
+	myTestPart04_Huge_Class003_011->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_011->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_011->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_011->getSampleAttribute() == 11);
+	delete( myTestPart04_Huge_Class003_011 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_012 instantiation and start: */
+{
+	TestPart04_Huge_Class003_012* myTestPart04_Huge_Class003_012 = new TestPart04_Huge_Class003_012( &theMainTask );
+	myTestPart04_Huge_Class003_012->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_012->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_012->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_012->getSampleAttribute() == 12);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_012, evStartTest() );
+	delete( myTestPart04_Huge_Class003_012 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_013 instantiation and start: */
+{
+	TestPart04_Huge_Class003_013* myTestPart04_Huge_Class003_013 = new TestPart04_Huge_Class003_013( &theMainTask );
+	myTestPart04_Huge_Class003_013->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_013->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_013->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_013->getSampleAttribute() == 13);
+	delete( myTestPart04_Huge_Class003_013 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_014 instantiation and start: */
+{
+	TestPart04_Huge_Class003_014* myTestPart04_Huge_Class003_014 = new TestPart04_Huge_Class003_014( &theMainTask );
+	myTestPart04_Huge_Class003_014->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_014->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_014->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_014->getSampleAttribute() == 14);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_014, evStartTest() );
+	delete( myTestPart04_Huge_Class003_014 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_015 instantiation and start: */
+{
+	TestPart04_Huge_Class003_015* myTestPart04_Huge_Class003_015 = new TestPart04_Huge_Class003_015( &theMainTask );
+	myTestPart04_Huge_Class003_015->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_015->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_015->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_015->getSampleAttribute() == 15);
+	delete( myTestPart04_Huge_Class003_015 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_016 instantiation and start: */
+{
+	TestPart04_Huge_Class003_016* myTestPart04_Huge_Class003_016 = new TestPart04_Huge_Class003_016( &theMainTask );
+	myTestPart04_Huge_Class003_016->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_016->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_016->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_016->getSampleAttribute() == 16);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_016, evStartTest() );
+	delete( myTestPart04_Huge_Class003_016 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_017 instantiation and start: */
+{
+	TestPart04_Huge_Class003_017* myTestPart04_Huge_Class003_017 = new TestPart04_Huge_Class003_017( &theMainTask );
+	myTestPart04_Huge_Class003_017->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_017->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_017->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_017->getSampleAttribute() == 17);
+	delete( myTestPart04_Huge_Class003_017 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_018 instantiation and start: */
+{
+	TestPart04_Huge_Class003_018* myTestPart04_Huge_Class003_018 = new TestPart04_Huge_Class003_018( &theMainTask );
+	myTestPart04_Huge_Class003_018->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_018->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_018->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_018->getSampleAttribute() == 18);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_018, evStartTest() );
+	delete( myTestPart04_Huge_Class003_018 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_019 instantiation and start: */
+{
+	TestPart04_Huge_Class003_019* myTestPart04_Huge_Class003_019 = new TestPart04_Huge_Class003_019( &theMainTask );
+	myTestPart04_Huge_Class003_019->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_019->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_019->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_019->getSampleAttribute() == 19);
+	delete( myTestPart04_Huge_Class003_019 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_020 instantiation and start: */
+{
+	TestPart04_Huge_Class003_020* myTestPart04_Huge_Class003_020 = new TestPart04_Huge_Class003_020( &theMainTask );
+	myTestPart04_Huge_Class003_020->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_020->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_020->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_020->getSampleAttribute() == 20);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_020, evStartTest() );
+	delete( myTestPart04_Huge_Class003_020 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_021 instantiation and start: */
+{
+	TestPart04_Huge_Class003_021* myTestPart04_Huge_Class003_021 = new TestPart04_Huge_Class003_021( &theMainTask );
+	myTestPart04_Huge_Class003_021->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_021->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_021->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_021->getSampleAttribute() == 21);
+	delete( myTestPart04_Huge_Class003_021 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_022 instantiation and start: */
+{
+	TestPart04_Huge_Class003_022* myTestPart04_Huge_Class003_022 = new TestPart04_Huge_Class003_022( &theMainTask );
+	myTestPart04_Huge_Class003_022->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_022->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_022->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_022->getSampleAttribute() == 22);
+	/* Just some event which will still be in queue during destruction */
+	FIRE( myTestPart04_Huge_Class003_022, evStartTest() );
+	delete( myTestPart04_Huge_Class003_022 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_023 instantiation and start: */
+{
+	TestPart04_Huge_Class003_023* myTestPart04_Huge_Class003_023 = new TestPart04_Huge_Class003_023( &theMainTask );
+	myTestPart04_Huge_Class003_023->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_023->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_023->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_023->getSampleAttribute() == 23);
+	delete( myTestPart04_Huge_Class003_023 );
+}
+/* Package TestPart04_Huge_Sub003_Pkg, Class TestPart04_Huge_Class003_024 instantiation and start: */
+{
+	TestPart04_Huge_Class003_024* myTestPart04_Huge_Class003_024 = new TestPart04_Huge_Class003_024( &theMainTask );
+	myTestPart04_Huge_Class003_024->startBehavior( );
+	this->result = this->result && (myTestPart04_Huge_Class003_024->getSampleAttribute() == -1);
+	myTestPart04_Huge_Class003_024->toSetAttribute( );
+	this->result = this->result && (myTestPart04_Huge_Class003_024->getSampleAttribute() == 24);
+	/* Just some events which will still be in queue during destruction, fill the queue to the maximum */
+	
+	uint16 msqSize = theMainTask.getMessageQueue()->getInitSize();
+   	for( int i = 0; i < msqSize; i++ )
+	{
+		FIRE( myTestPart04_Huge_Class003_024, evStartTest() );     
+	}
+	delete( myTestPart04_Huge_Class003_024 );
+}
+";
+					}
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAttribute 
+					- _id = GUID fb79da4e-582e-42d8-a68a-ed0c151d7d9d;
+					- _myState = 8192;
+					- _name = "result";
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- ValueSpecifications = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ILiteralSpecification 
+							- _id = GUID 010106f5-3b8c-477f-9825-794d4bc25e18;
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _value = "WSTTRUE";
+						}
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpBoolean";
+						- _id = GUID f19b56f2-78ab-44fa-860e-6ead487ecb07;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- StateCharts = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IStateChart 
+					- _id = GUID f92b6363-f315-41d6-982a-b6c988adcc3e;
+					- _myState = 10240;
+					- _name = "statechart_0";
+					- _modifiedTimeWeak = 2.9.2015::14:0:7;
+					- _lastID = 3;
+					- weakCGTime = 2.9.2015::14:0:7;
+					- strongCGTime = 4.30.2013::14:22:45;
+					- _multiplicity = "";
+					- _itsStateChart = { IHandle 
+						- _m2Class = "";
+					}
+					- _classModifier = Unspecified;
+					- _defNumber = 2;
+					- Transitions = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IDefaultDrvdTrans 
+							- _id = GUID c672f0f3-e4e3-4f25-a4d2-a877b9c557d8;
+							- _myState = 2048;
+							- _name = "defaulttransition_1";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _itsLabel = { ILabel 
+								- _id = GUID ea7aac20-1f91-488f-bd61-55b1e27b3b8f;
+								- _modifiedTimeWeak = 1.2.1990::0:0:0;
+								- _itsTrigger = NULL;
+								- _itsGuard = NULL;
+								- _itsAction = NULL;
+							}
+							- _itsTarget = GUID c6a9aec2-c069-44b6-b384-fd67deb58189;
+							- _staticReaction = 0;
+							- _itsSource = ;
+							- _ofState = GUID daeceb40-5ab9-4b01-b6ed-13ca6bb559d0;
+						}
+						{ ITransition 
+							- _id = GUID 65cf0e29-4afc-4e99-a6d7-c0b050b7f99b;
+							- _myState = 2048;
+							- _name = "transition_2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _itsLabel = { ILabel 
+								- _id = GUID ebcdd29d-b44c-4a1a-8078-718f6215005a;
+								- _modifiedTimeWeak = 1.2.1990::0:0:0;
+								- _itsTrigger = { IInterfaceItemTrigger 
+									- _id = GUID ecb4f233-cca1-4d31-a1d2-d47e92c96070;
+									- _modifiedTimeWeak = 1.2.1990::0:0:0;
+									- _body = "evStartTest";
+									- _info = "";
+									- _itsInterfaceItem = { IHandle 
+										- _m2Class = "IEvent";
+										- _filename = "TestControlPkg.sbs";
+										- _subsystem = "TestControlPkg";
+										- _class = "";
+										- _name = "evStartTest()";
+										- _id = GUID 5f553312-391b-4f84-a835-c641b7c0b7d4;
+									}
+								}
+								- _itsGuard = NULL;
+								- _itsAction = NULL;
+							}
+							- _itsTarget = GUID 7de886d0-937e-4a9f-b7ec-d2dccf424896;
+							- _staticReaction = 0;
+							- _itsSource = GUID c6a9aec2-c069-44b6-b384-fd67deb58189;
+						}
+					}
+					- States = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IState 
+							- _id = GUID daeceb40-5ab9-4b01-b6ed-13ca6bb559d0;
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _parent = ;
+							- _defaultTrans = GUID c672f0f3-e4e3-4f25-a4d2-a877b9c557d8;
+						}
+						{ IState 
+							- _id = GUID c6a9aec2-c069-44b6-b384-fd67deb58189;
+							- _name = "WaitingForHugeTest";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _parent = GUID daeceb40-5ab9-4b01-b6ed-13ca6bb559d0;
+							- _defaultTrans = ;
+						}
+						{ IState 
+							- _id = GUID 7de886d0-937e-4a9f-b7ec-d2dccf424896;
+							- _name = "HugeTestFinished";
+							- _modifiedTimeWeak = 2.9.2015::14:0:7;
+							- _parent = GUID daeceb40-5ab9-4b01-b6ed-13ca6bb559d0;
+							- _defaultTrans = ;
+							- _entryAction = { IAction 
+								- _id = GUID 1b669810-5c50-449e-b703-307fe5577784;
+								- _myState = 4096;
+								- _modifiedTimeWeak = 2.9.2015::14:0:7;
+								- _body = "subpackageStart( );
+results.status04_Huge = this->result;
+FIRE( this->itsTestMain, evTest_04_Finished() );
+";
+							}
+						}
+					}
+					- _version = 2.9.2015::15:0:7;
+					- _baseVersion = 1.2.1990::0:0:0;
+					- _diagram = GUID 601c9cd1-d9df-4863-a6d7-7cd35dd7efd5;
+					- Views = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IStateChartDiagram 
+							- _id = GUID 601c9cd1-d9df-4863-a6d7-7cd35dd7efd5;
+							- _myState = 10240;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "Format";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 3;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "DanglingTransition";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "Line.LineWidth";
+														- _Value = "2";
+														- _Type = Int;
+													}
+												}
+											}
+											{ IPropertyMetaclass 
+												- _Name = "DiagramFrame";
+												- Properties = { IRPYRawContainer 
+													- size = 8;
+													- value = 
+													{ IProperty 
+														- _Name = "DefaultSize";
+														- _Value = "20,20,590,500";
+														- _Type = String;
+													}
+													{ IProperty 
+														- _Name = "Fill.FillColor";
+														- _Value = "247,247,247";
+														- _Type = Color;
+													}
+													{ IProperty 
+														- _Name = "Fill.Transparent_Fill";
+														- _Value = "0";
+														- _Type = Int;
+													}
+													{ IProperty 
+														- _Name = "Font.Font";
+														- _Value = "Tahoma";
+														- _Type = String;
+													}
+													{ IProperty 
+														- _Name = "Font.Size";
+														- _Value = "8";
+														- _Type = Int;
+													}
+													{ IProperty 
+														- _Name = "Font.Weight@Child.NameCompartment@Name";
+														- _Value = "700";
+														- _Type = Int;
+													}
+													{ IProperty 
+														- _Name = "Line.LineColor";
+														- _Value = "194,192,192";
+														- _Type = Color;
+													}
+													{ IProperty 
+														- _Name = "Line.LineWidth";
+														- _Value = "1";
+														- _Type = Int;
+													}
+												}
+											}
+											{ IPropertyMetaclass 
+												- _Name = "State";
+												- Properties = { IRPYRawContainer 
+													- size = 7;
+													- value = 
+													{ IProperty 
+														- _Name = "DefaultSize";
+														- _Value = "0,0,96,60";
+														- _Type = String;
+													}
+													{ IProperty 
+														- _Name = "Fill.FillColor";
+														- _Value = "255,255,255";
+														- _Type = Color;
+													}
+													{ IProperty 
+														- _Name = "Font.Font";
+														- _Value = "Tahoma";
+														- _Type = String;
+													}
+													{ IProperty 
+														- _Name = "Font.Size";
+														- _Value = "8";
+														- _Type = Int;
+													}
+													{ IProperty 
+														- _Name = "Line.LineColor";
+														- _Value = "109,163,217";
+														- _Type = Color;
+													}
+													{ IProperty 
+														- _Name = "Line.LineStyle";
+														- _Value = "0";
+														- _Type = Int;
+													}
+													{ IProperty 
+														- _Name = "Line.LineWidth";
+														- _Value = "1";
+														- _Type = Int;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "statechartdiagram_0";
+							- _modifiedTimeWeak = 2.9.2015::14:0:7;
+							- _lastModifiedTime = "2.9.2015::14:0:7";
+							- _graphicChart = { CGIStateChart 
+								- _id = GUID 08e7a663-26bd-4fb8-a737-0153609a326c;
+								- m_type = 0;
+								- m_pModelObject = { IHandle 
+									- _m2Class = "IStateChart";
+									- _id = GUID f92b6363-f315-41d6-982a-b6c988adcc3e;
+								}
+								- m_pParent = ;
+								- m_name = { CGIText 
+									- m_str = "";
+									- m_style = "Arial" 10 0 0 0 1 ;
+									- m_color = { IColor 
+										- m_fgColor = 0;
+										- m_bgColor = 0;
+										- m_bgFlag = 0;
+									}
+									- m_position = 1 0 0  ;
+									- m_nIdent = 0;
+									- m_bImplicitSetRectPoints = 0;
+									- m_nOrientationCtrlPt = 8;
+								}
+								- m_drawBehavior = 4096;
+								- m_bIsPreferencesInitialized = 1;
+								- elementList = 6;
+								{ CGIState 
+									- _id = GUID 21cec051-725b-4d78-8c84-491a2c0dc499;
+									- m_type = 5;
+									- m_pModelObject = { IHandle 
+										- _m2Class = "IState";
+										- _id = GUID daeceb40-5ab9-4b01-b6ed-13ca6bb559d0;
+									}
+									- m_pParent = ;
+									- m_name = { CGIText 
+										- m_str = "ROOT";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 5;
+									}
+									- m_drawBehavior = 0;
+									- m_bIsPreferencesInitialized = 0;
+									- m_AdditionalLabel = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 1;
+									}
+									- m_polygon = 4 0 0  0 0  0 0  0 0  ;
+									- m_nNameFormat = 0;
+									- m_nIsNameFormat = 0;
+									- Compartments = { IRPYRawContainer 
+										- size = 0;
+									}
+									- nAndLineCount = 0;
+									- m_pInheritsFrom = { IHandle 
+										- _m2Class = "";
+									}
+									- m_nInheritanceMask = 0;
+									- m_pDefaultComponentRelation = ;
+								}
+								{ CGIDiagramFrame 
+									- _id = GUID 4b19de88-215b-4c9f-b807-fe2507e4f2be;
+									- m_type = 203;
+									- m_pModelObject = { IHandle 
+										- _m2Class = "";
+									}
+									- m_pParent = GUID 21cec051-725b-4d78-8c84-491a2c0dc499;
+									- m_name = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 8;
+									}
+									- m_drawBehavior = 4096;
+									- m_transform = 2.63889 0 0 3.63636 20 20 ;
+									- m_bIsPreferencesInitialized = 1;
+									- m_AdditionalLabel = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 1;
+									}
+									- m_polygon = 4 0 0  0 132  216 132  216 0  ;
+									- m_nNameFormat = 0;
+									- m_nIsNameFormat = 0;
+									- Compartments = { IRPYRawContainer 
+										- size = 0;
+									}
+								}
+								{ CGIState 
+									- _id = GUID 373ccf89-677c-4315-bf8a-7b2ded1def61;
+									- m_type = 8;
+									- m_pModelObject = { IHandle 
+										- _m2Class = "IState";
+										- _id = GUID c6a9aec2-c069-44b6-b384-fd67deb58189;
+									}
+									- m_pParent = GUID 21cec051-725b-4d78-8c84-491a2c0dc499;
+									- m_name = { CGIText 
+										- m_str = "WaitingForHugeTest";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 5;
+									}
+									- m_drawBehavior = 4104;
+									- m_transform = 0.178832 0 0 0.05 62 84 ;
+									- m_bIsPreferencesInitialized = 1;
+									- m_AdditionalLabel = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 1;
+									}
+									- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
+									- m_nNameFormat = 0;
+									- m_nIsNameFormat = 0;
+									- Compartments = { IRPYRawContainer 
+										- size = 0;
+									}
+									- nAndLineCount = 0;
+									- m_pInheritsFrom = { IHandle 
+										- _m2Class = "";
+									}
+									- m_nInheritanceMask = 0;
+									- m_pDefaultComponentRelation = ;
+								}
+								{ CGIState 
+									- _id = GUID a99ebfcb-7d87-430d-8b20-063c6bec94fe;
+									- m_type = 8;
+									- m_pModelObject = { IHandle 
+										- _m2Class = "IState";
+										- _id = GUID 7de886d0-937e-4a9f-b7ec-d2dccf424896;
+									}
+									- m_pParent = GUID 21cec051-725b-4d78-8c84-491a2c0dc499;
+									- m_name = { CGIText 
+										- m_str = "HugeTestFinished";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 5;
+									}
+									- m_drawBehavior = 4104;
+									- m_transform = 0.181569 0 0 0.0518868 58 340 ;
+									- m_bIsPreferencesInitialized = 1;
+									- m_AdditionalLabel = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 1;
+									}
+									- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
+									- m_nNameFormat = 0;
+									- m_nIsNameFormat = 0;
+									- Compartments = { IRPYRawContainer 
+										- size = 0;
+									}
+									- nAndLineCount = 0;
+									- m_pInheritsFrom = { IHandle 
+										- _m2Class = "";
+									}
+									- m_nInheritanceMask = 0;
+									- m_pDefaultComponentRelation = ;
+								}
+								{ CGITrans 
+									- _id = GUID 33306868-a68e-41a1-913d-9eb0fd7daaad;
+									- _properties = { IPropertyContainer 
+										- Subjects = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertySubject 
+												- _Name = "General";
+												- Metaclasses = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IPropertyMetaclass 
+														- _Name = "Graphics";
+														- Properties = { IRPYRawContainer 
+															- size = 1;
+															- value = 
+															{ IProperty 
+																- _Name = "ShowLabels";
+																- _Value = "False";
+																- _Type = Bool;
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+									- m_type = 29;
+									- m_pModelObject = { IHandle 
+										- _m2Class = "ITransition";
+										- _id = GUID c672f0f3-e4e3-4f25-a4d2-a877b9c557d8;
+									}
+									- m_pParent = ;
+									- m_name = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 8;
+									}
+									- m_drawBehavior = 4096;
+									- m_bIsPreferencesInitialized = 1;
+									- m_pSource = GUID 21cec051-725b-4d78-8c84-491a2c0dc499;
+									- m_sourceType = 'F';
+									- m_pTarget = GUID 373ccf89-677c-4315-bf8a-7b2ded1def61;
+									- m_targetType = 'T';
+									- m_direction = ' ';
+									- m_rpn = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 0;
+									}
+									- m_anglePoint1 = 0 0 ;
+									- m_anglePoint2 = 0 0 ;
+									- m_line_style = 2;
+									- m_SourcePort = 160 47 ;
+									- m_TargetPort = 548 140 ;
+									- m_pInheritsFrom = { IHandle 
+										- _m2Class = "";
+									}
+									- m_nInheritanceMask = 0;
+									- m_bShowName = 1;
+								}
+								{ CGITrans 
+									- _id = GUID 0b73ac68-1c5d-4717-8fea-1cee264cc458;
+									- _properties = { IPropertyContainer 
+										- Subjects = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertySubject 
+												- _Name = "General";
+												- Metaclasses = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IPropertyMetaclass 
+														- _Name = "Graphics";
+														- Properties = { IRPYRawContainer 
+															- size = 1;
+															- value = 
+															{ IProperty 
+																- _Name = "ShowLabels";
+																- _Value = "False";
+																- _Type = Bool;
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+									- m_type = 28;
+									- m_pModelObject = { IHandle 
+										- _m2Class = "ITransition";
+										- _id = GUID 65cf0e29-4afc-4e99-a6d7-c0b050b7f99b;
+									}
+									- m_pParent = ;
+									- m_name = { CGIText 
+										- m_str = "";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 8;
+									}
+									- m_drawBehavior = 4096;
+									- m_bIsPreferencesInitialized = 1;
+									- m_pSource = GUID 373ccf89-677c-4315-bf8a-7b2ded1def61;
+									- m_sourceType = 'F';
+									- m_pTarget = GUID a99ebfcb-7d87-430d-8b20-063c6bec94fe;
+									- m_targetType = 'T';
+									- m_direction = ' ';
+									- m_rpn = { CGIText 
+										- m_str = "evStartTest";
+										- m_style = "Arial" 10 0 0 0 1 ;
+										- m_color = { IColor 
+											- m_fgColor = 0;
+											- m_bgColor = 0;
+											- m_bgFlag = 0;
+										}
+										- m_position = 1 0 0  ;
+										- m_nIdent = 0;
+										- m_bImplicitSetRectPoints = 0;
+										- m_nOrientationCtrlPt = 0;
+									}
+									- m_anglePoint1 = 0 0 ;
+									- m_anglePoint2 = 0 0 ;
+									- m_line_style = 2;
+									- m_SourcePort = 531 980 ;
+									- m_TargetPort = 545 135 ;
+									- m_pInheritsFrom = { IHandle 
+										- _m2Class = "";
+									}
+									- m_nInheritanceMask = 0;
+									- m_bShowName = 1;
+								}
+								
+								- m_access = 'Z';
+								- m_modified = 'N';
+								- m_fileVersion = "";
+								- m_nModifyDate = 0;
+								- m_nCreateDate = 0;
+								- m_creator = "";
+								- m_bScaleWithZoom = 1;
+								- m_arrowStyle = 'S';
+								- m_pRoot = GUID 21cec051-725b-4d78-8c84-491a2c0dc499;
+								- m_currentLeftTop = 0 0 ;
+								- m_currentRightBottom = 0 0 ;
+								- m_pInheritsFrom = { IHandle 
+									- _m2Class = "";
+								}
+							}
+						}
+					}
+				}
+			}
+			- _itsStateChart = { IHandle 
+				- _m2Class = "IStateChart";
+				- _id = GUID f92b6363-f315-41d6-982a-b6c988adcc3e;
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 6cc03e50-985d-4cdd-8880-23dc1d21a90a;
+					- _myState = 8192;
+					- _name = "itsTestMain";
+					- _modifiedTimeWeak = 5.3.2013::7:47:30;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "TestControlPkg.sbs";
+						- _subsystem = "TestControlPkg";
+						- _class = "TopLevel";
+						- _name = "TestMain";
+						- _id = GUID e2f71502-8677-4e56-bba8-ef47f4cd09d5;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IPart";
+						- _filename = "TestControlPkg.sbs";
+						- _subsystem = "TestControlPkg";
+						- _class = "TopLevel.TestMain";
+						- _name = "itsTestPart04_Huge_Controller";
+						- _id = GUID 7c3bc672-295e-40b2-8a6f-e69d60d982c0;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Events = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IEvent 
+			- _id = GUID 14a62cbb-7b4a-4309-9a4e-4154676e8225;
+			- _myState = 8192;
+			- _name = "toSetAttribute";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _virtual = 0;
+			- Args = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+	}
+	- _configurationRelatedTime = 5.3.2013::7:23:11;
+}
+

@@ -1,0 +1,180 @@
+I-Logix-RPY-Archive version 8.11.0 C++ 8254044
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "TestPart02_Port_Pkg.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "TestPart02_Port_Pkg";
+		- _id = GUID 3559ce7c-db2d-41e2-8907-7b1b8ba8a2f4;
+	}
+	- _id = GUID 0f24190e-f9df-4f6c-ad5d-639a360b2381;
+	- _myState = 8192;
+	- _name = "TestPart02_Port_InterfacePkg";
+	- _modifiedTimeWeak = 2.9.2015::10:4:7;
+	- _theMainDiagram = { IHandle 
+		- _m2Class = "IDiagram";
+		- _filename = "Overview.omd";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "Overview";
+		- _id = GUID 54d91baf-17b9-4e35-a4cf-14c09c9fb24a;
+	}
+	- _lastID = 5;
+	- weakCGTime = 2.9.2015::10:4:7;
+	- strongCGTime = 4.23.2013::11:41:8;
+	- _defaultComposite = GUID 5ca84a53-3243-4d70-b8ca-1d8061825b85;
+	- _eventsBaseID = 1601;
+	- Classes = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IClass 
+			- _id = GUID 5ca84a53-3243-4d70-b8ca-1d8061825b85;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 5.3.2013::6:55:49;
+			- weakCGTime = 5.3.2013::6:55:49;
+			- strongCGTime = 4.23.2013::11:41:8;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID c37262a0-15c6-44a9-a0a9-91512e3c14d5;
+			- _myState = 8192;
+			- _name = "TestPart02_Port_I_Button";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Interface";
+					- _id = GUID 2a7b8a63-f54f-4379-bab0-02800a5084e1;
+				}
+			}
+			- _modifiedTimeWeak = 4.23.2013::12:34:2;
+			- _lastID = 1;
+			- weakCGTime = 4.23.2013::12:34:2;
+			- strongCGTime = 4.23.2013::12:34:2;
+			- Operations = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IReception 
+					- _id = GUID 861ba2df-0ef6-42fd-810a-2322f15a91cb;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 4.23.2013::12:34:2;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _id = GUID 8452f131-67ea-41d5-9567-42d162465214;
+					}
+				}
+				{ IReception 
+					- _id = GUID dd5f7f31-15a1-410f-b635-a0d944e11c5f;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 4.23.2013::12:34:2;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _id = GUID f3c42018-e8a7-4d5f-8c90-33bab861f95e;
+					}
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID baab7d86-5ef7-4dbe-bf7e-b35cf27ba751;
+			- _myState = 8192;
+			- _name = "TestPart02_Port_I_LED";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Interface";
+					- _id = GUID 2a7b8a63-f54f-4379-bab0-02800a5084e1;
+				}
+			}
+			- _modifiedTimeWeak = 4.23.2013::12:34:7;
+			- _lastID = 2;
+			- weakCGTime = 4.23.2013::12:34:7;
+			- strongCGTime = 4.23.2013::12:34:7;
+			- Operations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IReception 
+					- _id = GUID c603b887-d83b-41eb-9b12-041c8f83ff86;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 4.23.2013::12:34:7;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _id = GUID fc7007ef-2591-4d75-939b-caffa96751a2;
+					}
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Events = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IEvent 
+			- _id = GUID 8452f131-67ea-41d5-9567-42d162465214;
+			- _myState = 8192;
+			- _name = "evPressed";
+			- _modifiedTimeWeak = 1.1.1970::1:0:0;
+			- _virtual = 0;
+			- Args = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IEvent 
+			- _id = GUID f3c42018-e8a7-4d5f-8c90-33bab861f95e;
+			- _myState = 8192;
+			- _name = "evReleased";
+			- _modifiedTimeWeak = 1.1.1970::1:0:0;
+			- _virtual = 0;
+			- Args = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IEvent 
+			- _id = GUID fc7007ef-2591-4d75-939b-caffa96751a2;
+			- _myState = 8192;
+			- _name = "evTogglePortsLED";
+			- _modifiedTimeWeak = 1.1.1970::1:0:0;
+			- _virtual = 0;
+			- Args = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+	}
+	- _configurationRelatedTime = 4.24.2013::7:38:0;
+}
+

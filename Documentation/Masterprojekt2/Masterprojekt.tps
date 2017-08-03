@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Masterprojekt.tex
 
 [Frame0_View0,0]
-TopLine=101
-Cursor=5965
+TopLine=64
+Cursor=4375
 
 [Frame1]
 Flags=0
@@ -54,7 +54,7 @@ Document=Entwicklungsumgebung.tex
 
 [Frame2_View0,0]
 TopLine=33
-Cursor=4910
+Cursor=3904
 
 [Frame3]
 Flags=0
@@ -71,8 +71,8 @@ Class=LaTeXView
 Document=Implementierung.tex
 
 [Frame3_View0,0]
-TopLine=526
-Cursor=41472
+TopLine=642
+Cursor=50531
 
 [Frame4]
 Flags=0
@@ -89,8 +89,8 @@ Class=BibTeXView
 Document=MasterBib.bib
 
 [Frame4_View0,0]
-TopLine=57
-Cursor=2319
+TopLine=66
+Cursor=2662
 
 [Frame5]
 Flags=0

@@ -1,0 +1,357 @@
+S o f t w a r e l i z e n z v e r t r a g
+
+Präambel (Bitte lesen Sie vor dem Vertragsschluß sorgfältig die 
+Präambel) Bei der von Willert gelieferten Software handelt es 
+sich um eine integrierte Entwicklungs¬umgebung mit verschiedenen
+Tools für die Software¬entwicklung von technischen Systemen bestimmt
+ist. 
+
+Der Kunde erhält die Software als Entwicklungs- oder als Produktlizenz.
+Die Software hat folgende Besonderheiten:
+* Sie ist auf ausgebildete und spezialisierte Embedded-Programmierer
+  zugeschnitten deren Kenntnisse auf dem aktuellen Stand der Technik sind.
+  Aus diesem Grund weist Willert daraufhin, dass die Software mit einer
+  Benutzerdokumentation ausgeliefert wird die sich auf die Anwendung der
+  gelieferten Programme beschränkt. Handbücher und technischer Support
+  können keine Ausbildungs- oder Schulungsmaßnahmen ersetzen. 
+  Willert übernimmt keine Haftung für unsachgemäßen Einsatz der
+  gelieferten Produkte
+* Die von Willert gelieferte Software besteht zu Teilen aus Drittsoftware
+  (in Einzelfällen auch Opensource). Willert hat diese in der Entwicklungs-
+  umgebung nur zusammengestellt und übernimmt für die Drittsoftware keine
+  Gewähr, sondern verweist den Kunden auf Ansprüche gegen die Lieferanten
+  der Drittsoftware. Dieser Softwarelizenzvertrag gilt nur für die von
+  Willert erstellten Anteile der gelieferten Software
+* Die Software ist je nach gewünschtem Einsatz in zertifizierten und
+  unzertifizierten Versionen für die einzelnen Technikbereiche und
+  Branchen erhältlich. Willert übernimmt die Verantwortung für die Software
+  deshalb nur dann, wenn der Kunde entsprechend seinem Programmierwunsch
+  die passende Software für den jeweiligen Technikbereich und die Branche
+  auswählt und mit Willert abgestimmt hat. 
+* Die von Willert entwickelten Produkte sind oft eingebunden in andere
+  Entwicklungswerkzeuge (Rhapsody (R), Laufzeitsystem, eventuell Compiler
+  und IDE). Die in diesem Lizenzvertrag vereinbarten Leistungen setzen voraus,
+  dass die gelieferte Software nur in Kombination mit bestimmten Versionen
+  der Werkzeug eingesetzt wird. Die Versionen sind in den jeweiligen
+  Release Notes angegeben. Der Kunde hat dafür Sorge zu tragen, 
+  dass seine eingesetzten Tools den in den jeweiligen Release Notes 
+  angegebenen entsprechen.
+* Im Fall einer individuellen Anpassung der Software an eine vom Kunden
+  eingesetzte Plattform im Rahmen von technischer Unterstützung durch
+  einen Willert Mitarbeiter ist der Kunde für die weitere Pflege, Wartung
+  der Anpassungen verantwortlich, wenn nicht explizit für die individuell
+  angepassten Anteile ein gesonderter Wartungsvertrag vereinbart wurde.
+  Für die individuellen Anpassungen wird  von Willert keine Haftung
+  übernommen. In der Regel werden von dem Willert Mitarbeiter nur die
+  Anpassungsarbeiten Durchgeführt. Damit liegt die Verantwortung für die
+  Sicherstellung der ordnungsgemäßen Funktion der Software durch
+  entsprechende Tests beim Kunden.
+* Bei den von Willert gelieferten Softwareprodukten handelt es sich häufig
+  um Halbzeuge die in das Produkt des Kunden einfließen, dort nach 
+  Auslieferung verbleiben und an dem Betrieb der Kundensystems mitwirken.
+  In diesen Fällen ergeben sich die endgültigen Anforderungen an die
+  gelieferte Software erst im Rahmen der Anforderungen des vom Kunden
+  erstellten Gesamtsystems. Des weiteren ist es NICHT möglich die von
+  Willert gelieferte Software in dem vom Kunden erstellten Gesamtsystem
+  vollkommen entkoppelt von der vom Kunden erstellten Software zu betreiben.
+  Aus diesem Grund haben die von Willert durchgeführten Tests und Maßnahmen
+  zum sicheren Betrieb der Software nur einen eingeschränkten 
+  Gültigkeitsbereich und es liegt in der Verantwortung des Kunden die Software
+  im Rahmen seines Gesamtsystems ausreichend zu testen und entsprechend
+  seinen Qualitäts- und Sicherheitsanforderungen für den sicheren Betrieb
+  des Gesamtsystems zu sorgen.
+
+
+I Vertragsgegenstand
+
+1. Die Nutzung der Software erfolgt ausschließlich auf Grundlage des
+   vorliegenden Softwarelizenzvertrages. Andere Bedingungen gelten nicht,
+   auch wenn Willert diesen nicht widerspricht. 
+2. Andere Leistungen (z. B. Änderungen der Software, Lieferung neuer
+   Versionen, Pflege, Test und Schulung) sind nicht Gegenstand dieses
+   Vertrages. Willert verwendet den vorliegenden Softwarelizenzvertrag nur
+   gegenüber Unternehmern im Rahmen ihrer Geschäftstätigkeit.
+3. Der Kunde erwirbt die Software zur Entwicklung der eigenen Produkte.
+   Der Kunde darf die Software nur in dem in diesem Vertrag definierten 
+   Umfang nutzen. 
+4. Liefert Willert neue oder andere Software oder bewilligt Willert Lizenzen für
+   weitere Arbeitsplätze oder für eine umfänglichere Nutzung, so gelten für diese
+   Nutzung auch ohne ausdrückliche Vereinbarung die Bestimmungen dieses
+   Vertrages, insbesondere bezüglich der Rechtseinräumung (sehe III). 
+5. Die Nutzung der Software setzt voraus, dass der Nutzer ausreichende
+   technische Qualifikationen für die Softwareentwicklung besitzt. 
+   An dieser Voraussetzung sind die Anwenderschnittstellen und die
+   Dokumentationen orientiert. Die produktspezifischen Anforderungen sind in
+   den jeweiligen Release Notes dargelegt. 
+
+II Liefer- und Nutzungsumfang
+
+1. Der Kunde hat das Recht, die Software wie folgt zu nutzen: 
+
+   (1) als Entwicklungslizenz mit
+       a) Einfachnutzung (concurrent users)
+          Die Software darf von beliebigen Mitarbeitern des Kunden an dem
+          bestimmten Einsatzort genutzt werden, wobei pro erworbener Lizenz
+          nur jeweils ein Mitarbeiter gleichzeitig an einem Arbeitsplatz / 
+          an einem Rechner die Software nutzen darf. 
+       b) Abteilungsnutzung (concurrent users)
+          In der Abteilung darf die Software insgesamt jedoch höchstens von einer
+          vereinbarten Anzahl Nutzern gleichzeitig genutzt werden.
+       c) Konzernnutzung (concurrent users)
+          In allen Unternehmen, an denen der Kunde mehrheitlich beteiligt ist, darf
+          die Software insgesamt an höchstens der vereinbarten Anzahl von Nutzern 
+          und Arbeitsplätzen/Rechnern gleichzeitig genutzt werden.
+
+    (2) als Produktlizenz
+        Die Produktlizenz gestattet die Nutzung der Software auf beliebig vielen
+        Arbeitsplätzen im Betrieb/Unternehmen des Kunden an denen er
+        mehrheitlich beteiligt ist, beschränkt auf den Nutzungszweck der 
+        Softwareentwicklung des nachfolgenden eindeutig angegebenen Produkts.
+        Jegliche Nutzung, die nicht unmittelbar der Entwicklung des angegebenen
+        Produkts zurechenbar ist, ist nicht gestattet. 
+
+2. Die Drittsoftware, die in dem von Willert überlassenen Entwicklungsumgebung
+   enthalten ist, wird dem Kunden nach den jeweiligen Lizenzbestimmungen des
+   Herstellers zur Nutzung überlassen. 
+
+
+III Rechtseinräumung
+
+1. Die von Willert gelieferte Software ist urheberrechtsfähig. Alle Rechte an ihr
+   stehen im Verhältnis der Vertragspartner ausschließlich Willert zu. Soweit die
+   Rechte an der Software Dritten zustehen, hat Willert entsprechende
+   Verwertungsrechte. 
+2. Der Kunde erhält das räumlich und zeitlich unbefristete, nicht ausschließliche
+   Recht zur Nutzung der Software für eigene Zwecke, wie in diesem Vertrag und
+   insbesondere in II beschrieben.
+3. Der Kunde darf die Software vervielfältigen, soweit die jeweilige
+   Vervielfältigung für deren Nutzung des Tools notwendig ist. Willert kann
+   durch geeignete technische Maßnahmen die Einhaltung der
+   Vertragsbedingungen und insbesondere den Umfang der vereinbarten 
+   Nutzungen (vgl. II) sicherstellen.
+   Es ist unzulässig, die Software bei einer Produktlizenz für andere als die 
+   angegebenen Produkte einzusetzen.
+4. Vermietung, Überlassung oder Gebrauch durch oder für Dritte,
+   Timesharing-Nutzung, Nutzung im Rahmen von Online-Service-Leistungen
+   (ASP) und Rechenzentrumstätigkeiten oder eine sonstige entgeltliche 
+   oder unentgeltliche Nutzung der Software für Dritte ist, außer bei einer 
+   Konzernnutzung für die verbundenen Unternehmen, ohne vorherige
+   schriftliche Zustimmung von Willert nicht erlaubt. 
+5. Der Kunde darf die für einen sicheren Betrieb notwendigen Sicherungskopien
+   der Software erstellen, die als solche zu kennzeichnen und mit dem
+   Urheberrechtsvermerk des Originaldatenträgers zu versehen sind. 
+   Nur zu diesem Zweck darf der Kunde die Software vervielfältigen. 
+   Die gesamte gegebenenfalls übergebene Dokumentation (z. B. Handbücher,
+   Beispielprogramme, etc.) darf nicht kopiert werden. 
+   Für die Software und die Sicherungskopien gilt die Geheimhaltungsklausel (XIII)
+6. Alle anderen Verwertungsarten der Software, insbesondere die Übersetzung,
+   die Bearbeitung und die Verbreitung sind untersagt. Auch das nicht
+   ausdrücklich erlaubte Weitergeben der Software z. B. an eine Tochter oder
+   an einverbundenes Unternehmen (ausgenommen bei Konzernnutzungen und
+   Produktlizenzen) oder dadurch, dass die Mitnahme der Software durch
+   Mitarbeiter geduldet wird und das Entwickeln ähnlicher Software unter
+   Benutzung der Software als Vorlage ist untersagt. 
+7. Die in den Computerprogrammen und der Dokumentation enthaltenen
+   Copyright-Vermerke und andere Rechtsvorbehalte dürfen nicht verändert oder
+   unkenntlich gemacht werden. Sie müssen in unveränderter Form an den
+   entsprechenden Stellen in sämtlicher vertragsgemäß hergestellte Kopien oder
+   Teilkopien übernommen werden.
+8. Der Kunde darf mit der Software programmierte Anwendungen (runtimes – 
+   ausführende Programme) in Form von Runtime-Lizenzen, sofern diese mit der
+   Entwicklung des Kunden (untrennbar) verbunden sind, an Endkunden
+   weitergeben und verbreiten. Der Endkunde darf die runtimes im Rahmen der 
+   bestimmungsgemäßen Nutzung der Anwendungen des Kunden nutzen und,
+   sofern zur Nutzung notwendig, vervielfältigen. Hierbei muß der Kunde
+   verpflichtet werden, Nutzungsbedingungen einzuhalten, die den in
+   diesem Vertrag enthaltenen Nutzungsbedingungen ähnlich sind.
+9. Die Software selbst (Entwicklungsumgebung) darf als Ganzes unter folgenden
+   Bedingungen an Dritte weitergeben werden:
+   a) Der Kunde stellt die Nutzung der Software endgültig ein, löscht sämtliche
+      Kopien und alle Komponenten und vernichtet das Begleitmaterial oder
+      übergibt es an den Dritten oder an Willert;
+   b) der Kunde meldet Willert, dass er die Software nicht mehr nutzt und gibt
+      den Namen des Dritten an sowie in nachvollziehbarer Weise den Umfang der
+      Nutzung (Rechner [concurrent user], Nutzer [named user] oder die 
+      Einsatzorte oder Unternehmen).
+      Hierbei ist es nicht erlaubt, dass der tatsächliche Nutzungsumfang bei
+      einer Konzernnutzung sich da¬durch vergrößert, dass der Konzern des die
+      Software erwerbenden Dritten größer ist als der ursprüngliche Konzern,
+      dem Willert die Software überlassen hat. Die maßgebliche Größe ergibt
+      sich aus der Anzahl der Mitarbeiter, die Zugriff auf die Software haben,
+      sowie aus der Anzahl der Rechner, auf denen in beiden Konzernen die
+      Software zur Verfügung steht;
+   c) Der Kunde verpflichtet den Dritten zur Einhaltung von
+      Nutzungsbedingungen, die den Nutzungsbedingungen dieses
+      Lizenzvertrages gleichkommen, und legt Willert auf Anforderung eine
+      entsprechende schriftliche Verpflichtungserklärung des Dritten vor und
+   d) gibt auf Anforderung von Willert eine schriftliche Erklärung darüber ab,
+      dass er das eben beschriebene Verfahren zur Weitergabe eingehalten hat
+      und weist in nachvollziehbarer Weise (z.B. durch Vorlage von Unterlagen)
+      den tatsächlichen Nutzungsumfang der Software durch den Dritten nach.
+
+10. Willert wird in der Regel die Quellprogramme und in speziellen Fällen die 
+    Entwicklungsdokumentation der von Willert entwickelten Software an den
+    Kunden herausgeben. Der Kunde hat auf die Übergabe oder die
+    Vollständigkeit der übergebenen Quellprogramme und der 
+    Entwicklungsdokumentation allerdings keinen Anspruch und kann aus einer
+    erfolgten Übergabe keine Rechte (Gewährleistung, Schadensersatz) 
+    gegenüber Willert ableiten. Quellprogramme und 
+    Entwicklungsdokumentationen von eingesetzter Drittsoftware werden nicht
+    an den Kunden herausgegeben.
+11. Der Kunde wird Willert im Falle einer Schutzrechtsverletzung seitens Dritter
+    nach besten Kräften und im Rahmen des zumutbaren bei der gerichtlichen und 
+    außergerichtlichen Wahrnehmung von Rechten unterstützen. 
+
+IV Warnung (Software ohne Zertifikat)
+   Für die Verwendung in sensiblen Einsatzgebieten (Technologiebereichen,
+   Branchen) vertreibt Willert mit besonderer Zertifizierung. Software ohne
+   Zertifikat ist nicht fehlertolerant und wurde nicht für eine Verwendung in
+   der jeweiligen risikogeneigten Umgebung entwickelt oder hergestellt, in der
+   störungsfreier Betrieb erforderlich ist, wie z.B. in nukleartechnischen
+   Einrichtungen, Flugzeugnavigations- oder Kommunikationssystemen, in der
+   Flugsicherung, in Maschinen zur direkten Lebenserhaltung oder in
+   Waffensystemen, in denen ein Ausfall der Technologie direkt zu Todesfällen,
+   Personenschäden oder schwerwiegenden Schäden an Sachen oder Umwelt
+   führen würde. Software ohne Zertifikat ist aus diesem Grund nicht 
+   geeignet in einer solchen Umgebung eingesetzt zu werden.
+
+
+VII Sach- und Rechtsmängel
+
+1. Sachmängel sind ausschließlich reproduzierbare Mängel, deren Ursache in 
+   Qualitätsmängeln der Software liegt. Kein Sachmangel ist daher eine 
+   Funktionsbeeinträchtigung, die aus Hardwaremängeln,
+   Umgebungsbedingungen, Fehlbedienungen, schadhaften Daten oder 
+   sonstigen aus dem Risikobereich des Kunden stammenden Gründen
+   resultieren. Unwesentliche Mängel bleiben außer Betracht. 
+2. Willert weist darauf hin, dass schon geringfügige Änderungen außerhalb der
+   bestimmungs¬gemäßen Änderbarkeit der Software zu erheblichen, nicht
+   vorhersehbaren Störungen im Ablauf des betreffenden Programms und anderer
+   Programme führen können. Der Kunde wird deshalb ausdrücklich vor
+   eigenmächtigen Änderungen der gelieferten Software gewarnt; der Kunde trägt
+   insoweit das Risiko allein. Die Regelungen des III bleiben unberührt. 
+3. Der Kunde ist verpflichtet, die Software unverzüglich zu untersuchen und
+   Mängel unverzüglich schriftlich unter genauer Beschreibung zu rügen.
+   Der Kunde wird gründlich alle Entwicklungs¬ergebnisse testen und diese auf
+   Mangelfreiheit und Verwendbarkeit in der konkreten Situation prüfen, bevor
+   er mit der operativen Nutzung der Software und der Entwicklungen beginnt. 
+4. In Bezug auf die nicht von Willert selbst programmierten Teile der Software
+   muss der Kunde, bevor er gegenüber Willert Mängelansprüche geltend macht,
+   zunächst außergerichtlich die Ansprüche gegenüber dem Dritten geltend
+   machen, der die Software erstellt hat. Willert tritt hiermit dem Kunden
+   die entsprechenden Mängelansprüche ab, wobei Willert berechtigt ist,
+   diese für den Kunden gegenüber dem Dritten geltend zu machen. 
+   Den Vertragspartnern ist bewußt, dass es sich bei der Drittsoftware
+   auch um Opensource-Software handeln kann, die der Nutzergemeinde
+   kostenfrei und ohne Gewähr zur Verfügung gestellt werden. 
+5. Willert kann bei Vorliegen eines Mangels zunächst Nacherfüllung erbringen. 
+   Diese erfolgt nach Wahl von Willert durch Überlassen eines neuen Programms
+   oder Dokumentationsstandes oder dadurch, dass Willert Möglichkeiten
+   aufzeigt, die Auswirkungen des Mangels zu vermeiden. Der Kunde wird
+   einen neuen Programmstand auch dann übernehmen, wenn dies zu einem
+   hinnehmbaren Anpassungsaufwand führt. 
+6. Willert stellt die von ihr selbst programmierte Software frei von Rechten
+   Dritter zur Verfügung, die die Benutzung durch den Kunden nach den Regeln
+   dieses Vertrages behindern oder ausschließen. Falls Dritte Schutzrechte gegen
+   den Kunden geltend machen, unterrichtet dieser Willert unverzüglich 
+   schriftlich. Willert wird nach ihrer Wahl und in Absprache mit dem Kunden die
+   Ansprüche abwehren oder befriedigen. Die Nacherfüllung bei Rechtsmängeln
+   erfolgt, indem Willert dem Kunden eine rechtliche einwandfreie 
+   Nutzungsmöglichkeit an der Software verschafft, oder dadurch, dass Willert 
+   die betroffene Software gegen eine gleichwertige, den vertraglichen 
+   Bestimmungen entsprechende Software austauscht, wenn dies für den Kunden 
+   hinnehmbar ist. Der Kunde darf von sich aus die Ansprüche Dritter nicht
+   anerkennen. Willert wehrt die Ansprüche Dritter auf eigene Kosten ab und
+   stellt den Kunden nach den Bestimmungen in IX von allen mit der
+   Anspruchsabwehr verbundenen Kosten und Schäden frei, soweit diese nicht
+   auf einem pflichtwidrigen Verhalten des Kunden beruhen. 
+7. Ist die Nacherfüllung fehlgeschlagen, hat der Kunde das Recht, nach seiner
+   Wahl zu mindern oder vom Vertrag zurückzutreten. Für
+   Schadenersatzansprüche gilt IX dieses Vertrages. 
+8. Die Verjährungsfrist für Ansprüche des Kunden richtet sich nach den aktuellen
+   gesetzlichen Bestimmungen.
+   Wurde ein Sach- oder Rechtsmangel bewusst verschwiegen oder liegt Vorsatz,
+   Arglist oder grobe Fahrlässigkeit vor, gilt ebenfalls die gesetzliche 
+   Verjährungsfrist. 
+
+IX Haftung auf Schadenersatz 
+
+1. Im Fall einer Schadenshaftpflicht ist die Haftung der Firma Willert 
+   beschränktauf die Leistungen der Haftpfilchtversicherung.
+2. Für die Wiederbeschaffung von Daten haftet Willert nur, wenn der Kunde
+   sicherstellt, dass diese Daten aus den in maschinenlesbarer Form
+   bereitgehaltenen Datenbeständen
+   mit vertretbarem Aufwand reproduzierbar sind. 
+
+X Widerrufsvorbehalt
+
+1. Willert kann die Nutzungsbefugnisse aus wichtigem Grund ohne Einhaltung
+   einer Frist widerrufen. Ein wichtiger Grund liegt insbesondere vor, 
+   wenn der Kunde in Zahlungsverzug gerät, die Nutzungs- und 
+   Kontrollregelungen nicht einhält oder gegen die Geheimhaltungspflicht
+   verstößt und diese Verhaltenweise auch auf schriftliche Abmahnung
+   mit Widerrufsandrohung, bei Gefahr in Verzug auch ohne Abmahnung,
+   nicht sofort unterläßt. 
+2. Willert kann die Nutzungsbefugnis auch dann fristlos widerrufen, wenn einer
+   ihrer Wettbewerber, Software gleicher Art herstellt oder vertreibt, vom Kunden
+   übernommen wird oder wenn dieser den Kunden übernimmt. 
+   Als Übernahme gelten sowohl die Übertragung von
+   Wirtschaftsanteilen als auch die tatsächliche oder vereinbarte
+   Möglichkeit einer Beherrschung der Aktivitäten des jeweiligen
+   Unternehmens 
+3. Bei Widerruf der Nutzungsbefugnisse hat der Kunde die Originalsoftware
+   und die vorhandenen Kopien herauszugeben und gespeicherte Programme
+   zu löschen. Er hat Willert gegenüber die Herausgabe und Löschung
+   schriftlich zu versichern. 
+
+XI Support
+
+Willert leistet unabhängig von der Haftung für Sach- und Rechtsmängel (vgl. VIII)
+ab Lieferdatum 12 Monate technische Unterstützung über 
+Telefon (+49 5722 9678 60) und E-Mail (support@willert.de) zum Einsatz
+der Produkte. Die technische Unterstützung beschränkt sich inhaltlich
+auf Know-how zum Produkt und zeitlich auf zwei Aufwandsstunde/Monat
+pro Anwender bei Entwicklungslizenzen und vier Aufwandsstunde/Monat
+bei Produkt-, Projekt-, Abteilungs- oder Firmenlizenzen. 
+Willert setzt dabei voraus, dass der Kunde ausreichende Kenntnisse
+im Bereich der Embedded Softwareentwicklung besitzt. Speziell beim 
+Einsatz der UML Lösung bedeutet das, dass die Anwender die von Willert 
+empfohlenen Schulungsmassnahnen durchgeführt haben.  
+
+
+XII Geheimhaltung
+
+Die Parteien verpflichten sich, alle bei der Vertragsdurchführung
+bekanntwerdenden Informationen und Unterlagen (einschließlich der Information
+die aus der übergebenen Software gewonnen werden kann) auch über das
+Vertragsende hinaus vertraulich zu behandeln. Nicht von der
+Geheimhaltungsverpflichtung umfasst sind Informationen und Unterlagen,
+die zum Zeitpunkt der Offenlegung allgemein bekannt und zugänglich waren
+oder die dem empfangenen Vertragspartner zum Zeitpunkt der Offenlegung
+bereits bekannt waren oder die ihm von Dritten berechtigterweise
+zugänglich gemacht worden sind.
+
+
+XIII Schlußbestimmungen
+
+1. Mündliche Nebenabreden bestehen nicht. Änderungen oder Ergänzungen
+   dieses Vertrages bedürfen der Schriftform. Dieses 
+   Schriftformerfordernis kann selbst nur ausdrücklich und
+   schriftlich von den Vertragspartnern aufgehoben werden.
+   Die Vertragspartner genügen dem Schriftformerfordernis auch durch die
+   Versendung von Faxschreiben nicht jedoch von E-Mails. 
+   Anlagen sind Bestandteil des Vertrages.
+2. Sollte eine Bestimmung dieses Vertrages unwirksam sein oder werden oder
+   sollte der Vertrag unvollständig sein, so wird der Vertrag im 
+   übrigen Inhalt nicht berührt. 
+   Die Vertragspartner werden eine unwirksame Bestimmung durch eine
+   solche Bestimmung ersetzen, welche dem Sinn und Zweck der unwirksamen
+   Bestimmung in rechtswirksamer Weise wirtschaftlich am nächsten kommt. 
+   Das gleiche gilt für Vertragslücken. 
+3. Sämtliche Rechtsbeziehungen der Vertragspartner unterliegen dem Recht der 
+   Bundesrepublik Deutschland. 
+4. Gerichtsstand für sämtliche Rechtsstreitigkeiten ist Bückeburg. 
+   Willert hat das Recht, auch an dem Gerichtsstand des Kunden oder 
+   an jedem anderen nach nationalem und internationalem Recht
+   zuständigen Gerichtsstand zu klagen.
+

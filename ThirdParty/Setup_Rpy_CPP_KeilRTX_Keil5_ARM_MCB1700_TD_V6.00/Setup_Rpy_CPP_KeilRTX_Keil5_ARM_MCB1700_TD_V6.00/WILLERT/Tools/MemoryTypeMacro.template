@@ -1,0 +1,53 @@
+/**
+*
+*
+*
+* $Id: MemoryTypeMacro.template 18902 2008-12-30 19:44:06Z cm $
+* $URL: http://svn.willert.de/V5/Component/trunk/PMF/IP/Animation/Tools/MemoryTypeMacro.template $
+*
+* Willert Software Tools - RXF
+*
+*
+* Email: support@willert.de
+*
+* 
+* 
+*
+**/
+
+
+
+
+/*****************************************************************************
+ * 
+ * @WST_START_PRODUCT_INFOS@
+ * ...
+ * ...
+ * This space left between the WST_xxx_PRODUCT_INFOS macros is reserved
+ * for information about the released product components.
+ * ...
+ * ...
+ * The WST-Generator replace the macros and fill this space with the
+ * appropriate contents.
+ * ...
+ * ...
+ * ...
+ * @WST_STOP_PRODUCT_INFOS@
+ *
+ *****************************************************************************/
+
+
+/* Abbreviations used in macros:    WST_<Memory category>_<Phase>_[START_SEC|STOP_SEC]_<Code>_<Memory type> and 
+ *                                  WST_<Memory category>_<Phase>_[START_SEC|STOP_SEC]_<Data size>_<Data type>_<Memory type>
+ * 
+ * Section names are composed like:	CODE_<Memory category>_<Phase>_<Memory type> and
+ *                                  DATA_<Memory category>_<Phase>_<Data size>_<Data type>_<Memory type>
+ * 
+ * Memory categories:   RXF, APPL, ANIM
+ * Phases:              ONPOWER, DOWNPOWER, SLEEP, RUNNING
+ * Code:                CODE
+ * Data size:           8 (bits), 16 (bits), 24 (bits), 32 (bits), UNSPECIFIED (bits)
+ * Data type:           INIT, NOINIT, CONST
+ * Memory type:         FAST, SLOW
+ * 
+ */

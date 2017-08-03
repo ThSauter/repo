@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Embedded UML Target Debugger Communication Plugin - RXF Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="wst.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="wst_print.css" type="text/css" media="print"></head><body>
+<div id="View">
+  <script src="TOC.js" type="text/javascript"> </script> 	
+
+  <div id="Content">
+  <h1>Communication Plugin</h1><br>
+
+  <div style="text-align: justify;">
+    This part will give an overview how to develop your communication interface between the target and the PC. This plugin allow the <a href="WST_1-Introduction_9-UML-Target-Debugger.htm">Embedded UML Target Debugger</a> on the PC to read and write data from / to the target board through different interfaces.
+    You principally need to implement this part on the PC part (host) and the monitor part on target.<br>
+    <br>
+    <br>
+    <span style="font-weight: bold;">Embedded</span> <span style="font-weight: bold;">UML&nbsp;</span><span style="font-weight: bold;">Target Debugger Communication Interface.</span><br>
+    <br>
+    The Embedded UML Target Debugger needs to communicate with the target. This part is already implemented for a serial interface as an example. More ready to use interfaces might be available, you should contact Willert Software Tools for a list of currently available plugins. But it's also possible to implement a custom interface on your target and for Qt. You need to implement functions to initialize, read and write on you communication port. You need also to know how Qt works and more precisely the signal and slot concept.<br>
+    <br>
+    &nbsp;To implement the plugin, it's recommend to use QtCreator IDE to develop it. You can download it for free at <a href="http://qt.nokia.com/downloads">http://qt.nokia.com/downloads</a><br>
+    <br>
+    There is a template class available named "MyCommunicationPlugIn". You can rename this class for your convenience but you need to rename also the name in the Qt project file (.pro). You can see that this class implements Communication, a class interface that allow the Embedded UML Target Debugger to know which class can be called. You can not modify this class interface. Moreover you need to&nbsp;define those classes of the Communication interface. &nbsp;<br>
+    <br>
+    &nbsp;On MyCommunicationPlugin class, there are multiple functions:<br>
+
+    <ul>
+      <li><span style="font-style: italic;">void <span style="font-weight: bold;">initCom</span>()</span>:&nbsp; it needs to be implemented to initialize your communication plug in.
+      You need to emit a signal to the&nbsp;Embedded UML Target Debugger to signal that the communication is ready.
+      This should be done using communicationEstablished().</li>
+
+      <li><span style="font-style: italic;">char* <span style="font-weight: bold;">read</span>() <span style="font-weight: bold;">:</span></span> inside this function, you need to insert a thread or event driven (preferable) functionality to read all available bytes from your communication port from the target.
+      This function must write the number of bytes (numBytes) and the data (readBuffer).
+      At the end you need to send the readBuffer and the number of bytes to the Embedded UML Target debugger via a signal (emit newCommand( readBuffer, numBytes )).</li>
+
+      <li><span style="font-style: italic;">void</span> <span style="font-weight: bold; font-style: italic;">write</span><span style="font-style: italic;">(</span><span style="font-style: italic;">char[] , int length)</span> &nbsp;: this function&nbsp;is directly called from the&nbsp;Embedded UML Target Debugger and allow to write the data inside the&nbsp;table&nbsp;with the length of the table&nbsp;as second argument.
+      This data must be send to the target via your communication interface.</li>
+
+      <li><span style="font-style: italic;">bool</span> <span style="font-weight: bold; font-style: italic;">initialization</span><span style="font-style: italic;">(</span><span style="font-style: italic;">bool config)</span> :&nbsp;this function&nbsp;is directly called from the&nbsp;Embedded UML Target Debugger and initializes the config dialog box and the link between the dialog box view and MyCommunicationPlugin data model.
+      In this function you can change the name and the list of parameter in .cpp and .h.
+      You can also modify the slot function parameter to your own needs here.&nbsp;If you want to design the config dialog box you need to open the configdialog.ui file with QtCreator.&nbsp;If you click on the combo box, you can change on the right bottom hand side the object name, that you will call in the MyCommunication plugin with myDialogBox-&gt;getUi()-&gt;parameter1Box.
+      So for each object, you want to edit in the CommunicationPlugin from configDiaolog.ui, you just need to check the objectName and call myDialogBox-&gt;getUi()-&gt; &lt; yourObjectName &gt; .
+      Moreover, it's possible to add other boxes but you just need to connect them with the communication plugin like in the communicationPlugIn.cpp and add a slot function that calls it when the user changes it.</li>
+
+      <li style="text-align: justify;"><span style="font-style: italic;">void <span style="font-weight: bold;">close</span>() :</span> Needs to be implemented to close MyCommunicationPlugIn..</li>
+    </ul>
+  </div>
+  </div>
+
+  <p id="Footer">This documentation belongs to the Product Rpy_CPP_KeilRTX_Keil5_ARM_MCB1700_TD_V6.00, released on 2016-04-22. &copy;&nbsp;2016 Willert Software Tools GmbH.</p>
+</div>
+</body></html>

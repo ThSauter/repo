@@ -1,0 +1,2 @@
+The NoFrameworkInJava settings disable usage of the oxf framework for code generation in Rhapsody in Java.
+This may be useful after the Willert Embedded UML Studio enabled code generation in Rhapsody Software Architect and besides C or C++, also Java development should be used, but without oxf/framework based code generation.

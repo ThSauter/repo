@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Asynchronous Messages - RXF Documentation</title>
+  
+
+  
+  
+  <link rel="stylesheet" href="wst.css" type="text/css" media="screen">
+
+  
+  <link rel="stylesheet" href="wst_print.css" type="text/css" media="print"></head><body>
+<div id="View">
+<script src="TOC.js" type="text/javascript"> </script>
+<div id="Content">
+<h1><a name="Event_Handling"></a><a name="CGEN"></a><a name="RiCGEN"></a><a name="FIRE"></a><a name="Messages"></a>Asynchronous Messages<br>
+</h1>
+The Willert RXF supports communication via asynchronous messages, also
+known as events. This is a strong mechanism for decoupling object-oriented software in run time behavior.<br>
+<br>
+Event receptions in a UML model are usually consumed by classes, which
+have their behavior modeled via a statechart. An event can for example
+be perfectly used to trigger a transition to another state.<br>
+<br>
+Events can be sent from any part of the application, usually within
+user code. The RXF supports different macros to send an event to a
+receiving object:<br>
+<br>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th style="vertical-align: top; width: 50%;">Use Case<br>
+      </th>
+      <th style="vertical-align: top; width: 30%;">Macro<br>
+      </th>
+      <th style="vertical-align: top; width: 20%;">Alternative Macros<br>
+      </th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Sending an event from an interrupt service routine, where events may
+not be allocated dynamically, but where a me pointer of the sender is
+available.<br>
+This is a rarely used way, as an ISR usually does not have a me pointer available.<br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">FIRE_ISR</span>(&lt;receiver address&gt;, &lt;static event&gt;)</td>
+      <td style="vertical-align: top;">CGEN_ISR<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Sending events from anywhere else in the application (from a normal object).<br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">FIRE</span>(&lt;receiver address&gt;, &lt;event&gt;)</td>
+      <td style="vertical-align: top;">CGEN, RiCGEN<br>
+      </td>
+    </tr><tr>
+      <td style="vertical-align: top;"><a name="FIRE_ISR_ARRAY"></a><a name="WST_EVT_initStaticEventArray_S"></a><a name="Static_Event_Array"></a>Sending
+static events from an interrupt service routine, which may call the fire
+function multiple times before events are consumed.&nbsp; Using these
+macros requires an array of the static events to exist and an index
+attribute. Initialization can to be done in two different ways:<br><b>1:</b> via the macro <span style="font-weight: bold;">WST_EVT_initStaticEventArray</span>( &lt;event array&gt;, &lt;size of array&gt; ).<br>
+<b>2:</b> setting the property CG::Event::DeleteAfterConsumption of the depending Event to false. (Be carefull, this meeans that this Event is only used with static Events).
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">FIRE_ISR_ARRAY</span>( &lt;receiver address&gt;, &lt;event array&gt;, &lt;index attribute&gt;, &lt;size of array&gt; ).<br>
+      </td>
+      <td style="vertical-align: top;">-</td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<br>
+<h3>Sample Usage</h3>
+<ul>
+  <li>FIRE( me-&gt;myLED, evToggle() );</li>
+  <li><span style="font-style: italic;">Sending static events from an interrupt service routine via the static event array:</span></li>
+  <ul>
+    <li><span style="font-style: italic;">Type with the name "</span>MAX_STATIC_EV_INDEX<span style="font-style: italic;">" of kind </span>Language<span style="font-style: italic;"> must exist: "</span>#define %s (4)<span style="font-style: italic;">".</span><br>
+<span style="font-style: italic;"></span></li>
+    <li><span style="font-style: italic;">Attribute "</span>evToggle %s[IRQ_MAX_STATIC_EV_INDEX]<span style="font-style: italic;">;" with the name "</span>staticEvToggle<span style="font-style: italic;">" must exist.</span></li>
+
+    <li><span style="font-style: italic;">Attribute of type </span>int<span style="font-style: italic;"> with the name "</span>staticEvToggleIndex<span style="font-style: italic;">" must exist.</span></li>
+    <li><span style="font-style: italic;"><span style="font-style: italic;">Initialization: </span></span>WST_EVT_initStaticEventArray( IRQ.staticEvToggle, IRQ_MAX_STATIC_EV_INDEX );<span style="font-style: italic;"><span style="font-style: italic;"><br>
+      </span></span></li>
+    <li><span style="font-style: italic;"><span style="font-style: italic;">Sending the event: </span></span>FIRE_ISR_ARRAY( IRQ.myLED, IRQ.staticEvToggle, IRQ.staticEvToggleIndex, IRQ_MAX_STATIC_EV_INDEX );<span style="font-style: italic;"><span style="font-style: italic;"><br>
+      </span></span></li>
+  </ul>
+</ul>
+<br>
+
+<br>
+<br>
+<br>
+</div>
+<p id="Footer">This documentation belongs to the Product
+Rpy_CPP_CMSIS_Keil5_ARM_MCB1700_TD_V6.01, released on 2017-02-27.
+&copy;&nbsp;2016 Willert Software Tools GmbH.</p>
+</div>
+
+</body></html>
