@@ -4,11 +4,11 @@
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
       <bcf:key>output_encoding</bcf:key>
-      <bcf:value>latin1</bcf:value>
+      <bcf:value>ansinew</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>input_encoding</bcf:key>
-      <bcf:value>latin1</bcf:value>
+      <bcf:value>ansinew</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>debug</bcf:key>
@@ -2144,14 +2144,27 @@
     <bcf:datasource type="file" datatype="bibtex">MasterBib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">ModelingEmSys</bcf:citekey>
-    <bcf:citekey order="2">RXFMigrationGuide</bcf:citekey>
+    <bcf:citekey order="1">IBM2017</bcf:citekey>
+    <bcf:citekey order="2">ModelingEmSys</bcf:citekey>
     <bcf:citekey order="3">RXFMigrationGuide</bcf:citekey>
-    <bcf:citekey order="4">MDK</bcf:citekey>
-    <bcf:citekey order="5">RLARMtoCMSIS</bcf:citekey>
-    <bcf:citekey order="6">Steinmeyer</bcf:citekey>
-    <bcf:citekey order="7">ExternalSources</bcf:citekey>
-    <bcf:citekey order="8">Schwerin17</bcf:citekey>
+    <bcf:citekey order="4">RXFMigrationGuide</bcf:citekey>
+    <bcf:citekey order="5">MDK</bcf:citekey>
+    <bcf:citekey order="6">RLARMtoCMSIS</bcf:citekey>
+    <bcf:citekey order="7">Steinmeyer</bcf:citekey>
+    <bcf:citekey order="8">ExternalSources</bcf:citekey>
+    <bcf:citekey order="9">Schwerin17</bcf:citekey>
+    <bcf:citekey order="10">CmsisRtos2017</bcf:citekey>
+    <bcf:citekey order="11">NetworkComponent2017</bcf:citekey>
+    <bcf:citekey order="12">NetworkComponent2017</bcf:citekey>
+    <bcf:citekey order="13">LPC17xxUserManual2010</bcf:citekey>
+    <bcf:citekey order="14">CmsisRtos2017</bcf:citekey>
+    <bcf:citekey order="15">FileSystemComponentResourceRequirements2017</bcf:citekey>
+    <bcf:citekey order="16">FileSystemComponentResourceRequirements2017</bcf:citekey>
+    <bcf:citekey order="17">LPC17xxUserManual2010</bcf:citekey>
+    <bcf:citekey order="18">LPC17xxUserManual2010</bcf:citekey>
+    <bcf:citekey order="19">LPC17xxUserManual2010</bcf:citekey>
+    <bcf:citekey order="20">LPC17xxUserManual2010</bcf:citekey>
+    <bcf:citekey order="21">CmsisRtos2017</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

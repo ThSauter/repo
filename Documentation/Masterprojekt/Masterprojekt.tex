@@ -1,50 +1,89 @@
+%% Basierend auf einer TeXnicCenter-Vorlage von Mark Müller
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Wählen Sie die Optionen aus, indem Sie % vor der Option entfernen  
+% Dokumentation des KOMA-Script-Packets: scrguide
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optionen zum Layout des Buchs                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[
-%a4paper,							% alle weiteren Papierformat einstellbar
+paper=a4,							% alle weiteren Papierformat einstellbar
 %landscape,						% Querformat
-12pt,						  		% Schriftgröße (12pt, 11pt (Standard))
-%BCOR1cm,							% Bindekorrektur, bspw. 1 cm
+12pt,								% Schriftgröße (12pt, 11pt (Standard))
+BCOR=1cm,							% Bindekorrektur, bspw. 1 cm
 %DIVcalc,							% führt die Satzspiegelberechnung neu aus
 %											  s. scrguide 2.4
 %oneside,							% einseitiges Layout
-twoside,						
 %twocolumn,						% zweispaltiger Satz
 %openany,							% Kapitel können auch auf linken Seiten beginnen
 %halfparskip*,				% Absatzformatierung s. scrguide 3.1
-headsepline,					% Trennline zum Seitenkopf	
+headsepline=true,			% Trennline zum Seitenkopf	
 %footsepline,					% Trennline zum Seitenfuß
-%notitlepage,					% in-page-Titel, keine eigene Titelseite
+notitlepage,					% in-page-Titel, keine eigene Titelseite
 %chapterprefix,				% vor Kapitelüberschrift wird "Kapitel Nummer" gesetzt
 %appendixprefix,				% Anhang wird "Anhang" vor die Überschrift gesetzt 
-%normalheadings,			% Überschriften etwaspdflatex -shell-escape test.tex kleiner (smallheadings)
+%normalheadings,			% Überschriften etwas kleiner (smallheadings)
 %idxtotoc,						% Index im Inhaltsverzeichnis
 %liststotoc,					% Abb.- und Tab.verzeichnis im Inhalt
-listof=totoc,					% Verzeichnisse im Inhaltsverzeichnis aufführen
-bibtotoc=totoc,				% Literaturverzeichnis im Inhaltsverzeichnis aufführen
+bibliography=totoc,						% Literaturverzeichnis im Inhalt
 %leqno,								% Nummerierung von Gleichungen links
 %fleqn,								% Ausgabe von Gleichungen linksbündig
-%draft								% überlangen Zeilen in Ausgabe gekennzeichnet
+%draft,								% überlangen Zeilen in Ausgabe gekennzeichnet
+%cleardoubleplain,    % leere, linke Seite mit Seitenstil 'plain' 
+%cleardoubleempty,    % leere, linke Seite mit Seitenstil 'empty'
 ]
 {scrbook}
 
+%\pagestyle{empty}		% keine Kopf und Fußzeile (k. Seitenzahl)
+%\pagestyle{headings}	% lebender Kolumnentitel  
+
 %% Deutsche Anpassungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[ngerman]{babel}
-\usepackage[latin1]{inputenc}
-\usepackage{lmodern}
-\usepackage[T1]{fontenc}			% Schöner Schrift
-%\usepackage{fancyhdr}					% Paket zur einfacheren Manipulation von Kopf- und Fußzeile		
-\usepackage{hyperref}					% Paket welches die Möglichkeit gibt Links und Verweise innerhalb von PDF Dokumenten zu erzeugen und zu setzen
-\usepackage[subfigure]{ccaption}	 	
-\usepackage{csquotes}					% Wenn babel verwendet wird mit biblatex, csquotes wird empfohilen zur sicheren Darstellung von Anführungszeichen
-\usepackage{nomencl}					% Paket für Abkürzungsverzeichnis
-\usepackage{a4}	 							% europäisches A4
-\usepackage{url} 							% für ordentliche Ausgabe von URLs
-\usepackage{courier}
-\usepackage{subfigure}
-\usepackage{wasysym}					% Zusätzliche Symbole wie CheckedBox
-\usepackage{marvosym}					% Zusätzliche Symbole wie CheckedBox
-\usepackage{lipsum}						% ermöglich das einfügen von \lipsum dummy Text
-\usepackage{booktabs}					% Tabellen Paket
-\usepackage{threeparttable} 	% Tabellen Paket um Tabellen mit Überschriften, Fußnoten, ... zu versehen
+\usepackage[ansinew]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hypertexnames=false]{hyperref}	% Paket welches die Möglichkeit gibt Links und Verweise innerhalb von PDF Dokumenten zu erzeugen und zu setzen
+																						% Ziemlich früh Einbinden, sonst werden Abbildungen als Abschnitte via \autoref referenziert.
+\usepackage{csquotes}												% Wenn babel verwendet wird mit biblatex, csquotes wird empfohilen zur Darstellung von Anführungszeichen
+\usepackage{lmodern} 												% Pixelfreie Schrift
+\usepackage{booktabs}												% Tabellen Paket
+\usepackage[subfigure]{ccaption}					 
+\usepackage{threeparttable} 								% Tabellen Paket um Tabellen mit Überschriften, Fußnoten, ... zu versehen
+%\usepackage{a4}	 														% europäisches A4
+\usepackage{courier}												% Stellt Courier New korrekt dar
+\usepackage{wasysym}												% Zusätzliche Symbole wie CheckedBox
+\usepackage{marvosym}												% Zusätzliche Symbole wie CheckedBox
+\usepackage{pmboxdraw}											% für die Ordnerbaum-Symbole
+\usepackage{amssymb} 												% für \boxplus und \boxminus
+\usepackage{siunitx}												% SI-Einheiten
+
+%% \autoref Name "`Kapitel"' statt "`Unterabschnitt"'
+\addto\extrasngerman{%
+\def\subsectionautorefname{Kapitel}%
+\def\sectionautorefname{Kapitel}%
+}
+
+%% Hurenkinder und Schusterjungen verhindern
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty=10000
+
+%% Packages für Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} %% Zum Laden von Grafiken
+\usepackage{subfigure} %% Teilabbildungen in einer Abbildung
+\newcommand{\subfigureautorefname}{\figureautorefname} % \autoref Name für subfigures
+%% Beachten Sie:
+%% Die Einbindung einer Grafik erfolgt mit \includegraphics{Dateiname}
+%% bzw. über den Dialog im Einfügen-Menü.
+%% 
+%% Im Modus "LaTeX => PDF" können Sie u.a. folgende Grafikformate verwenden:
+%%   .jpg  .png  .pdf  .mps
+%% 
+%% In den Modi "LaTeX => DVI", "LaTeX => PS" und "LaTeX => PS => PDF"
+%% können Sie u.a. folgende Grafikformate verwenden:
+%%   .eps  .ps  .bmp  .pict  .pntg
+
+%% Bibliographiestil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[
 style=authoryear,
 natbib,
@@ -52,37 +91,26 @@ dashed=false,									% Bei mehreren Werken eines Autors alle einzeln anzeigen
 backend=biber, 
 block=space										% kleiner horizontaler Platz zwischen den Feldern
 ]{biblatex}										% Literaturangaben mit BibTeX
+\DeclareNameAlias{sortname}{last-first}
+\addbibresource{MasterBib.bib}
 \setlength{\bibitemsep}{1em}	% Abstand zwischen den Literaturangaben
 \setlength{\bibhang}{2em}   	% Einzug nach jeweils erster Zeile
-\DefineBibliographyStrings{german}{% 
-urlseen = {Aufruf am}, 				% Ändert den Text für "urlseen"
-}
-\DeclareNameAlias{sortname}{last-first}	% Sortiert alle Angaben eines Eintrags im Verzeichnis nach: Nachname, Vorname
-\addbibresource{MasterBib.bib}
-% START: Sorgt dafür, dass bei \parencite Autor+Jahr als Hyperref markiert sind %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareCiteCommand{\parencite}[\mkbibparens]
-  {\usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-    \printtext[bibhyperref]{\usebibmacro{cite}}}
-  {\multicitedelim}
-  {\usebibmacro{postnote}}
 
-\DeclareCiteCommand*{\parencite}[\mkbibparens]
-  {\usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-    \printtext[bibhyperref]{\usebibmacro{citeyear}}}
-  {\multicitedelim}
-  {\usebibmacro{postnote}}
-% ENDE: Sorgt dafür, dass bei \parencite Autor+Jahr als Hyperref markiert sind %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{nomencl}					% Paket für Abkürzungsverzeichnis
+\makeindex										% Erstellt Masterarbeit.idx welche für das Abkürzungsverzeichnis nötig ist
+															% Muss zwingend VOR \makenomenclature aufgerufen werden!
+\let\abk\nomenclature
+\renewcommand{\nomname}{Abkürzungsverzeichnis}  
+\setlength{\nomlabelwidth}{0.20\hsize}			  	% Punkte zw. Abkürzungen und Beschreibung
+\renewcommand{\nomlabel}[1]{#1 \dotfill}				
+\setlength{\nomitemsep}{-\parsep}								% Zeilenabstände verkleinern
+\makenomenclature 
 
-% Packages für Grafiken & Abbildungen 
-\usepackage{graphicx} 				% Zum Laden von Grafiken
-
-% Package für Quellcode
+%% Quellcode Listings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{listings}
 \usepackage[table, dvipsnames]{xcolor}	
 \definecolor{KeilGreen}{RGB}{189,249,181}
-
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -94,7 +122,7 @@ urlseen = {Aufruf am}, 				% Ändert den Text für "urlseen"
   frame=none,
   xleftmargin=\parindent,
   language=C,
-	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbers=left,                     % where to put the line-numbers; possible values are (none, left, right)
   showstringspaces=false,
 	%numberstyle=\tiny,								% the style that is used for the line-numbers 
   basicstyle=\footnotesize\ttfamily,
@@ -103,100 +131,44 @@ urlseen = {Aufruf am}, 				% Ändert den Text für "urlseen"
   identifierstyle=\color{black},
   stringstyle=\color{orange},
 }
-
 \renewcommand{\lstlistingname}{Quelltext}	% Änder den Name von "`Listing"' auf Quelltext
 \newcommand{\lstnumberautorefname}{Zeile}
-\addto\extrasngerman{%
-\def\subsectionautorefname{Abschnitt}%
-}
-\newcommand{\subfigureautorefname}{\figureautorefname}
 
-\usepackage[headsepline]{scrlayer-scrpage}	% Kopf- und Fußzeilen anpassen
-%\automark[section]{section}
-%\renewcommand*{\partmark}[1]{}
-%\setkomafont{pageheadfoot}{\normalcolor\footnotesize\slshape}
-%\setkomafont{pagenumber}{\itshape\normalsize}
-%\clearpairofpagestyles
-\ihead{}
-\ohead{\headmark}
-%\ifoot*{}
-\ofoot*{\pagemark}
-%\ModifyLayer[addvoffset=-.6ex]{scrheadings.foot.above.line}% Linie verschieben
-
-%% START: Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeindex				% Erstellt Masterarbeit.idx welche für das Abkürzungsverzeichnis nötig ist
-									% Muss zwingend VOR \makenomenclature aufgerufen werden!
-
-\let\abk\nomenclature
-\renewcommand{\nomname}{Abkürzungsverzeichnis}  
-\setlength{\nomlabelwidth}{0.20\hsize}						%Punkte zw. Abkürzungen und Beschreibung
-\renewcommand{\nomlabel}[1]{#1 \dotfill}				
-\setlength{\nomitemsep}{-\parsep}								%Zeilenabstände verkleinern
-\makenomenclature 
-\begin{document}
-% ENDE: Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Warning, dass mehrere pdfs auf einer Seite sind unterdrücken
+\pdfsuppresswarningpagegroup=1
+\pdfminorversion=7
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Start Dokumentation                                               %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\setlength{\oddsidemargin}{0cm}	
-\setlength\evensidemargin{1cm}
+%% Buch                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
 
-%\pagestyle{fancy}
-%\fancyhead{}
-%\fancyhead[ER]{\slshape\nouppercase\leftmark}               % "E" für "even", also gerade/linke Seiten.
-%\fancyhead[OL]{\slshape\nouppercase\rightmark}              % "O" steht für "odd", also ungerade/rechte Seiten
-%\fancyhead[EL,OR]{\slshape\nouppercase\thepage}             % Kopfzeile, EVEN|LEFT, Seitennummer
-%\fancyfoot[EC,OC]{}																					% Fusszeile, EVEN|CENTER und ODD|CENTER, nichts
-%\renewcommand{\headrulewidth}{0.4pt}            						%	 obere Trennlinie
-%%\renewcommand{\footrulewidth}{0.4pt}           % untere Trennlinie
-
-%\fancypagestyle{plain}{ 
-%\fancyhead{}
-%\fancyhead[ER]{\slshape\nouppercase\leftmark} 
-%\fancyhead[OL]{\slshape\nouppercase\rightmark}
-%\fancyhead[EL,OR]{\slshape\nouppercase\thepage} 
-%\fancyfoot[EC,OC]{}
-%\renewcommand{\headrulewidth}{0.4pt}
-%\renewcommand{\footrulewidth}{0.4pt}
-%}
-
-%%%%%%%% TITELSEITE %%%%%%%%
+%%%%%% Titelseite %%%%%%
+\frontmatter						% ab hier römische Nummerierung
 \input{Titelseite}
-\cleardoublepage
-\pagenumbering{Roman} 	% ab hier römische Nummerierung
+\cleardoublepage				% mit neuer ungerader Seite weiter
 
-%%%%%%%% INHALTSVERZEICHNIS %%%%%%%%
-\pagestyle{plain}
-\markboth{}{}
-\setcounter{tocdepth}{1}
-\tableofcontents
-\cleardoublepage
-\newpage
+%%%%%% Inhaltsverzeichnis %%%%%%
+\tableofcontents				% Inhaltsverzeichnis
+\cleardoubleoddpage			% Sorgt dafür, dass die Änderung der Seitennummerierung
+												% immer auf einer neuen (rechten) Seite beginnt!
+\mainmatter							% ab hier arabische Nummerierung
 
-%%%%%%%% START TEXT %%%%%%%%
-\pagenumbering{arabic} % enthält bereits \setcounter{page}{1}	
-\markboth{}{}
-%% Zeilenabstand
-%\renewcommand{\baselinestretch}{1.5}
-%\pagestyle{fancy}
+%% Der Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{Einleitung}
 \input{Entwicklungsumgebung}
 \input{Implementierung}
-
+\input{ZusammenfassungUndAusblick}
 \cleardoublepage
-%\pagenumbering{Roman}
-%\setcounter{page}{2}
-
 %%%%%%%% ABKÜRZUNGSVERZEICHNIS %%%%%%%%
 \markboth{Abkürzungsverzeichnis}{}	
 \printnomenclature
 \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
 \cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%% LITERATURVERZEICHNIS %%%%%%%%
-\markboth{Literaturverzeichnis}{}	
+%%%%%% Bibliography %%%%%%
 \printbibliography[title=Literaturverzeichnis]
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}

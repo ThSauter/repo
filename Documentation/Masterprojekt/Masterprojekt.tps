@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Masterprojekt.tex
 
 [Frame0_View0,0]
-TopLine=20
-Cursor=2117
+TopLine=43
+Cursor=3371
 
 [Frame1]
 Flags=0
@@ -36,7 +36,7 @@ Document=Titelseite.tex
 
 [Frame1_View0,0]
 TopLine=0
-Cursor=383
+Cursor=229
 
 [Frame2]
 Flags=0
@@ -50,11 +50,11 @@ NormalPos.top=26
 NormalPos.right=1562
 NormalPos.bottom=721
 Class=LaTeXView
-Document=Einleitung.tex
+Document=Entwicklungsumgebung.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=90
+TopLine=76
+Cursor=6603
 
 [Frame3]
 Flags=0
@@ -68,11 +68,11 @@ NormalPos.top=26
 NormalPos.right=1562
 NormalPos.bottom=721
 Class=LaTeXView
-Document=Entwicklungsumgebung.tex
+Document=Implementierung.tex
 
 [Frame3_View0,0]
-TopLine=30
-Cursor=3001
+TopLine=1128
+Cursor=85752
 
 [Frame4]
 Flags=0
@@ -89,8 +89,8 @@ Class=BibTeXView
 Document=MasterBib.bib
 
 [Frame4_View0,0]
-TopLine=21
-Cursor=1568
+TopLine=66
+Cursor=890
 
 [Frame5]
 Flags=0
@@ -104,16 +104,16 @@ NormalPos.top=26
 NormalPos.right=1562
 NormalPos.bottom=721
 Class=LaTeXView
-Document=Implementierung.tex
+Document=..\..\..\..\..\..\..\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 
 [Frame5_View0,0]
-TopLine=245
-Cursor=17324
+TopLine=629
+Cursor=23426
 
 [SessionInfo]
 FrameCount=6
-ActiveFrame=0
+ActiveFrame=3
 
 [Bookmarks]
-Masterprojekt.tex=0 52 
+Implementierung.tex=299 
 
