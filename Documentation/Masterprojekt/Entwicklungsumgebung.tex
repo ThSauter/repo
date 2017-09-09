@@ -1,6 +1,9 @@
 \chapter{Entwicklungsumgebung}
-\section{Keil MCB1760 Evaluation Board}
-Das Keil MCB1760 Evaluation Board enthält einen NXP LPC1768 Mikrocontroller basierend auf einem  100Mhz ARM 32-bit Cortex-M3 Mikroprozessor. Neben den wesentlichen Komponenten und Schnittstellen, welche in \autoref{fig:MCB1760EvalBoard} dargestellt sind, verfügt das Keil MCB1760 Evaluation Board über 512KB Flash und 64KB RAM On-Chip Memory.
+
+\section{Hardware}
+
+\subsection{Evaluation Board Keil MCB1760}
+Das Keil MCB1760 Evaluation Board enthält einen NXP LPC1768 Mikrocontroller basierend auf einem  100Mhz ARM 32-bit Cortex-M3 Mikroprozessor. Neben den wesentlichen Komponenten und Schnittstellen, welche in \autoref{fig:MCB1760EvalBoard} dargestellt sind, verfügt das Keil MCB1760 Evaluation Board über 512KB Flash und 64KB RAM Speicher.
 
 \begin{figure}[ht!]
 	\centering
@@ -11,18 +14,21 @@ Das Keil MCB1760 Evaluation Board enthält einen NXP LPC1768 Mikrocontroller basi
 
 In der Regel werden Evaluation Boards in früheren Entwicklungsphasen eingesetzt, um die Leistungsgrenzen der gewählten Architektur zu verifizieren. Im Rahmen dieser Arbeit steht die Integration des Evaluation Boards zusammen mit der Toolchain im Vordergrund. 
 
-\section{ESP8266}
-TODO
+\subsection{WLAN-Modul ESP8266}
 
-%\begin{figure}[h!]
-%	\centering
-%		\includegraphics[width=1\textwidth]{images/ESP8266_E12.pdf}
-%		\caption[MCB1760 Evaluation Board]{Komponenten des MCB1760 Evaluation Board}
-%	\label{schaden}
-%\end{figure}
+\begin{figure}[b!]
+	\centering
+		\includegraphics[width=1\textwidth]{images/ESP8266_E12.pdf}
+		\caption{WLAN-Modul ESP8266.}
+	\label{fig:ESP8266}
+\end{figure}
 
-\section{Toolchain}
-TODO
+Das WLAN-Modul ESP8266 ist eines von wenigen Boards auf dem Markt, das über einen Mikrocontroller mit WLAN-Funktionalität verfügt. Das Herzstück des Mikrocontrollers ist der bis zu 160MHz schnelle 32-bit Xtensa LX106 Mikroprozessor von Tensilica. Dabei gibt eine ganze Reihe von Boards, die sich vor allem in ihrer Dimension, den damit zugänglichen Pins und dem Flash Speicher unterscheiden. Im Rahmen dieser Arbeit wird das Board ESP8266-12E verwendet, wie es in \autoref{fig:ESP8266} dargestellt ist. Das Board verfügt über 4MB Flash und 65KB RAM Speicher. Eine hohe Popularität im Internet erlangte das Board auch unter dem Begriff \textit{NodeMCU}. Der Name \textit{NodeMCU} stammt dabei von der Firmware, die ab Werk vorinstalliert ist. Die Open-Source Firmware basiert auf der Skriptsprache Lua. In dieser Arbeit wird die Firmware \textit{NodeMCU} nicht verwendet, weshalb das Board im Weiteren auch als WLAN-Modul ESP8266 bezeichnet wird. Die Programmierung über Lua-Skripte ist möglicherweise komfortabler, bietet aber eine wesentlich geringere Flexibilität als eine Programmiersprache wie C. 
+
+Der große Vorteil des verwendeten Boards liegt in der USB-Schnittstelle. Diese dient als Programmier-Schnittstelle und Spannungsversorgung zugleich.  Dabei wird die USB-Schnittstelle durch den USB/UART-Wandler CH340G und eine Spannungsstabilisierung unterstützt. Das vereinfacht die Programmierung des ESP8266, da nicht beachtet werden muss, dass bestimmte Pins vor der Programmierung definierte Pegel haben. Zudem muss keine explizite Spannungsversorgung entwickelt werden. 
+
+\section{Software}
+
 \subsection{IBM Rational Rhapsody}
 
 Derzeit gibt es auf dem Markt eine Vielzahl an Software-Modellierungswerkzeuge, die sich im Wesentlichen durch ihre Funktionen und den daraus resultierenden Preis unterscheiden. Jedoch haben die meisten dieser Tools miteinander gemein, dass sie die Modellierungssprache UML unterstützen. So gibt es unter anderem einige kostenlose Tools wie StarUML oder Netbeans, die geringen Anforderungen durchaus genügen. Weitaus mächtiger sind etwa Enterprise Architect von SparxSystems und das in dieser Arbeit verwendete Rational Rhapsody von IBM. Mit Rational Rhapsody ist es möglich, nebem UML-Modellierung weitere Aufgaben zu bearbeiten, die während der Softwareentwicklung anfallen. Beispielsweise können Anforderungen direkt spezifiziert oder auch aus DOORS NG importiert und zu der erstellten Architektur verlinkt werden. Ein Codegenerator übersetzt die Architektur in Quelltext. Dabei bietet der Codegenerator etliche Konfigurationsmöglichkeiten, um Layout und Syntax nach Belieben anzupassen. Das Spezifizieren und Ausführen von Tests in einer integrierten Testumgebung runden den Funktionsumfang zur Unterstützung eines Software Entwicklungsprozesses ab.
@@ -31,6 +37,20 @@ Rational Rhapsody wird in verschiedenen Versionen Angeboten, die sich stark in i
 automatische Codegenerierung, unter anderem auch für Embedded Echtzeitsysteme, ist nur in den Premium-Versionen verfügbar \parencite{IBM2017}. 
 
 Beim Generieren von Quelltext unterstützt Rational Rhapsody die Programmiersprachen C, C++, Java und C\#. Dabei ist es wichtig, dass direkt beim Anlegen des Projekts die gewünschte Programmiersprache ausgewählt wird. Denn in der Folge startet Ratioal Rhapsody beim Öffnen der Rhapsody Projektdatei stets die passende Variante für die definierte Programmiersprache. Da die Implementierungen in dieser Arbeit in C++ erfolgen, ergibt sich somit die Version \textit{IBM Rational Rhapsody Developer for C++}, die zudem den vollen Funktionsumfang beinhaltet. 
+
+\subsubsection*{Rhapsody TestConductor Add On}
+
+Der Rhapsody TestConductor ist Teil der Testumgebung von Rational Rhapsody, welche auf drei Hauptkomponenten basiert:
+
+\begin{itemize}
+\item Automatisiertes Generieren von Test-Architekturen
+\item Automatisiertes Generieren von Testfällen
+\item Automatisiertes Ausführen von Testfällen
+\end{itemize}
+
+Dabei unterstützt der TestConductor in der Basisversion das automatisierte Generieren von Test-Architekturen, sowie das Ausführen von Testfällen. Mit der Erweiterung Automatic Test Generation (ATG) wird auch das automatisierte Generieren von Testfällen unterstützt. Ungeachtet dessen steht im Fokus des TestConductors der modellbasierte, dynamische Test. So ermöglicht der TestConductors das Modellieren von Testfällen in Form von Sequenz-, Zustands- und Aktivitätsdiagrammen. Zusätzlich ist es aber auch möglich, Testfälle als Quellcode zu implementieren.
+
+Darüber hinaus bringt der TestConductor das Rhapsody UML Testing Profile mit sich, basierend auf dem offiziellen UML Testing Profile der \citet{OMGUMLTestingProfile}. Dabei gilt es zu beachten, dass das Rhapsodoy UML Testing Profile nicht alle Elemente des UML Testing Profiles enthält. Aber es verfügt über zusätzliche Elemente, die nicht Teil des UML Testing Profiles der OMG sind. Ein Beispiel dafür sind Platzhalter für Schnittstellen, die nicht Teil der zu testenden Komponente sind \parencite{TestConductorAddOn}. 
 
 \subsection{Willert Embedded UML RXF}
 Der generierte Code aus Rhapsody eignet sich zunächst nicht zur Ausführung auf einem Target. Die UML-Notation ist viel leistungsstärker und auf einer höheren Abstraktionsebene als jede höhere Programmiersprache. UML-Elemente wie asynchrone Kommunikation, aktive Klassen oder auch komplexe Zustände können nicht direkt in eine höhere Programmiersprache übersetzt werden. 
@@ -51,7 +71,7 @@ Bei der Codegenerierung unterstützt das RXF die beiden bekanntesten UML-Tools, R
 		\begin{tablenotes}
 			\footnotesize 
 			\item[*]{Die EvalBoard Komponente ist kein Teil des Produkts. Sie sagt lediglich aus, mit welcher CPU Familie das Produkt verwendet werden kann.}
-			\item[**]{Erweiterungen sind optional und können auch miteinander kombiniert werden. Mögliche Zusätze sind "`TD"' für Embedded UML Target Debugger oder "`Eval"' für eine RXF Evaluierungsversion.}
+			\item[**]{Erweiterungen sind optional und können auch miteinander kombiniert werden. Mögliche Zusätze sind "`TD"' für Embedded UML Target Debugger, "`TC"' für Test Conductor oder "`Eval"' für eine RXF Evaluierungsversion.}
 		\end{tablenotes}
 	\end{threeparttable}
 	\caption{Produktcode zur Identifikation der enthalten Komponenten \parencite{RXFMigrationGuide}.}
@@ -63,13 +83,6 @@ In dieser Arbeit wurden die Varianten \begin{itshape}RXF-Eval\_Rpy-Cpp-ARM\end{i
 \subsection{Keil uVision}
 Die IDE Keil uVision ist Teil des Keil Microcontroller Development Kit (MDK)\abk{$MDK$}{Microcontroller Development Kit}. Es vereint einen Projektmanager und eine Run-Time Environment (RTE)\abk{$RTE$}{Run-Time-Environment}, mit deren Hilfe vorgefertigte Software Pakete integriert werden können. Die Software Pakete können Bibliotheken, Module, Konfigurationsdateien, Templates und Dokumentation enthalten, welche bei der Inbetriebnahme des Targets unterstützen. Die Basisfunktionalitäten einer gewöhnlichen IDE, wie Quellcode-Editor und Debugger, sind ebenfalls enthalten \parencite{MDK}.
 
-%\begin{figure}[h!]
-%	\centering
-%		\includegraphics[width=1\textwidth]{images/MDK.pdf}
-%		\caption[Keil MDK]{Überblick Keil MDK Version 5}
-%	\label{KeilMDK}
-%\end{figure}
- 
 In dieser Arbeit wird das Keil MDK in der Version 5 verwendet. Im Vergleich zum vorherigen Keil MDK in der Version 4, ist eine wesentliche Neuerung das Echtzeitbetriebssystem Cortex Microcontroller Software Interface Standard (CMSIS)\abk{$CMSIS$}{Cortex Microcontroller Software Interface Standard}. Es löst das bisherige RTX Real-Time Library (RL-ARM)\abk{$RL-ARM$}{Real-Time Library for ARM microprocessors} Echtzeitbetriebssystems ab und bringt die folgenden Vorteile mit sich \parencite{RLARMtoCMSIS}: 
 
 \begin{itemize}
@@ -78,3 +91,7 @@ In dieser Arbeit wird das Keil MDK in der Version 5 verwendet. Im Vergleich zum 
 \item Einfaches wiederverwenden von Software Komponenten durch einheitliche Funktionen
 \item CMSIS konforme Middleware kann einfach angepasst werden
 \end{itemize}
+
+\subsection{Arduino IDE}
+
+Um das WLAN-Modul ESP8266 in der Programmiersprache C zu implementieren, wird die Arduino IDE verwendet. Zwar bringt die Ardunio IDE nur einen sehr geringen Funktionsumfang mit sich, so ist beispielsweise kein Debugger enthalten. Der fehlende Debugger kann durch Ausgaben auf die serielle Schnittstelle teilweise kompensiert werden, dazu bietet die Arduino IDE auch ein integriertes Terminal an. Dennoch ist die Arduino IDE weit verbreitet und kostenlos, zudem ist sie überschaubar und daher sehr schnell zu beherrschen. Nach der Installation unterstützt die Arduino IDE eine Vielzahl an Ardunio-Boards, jedoch nicht das WLAN-Modul ESP8266. Dazu muss die Arduino IDE um das ESP8266-Paket erweitert werden. Eine detaillierte Installationsanleitung beschreibt \citet{ESP8266Sauter17}. Der Quellcode ist einem sogenannten Sketch enthalten, welcher die beiden klassischen Funktionen \textit{setup} und \textit{loop} implementiert.

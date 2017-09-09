@@ -167,6 +167,33 @@
       \verb http://www-03.ibm.com/software/products/en/ratirhapfami
       \endverb
     \endentry
+    \entry{SoftwareSerial}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=540146183307441bf6013bb11a4aecbf}{%
+           family={Lerup},
+           familyi={L\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{540146183307441bf6013bb11a4aecbf}
+      \strng{fullhash}{540146183307441bf6013bb11a4aecbf}
+      \strng{authornamehash}{540146183307441bf6013bb11a4aecbf}
+      \strng{authorfullhash}{540146183307441bf6013bb11a4aecbf}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{EspSoftwareSerial}
+      \field{urlday}{8}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://github.com/plerup/espsoftwareserial
+      \endverb
+    \endentry
     \entry{ExternalSources}{report}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=84a22146a4726431ebc11459f9688240}{%
@@ -196,6 +223,30 @@
       \field{type}{Handout}
       \field{year}{2015}
     \endentry
+    \entry{EmbeddedMarketsStudy}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9a20ee54f08b63389aa95c68f46d68d1}{%
+           family={Maxfield},
+           familyi={M\bibinitperiod},
+           given={Clive},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {EE Times}%
+      }
+      \strng{namehash}{9a20ee54f08b63389aa95c68f46d68d1}
+      \strng{fullhash}{9a20ee54f08b63389aa95c68f46d68d1}
+      \strng{authornamehash}{9a20ee54f08b63389aa95c68f46d68d1}
+      \strng{authorfullhash}{9a20ee54f08b63389aa95c68f46d68d1}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{2017 Embedded Markets Study}
+      \field{type}{Study}
+      \field{year}{2017}
+    \endentry
     \entry{LPC17xxUserManual2010}{manual}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=5a8da7df255602cc797b726bd4f4b18f}{%
@@ -214,6 +265,47 @@
       \field{title}{LPC17xx User manual}
       \field{type}{User manual}
       \field{year}{2010}
+    \endentry
+    \entry{OMGUMLTestingProfile}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=5af83e3196bf99f440f31f2e1a6c9afe}{%
+           family={OMG},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {OMG}%
+      }
+      \strng{namehash}{5af83e3196bf99f440f31f2e1a6c9afe}
+      \strng{fullhash}{5af83e3196bf99f440f31f2e1a6c9afe}
+      \strng{authornamehash}{5af83e3196bf99f440f31f2e1a6c9afe}
+      \strng{authorfullhash}{5af83e3196bf99f440f31f2e1a6c9afe}
+      \field{sortinit}{O}
+      \field{sortinithash}{f5d80ef71b5b58852663ecfd775b175a}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UML Testing Profile (UTP)}
+      \field{type}{Technical Report}
+      \field{year}{2013}
+    \endentry
+    \entry{TestConductorAddOn}{manual}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4db7d1c5675d650067e81100a1bb213e}{%
+           family={{OSC Embedded Systems AG}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{4db7d1c5675d650067e81100a1bb213e}
+      \strng{fullhash}{4db7d1c5675d650067e81100a1bb213e}
+      \strng{authornamehash}{4db7d1c5675d650067e81100a1bb213e}
+      \strng{authorfullhash}{4db7d1c5675d650067e81100a1bb213e}
+      \field{sortinit}{O}
+      \field{sortinithash}{f5d80ef71b5b58852663ecfd775b175a}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{IBM Rational Rhapsody TestConductor Add On}
+      \field{type}{User Guide}
+      \field{year}{2017}
     \endentry
     \entry{RXFMigrationGuide}{report}{}
       \name{author}{1}{}{%
@@ -238,6 +330,30 @@
       \field{title}{RXF Migration Guide}
       \field{type}{Application Note}
       \field{year}{2012}
+    \endentry
+    \entry{ESP8266Sauter17}{manual}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=158e183a71f407a8aacdd2e60fca39d0}{%
+           family={Sauter},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Hochschule Ulm}%
+      }
+      \strng{namehash}{158e183a71f407a8aacdd2e60fca39d0}
+      \strng{fullhash}{158e183a71f407a8aacdd2e60fca39d0}
+      \strng{authornamehash}{158e183a71f407a8aacdd2e60fca39d0}
+      \strng{authorfullhash}{158e183a71f407a8aacdd2e60fca39d0}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Installationsanleitung WLAN-Modul ESP8266}
+      \field{type}{Guide}
+      \field{year}{2017}
     \endentry
     \entry{Steinmeyer}{report}{}
       \name{author}{2}{}{%
@@ -292,6 +408,30 @@
       \field{title}{Modeling Embedded Systems}
       \field{type}{Datenblatt}
       \field{year}{2016}
+    \endentry
+    \entry{ModelingEmbeddedSystems}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=6a582f375c16696aa93f582595bce935}{%
+           family={Van\bibnamedelimb der\bibnamedelima Heiden},
+           familyi={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Willert Software Tools GmbH}%
+      }
+      \strng{namehash}{6a582f375c16696aa93f582595bce935}
+      \strng{fullhash}{6a582f375c16696aa93f582595bce935}
+      \strng{authornamehash}{6a582f375c16696aa93f582595bce935}
+      \strng{authorfullhash}{6a582f375c16696aa93f582595bce935}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Modeling Embedded Systems}
+      \field{type}{Technical Report}
+      \field{year}{2017}
     \endentry
     \entry{Schwerin17}{report}{}
       \name{author}{2}{}{%

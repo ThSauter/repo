@@ -749,7 +749,7 @@ Die Software-Architektur für die Eval Boards ist in \autoref{fig:ClassDiagramWLA
 
 \subsection{Design und Coding}
 
-Inhalt dieses Kapitels sind Attribute, Funktionen und Statecharts wichtiger Klassen.
+Im Folgenden werden Attribute, Funktionen und Statecharts wichtiger Klassen vorgestellt.
 
 \subsubsection*{UART-Controller, Transmitter und Receiver}
 
@@ -923,7 +923,7 @@ Bei der CMSIS Configuration wird der CMSIS RTX Kernel eingstellt. Die Konfigurat
 
 \subsubsection*{Device Configuration}
 
-Die Device Configuration erfolgt über die Dateien \textit{startup\_LPC17xx.s (Startup)}, \textit{startup\_LPC17xx.c (Startup)} und \textit{RTE\_Device.h (Startup)}, welche zur Device Komponente gehören. Sie implementieren den Start-up Code, welcher nach einem Reset des Targets ausgeführt wird. Im Rahmen der WLAN-Applikation ist lediglich die Datei \textit{RTE\_Device.h (Startup)} anzupassen. Da die UART0-Schnittstelle des Eval Boards zur Kommunikation mit dem WLAN-Modul verwendet werden soll, müssen die entsprechenden Pins gemäß \autoref{tab:DeviceConfigWLAN} zugewiesen werden. Zudem ist der SPI Treiber \textit{Driver\_SPI1} zum Betrieb des Displays aktiviert.
+Die Device Configuration erfolgt über die Dateien \textit{startup\_LPC17xx.s (Startup)}, \textit{startup\_LPC17xx.c (Startup)} und \textit{RTE\_Device.h (Startup)}, welche zur Device Komponente gehören. Sie implementieren den Start-up Code, welcher nach einem Reset des Targets ausgeführt wird. Im Rahmen der WLAN-Applikation ist lediglich die Datei \textit{RTE\_Device.h (Startup)} anzupassen. Da die UART0-Schnittstelle des Eval-Boards zur Kommunikation mit dem WLAN-Modul verwendet werden soll, müssen die entsprechenden Pins gemäß \autoref{tab:DeviceConfigWLAN} zugewiesen werden. Zudem ist der SPI Treiber \textit{Driver\_SPI1} zum Betrieb des Displays aktiviert.
 
 \begin{table}[!htb]
 \footnotesize
@@ -961,8 +961,117 @@ Die Device Configuration erfolgt über die Dateien \textit{startup\_LPC17xx.s (St
 
 \subsection{Inbetriebnahme der WLAN-Module ESP8266}
 
-\subsubsection*{Pinning}
+Die beiden WLAN-Module ESP8266 bilden in der WLAN-Applikation die Schnittstelle zwischen den beiden Eval-Boards. Dabei gilt es zu beachten, dass beide WLAN-Module zwar die selbe Funktionalität erfüllen hinsichtlich der Datenübertragung, aber unterschiedliche Rollen im WLAN einnehmen. So baut ein WLAN-Modul ein Netzwerk auf und agiert als Soft Access Point, während das andere WLAN-Modul als Station eine Verbindung zu diesem Netzwerk herstellt. Diese Unterscheidung wird in der \texttt{setup}-Funktion mit Hilfe der Bibliothek \textit{ESP8266WiFi} konfiguriert. Auf die Details wird in den folgenden Kapiteln eingegangen.
 
-\subsubsection*{Soft Access Point}
+In der \texttt{loop}-Funktion spiegeln sich die Gemeinsamkeiten in Bezug auf die Datenübertragung wider. Die Implementierung für den Soft Access Point und für die Station sind im Wesentlichen identisch, wie auch das Aktivitätsdiagramm in \autoref{fig:WLANESPloop} darstellt. Zunächst wird überprüft, ob Daten via WLAN empfangen wurden. Ist das der Fall, werden diese unverändert über die UART-Schnittstelle ausgegeben. Anschließend wird die UART-Schnittstelle auf eingehende Daten abgefragt. Liegen hier Daten vor, werden diese unverändert als UDP-Paket an das andere WLAN-Modul drahtlos übertragen. Zuletzt überprüft jedes WLAN-Modul, ob eine Verbindung zum Netzwerk besteht. Hier wird unterschieden zwischen Soft Access Point und Station. Der Soft Access Point ermittelt die Anzahl der mit ihm verbunden Stations. Ist diese größer Null, leuchtet die grüne LED auf dem Steckbrett auf. Dagegen aktiviert die Station ihre grüne LED auf dem Steckbrett, wenn eine Verbindung zum Netzwerk besteht.
 
-\subsubsection*{Station}
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=0.85\textwidth]{images/WLANESPloop.pdf}
+		\caption{Ablauf der loop-Funktion in den beiden WLAN-Modulen.}
+	\label{fig:WLANESPloop}
+\end{figure} 
+
+\subsubsection*{UART-Schnittstelle}
+
+Bei der Implementierung der UART-Schnittstelle muss beachtet werden, dass die USB"=Schnittstelle mit der UART0-Schnittstelle (GPIO3/GPIO1) verbunden ist. Mit dem Aufruf \texttt{Serial.printf} kann über die USB"=Schnittstelle des WLAN-Moduls ein Logging realisiert werden. Somit ist es möglich, mit dem verbundenen PC das Logging mit einem Terminal-Programm mitzulesen. Das bedeutet aber auch, dass über den Pin GPIO1 sämtliche Daten des Loggings ausgegeben werden.  In Folge dessen wird auf die UART2-Schnittstelle (GPIO13/GPIO15) ausgewichen. Die entsprechende Konfiguration erfolgt bei der Definition der UART-Schnittstelle, welche vom Typ SoftwareSerial ist. Wie der vereinfachte \autoref{lst:softSerialDefinition} darstellt, wurde dazu die Open-Source Bibliothek \textit{SoftwareSerial} eingebunden \parencite{SoftwareSerial}. In der \texttt{setup}-Funktion muss die UART2-Schnittstelle lediglich mit der Ziel-Baudrate von \(115{.}200 baud\) initialisiert werden. 
+
+\lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
+\begin{lstlisting}[caption={Definition und Initialisierung der UART2-Schnittstelle. Auf die UART2-Schnittstelle reduzierter Ausschnitt aus dem Quellcode, der in beiden WLAN-Modulen implementiert wird.}, captionpos=b, label={lst:softSerialDefinition}]
+#include <SoftwareSerial.h>
+
+//D7 == GPIO 13 == RXD2
+//D8 == GPIO 15 == TXD2
+SoftwareSerial swSer(13, 15, false, 256);  
+
+void setup() {
+  //...
+	
+  swSer.begin(115200);
+	
+  //...
+}
+\end{lstlisting}
+
+Während der Verifizierung der UART-Schnittstelle stellte sich heraus, dass bei jedem gesendeten Datenpaket das erste Bit stets einer logischen Null entspricht und somit die gesendete Information verfälscht. Nach ausgiebiger Analyse mit Logic-Analyzer und Code-Review stellte sich heraus, dass die Bibliothek \textit{SoftwareSerial} einen zusätzlichen High-Pegel vor dem Start-Bit jedes Pakets einspeist. Die Ursache dafür konnte nicht ermittelt werden, liegt aber vermutlich daran, dass die Bibliothek \textit{SoftwareSerial} auf die UART-Kommunikation mit einem Arduino Board ausgelegt ist. Eine Anpassung der Bibliothek löste dieses Problem, so dass Datenpakete unverfälscht zum Eval-Board gesendet werden können. Zudem sei an dieser Stelle darauf hingewiesen, dass die Bibliothek die Datenpakete invers empfängt und sendet. Das hat zur Folge, dass zum Beispiel das empfangene Synchronisations-Byte 0xFB als 0x04 dargestellt wird.
+
+\subsubsection*{WLAN-Schnittstelle}
+
+\paragraph{Initialisierung als Soft Access Point:}
+
+Die Implementierung des Soft Access Point findet sich im Sketch \textit{WiFiAccessPoint.ino} wider. Der \autoref{lst:softAPDefinition} zeigt einen Ausschnitt aus dem Sketch, der auf die wesentlichen Elemente zur Inbetriebnahme des WLAN-Moduls als Soft Access Point reduziert wurde.
+
+Wie zuvor erwähnt erfolgt die WLAN-Konfiguration mit Hilfe der \textit{ESP8266WiFi} Bibliothek. Zudem wird die Bibliothek \textit{WiFiUdp} inkludiert, da die WLAN"=Kommunikation auf UPD basieren soll. Anschließend werden von \autoref{cdl:SAPline7} bis \autoref{cdl:SAPline12} die wichtigsten Parameter für die WLAN-Kommunikation definiert. Darunter befindet sich auch die SSID, das heißt der Netzwerkname unter dem der Soft Access Point erreicht wird. Ein Passwort für den Zugang zum Netzwerk wird zunächst nicht vergeben. In der \texttt{setup}-Funktion erfolgt von \autoref{cdl:SAPline18} bis \autoref{cdl:SAPline22} die Initialisierung des WLAN-Moduls als Soft Access Point, sowie das Setzen der zuvor definierten Parameter. Zuletzt wird in \autoref{cdl:SAPline25} der UDP-Protokollstapel aufgesetzt.
+
+\lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
+\begin{lstlisting}[caption={Definition und Initialisierung der WLAN-Schnittstelle als Soft Access Point. Ausschnitt aus dem Sketch \textit{WiFiAccessPoint.ino}.}, captionpos=b, label={lst:softAPDefinition}]
+#include <ESP8266WiFi.h>  // Used for the soft AP
+#include <WiFiUdp.h>      // Used for UDP communication
+
+WiFiUDP Udp; 
+
+//*** Soft AP variables ***
+const char *APssid = "ESP8266-12E";		(*@\label{cdl:SAPline7}@*)													
+const char *APpassword = "";                // No password for the AP
+IPAddress APlocal_IP(192, 168, 0, 100);
+IPAddress APgateway(192, 168, 0, 254);
+IPAddress APsubnet(255, 255, 255, 0);
+unsigned int localUdpPort = 4209;			(*@\label{cdl:SAPline12}@*)
+
+void setup() {
+  //...
+	
+  // Set operation mode and configure the network
+  WiFi.mode(WIFI_AP);				(*@\label{cdl:SAPline18}@*)								
+  WiFi.softAPConfig(APlocal_IP, APgateway, APsubnet);	
+  WiFi.softAP(APssid, APpassword);											
+  // Confirm Soft Ap IP address
+  WiFi.softAPIP();				(*@\label{cdl:SAPline22}@*)
+	
+  // Setup the UDP port
+  Udp.begin(localUdpPort);				(*@\label{cdl:SAPline25}@*)
+  //...
+}
+\end{lstlisting}
+
+
+\paragraph{Initialisierung als Station:} Der Sketch \textit{WiFiStation.ino} beinhaltet den Quellcode für den Betriebsmodus Station. Die wichtigsten Elemente des Sketches zur Verwendung des WLAN-Moduls als Station fasst der \autoref{lst:stationDefinition} zusammen. 
+
+Auch hier werden zunächst die beiden Bibliotheken \textit{ESP8266WiFi} und \textit{WiFiUdp} eingebunden. Im Anschluss werden von \autoref{cdl:STAline7} bis \autoref{cdl:STAline14} die SSID und das Passwort des Soft Access Points übernommen, sowie die Parameter der Station festgelegt. Wichtig ist, dass die Gateway-IP und die Subnet-IP identisch mit dem Soft Access Point sind. Der UDP-Port legt fest, welcher Port auf eingehende Datenpakete überprüft wird. Es kann für beide WLAN-Module gleich bleiben. Die Initialisierung des WLAN-Moduls als Station erfolgt in der \texttt{setup}-Funktion in \autoref{cdl:STAline20} und \autoref{cdl:STAline21}. In der darauf folgenden while-Schleife wird alle 500ms versucht, eine Verbindung zum Soft Access Point aufzubauen. Wie beim Soft Access Point wird am Ende in \autoref{cdl:STAline31} der UDP-Protokollstapel aufgesetzt. 
+
+\lstset{escapechar=@, escapeinside={(*@}{@*)}, style=customcpp}
+\begin{lstlisting}[caption={Definition und Initialisierung der WLAN-Schnittstelle als Station. Ausschnitt aus dem Sketch \textit{WiFiStation.ino}.}, captionpos=b, label={lst:stationDefinition}]
+#include <ESP8266WiFi.h>  // Used for the soft AP
+#include <WiFiUdp.h>      // Used for UDP communication
+
+WiFiUDP Udp; 
+
+//*** Soft AP variables ***
+const char *APssid = "ESP8266-12E";		(*@\label{cdl:STAline7}@*)													
+const char *APpassword = "";                // No password for the AP
+
+//***STAtion variables ***
+IPAddress STAlocal_IP(192, 168, 0, 101);
+IPAddress STAgateway(192, 168, 0, 254);
+IPAddress STAsubnet(255, 255, 255, 0);
+unsigned int localUdpPort = 4209;			(*@\label{cdl:STAline14}@*)
+
+void setup() {
+  //...
+	
+  // Set operation mode and configure the network
+  WiFi.begin(APssid, APpassword); (*@\label{cdl:STAline20}@*)
+  WiFi.config(STAlocal_IP, STAgateway, STAsubnet); (*@\label{cdl:STAline21}@*)
+	
+  // Connect to Soft AP
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.print(".");
+  }
+  
+  // Setup the UDP port
+  Udp.begin(localUdpPort);	 (*@\label{cdl:STAline31}@*)
+  //...
+}
+\end{lstlisting}

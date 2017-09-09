@@ -2,8 +2,28 @@
 
 \section{Motivation}
 
-TODO
+Das Programmieren von Software kann derzeit in vier Generationen eingestuft werden \parencite{ModelingEmbeddedSystems}. Dabei repräsentiert die erste Generation die Maschinensprache. Zwar findet die Maschinensprache noch heute Anwendung in allen Prozessoren, allerdings ist das Schreiben von Maschinensprache als binärer oder hexadezimaler Code äußerst mühselig und fehleranfällig. 
+
+Deshalb wurde mit der zweiten Generation die Assemblersprache eingeführt. Dabei übersetzt ein Computerprogramm, der Assembler, die Assemblersprache in Maschinensprache. Einheitliche Befehle in Textform ermöglichen ein schnelleres und besser Verständnis dafür, was ein Programm tatsächlich ausführt. Fehler können dennoch vorkommen, allerdings nicht mehr in einfachen Konstrukten.Schließlich wurden die Programme in Assemblersprache mit zunehmender Dauer größer und unübersichtlicher, wodurch deren Wartung und Test immer schwerer wurde. 
+
+Die höheren Programmiersprachen wie C oder C++ läuteten daraufhin die dritte Generation ein, die bis heute Verwendung findet. Die abstrakte Syntax ist eher an menschliche Gewohnheiten angepasst und beschreibt, wie ein Problem gelöst wird. Ein Compiler übersetzt den Quellcode in Maschinensprache. Aber auch hier wächst die Software kontinuierlich, wodurch erneut das Problem der Komplexität auftritt. Das spiegelt sich auch in einer Umfrage von \citet[Folie 48]{EmbeddedMarketsStudy} wider. Dort wird die steigende Komplexität, verbunden mit der zunehmenden Anzahl an Codezeilen, als größte Herausforderungen im kommenden Jahr in der Entwicklung von Software für Embedded Systems angegeben.
+
+Abhilfe sollen die Sprachen der vierten Generation schaffen, wobei die Literatur die Inhalte der vierten Generation nicht klar abgrenzt. Nach \citet{ModelingEmbeddedSystems} gehört zur vierten Generation auch die Modellierungssprache UML. Die UML hebt die Programmierung nochmals auf eine höhere Abstraktionsebene und versucht so die Komplexität zu bewältigen. Dabei kommen standardisierte Modellelemente zum Einsatz, die eine höhere Informationsdichte haben als übliche Programmiersprachen. Mit den Modellelementen können Grafiken wie Klassen-, Sequenz- und Zustandsdiagramme modelliert werden. Oft ist es noch gängige Praxis, dass UML-Modelle lediglich zur Dokumentation verwendet werden. Dabei wird aber nicht das gesamte Potential der UML ausgenutzt. Zusammen mit einem Codegenerator entwickelt sich die UML zu einer leistungsstarken Modellierungssprache, bei der das Programmieren vom Modellieren abgelöst wird. In diesem Zusammenhang ist eine Entwicklungsumgebung, welche das automatisierte Generieren von Quellcode unterstützt, unverzichtbar. Bezogen auf die vier Generationen überführt der Codegenerator das UML-Modell aus der vierten Generation in ausführbaren Quellcode der dritten Generation.     
 
 \section{Aufgabenstellung}
 
-TODO
+Der Fokus im Rahmen dieser Arbeit liegt auf der modellbasierten Softwareentwicklung für Embedded Systems. Die Basis bildet die Laborveranstaltung zur Vorlesung Embedded Systems. Dort wurde bisher mit Hilfe des Tools IBM Rational Rhapsody und des Willert Realtime RXF aus UML-Modellen Quellcode in C generiert. Der generierte Quellcode wird in der Entwicklungsumgebung Keil uVision kompiliert und auf ein Evaluierungsboard geladen. 
+
+Die erste Aufgabe besteht darin, die bisher existierenden Laboraufgaben von der Programmiersprache C nach C++ zu überführen. Besonderheiten in diesem Zusammenhang stellt das Einbinden externer C-Quellen dar, was im Weiteren Verlauf der Arbeit nochmals thematisiert wird. Lösungen der Laboraufgaben in der Programmiersprache C++ sind nicht Inhalt der vorliegenden Arbeit.
+
+In den existierenden Laboraufgaben wurden bereits verschiedene Peripheriegeräte des Evaluierungsboards verwendet, unter anderem LED-Bar, Poti, Display, Joystick und Interrupt-Button. Hier sollen weitere Bauteile angesprochen und die Laboraufgaben erweitert werden. Dabei handelt es sich um folgende Funktionalitäten:
+
+\begin{itemize}
+\item Ethernet-Kommunikation
+\item WLAN-Kommunikation
+\item Lesen und Schreiben einer SD-Karte
+\end{itemize}
+
+Das Hauptaugenmerk bei der Implementierung liegt darauf, dass der generierte C++-Quellcode in Keil uVision nicht mehr geändert werden muss, ansonsten geht der Vorteil der automatisierten Codegenerierung durch Rational Rhapsody verloren. Eine Ausnahme bildet die WLAN-Kommunikation. Da das Evaluierungsboard über keine eigene WLAN-Antenne verfügt, muss diese über einen externes WLAN-Modul zur Verfügung gestellt werden. Zwar erfolgt die Implementierung für das Evaluierungsboard über die bestehende Toolkette, jedoch benötigt das externe WLAN-Modul eine spezifische Entwicklungsumgebung in welcher der entsprechende Code von Hand implementiert wird.
+
+Den Abschluss der Arbeit bildet die Verifikation. Dabei soll auch ein modellbasierter Test implementiert werden. Rational Rhapsody bietet dazu die Erweiterung TestConductor an, welche diese Funktionalität unterstützt. Damit aus den modellierten Testfällen ausführbarer Quellcode entstehen kann, wird ebenfalls das Willert Realtime RXF sowie Keil uVision benötigt. Zu Beginn der Arbeit war geplant, dass die Implementierungen zu den neuen Funktionen einem modellbasierten Test unterzogen werden. Allerdings existiert derzeit kein Willert Realtime RXF, das die verwendete Toolchain und den TestConductor unterstützt, sowie C++-Quellcode generiert. Ein Release eines entsprechenden Willert Realtime RXF ist für das vierte Quartal im Jahr 2017 vorgesehen. Aus diesem Grund soll eine der bereits existierenden Laboraufgaben in C verwendet werden und exemplarisch ein Testszenario modelliert werden.
