@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.12.0 * 9641846
+I-Logix-RPY-Archive version 8.13.0 * 9794446
 
 - m_fileModifyTime = { IRPYRawContainer 
 	- size = 12;
@@ -16,25 +16,13 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 	"MCB1700\\Debug\\Poti.h" 4.5.2017::13:55:40
 	
 }
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 2;
+	- value = "GUID 93425724-08db-4e42-a798-cb363b94c8e8" "GUID 9fe820e0-2416-4f0d-aadd-d3c67f311616"
+	"GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea" "GUID 9fe820e0-2416-4f0d-aadd-d3c67f311616"
+	
+}
 - size = 7;
-- hElement = { IHandle 
-	- _m2Class = "IClass";
-	- _filename = "Default.sbs";
-	- _subsystem = "Default";
-	- _class = "";
-	- _name = "Poti";
-	- _id = GUID ad4ed805-51c9-4b12-bb85-ab311ef2b46d;
-}
-- genTime = 4.5.2017::13:55:40;
-- hElement = { IHandle 
-	- _m2Class = "ISubsystem";
-	- _filename = "Default.sbs";
-	- _subsystem = "";
-	- _class = "";
-	- _name = "Default";
-	- _id = GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea;
-}
-- genTime = 4.5.2017::14:3:58;
 - hElement = { IHandle 
 	- _m2Class = "ICodeGenConfigInfo";
 	- _filename = "MCB1700.cmp";
@@ -45,38 +33,32 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 }
 - genTime = 4.5.2017::14:4:25;
 - hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _id = GUID a63b9c26-dec0-4ef6-b871-fafc26da95ea;
+}
+- genTime = 4.5.2017::14:3:58;
+- hElement = { IHandle 
 	- _m2Class = "IClass";
-	- _filename = "Default.sbs";
-	- _subsystem = "Default";
-	- _class = "";
-	- _name = "LedBar";
+	- _id = GUID ad4ed805-51c9-4b12-bb85-ab311ef2b46d;
+}
+- genTime = 4.5.2017::13:55:40;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
 	- _id = GUID c2d5c3b8-e0fe-4ea7-b08f-376cecd32516;
 }
 - genTime = 4.5.2017::13:55:40;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
-	- _filename = "Default.sbs";
-	- _subsystem = "Default";
-	- _class = "";
-	- _name = "Board";
-	- _id = GUID 0cd33b24-8444-4d7a-b67b-a0f59d871ea4;
-}
-- genTime = 4.5.2017::14:3:58;
-- hElement = { IHandle 
-	- _m2Class = "IClass";
-	- _filename = "Default.sbs";
-	- _subsystem = "Default";
-	- _class = "";
-	- _name = "Display";
 	- _id = GUID d474bf0c-c0a7-4352-9096-5cf8a45b9dc5;
 }
 - genTime = 4.5.2017::13:55:40;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
-	- _filename = "Default.sbs";
-	- _subsystem = "Default";
-	- _class = "";
-	- _name = "Joystick";
+	- _id = GUID 0cd33b24-8444-4d7a-b67b-a0f59d871ea4;
+}
+- genTime = 4.5.2017::14:3:58;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
 	- _id = GUID 3fbebd12-f085-4d7b-a0c6-891a580d13cd;
 }
 - genTime = 4.5.2017::14:4:25;

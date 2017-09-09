@@ -1,7 +1,8 @@
-I-Logix-RPY-Archive version 8.12.0 * 9641846
+I-Logix-RPY-Archive version 8.13.0 * 9794446
 { CGEMdiWorkspace 
 	- stubList = { IRPYRawContainer 
-		- size = 0;
+		- size = 2;
+		- value = GUID 839b3570-feed-482e-8776-cdf59c7831ae; GUID bfc317b6-e8a6-d0c6-ebbd-d5c3478d6a6a; 
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
@@ -30,8 +31,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 				- _name = "StatechartDiagram";
 				- _id = GUID 61314661-9a66-471d-a3d8-c96e459bdf39;
 			}
-			- _UpLeft = 0 14 ;
-			- _DownRight = 1503 637 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1344 548 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 3;
 			- m_bIsActiveView = 1;
@@ -182,7 +183,7 @@ I-Logix-RPY-Archive version 8.12.0 * 9641846
 			- m_bIsActiveView = 0;
 		}
 	}
-	- _fullName = "C:\\02__Cpp_Lab\\rpy\\Exercise_8_Joystick\\Exercise_8_Joystick";
+	- _fullName = "C:\\90__Studium\\Master\\Semester_III\\PROJ\\repo\\Coding\\02__Cpp_Lab\\rpy\\Exercise_8_Joystick\\Exercise_8_Joystick";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}

@@ -1,93 +1,144 @@
-#include <ESP8266WiFi.h> // Used for the soft AP
-#include <WiFiUdp.h> // used for UDP comms.
+#include <ESP8266WiFi.h>  // Used for the soft AP
+#include <WiFiUdp.h>      // Used for UDP communication
 #include <SoftwareSerial.h>
+#include <Ticker.h>
 
 WiFiUDP Udp;
 //D7 == GPIO 13 == RXD2
 //D8 == GPIO 15 == TXD2
-SoftwareSerial swSer(13, 15, true, 256);  
+SoftwareSerial swSer(13, 15, false, 256);
+Ticker LedRed;  
 
 //*** Soft Ap variables ***
 const char *APssid = "ESP8266-12E";
-const char *APpassword = ""; // No password for the AP
+const char *APpassword = "";                // No password for the AP
 IPAddress APlocal_IP(192, 168, 0, 100);
 IPAddress APgateway(192, 168, 0, 254);
 IPAddress APsubnet(255, 255, 255, 0);
 
 //***STAtion variables ***
-const char *STAssid = "ESP8266-12E"; // Network to be joined as a station SSID
-const char *STApassword = ""; // Network to be joined as a station password
 IPAddress STAlocal_IP(192, 168, 0, 101);
 IPAddress STAgateway(192, 168, 0, 254);
 IPAddress STAsubnet(255, 255, 255, 0);
 
-//***UDP Variables***
-unsigned int localUdpPort = 4209;
-char incomingPacket[255];
-char replyPacket[] = "Hi there! Got the message :-)";
-char initialPacket[] = "Hi world!";
-
 //***General Variables***
-const int LEDpin = 2;
+unsigned int localUdpPort = 4209;
+char serIncomingPacket[255];
+char incomingPacket[255];
+
+#define LEDRED D1
+#define LEDGREEN D2
 
 void setup() {
- Serial.begin(115200); //fire up the serial port
- swSer.begin(115200);
- //pinMode(LEDpin,OUTPUT);
- //digitalWrite(LEDpin,HIGH);
- 
- //WiFi.mode(WIFI_AP);
- 
- Serial.printf("Connecting to %s ", STAssid);
- WiFi.begin(STAssid, STApassword);
- WiFi.config(STAlocal_IP, STAgateway, STAsubnet);
+  
+  // Red LED
+  pinMode(LEDRED, OUTPUT);  
+  LedRed.attach(0.5, blinkLedRed); 
+  
+  // Green LED
+  pinMode(LEDGREEN, OUTPUT);  
+  digitalWrite(LEDGREEN, false);  
+
+  // Start serial port via USB
+  Serial.begin(115200); 
+  // Start serial port via RXD2/TXD2
+  swSer.begin(115200);
+  
+  Serial.printf("\nConnecting to %s ", APssid);
+  WiFi.begin(APssid, APpassword);
+  WiFi.config(STAlocal_IP, STAgateway, STAsubnet);
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(500);
     Serial.print(".");
   }
- Serial.println(" connected");
- 
+  digitalWrite(LEDGREEN, true);
+  Serial.println(" connected");
+  
   Udp.begin(localUdpPort);
   Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
 }
 
 void loop() {
-  int serReadValue = 0;
- int packetSize = Udp.parsePacket();
- if (packetSize)
- {
-   // receive incoming UDP packets
-   Serial.printf("[WiFi] Received %d bytes from %s, port %d\n", packetSize, Udp.remoteIP().toString().c_str(), Udp.remotePort());
-   int len = Udp.read(incomingPacket, 255);
-   if (len > 0)
-   {
-    incomingPacket[len] = 0;
-   }
-   Serial.printf("[WiFi] UDP packet contents: %s\n", incomingPacket);
-  
-   // send back a reply, to the IP address and port we got the packet from
-   //Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
-   //Udp.write(replyPacket);
-   //Udp.endPacket();
-   //Udp.beginPacket(APlocal_IP, 4210);
-   //Serial.println(Udp.write(incomingPacket[0]) ? "W OK" : "W Failed!");   
-   //Udp.endPacket();
 
-    /* Forward received WiFi message via Serial to the EvalBoard */
-    Serial.printf("[Serial] Write: 0x%02X\n", incomingPacket[0]);
-    char helper = ~incomingPacket[0] << 1u;
-    Serial.printf("[Serial] Write: 0x%02X\n", helper);
-    swSer.write(helper);
- }
+  // Check for incoming UDP packets 
+  checkForWiFiData();
 
-  // Check for incoming Serial packets
-  while (swSer.available() > 0) {
-    Serial.printf("[Serial] Received byte\n");
-    serReadValue = swSer.read();
-    Serial.printf("[WiFi] Send one byte to %s, port %d\n", APlocal_IP.toString().c_str(), 4210);
-    Udp.beginPacket(APlocal_IP, 4210);
-    Udp.write(serReadValue);
-    Udp.endPacket();
+  // Check for incoming serial packets
+  checkForSerialData();
+
+  // Check if WiFi connection is alive
+  if (WiFi.status() != WL_CONNECTED)
+  {
+    digitalWrite(LEDGREEN, false);
+  }
+  else
+  {
+    digitalWrite(LEDGREEN, true);
   }
 }
+
+void blinkLedRed()
+{
+  int state = digitalRead(LEDRED);
+  digitalWrite(LEDRED, !state);
+}
+
+void checkForWiFiData()
+{
+  int i = 0;
+  int wifiLength = 0;
+  
+  int packetSize = Udp.parsePacket();
+  if (packetSize)
+  {
+    Serial.printf("-------------------------------------------\n");
+    Serial.printf("[WiFi] Received %d bytes from %s, port %d\n", packetSize, Udp.remoteIP().toString().c_str(), Udp.remotePort());
+    wifiLength = Udp.read(incomingPacket, 255);
+
+    // Forward received WiFi message via Serial to the EvalBoard
+    Serial.printf("[WiFi] UDP packet contents: 0x%02X", incomingPacket[0]);
+    swSer.write(incomingPacket[0]);  
+  
+    for (i = 1; i< wifiLength; i++)
+    {
+      Serial.printf(", 0x%02X", incomingPacket[i]);   
+      swSer.write(incomingPacket[i]);    
+    }
+
+    Serial.printf("\n");
+    Serial.printf("[Serial] Send %d byte(s)\n", wifiLength);
+  }
+}
+
+void checkForSerialData()
+{ 
+  int i = 0;
+  int serLength = 0;
+
+  while (swSer.available() > 0) {
+    serIncomingPacket[i] = swSer.read();
+    i++;
+    delay(10);
+  }
+
+  if (i > 0)
+  {
+    serLength = i;
+    Serial.printf("-------------------------------------------\n");
+    Serial.printf("[Serial] Received %d byte(s)\n", serLength);  
+    Serial.printf("[Serial] Packet contents: 0x%02X", serIncomingPacket[0]);
+    for(i = 1; i < serLength; i++)
+    {
+      Serial.printf(", 0x%02X", serIncomingPacket[i]);     
+    }
+    
+    Serial.printf("\n");
+    Serial.printf("[WiFi] Send %d byte(s) to %s, port %d\n", serLength, APlocal_IP.toString().c_str(), 4210);
+    
+    Udp.beginPacket(APlocal_IP, 4210);
+    Udp.write(serIncomingPacket);
+    Udp.endPacket();    
+  }
+}
+
